@@ -68,8 +68,9 @@
     <Content Include="Global.asax" />
     <Content Include="Inicio.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="AvionSeleccionDestino.aspx" />
     <Content Include="Paquetes.aspx" />
-    <Content Include="PaquetesAvion.aspx" />
+    <Content Include="AvionSeleccionMes.aspx" />
     <Content Include="PaquetesBus.aspx" />
     <Content Include="Preguntas.aspx" />
     <Content Include="Web.config" />
@@ -106,6 +107,13 @@
     <Compile Include="Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
+    <Compile Include="AvionSeleccionDestino.aspx.cs">
+      <DependentUpon>AvionSeleccionDestino.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AvionSeleccionDestino.aspx.designer.cs">
+      <DependentUpon>AvionSeleccionDestino.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paquetes.aspx.cs">
       <DependentUpon>Paquetes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -113,12 +121,12 @@
     <Compile Include="Paquetes.aspx.designer.cs">
       <DependentUpon>Paquetes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PaquetesAvion.aspx.cs">
-      <DependentUpon>PaquetesAvion.aspx</DependentUpon>
+    <Compile Include="AvionSeleccionMes.aspx.cs">
+      <DependentUpon>AvionSeleccionMes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PaquetesAvion.aspx.designer.cs">
-      <DependentUpon>PaquetesAvion.aspx</DependentUpon>
+    <Compile Include="AvionSeleccionMes.aspx.designer.cs">
+      <DependentUpon>AvionSeleccionMes.aspx</DependentUpon>
     </Compile>
     <Compile Include="PaquetesBus.aspx.cs">
       <DependentUpon>PaquetesBus.aspx</DependentUpon>

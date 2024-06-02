@@ -5,7 +5,7 @@
         .card {
             margin: 50px auto;
             transition: transform 0.3s ease;
-            width: 700px;
+            width: 800px;
             max-width: calc(100% - 20px);
             height: 450px;
             display: flex;
@@ -45,21 +45,20 @@
         }
 
         .card a {
-            text-decoration: none; 
+            text-decoration: none;
             color: inherit;
         }
-
     </style>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col">
-            <a href="PaquetesAvion.aspx">
+            <a href="AvionSeleccionMes.aspx">
                 <div class="card">
                     <h5 class="card-title">Paquetes avion</h5>
-                    <img src="Avion.jpg" class="card-img-top" alt="...">
+                    <img src="/imagenes/Avion.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Una opción rápida y eficiente para viajar largas distancias.</p>
                     </div>
@@ -68,13 +67,15 @@
         </div>
 
         <div class="col">
-        <a href="PaquetesBus.aspx">
-            <div class="card">
-                <h5 class="card-title">Paquetes micro</h5>
-                <img src="Bus.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Un método económico y accesible para viajar largas distancias.</p>
+            <a href="PaquetesBus.aspx">
+                <div class="card">
+                    <h5 class="card-title">Paquetes micro</h5>
+                    <img src="/imagenes/Bus.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Un método económico y accesible para viajar largas distancias.</p>
+                    </div>
                 </div>
-        </a>
-            </div>
+            </a>
+        </div>
+    </div>
 </asp:Content>
