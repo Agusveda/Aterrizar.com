@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+   
     .card {
         margin: 10px 50px 1px 50px;
         width: 90%;
@@ -11,6 +12,7 @@
         justify-content: space-between;
         border: 1px solid #ddd;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
 
     }
 
@@ -36,18 +38,16 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
     }
 
     .card-title {
         text-align: center;
         margin-top: 10px;
+
     }
 
-        .a {
-            text-decoration: none;
-
-        }
-
+     
 
 </style>
 </asp:Content>
@@ -70,7 +70,7 @@
       </a>
   </div>
   <div class="col">
-      <a href="AvionSeleccionDestino.aspx" class="Imag">
+      <a href="AvionSeleccionDestino.aspx" >
 
     <div class="card">
       <img src="/imagenes/Agosto.jpg" class="card-img-top" alt="...">
@@ -103,8 +103,8 @@
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
-  </div>
       </a>
+  </div>
 </div>
  
     </div>
