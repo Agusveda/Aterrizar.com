@@ -1,0 +1,9 @@
+C:\Users\Usuario\Desktop\C#\Facultad\Tp-Carrito-equipo-O1\Codigo\Tp-Carrito-equipo-O1\Funcionalidades\bin\Debug\Funcionalidades.dll
+C:\Users\Usuario\Desktop\C#\Facultad\Tp-Carrito-equipo-O1\Codigo\Tp-Carrito-equipo-O1\Funcionalidades\bin\Debug\Funcionalidades.pdb
+C:\Users\Usuario\Desktop\C#\Facultad\Tp-Carrito-equipo-O1\Codigo\Tp-Carrito-equipo-O1\Funcionalidades\bin\Debug\Clases.dll
+C:\Users\Usuario\Desktop\C#\Facultad\Tp-Carrito-equipo-O1\Codigo\Tp-Carrito-equipo-O1\Funcionalidades\bin\Debug\Clases.pdb
+C:\Users\Usuario\Desktop\C#\Facultad\Tp-Carrito-equipo-O1\Codigo\Tp-Carrito-equipo-O1\Funcionalidades\obj\Debug\Funcionalidades.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\C#\Facultad\Tp-Carrito-equipo-O1\Codigo\Tp-Carrito-equipo-O1\Funcionalidades\obj\Debug\Funcionalidades.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\C#\Facultad\Tp-Carrito-equipo-O1\Codigo\Tp-Carrito-equipo-O1\Funcionalidades\obj\Debug\Funciona.62B5C317.Up2Date
+C:\Users\Usuario\Desktop\C#\Facultad\Tp-Carrito-equipo-O1\Codigo\Tp-Carrito-equipo-O1\Funcionalidades\obj\Debug\Funcionalidades.dll
+C:\Users\Usuario\Desktop\C#\Facultad\Tp-Carrito-equipo-O1\Codigo\Tp-Carrito-equipo-O1\Funcionalidades\obj\Debug\Funcionalidades.pdb

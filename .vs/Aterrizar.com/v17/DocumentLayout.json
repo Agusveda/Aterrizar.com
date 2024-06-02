@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{29140E59-18AD-467F-953D-01B1CAEA2E05}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\dominio\\destino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29140E59-18AD-467F-953D-01B1CAEA2E05}|Dominio\\Dominio.csproj|solutionrelative:dominio\\destino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\gestion de viajes\\inicio.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\inicio.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29140E59-18AD-467F-953D-01B1CAEA2E05}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\dominio\\paquetedeviaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29140E59-18AD-467F-953D-01B1CAEA2E05}|Dominio\\Dominio.csproj|solutionrelative:dominio\\paquetedeviaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29140E59-18AD-467F-953D-01B1CAEA2E05}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\dominio\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29140E59-18AD-467F-953D-01B1CAEA2E05}|Dominio\\Dominio.csproj|solutionrelative:dominio\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29140E59-18AD-467F-953D-01B1CAEA2E05}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29140E59-18AD-467F-953D-01B1CAEA2E05}|Dominio\\Dominio.csproj|solutionrelative:dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29140E59-18AD-467F-953D-01B1CAEA2E05}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\dominio\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29140E59-18AD-467F-953D-01B1CAEA2E05}|Dominio\\Dominio.csproj|solutionrelative:dominio\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29140E59-18AD-467F-953D-01B1CAEA2E05}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\dominio\\excursiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29140E59-18AD-467F-953D-01B1CAEA2E05}|Dominio\\Dominio.csproj|solutionrelative:dominio\\excursiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Inicio.aspx",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Gestion de viajes\\Inicio.aspx",
+              "RelativeDocumentMoniker": "Gestion de viajes\\Inicio.aspx",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Gestion de viajes\\Inicio.aspx",
+              "RelativeToolTip": "Gestion de viajes\\Inicio.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-02T16:27:58.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Excursiones.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Dominio\\Excursiones.cs",
+              "RelativeDocumentMoniker": "Dominio\\Excursiones.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Dominio\\Excursiones.cs",
+              "RelativeToolTip": "Dominio\\Excursiones.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T16:27:50.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Dominio\\Usuario.cs",
+              "RelativeDocumentMoniker": "Dominio\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Dominio\\Usuario.cs",
+              "RelativeToolTip": "Dominio\\Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T15:28:23.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PaqueteDeViaje.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Dominio\\PaqueteDeViaje.cs",
+              "RelativeDocumentMoniker": "Dominio\\PaqueteDeViaje.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Dominio\\PaqueteDeViaje.cs",
+              "RelativeToolTip": "Dominio\\PaqueteDeViaje.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAgwBAAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T15:28:01.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Destino.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Dominio\\Destino.cs",
+              "RelativeDocumentMoniker": "Dominio\\Destino.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Dominio\\Destino.cs",
+              "RelativeToolTip": "Dominio\\Destino.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T15:26:57.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Reserva.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Dominio\\Reserva.cs",
+              "RelativeDocumentMoniker": "Dominio\\Reserva.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Dominio\\Reserva.cs",
+              "RelativeToolTip": "Dominio\\Reserva.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T15:25:56.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Hotel.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Dominio\\Hotel.cs",
+              "RelativeDocumentMoniker": "Dominio\\Hotel.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Dominio\\Hotel.cs",
+              "RelativeToolTip": "Dominio\\Hotel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T15:11:16.142Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
