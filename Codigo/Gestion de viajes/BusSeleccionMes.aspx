@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="AvionSeleccionMes.aspx.cs" Inherits="Gestion_de_viajes.PaquetesAvion" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="BusSeleccionMes.aspx.cs" Inherits="Gestion_de_viajes.PaquetesBus" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style>
+        <style>
     .card {
         margin: 10px 50px 1px 50px;
         width: 90%;
@@ -11,7 +11,6 @@
         justify-content: space-between;
         border: 1px solid #ddd;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
     }
 
         .card:hover {
@@ -43,22 +42,19 @@
         margin-top: 10px;
     }
 
-        .a {
-            text-decoration: none;
-
-        }
-
-
+    .card a {
+        text-decoration: none;
+        color: inherit;
+    }
 </style>
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-    <div class="container">
+     <div class="container">
 
     <div class="row row-cols-1 row-cols-md-2 g-4">
   <div class="col">
-      <a href="AvionSeleccionDestino.aspx" >
+      <a href="BusSeleccionDestino.aspx">
 
     <div class="card" >
       <img src="/imagenes/JULIO.JPG" class="card-img-top" alt="...">
@@ -70,7 +66,7 @@
       </a>
   </div>
   <div class="col">
-      <a href="AvionSeleccionDestino.aspx" class="Imag">
+      <a href="BusSeleccionDestino.aspx">
 
     <div class="card">
       <img src="/imagenes/Agosto.jpg" class="card-img-top" alt="...">
@@ -82,7 +78,7 @@
       </a>
   </div>
   <div class="col">
-      <a href="AvionSeleccionDestino.aspx">
+      <a href="BusSeleccionDestino.aspx">
 
     <div class="card">
       <img src="/imagenes/Septiembre.jpg" class="card-img-top" alt="...">
@@ -94,8 +90,7 @@
       </a>
   </div>
   <div class="col">
-      <a href="AvionSeleccionDestino.aspx">
-
+      <a href="BusSeleccionDestino.aspx">
     <div class="card">
       <img src="/imagenes/octubre.jpg" class="card-img-top" alt="...">
       <div class="card-body">
@@ -104,10 +99,8 @@
       </div>
     </div>
   </div>
-      </a>
 </div>
+      </a>
  
     </div>
-
-
 </asp:Content>

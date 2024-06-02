@@ -47,6 +47,7 @@
         .card a {
             text-decoration: none;
             color: inherit;
+            
         }
     </style>
 
@@ -67,7 +68,7 @@
         </div>
 
         <div class="col">
-            <a href="PaquetesBus.aspx">
+            <a href="BusSeleccionMes.aspx">
                 <div class="card">
                     <h5 class="card-title">Paquetes micro</h5>
                     <img src="/imagenes/Bus.jpg" class="card-img-top" alt="...">

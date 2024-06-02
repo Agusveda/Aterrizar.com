@@ -64,6 +64,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BusSeleccionDestino.aspx" />
     <Content Include="Contacto.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Inicio.aspx" />
@@ -71,11 +72,18 @@
     <Content Include="AvionSeleccionDestino.aspx" />
     <Content Include="Paquetes.aspx" />
     <Content Include="AvionSeleccionMes.aspx" />
-    <Content Include="PaquetesBus.aspx" />
+    <Content Include="BusSeleccionMes.aspx" />
     <Content Include="Preguntas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusSeleccionDestino.aspx.cs">
+      <DependentUpon>BusSeleccionDestino.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BusSeleccionDestino.aspx.designer.cs">
+      <DependentUpon>BusSeleccionDestino.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contacto.aspx.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -128,12 +136,12 @@
     <Compile Include="AvionSeleccionMes.aspx.designer.cs">
       <DependentUpon>AvionSeleccionMes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PaquetesBus.aspx.cs">
-      <DependentUpon>PaquetesBus.aspx</DependentUpon>
+    <Compile Include="BusSeleccionMes.aspx.cs">
+      <DependentUpon>BusSeleccionMes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PaquetesBus.aspx.designer.cs">
-      <DependentUpon>PaquetesBus.aspx</DependentUpon>
+    <Compile Include="BusSeleccionMes.aspx.designer.cs">
+      <DependentUpon>BusSeleccionMes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Preguntas.aspx.cs">
       <DependentUpon>Preguntas.aspx</DependentUpon>
