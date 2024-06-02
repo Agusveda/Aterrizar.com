@@ -116,3 +116,44 @@ D:\TRANSFERENCIA\CODIGO\Aterrizar.com\Gestion de viajes\obj\Debug\Gestion de via
 D:\TRANSFERENCIA\CODIGO\Aterrizar.com\Gestion de viajes\obj\Debug\Gestion .416D0B75.Up2Date
 D:\TRANSFERENCIA\CODIGO\Aterrizar.com\Gestion de viajes\obj\Debug\Gestion de viajes.dll
 D:\TRANSFERENCIA\CODIGO\Aterrizar.com\Gestion de viajes\obj\Debug\Gestion de viajes.pdb
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\Gestion de viajes.dll.config
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\Gestion de viajes.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\Gestion de viajes.pdb
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csc.exe
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csc.exe.config
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csc.rsp
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csi.exe
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csi.exe.config
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csi.rsp
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.Managed.Core.targets
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Buffers.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Collections.Immutable.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Memory.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Numerics.Vectors.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Reflection.Metadata.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\vbc.exe
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\vbc.exe.config
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\vbc.rsp
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\VBCSCompiler.exe
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\VBCSCompiler.exe.config
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.csproj.AssemblyReference.cache
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.csproj.CoreCompileInputs.cache
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion .416D0B75.Up2Date
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.pdb
