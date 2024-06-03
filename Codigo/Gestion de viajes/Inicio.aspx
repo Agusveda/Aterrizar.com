@@ -4,7 +4,7 @@
     <style>
         .card {
             margin: 50px auto;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease;
             width: 800px;
             max-width: calc(100% - 20px);
             height: 450px;
@@ -37,6 +37,8 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            text-align: center;
+            margin-top: 10px;
         }
 
         .card-title {
@@ -47,7 +49,6 @@
         .card a {
             text-decoration: none;
             color: inherit;
-            
         }
     </style>
 
