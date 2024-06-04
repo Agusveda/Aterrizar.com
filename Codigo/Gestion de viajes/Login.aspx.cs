@@ -16,7 +16,7 @@ namespace Gestion_de_viajes
             
         }
 
-        protected void lnkRegister_Click(object sender, EventArgs e)//oculta el panel de inicio sesion y abre el de registro
+        protected void lnkRegister_Click(object sender, EventArgs e) //oculta el panel de inicio sesion y abre el de registro
         {
             pnlLogin.Visible = false;
             pnlRegister.Visible = true;
