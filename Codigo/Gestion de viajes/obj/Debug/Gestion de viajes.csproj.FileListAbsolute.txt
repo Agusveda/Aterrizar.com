@@ -198,3 +198,7 @@ C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestio
 C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion .416D0B75.Up2Date
 C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.dll
 C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.pdb
+C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Gestion de viajes\bin\Dominio.dll
+C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Gestion de viajes\bin\Funcionalidades.dll
+C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Gestion de viajes\bin\Dominio.pdb
+C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Gestion de viajes\bin\Funcionalidades.pdb

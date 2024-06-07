@@ -7,4 +7,3 @@ select * from reserva
 select * from usuarios
 
 
-

@@ -9,13 +9,14 @@ namespace Gestion_de_viajes
     public class PaqueteDeViaje
     {
         public int IdPaquete { get; set; }
-        public Hotel IdHotel { get; set; }// toma el objeto de Hotel
-        public Destino IdDestino { get; set; }// toma el objeto de Destino
-        public Excursiones IdExcursion { get; set; }// toma el objeto de Excursiones
+        public int cdgDestino { get; set; }
         public string NombrePaquete { get; set; }
         public string Descripcion { get; set; }
-        public decimal PrecioPaquete { get; set; }
-        public string Mes { get; set; }
-        public int Duracion { get; set; }
+        public Decimal PrecioPaquete { get; set; }
+        public int Mes {get; set; }
+        public string Duracion { get; set; }
+        public int TipoTransporte { get; set; }
+        public string URLimagen {  get; set; }
+
     }
 }

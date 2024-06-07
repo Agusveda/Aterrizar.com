@@ -1,0 +1,1 @@
+-la parte de visualizar en el proyecto se haria con una opcion que solo puede activar el ADM para poder visualizar que mes se muestra por pantallaa (ya estarian los 12 meses pre- cargados(iamgen-texto))

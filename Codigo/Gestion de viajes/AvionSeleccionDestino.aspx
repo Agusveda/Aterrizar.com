@@ -9,7 +9,7 @@
 
 
 
-    <div class="container"> 
+<%--    <div class="container"> 
     <div class="row row-cols-1 row-cols-md-3 g-4">
         
         <div class="col">
@@ -50,8 +50,12 @@
         </div>
 
     </div>
-    </div>
+    </div>--%>
 
+
+<h1>Lista de PAQUETES BRO</h1>
+
+    <asp:GridView ID="dgvPaquete" runat="server" CssClass="table" ></asp:GridView>
 
 
     

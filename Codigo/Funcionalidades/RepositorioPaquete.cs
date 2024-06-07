@@ -9,36 +9,41 @@ using Gestion_de_viajes;
 
 namespace Funcionalidades
 {
-    internal class RepositorioPaquete
+    public class RepositorioPaquete
     {
 
-        public List<PaqueteDeViaje> Listar()
+        public List<PaqueteDeViaje> ListarConSp()
         {
 
             List<PaqueteDeViaje> listarPaquete = new List<PaqueteDeViaje>();
             AccesoDatos AccesoDatos = new AccesoDatos();
             try
             {
-                AccesoDatos.setearConsulta("");
+
+                AccesoDatos.setearSp("SelPaqueteCompleto");
                 AccesoDatos.ejecutarLectura();
 
                 while (AccesoDatos.Lector.Read())
                 {
-                    PaqueteDeViaje aux = new PaqueteDeViaje()
-                    {
-                    aux.IdPaquete = (int)AccesoDatos.Lector[""];
-                    aux.NombrePaquete = (string)AccesoDatos.Lector[""];
-                    aux.Descripcion = (string)AccesoDatos.Lector[""];
-                    aux.PrecioPaquete = (decimal)AccesoDatos.Lector[""];
-                    aux.Mes = (string)AccesoDatos.Lector[""];
-                    aux.Duracion = (string)AccesoDatos.Lector[""];
+                    PaqueteDeViaje aux = new PaqueteDeViaje();
+
+                    
+                    aux.IdPaquete = (int)AccesoDatos.Lector["IdPaquete"];
+                    aux.NombrePaquete = (string)AccesoDatos.Lector["NombrePaquete"];
+                    aux.Descripcion = (string)AccesoDatos.Lector["Descripcion"];
+                    aux.PrecioPaquete = (Decimal)AccesoDatos.Lector["PrecioPaquete"];
+                    aux.Mes = (int)AccesoDatos.Lector["Mes"];
+                    aux.Duracion = (string)AccesoDatos.Lector["Duracion"];
+                    aux.TipoTransporte = (int)AccesoDatos.Lector["TipoTransporte"];
+                   // aux.URLimagen = (string)AccesoDatos.Lector["URLimagen"];
 
 
-                    //Aux para Hotel
-                    aux.IdHotel = new Hotel();
-                    aux.IdHotel.IdHotel = (int)AccesoDatos.Lector[""];
-                    aux.IdHotel.NombreHotel = (string)AccesoDatos.Lector[""];
-                    aux.IdHotel.Descripcion = (string)AccesoDatos.Lector[""];
+
+                    ////Aux para Hotel
+                    //aux.IdHotel = new Hotel();
+                    //aux.IdHotel.IdHotel = (int)AccesoDatos.Lector[""];
+                    //aux.IdHotel.NombreHotel = (string)AccesoDatos.Lector[""];
+                    //aux.IdHotel.Descripcion = (string)AccesoDatos.Lector[""];
 
                     listarPaquete.Add(aux);
                 }
@@ -58,73 +63,73 @@ namespace Funcionalidades
 
 
 
-        public void Agregar(PaqueteDeViaje nuevoPaquete)
-        {
-            AccesoDatos Accesodatos = new AccesoDatos();
-            try
-            {
+        //public void Agregar(PaqueteDeViaje nuevoPaquete)
+        //{
+        //    AccesoDatos Accesodatos = new AccesoDatos();
+        //    try
+        //    {
 
-                Accesodatos.setearConsulta("");
-                Accesodatos.setearParametros("@", nuevoPaquete.IdPaquete);
-                Accesodatos.setearParametros("@", nuevoPaquete.NombrePaquete);
-                Accesodatos.setearParametros("@", nuevoPaquete.Descripcion);
-                Accesodatos.setearParametros("@", nuevoPaquete.PrecioPaquete);
-                Accesodatos.setearParametros("@", nuevoPaquete.Mes);
-                Accesodatos.setearParametros("@", nuevoPaquete.Duracion);
-                Accesodatos.setearParametros("@", nuevoPaquete.IdHotel.IdHotel);
-                Accesodatos.ejecutarAccion();
+        //        Accesodatos.setearConsulta("");
+        //        Accesodatos.setearParametros("@", nuevoPaquete.IdPaquete);
+        //        Accesodatos.setearParametros("@", nuevoPaquete.NombrePaquete);
+        //        Accesodatos.setearParametros("@", nuevoPaquete.Descripcion);
+        //        Accesodatos.setearParametros("@", nuevoPaquete.PrecioPaquete);
+        //        Accesodatos.setearParametros("@", nuevoPaquete.Mes);
+        //        Accesodatos.setearParametros("@", nuevoPaquete.Duracion);
+        //        Accesodatos.setearParametros("@", nuevoPaquete.IdHotel.IdHotel);
+        //        Accesodatos.ejecutarAccion();
 
-            }
-            catch (Exception ex)
-            {
+        //    }
+        //    catch (Exception ex)
+        //    {
 
-                throw ex;
-            }
-            finally
-            {
-                Accesodatos.cerrarConexion();
-
-
-            }
+        //        throw ex;
+        //    }
+        //    finally
+        //    {
+        //        Accesodatos.cerrarConexion();
 
 
+        //    }
 
 
 
-        }
+
+
+        //}
 
 
 
-        public void Modificar(PaqueteDeViaje nuevoPaquete)
-        {
-            AccesoDatos Accesodatos = new AccesoDatos();
-            try
-            {
+        //public void Modificar(PaqueteDeViaje nuevoPaquete)
+        //{
+        //    AccesoDatos Accesodatos = new AccesoDatos();
+        //    try
+        //    {
 
-                Accesodatos.setearConsulta("");
-                Accesodatos.setearParametros("@", nuevoPaquete.IdPaquete);
-                Accesodatos.setearParametros("@", nuevoPaquete.NombrePaquete);
-                Accesodatos.setearParametros("@", nuevoPaquete.Descripcion);
-                Accesodatos.setearParametros("@", nuevoPaquete.PrecioPaquete);
-                Accesodatos.setearParametros("@", nuevoPaquete.Mes);
-                Accesodatos.setearParametros("@", nuevoPaquete.Duracion);
-                Accesodatos.setearParametros("@", nuevoPaquete.IdHotel.IdHotel);
-                Accesodatos.ejecutarAccion();
+        //        Accesodatos.setearConsulta("");
+        //        Accesodatos.setearParametros("@", nuevoPaquete.IdPaquete);
+        //        Accesodatos.setearParametros("@", nuevoPaquete.NombrePaquete);
+        //        Accesodatos.setearParametros("@", nuevoPaquete.Descripcion);
+        //        Accesodatos.setearParametros("@", nuevoPaquete.PrecioPaquete);
+        //        Accesodatos.setearParametros("@", nuevoPaquete.Mes);
+        //        Accesodatos.setearParametros("@", nuevoPaquete.Duracion);
+        //        Accesodatos.setearParametros("@", nuevoPaquete.IdHotel.IdHotel);
+        //        Accesodatos.ejecutarAccion();
 
-            }
-            catch (Exception ex)
-            {
+        //    }
+        //    catch (Exception ex)
+        //    {
 
-                throw ex;
-            }
-            finally
-            {
-                Accesodatos.cerrarConexion();
+        //        throw ex;
+        //    }
+        //    finally
+        //    {
+        //        Accesodatos.cerrarConexion();
 
 
-            }
+        //    }
 
-        }
+        //}
 
     }
 
