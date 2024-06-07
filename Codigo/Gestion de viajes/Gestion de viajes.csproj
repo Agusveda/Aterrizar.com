@@ -66,6 +66,7 @@
   <ItemGroup>
     <Content Include="BusSeleccionDestino.aspx" />
     <Content Include="Contacto.aspx" />
+    <Content Include="DetallePaquete.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Inicio.aspx" />
     <Content Include="Login.aspx" />
@@ -90,6 +91,13 @@
     </Compile>
     <Compile Include="Contacto.aspx.designer.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetallePaquete.aspx.cs">
+      <DependentUpon>DetallePaquete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetallePaquete.aspx.designer.cs">
+      <DependentUpon>DetallePaquete.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

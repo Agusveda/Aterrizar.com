@@ -12,6 +12,9 @@ using Funcionalidades;
 
 namespace Funcionalidades
 {
+  
+    
+    
     public class RepositorioArticulo
     {
         public List<Articulo> Listar()
