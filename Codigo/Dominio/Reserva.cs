@@ -13,7 +13,7 @@ namespace Dominio
         public int DNIUsuario { get; set; }
         public bool estado { get; set; } // Estado de la reserva 1 aceptada 0 cancelada
         public PaqueteDeViaje IdPaquete { get; set; } // toma el objeto de paquete de viaje
-        public float Precio { get; set; }
+        public decimal Precio { get; set; }
 
     }
 }

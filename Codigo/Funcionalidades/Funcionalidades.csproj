@@ -44,6 +44,9 @@
     <Compile Include="AccesoDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositorioArticulo.cs" />
+    <Compile Include="RepositorioDestino.cs" />
+    <Compile Include="RepositorioExcursiones.cs" />
+    <Compile Include="RepositorioHotel.cs" />
     <Compile Include="RepositorioPaquete.cs" />
   </ItemGroup>
   <ItemGroup>

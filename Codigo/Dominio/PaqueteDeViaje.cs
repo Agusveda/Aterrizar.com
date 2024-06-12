@@ -12,7 +12,7 @@ namespace Gestion_de_viajes
         public int cdgDestino { get; set; }
         public string NombrePaquete { get; set; }
         public string Descripcion { get; set; }
-        public Decimal PrecioPaquete { get; set; }
+        public decimal PrecioPaquete { get; set; }
         public int Mes {get; set; }
         public string Duracion { get; set; }
         public int TipoTransporte { get; set; }
