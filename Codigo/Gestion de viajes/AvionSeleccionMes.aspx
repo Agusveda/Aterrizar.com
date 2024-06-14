@@ -44,6 +44,7 @@
         .card-title {
             text-align: center;
             margin-top: 10px;
+            font-size: 24px;
         }
     </style>
 </asp:Content>
@@ -60,7 +61,6 @@
                         <img src="/imagenes/JULIO.JPG" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">SALIDAS EN JULIO</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                     </div>
                 </a>
@@ -72,7 +72,6 @@
                         <img src="/imagenes/Agosto.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">SALIDAS EN AGOSTO</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                     </div>
                 </a>
@@ -84,7 +83,6 @@
                         <img src="/imagenes/Septiembre.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">SALIDAS EN SEPTIEMBRE</h5>
-                            <p class="card-text">This a a a  a a aa a a a a a aa a  is a longer card with supporting text below as a natural lead-in to additional content.</p>
                         </div>
                     </div>
                 </a>
@@ -96,7 +94,6 @@
                         <img src="/imagenes/octubre.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">SALIDAS EN OCTUBRE</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                     </div>
                 </a>

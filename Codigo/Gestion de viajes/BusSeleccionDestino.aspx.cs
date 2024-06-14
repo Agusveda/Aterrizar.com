@@ -14,16 +14,17 @@ namespace Gestion_de_viajes
         protected void Page_Load(object sender, EventArgs e)
         {
 
-
+            if (!IsPostBack)
             {
-                RepositorioPaquete repositorioPaquete = new RepositorioPaquete();
-                listapaquete = repositorioPaquete.ListarConSp();
-                repPaquetesBus.DataSource = listapaquete;
-                repPaquetesBus.DataBind();
-
-
+                PaquetesBus();
             }
-
+        }
+        private void PaquetesBus()
+        {
+            RepositorioPaquete repositorioPaquete = new RepositorioPaquete();
+            listapaquete = repositorioPaquete.ListarConSp(2);
+            repPaquetesBus.DataSource = listapaquete;
+            repPaquetesBus.DataBind();
         }
     }
 }

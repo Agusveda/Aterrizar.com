@@ -67,6 +67,47 @@ namespace Funcionalidades
         }
 
 
+        public List<PaqueteDeViaje> ListarConSp(int tipoTransporte)
+        {
+            List<PaqueteDeViaje> listarPaquete = new List<PaqueteDeViaje>();
+            AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {
+                accesoDatos.setearSp("SelPaqueteCompleto");
+
+               
+                accesoDatos.setearParametros("@TipoTransporte", tipoTransporte);
+                
+
+                accesoDatos.ejecutarLectura();
+
+                while (accesoDatos.Lector.Read())
+                {
+                    PaqueteDeViaje aux = new PaqueteDeViaje
+                    {
+                        IdPaquete = (int)accesoDatos.Lector["IdPaquete"],
+                        NombrePaquete = (string)accesoDatos.Lector["NombrePaquete"],
+                        Descripcion = (string)accesoDatos.Lector["Descripcion"],
+                        PrecioPaquete = (decimal)accesoDatos.Lector["PrecioPaquete"],
+                        Mes = (int)accesoDatos.Lector["Mes"],
+                        Duracion = (string)accesoDatos.Lector["Duracion"],
+                        TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"],
+                        URLimagen = accesoDatos.Lector["URLimagen"] is DBNull ? "https://icrier.org/wp-content/uploads/2022/09/Event-Image-Not-Found.jpg" : (string)accesoDatos.Lector["URLimagen"]
+                    };
+
+                    listarPaquete.Add(aux);
+                }
+
+                accesoDatos.cerrarConexion();
+                return listarPaquete;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
 
         //public void Agregar(PaqueteDeViaje nuevoPaquete)
         //{
