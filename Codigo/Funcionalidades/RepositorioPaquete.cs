@@ -27,15 +27,20 @@ namespace Funcionalidades
                 {
                     PaqueteDeViaje aux = new PaqueteDeViaje();
 
-                    
+
                     aux.IdPaquete = (int)AccesoDatos.Lector["IdPaquete"];
                     aux.NombrePaquete = (string)AccesoDatos.Lector["NombrePaquete"];
                     aux.Descripcion = (string)AccesoDatos.Lector["Descripcion"];
-                    aux.PrecioPaquete = (Decimal)AccesoDatos.Lector["PrecioPaquete"];
+                    aux.PrecioPaquete = (decimal)AccesoDatos.Lector["PrecioPaquete"];
                     aux.Mes = (int)AccesoDatos.Lector["Mes"];
                     aux.Duracion = (string)AccesoDatos.Lector["Duracion"];
                     aux.TipoTransporte = (int)AccesoDatos.Lector["TipoTransporte"];
-                   // aux.URLimagen = (string)AccesoDatos.Lector["URLimagen"];
+                    if (AccesoDatos.Lector["URLimagen"] is DBNull) {
+                        aux.URLimagen = "https://icrier.org/wp-content/uploads/2022/09/Event-Image-Not-Found.jpg";
+                        
+                    } else {
+                        aux.URLimagen = (string)AccesoDatos.Lector["URLimagen"];
+                    }
 
 
 

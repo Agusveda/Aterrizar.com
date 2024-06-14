@@ -11,11 +11,13 @@ namespace Gestion_de_viajes
 {
     public partial class PaqueteAvionSeleccionMes : System.Web.UI.Page
     {
+        public List<PaqueteDeViaje> listapaquete { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             RepositorioPaquete repositorioPaquete = new RepositorioPaquete();
-            dgvPaquete.DataSource = repositorioPaquete.ListarConSp();
-            dgvPaquete.DataBind();
+            listapaquete = repositorioPaquete.ListarConSp();
+            repPaquetesAvion.DataSource = listapaquete;
+            repPaquetesAvion.DataBind();
 
 
         }

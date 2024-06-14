@@ -206,3 +206,48 @@ D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\Dominio.dll
 D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\Funcionalidades.dll
 D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\Dominio.pdb
 D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\Funcionalidades.pdb
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\Gestion de viajes.dll.config
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\Gestion de viajes.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\Gestion de viajes.pdb
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csc.exe
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csc.exe.config
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csc.rsp
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csi.exe
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csi.exe.config
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csi.rsp
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.Managed.Core.targets
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Buffers.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Collections.Immutable.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Memory.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Numerics.Vectors.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Reflection.Metadata.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\vbc.exe
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\vbc.exe.config
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\vbc.rsp
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\VBCSCompiler.exe
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\VBCSCompiler.exe.config
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\Dominio.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\Funcionalidades.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\Dominio.pdb
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\Funcionalidades.pdb
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.csproj.AssemblyReference.cache
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.csproj.CoreCompileInputs.cache
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion .416D0B75.Up2Date
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.dll
+E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.pdb
