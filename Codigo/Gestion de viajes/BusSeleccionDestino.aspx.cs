@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Funcionalidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,8 +10,19 @@ namespace Gestion_de_viajes
 {
     public partial class BusSeleccionDestino : System.Web.UI.Page
     {
+        public List<PaqueteDeViaje> listapaquete { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
+            {
+                RepositorioPaquete repositorioPaquete = new RepositorioPaquete();
+                listapaquete = repositorioPaquete.ListarConSp();
+                repPaquetesBus.DataSource = listapaquete;
+                repPaquetesBus.DataBind();
+
+
+            }
 
         }
     }

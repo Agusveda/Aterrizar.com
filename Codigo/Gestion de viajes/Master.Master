@@ -44,42 +44,41 @@
                 font-weight: bold;
             }
 
-        .navbar-nav .dropdown-menu {
-            background-color: #4b79a1;
-            border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
 
-        .dropdown-menu .dropdown-item {
-            color: #fff;
-            transition: background-color 0.3s, color 0.3s;
-        }
 
-            .dropdown-menu .dropdown-item:hover {
-                background-color: #283e51;
-                color: #ffcc00;
-            }
 
-             footer {
+        footer {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             padding: 20px;
             background-color: #f8f9fa;
+         
+            bottom: 0;
+            width: 100%; 
+             width: 100%;
+             z-index: 1000;
+             height: 150px;
+             margin-top: 150px;
         }
 
-        footer img {
-            margin-bottom: 10px;
-        }
+
+        .container {
+    margin-bottom: 300px; 
+}
+
+            footer img {
+                margin-bottom: 10px;
+            }
 
         .Copyright {
             margin: 0;
         }
+
         a {
-        text-decoration: none !important;
-    }
+            text-decoration: none !important;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
@@ -105,7 +104,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="Login.aspx">Login</a>
                         </li>
-                       
+
                     </ul>
                 </div>
             </div>
@@ -116,9 +115,10 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
+    <footer>
+    <img src="/Imagenes/Viajes.png" width="7%">
+    <p class="Copyright">&copy Copyright Aterrizar.com - 2024</p>
+</footer>
 </body>
-      <footer>
-            <img src ="/Imagenes/Viajes.png" width="10%">
-            <p class="Copyright">&copy Copyright Aterrizar.com - 2024</p>
-        </footer>
+
 </html>

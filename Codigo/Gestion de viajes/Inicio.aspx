@@ -30,6 +30,7 @@
         .container-custom {
             padding-left: 15px;
             padding-right: 15px;
+             margin-bottom: 110px;
         }
 
         .card-body {
