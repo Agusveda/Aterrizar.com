@@ -16,3 +16,7 @@ C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Funcionalidades\bin\Debug\Funciona
 C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Funcionalidades\bin\Debug\Dominio.dll
 C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Funcionalidades\bin\Debug\Dominio.pdb
 C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Funcionalidades\obj\Debug\Funciona.62B5C317.Up2Date
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Funcionalidades\obj\Debug\Funcionalidades.csproj.AssemblyReference.cache
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Funcionalidades\obj\Debug\Funcionalidades.csproj.CoreCompileInputs.cache
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Funcionalidades\obj\Debug\Funcionalidades.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Funcionalidades\obj\Debug\Funcionalidades.pdb

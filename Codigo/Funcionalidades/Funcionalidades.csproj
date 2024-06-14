@@ -49,6 +49,7 @@
     <Compile Include="RepositorioHotel.cs" />
     <Compile Include="RepositorioPaquete.cs" />
     <Compile Include="RepositorioReserva.cs" />
+    <Compile Include="RepositorioUsuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Clases\Clases.csproj">

@@ -202,3 +202,7 @@ C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Gestion de viajes\bin\Dominio.dll
 C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Gestion de viajes\bin\Funcionalidades.dll
 C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Gestion de viajes\bin\Dominio.pdb
 C:\Users\Usuario\Desktop\Aterrizar.com\Codigo\Gestion de viajes\bin\Funcionalidades.pdb
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\Dominio.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\Funcionalidades.dll
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\Dominio.pdb
+D:\TRANSFERENCIA\Aterrizar.com\Codigo\Gestion de viajes\bin\Funcionalidades.pdb

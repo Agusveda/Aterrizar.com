@@ -32,6 +32,7 @@ namespace Funcionalidades
                     aux.DNIUsuario = (int)AccesoDatos.Lector["DNI"];
                     aux.estado = (bool)AccesoDatos.Lector["EstadoReserva"];
                     aux.Precio = (decimal)AccesoDatos.Lector["Precio"];
+                    aux.IdPaquete = new PaqueteDeViaje();
                     aux.IdPaquete.IdPaquete = (int)AccesoDatos.Lector["IdPaquete"];
 
 
