@@ -41,6 +41,7 @@ namespace Funcionalidades
                     } else {
                         aux.URLimagen = (string)AccesoDatos.Lector["URLimagen"];
                     }
+                    aux.Disponibilidad = (int)AccesoDatos.Lector["Disponibilidad"];
 
 
 

@@ -12,5 +12,6 @@ namespace Gestion_de_viajes
         public string Descripcion { get; set; }
         public decimal PrecioPorNoche { get; set; }
         public int IdDestino { get; set; }
+        public string URLimagen {  get; set; }
     }
 }

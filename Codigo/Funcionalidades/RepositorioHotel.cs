@@ -31,6 +31,7 @@ namespace Funcionalidades
                     aux.Descripcion = (string)AccesoDatos.Lector["Descripcion"];
                     aux.PrecioPorNoche = (decimal)AccesoDatos.Lector["PrecioPorNoche"];
                     aux.IdDestino = (int)AccesoDatos.Lector["IdDestino"];
+                    aux.URLimagen = (string)AccesoDatos.Lector["URLimagen"];
 
 
         listarHotel.Add(aux);

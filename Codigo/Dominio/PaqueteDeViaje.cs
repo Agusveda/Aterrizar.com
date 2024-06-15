@@ -17,6 +17,6 @@ namespace Gestion_de_viajes
         public string Duracion { get; set; }
         public int TipoTransporte { get; set; }
         public string URLimagen {  get; set; }
-
+        public int Disponibilidad { get; set; }
     }
 }
