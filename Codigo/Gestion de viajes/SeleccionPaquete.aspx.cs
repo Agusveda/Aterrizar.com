@@ -12,11 +12,23 @@ namespace Gestion_de_viajes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           if (!IsPostBack)
+            if (!IsPostBack)
             {
-                CargarDetallePaquete();
+                int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
+                CargarDetallePaquete(idPaquete);
             }
-          
         }
+
+            private void CargarDetallePaquete(int idPaquete)
+            {
+                RepositorioPaquete repositorio = new RepositorioPaquete();
+                PaqueteDeViaje paquete = repositorio.ObtenerPaquetePorId(idPaquete);
+                if (paquete != null)
+                {
+                    imgPaquete.ImageUrl = paquete.URLimagen;
+
+                }
+            }
+        
     }
 }

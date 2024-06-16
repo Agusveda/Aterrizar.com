@@ -76,6 +76,7 @@ namespace Funcionalidades
             {
                 accesoDatos.setearSp("SelPaqueteCompleto");
 
+
                
                 accesoDatos.setearParametros("@TipoTransporte", tipoTransporte);
                 
@@ -109,76 +110,120 @@ namespace Funcionalidades
         }
 
 
+        public PaqueteDeViaje ObtenerPaquetePorId(int idPaquete)
+        {
+            PaqueteDeViaje paquete = null;
+            AccesoDatos accesoDatos = new AccesoDatos();
 
-        //public void Agregar(PaqueteDeViaje nuevoPaquete)
-        //{
-        //    AccesoDatos Accesodatos = new AccesoDatos();
-        //    try
-        //    {
+            try
+            {
+                accesoDatos.setearSp("SelPaqueteCompleto");
+                accesoDatos.setearParametros("@IdPaquete", idPaquete);
+                accesoDatos.ejecutarLectura();
 
-        //        Accesodatos.setearConsulta("");
-        //        Accesodatos.setearParametros("@", nuevoPaquete.IdPaquete);
-        //        Accesodatos.setearParametros("@", nuevoPaquete.NombrePaquete);
-        //        Accesodatos.setearParametros("@", nuevoPaquete.Descripcion);
-        //        Accesodatos.setearParametros("@", nuevoPaquete.PrecioPaquete);
-        //        Accesodatos.setearParametros("@", nuevoPaquete.Mes);
-        //        Accesodatos.setearParametros("@", nuevoPaquete.Duracion);
-        //        Accesodatos.setearParametros("@", nuevoPaquete.IdHotel.IdHotel);
-        //        Accesodatos.ejecutarAccion();
+                if (accesoDatos.Lector.Read())
+                {
+                    paquete = new PaqueteDeViaje
+                    {
+                        IdPaquete = (int)accesoDatos.Lector["IdPaquete"],
+                        NombrePaquete = (string)accesoDatos.Lector["NombrePaquete"],
+                        Descripcion = (string)accesoDatos.Lector["Descripcion"],
+                        PrecioPaquete = (decimal)accesoDatos.Lector["PrecioPaquete"],
+                        Mes = (int)accesoDatos.Lector["Mes"],
+                        Duracion = (string)accesoDatos.Lector["Duracion"],
+                        TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"],
+                        URLimagen = accesoDatos.Lector["URLimagen"] is DBNull ? "https://icrier.org/wp-content/uploads/2022/09/Event-Image-Not-Found.jpg" : (string)accesoDatos.Lector["URLimagen"],
+                        Disponibilidad = (int)accesoDatos.Lector["Disponibilidad"]
+                    };
+                }
 
-        //    }
-        //    catch (Exception ex)
-        //    {
+                accesoDatos.cerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
 
-        //        throw ex;
-        //    }
-        //    finally
-        //    {
-        //        Accesodatos.cerrarConexion();
-
-
-        //    }
-
-
-
-
-
-        //}
-
-
-
-        //public void Modificar(PaqueteDeViaje nuevoPaquete)
-        //{
-        //    AccesoDatos Accesodatos = new AccesoDatos();
-        //    try
-        //    {
-
-        //        Accesodatos.setearConsulta("");
-        //        Accesodatos.setearParametros("@", nuevoPaquete.IdPaquete);
-        //        Accesodatos.setearParametros("@", nuevoPaquete.NombrePaquete);
-        //        Accesodatos.setearParametros("@", nuevoPaquete.Descripcion);
-        //        Accesodatos.setearParametros("@", nuevoPaquete.PrecioPaquete);
-        //        Accesodatos.setearParametros("@", nuevoPaquete.Mes);
-        //        Accesodatos.setearParametros("@", nuevoPaquete.Duracion);
-        //        Accesodatos.setearParametros("@", nuevoPaquete.IdHotel.IdHotel);
-        //        Accesodatos.ejecutarAccion();
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        throw ex;
-        //    }
-        //    finally
-        //    {
-        //        Accesodatos.cerrarConexion();
+            return paquete;
+        }
+    
 
 
-        //    }
 
-        //}
 
-    }
+    //public void Agregar(PaqueteDeViaje nuevoPaquete)
+    //{
+    //    AccesoDatos Accesodatos = new AccesoDatos();
+    //    try
+    //    {
+
+    //        Accesodatos.setearConsulta("");
+    //        Accesodatos.setearParametros("@", nuevoPaquete.IdPaquete);
+    //        Accesodatos.setearParametros("@", nuevoPaquete.NombrePaquete);
+    //        Accesodatos.setearParametros("@", nuevoPaquete.Descripcion);
+    //        Accesodatos.setearParametros("@", nuevoPaquete.PrecioPaquete);
+    //        Accesodatos.setearParametros("@", nuevoPaquete.Mes);
+    //        Accesodatos.setearParametros("@", nuevoPaquete.Duracion);
+    //        Accesodatos.setearParametros("@", nuevoPaquete.IdHotel.IdHotel);
+    //        Accesodatos.ejecutarAccion();
+
+    //    }
+    //    catch (Exception ex)
+    //    {
+
+    //        throw ex;
+    //    }
+    //    finally
+    //    {
+    //        Accesodatos.cerrarConexion();
+
+
+    //    }
+
+
+
+
+
+    //}
+
+
+
+    //public void Modificar(PaqueteDeViaje nuevoPaquete)
+    //{
+    //    AccesoDatos Accesodatos = new AccesoDatos();
+    //    try
+    //    {
+
+    //        Accesodatos.setearConsulta("");
+    //        Accesodatos.setearParametros("@", nuevoPaquete.IdPaquete);
+    //        Accesodatos.setearParametros("@", nuevoPaquete.NombrePaquete);
+    //        Accesodatos.setearParametros("@", nuevoPaquete.Descripcion);
+    //        Accesodatos.setearParametros("@", nuevoPaquete.PrecioPaquete);
+    //        Accesodatos.setearParametros("@", nuevoPaquete.Mes);
+    //        Accesodatos.setearParametros("@", nuevoPaquete.Duracion);
+    //        Accesodatos.setearParametros("@", nuevoPaquete.IdHotel.IdHotel);
+    //        Accesodatos.ejecutarAccion();
+
+    //    }
+    //    catch (Exception ex)
+    //    {
+
+    //        throw ex;
+    //    }
+    //    finally
+    //    {
+    //        Accesodatos.cerrarConexion();
+
+
+    //    }
+
+    //}
+
+}
 
 }
 
