@@ -12,7 +12,11 @@ namespace Gestion_de_viajes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+           if (!IsPostBack)
+            {
+                CargarDetallePaquete();
+            }
+          
         }
     }
 }
