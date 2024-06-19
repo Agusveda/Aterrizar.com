@@ -53,6 +53,43 @@ namespace Funcionalidades
 
         }
 
+        public Reserva ObtenerReservaPorId(int idReserva)
+        {
+            Reserva reserva = new Reserva();
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("ObtenerReservaPorId");
+                accesoDatos.setearParametros("@IdReserva", idReserva);
+                accesoDatos.ejecutarLectura();
+
+                if (accesoDatos.Lector.Read())
+                {
+                    Reserva aux = new Reserva();
+
+                    aux.IdReserva = (int)accesoDatos.Lector["IdReserva"];
+                    aux.DNIUsuario = (int)accesoDatos.Lector["DNI"];
+                    aux.estado = (bool)accesoDatos.Lector["EstadoReserva"];
+                    aux.IdPaquete = (PaqueteDeViaje)accesoDatos.Lector["IdPaquete"];
+                    aux.Precio = (decimal)accesoDatos.Lector["Precio"];
+                    reserva = aux;
+                }
+
+                accesoDatos.cerrarConexion();
+                return reserva;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+        }
+
 
     }
 }
