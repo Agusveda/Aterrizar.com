@@ -30,7 +30,7 @@ namespace Funcionalidades
                     aux.NombreHotel = (string)AccesoDatos.Lector["NombreHotel"];
                     aux.Descripcion = (string)AccesoDatos.Lector["Descripcion"];
                     aux.PrecioPorNoche = (decimal)AccesoDatos.Lector["PrecioPorNoche"];
-                    aux.IdDestino = (int)AccesoDatos.Lector["IdDestino"];
+                    aux.cdgDestino = (int)AccesoDatos.Lector["IdDestino"];
                     aux.URLimagen = (string)AccesoDatos.Lector["URLimagen"];
 
 
@@ -50,5 +50,50 @@ namespace Funcionalidades
             }
 
         }
+
+        public List<Hotel> SelHotelCompletoPorDestino(int cdgDestino)
+        {
+            List <Hotel> listarHotelDestino = new List<Hotel>();
+            AccesoDatos accesoDatos= new AccesoDatos();
+
+
+            try
+            {
+                accesoDatos.setearSp("SelHotelCompletoPorDestino");
+                accesoDatos.setearParametros("@cdgDestino", cdgDestino);
+
+                accesoDatos.ejecutarLectura();
+                while(accesoDatos.Lector.Read())
+                {
+                     Hotel aux = new Hotel();
+
+                    aux.IdHotel = (int)accesoDatos.Lector["IdHotel"];
+                    aux.NombreHotel = (string)accesoDatos.Lector["NombreHotel"];
+                    aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
+                    aux.PrecioPorNoche = (decimal)accesoDatos.Lector["PrecioPorNoche"];
+                    aux.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
+                    aux.URLimagen = accesoDatos.Lector["URLimagen"] is DBNull ? "https://icrier.org/wp-content/uploads/2022/09/Event-Image-Not-Found.jpg" : (string)accesoDatos.Lector["URLimagen"];
+
+
+
+
+                    listarHotelDestino.Add(aux);
+
+                }
+                accesoDatos.cerrarConexion();
+                return listarHotelDestino;
+
+            }
+            catch (Exception ex )
+            {
+
+                throw ex;
+            }
+
+
+
+
+        }
+
     }
 }

@@ -29,6 +29,7 @@ namespace Funcionalidades
 
 
                     aux.IdPaquete = (int)AccesoDatos.Lector["IdPaquete"];
+                    aux.cdgDestino = (int)AccesoDatos.Lector["cdgDestino"];
                     aux.NombrePaquete = (string)AccesoDatos.Lector["NombrePaquete"];
                     aux.Descripcion = (string)AccesoDatos.Lector["Descripcion"];
                     aux.PrecioPaquete = (decimal)AccesoDatos.Lector["PrecioPaquete"];
@@ -85,17 +86,18 @@ namespace Funcionalidades
 
                 while (accesoDatos.Lector.Read())
                 {
-                    PaqueteDeViaje aux = new PaqueteDeViaje
-                    {
-                        IdPaquete = (int)accesoDatos.Lector["IdPaquete"],
-                        NombrePaquete = (string)accesoDatos.Lector["NombrePaquete"],
-                        Descripcion = (string)accesoDatos.Lector["Descripcion"],
-                        PrecioPaquete = (decimal)accesoDatos.Lector["PrecioPaquete"],
-                        Mes = (int)accesoDatos.Lector["Mes"],
-                        Duracion = (string)accesoDatos.Lector["Duracion"],
-                        TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"],
-                        URLimagen = accesoDatos.Lector["URLimagen"] is DBNull ? "https://icrier.org/wp-content/uploads/2022/09/Event-Image-Not-Found.jpg" : (string)accesoDatos.Lector["URLimagen"]
-                    };
+                    PaqueteDeViaje aux = new PaqueteDeViaje();
+
+                    aux.IdPaquete = (int)accesoDatos.Lector["IdPaquete"];
+                    aux.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
+                    aux.NombrePaquete = (string)accesoDatos.Lector["NombrePaquete"];
+                    aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
+                    aux.PrecioPaquete = (decimal)accesoDatos.Lector["PrecioPaquete"];
+                    aux.Mes = (int)accesoDatos.Lector["Mes"];
+                    aux.Duracion = (string)accesoDatos.Lector["Duracion"];
+                    aux.TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"];
+                    aux.URLimagen = accesoDatos.Lector["URLimagen"] is DBNull ? "https://icrier.org/wp-content/uploads/2022/09/Event-Image-Not-Found.jpg" : (string)accesoDatos.Lector["URLimagen"];
+                    
 
                     listarPaquete.Add(aux);
                 }
@@ -112,32 +114,35 @@ namespace Funcionalidades
 
         public PaqueteDeViaje ObtenerPaquetePorId(int idPaquete)
         {
-            PaqueteDeViaje paquete = null;
+            PaqueteDeViaje paquete = new PaqueteDeViaje();
             AccesoDatos accesoDatos = new AccesoDatos();
 
             try
             {
-                accesoDatos.setearSp("SelPaqueteCompleto");
+                accesoDatos.setearSp("ObtenerPaquetePorId");
                 accesoDatos.setearParametros("@IdPaquete", idPaquete);
                 accesoDatos.ejecutarLectura();
 
                 if (accesoDatos.Lector.Read())
                 {
-                    paquete = new PaqueteDeViaje
-                    {
-                        IdPaquete = (int)accesoDatos.Lector["IdPaquete"],
-                        NombrePaquete = (string)accesoDatos.Lector["NombrePaquete"],
-                        Descripcion = (string)accesoDatos.Lector["Descripcion"],
-                        PrecioPaquete = (decimal)accesoDatos.Lector["PrecioPaquete"],
-                        Mes = (int)accesoDatos.Lector["Mes"],
-                        Duracion = (string)accesoDatos.Lector["Duracion"],
-                        TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"],
-                        URLimagen = accesoDatos.Lector["URLimagen"] is DBNull ? "https://icrier.org/wp-content/uploads/2022/09/Event-Image-Not-Found.jpg" : (string)accesoDatos.Lector["URLimagen"],
-                        Disponibilidad = (int)accesoDatos.Lector["Disponibilidad"]
-                    };
+                    PaqueteDeViaje aux = new PaqueteDeViaje();
+
+
+                        aux.IdPaquete = (int)accesoDatos.Lector["IdPaquete"];
+                    aux.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
+                    aux.NombrePaquete = (string)accesoDatos.Lector["NombrePaquete"];
+                    aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
+                    aux.PrecioPaquete = (decimal)accesoDatos.Lector["PrecioPaquete"];
+                    aux.Mes = (int)accesoDatos.Lector["Mes"];
+                    aux.Duracion = (string)accesoDatos.Lector["Duracion"];
+                    aux.TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"];
+                    aux.URLimagen = accesoDatos.Lector["URLimagen"] is DBNull ? "https://icrier.org/wp-content/uploads/2022/09/Event-Image-Not-Found.jpg" : (string)accesoDatos.Lector["URLimagen"];
+                        aux.Disponibilidad = (int)accesoDatos.Lector["Disponibilidad"];
+                    paquete = aux;
                 }
 
                 accesoDatos.cerrarConexion();
+                return paquete;
             }
             catch (Exception ex)
             {
@@ -148,7 +153,6 @@ namespace Funcionalidades
                 accesoDatos.cerrarConexion();
             }
 
-            return paquete;
         }
     
 

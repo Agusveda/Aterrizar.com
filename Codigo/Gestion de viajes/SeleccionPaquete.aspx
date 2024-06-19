@@ -98,13 +98,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="detalle-paquete">
         <h2>Detalle del Paquete</h2>
+        <asp:Label Text="nombre" ID="lbNombrePaquete" runat="server" />
         <div class="section">
             <asp:Image ID="imgPaquete" runat="server" alt="Imagen del Paquete" />
         </div>
         <div class="section hotel">
             <div>
                 <label for="hotelSelect">Desplegable Hoteles:</label>
-                <asp:DropDownList ID="hotelSelect" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlHoteles" runat="server"></asp:DropDownList>
             </div>
             <div>
                 <asp:Image ID="imgHotel" runat="server" alt="Foto del Hotel" />

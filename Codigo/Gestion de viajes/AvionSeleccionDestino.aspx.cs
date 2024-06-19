@@ -15,7 +15,7 @@ namespace Gestion_de_viajes
         protected void Page_Load(object sender, EventArgs e)
         {
             RepositorioPaquete repositorioPaquete = new RepositorioPaquete();
-            listapaquete = repositorioPaquete.ListarConSp();
+            listapaquete = repositorioPaquete.ListarConSp(1);
             repPaquetesAvion.DataSource = listapaquete;
             repPaquetesAvion.DataBind();
 

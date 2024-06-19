@@ -66,8 +66,8 @@
             <asp:Repeater ID="repPaquetesAvion" runat="server">
                 <ItemTemplate>
                     <div class="col">
-                        <a href="SeleccionPaquete.aspx">
                             <div class="card h-100">
+                          <a href='<%# "SeleccionPaquete.aspx?id=" + Eval("IdPaquete") %>'>
                                 <img src='<%# Eval("URLimagen") %>' class="card-img-top articulo-img" alt="Imagen del artículo">
                                 <div class="card-body" style="text-align: center;">
                                     <h5 class="card-title"><%# Eval("NombrePaquete") %></h5>

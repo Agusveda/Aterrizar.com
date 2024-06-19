@@ -15,6 +15,15 @@ namespace Gestion_de_viajes
     {
 
         /// <summary>
+        /// Control lbNombrePaquete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbNombrePaquete;
+
+        /// <summary>
         /// Control imgPaquete.
         /// </summary>
         /// <remarks>
@@ -24,13 +33,13 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Image imgPaquete;
 
         /// <summary>
-        /// Control hotelSelect.
+        /// Control ddlHoteles.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList hotelSelect;
+        protected global::System.Web.UI.WebControls.DropDownList ddlHoteles;
 
         /// <summary>
         /// Control imgHotel.
