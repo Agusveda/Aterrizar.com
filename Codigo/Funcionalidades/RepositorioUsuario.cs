@@ -51,6 +51,37 @@ namespace Funcionalidades
 
         }
 
+        public Usuario ObtenerUsuarioPorId(int idUsuario)
+        {
+            Usuario usuario = new Usuario();
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("ObtenerUsuarioPorId");
+                accesoDatos.setearParametros("@IdUsuario", idUsuario);
+                accesoDatos.ejecutarLectura();
+
+                if (accesoDatos.Lector.Read())
+                {
+                    usuario.IdUsuario = (int)accesoDatos.Lector["IdUsuario"];
+                    usuario.DNI = (int)accesoDatos.Lector["DNI"];
+                    usuario.Nombre = (string)accesoDatos.Lector["Nombre"];
+                    usuario.Apellido = (string)accesoDatos.Lector["Apellido"];
+                    usuario.CorreoElectronico = (string)accesoDatos.Lector["CorreoElectronico"];
+                    usuario.Password = (string)accesoDatos.Lector["Password"];
+                    usuario.Telefono = (string)accesoDatos.Lector["Telefono"];
+                }
+
+                accesoDatos.cerrarConexion();
+                return usuario;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }   
+
 
     }
 }
