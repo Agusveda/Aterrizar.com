@@ -1,0 +1,6 @@
+- validar cuando hoteles sea null o vacio
+- excursion crear una descripción 
+- crear label de precio
+- reserva total sea paquete+hotel+excursiones adicionales
+- hacer login (opcional)
+- lo de mails (opcional)
