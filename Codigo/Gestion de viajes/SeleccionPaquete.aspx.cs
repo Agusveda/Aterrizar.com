@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Dominio;
 using Funcionalidades;
 
 namespace Gestion_de_viajes
@@ -19,11 +20,12 @@ namespace Gestion_de_viajes
                 int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
 
                 CargarDetallePaquete(idPaquete);
-                PrimeraImagenHotel();
+                PrimerHotel();
+                
             }
 
         }
-        private void PrimeraImagenHotel()
+        private void PrimerHotel()
         {
             RepositorioHotel repoHotel = new RepositorioHotel();
             int idHotel = int.Parse(ddlHoteles.SelectedItem.Value);
@@ -32,10 +34,13 @@ namespace Gestion_de_viajes
             if (hotelSeleccionado != null)
             {
                 imgHotel.ImageUrl = hotelSeleccionado.URLimagen;
+                detalleHotel.Text = hotelSeleccionado.Descripcion;
+
             }
 
-
         }
+
+       
 
         private void CargarDetalleHotel(int cdgDestino)
         {
@@ -64,6 +69,7 @@ namespace Gestion_de_viajes
                 lbNombrePaquete.Text = paquete.NombrePaquete;
                 int cdgdestino = paquete.cdgDestino;
                 CargarDetalleHotel(cdgdestino);
+                CargarExcursiones(cdgdestino);
             }
         }
 
@@ -76,9 +82,26 @@ namespace Gestion_de_viajes
                 if (hotelSeleccionado != null)
                 {
                     imgHotel.ImageUrl = hotelSeleccionado.URLimagen;
-                }
+                    detalleHotel.Text = hotelSeleccionado.Descripcion;
+
+            }
 
 
+        }
+
+
+
+
+        private void CargarExcursiones(int cdgDestino)
+        {
+            RepositorioExcursiones repoExcursion = new RepositorioExcursiones();
+            List<Excursiones> excursiones = repoExcursion.ObtenerExcursionesPorDestino(cdgDestino);
+
+            
+            excursionesIncluidas.DataSource = excursiones;
+            excursionesIncluidas.DataTextField = "Descripcion";
+            excursionesIncluidas.DataValueField = "IdExcursion";
+            excursionesIncluidas.DataBind();
         }
     }
 }

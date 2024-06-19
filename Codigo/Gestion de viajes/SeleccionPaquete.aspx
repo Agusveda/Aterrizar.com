@@ -112,7 +112,7 @@
             </div>
             <div>
                 <label>Detalle del Hotel</label>
-                <asp:Label ID="detalleHotel" runat="server" Text="Detalles del hotel aquí"></asp:Label>
+                <asp:Label ID="detalleHotel" runat="server" Text=""></asp:Label>
             </div>
         </div>
         <div class="section excursiones">
