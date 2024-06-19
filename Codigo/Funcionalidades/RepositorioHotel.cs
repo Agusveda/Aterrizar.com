@@ -95,5 +95,43 @@ namespace Funcionalidades
 
         }
 
+        public Hotel ObtenerHotelPorId(int idHotel)
+        {
+            Hotel hotel = new Hotel();
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("ObtenerHotelPorId");
+                accesoDatos.setearParametros("@IdHotel", idHotel);
+                accesoDatos.ejecutarLectura();
+
+                if (accesoDatos.Lector.Read())
+                {
+                    Hotel aux = new Hotel();
+
+                    aux.IdHotel = (int)accesoDatos.Lector["IdHotel"];
+                    aux.NombreHotel = (string)accesoDatos.Lector["NombreHotel"];
+                    aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
+                    aux.PrecioPorNoche = (decimal)accesoDatos.Lector["PrecioPorNoche"];
+                    aux.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
+                    aux.URLimagen = accesoDatos.Lector["URLimagen"] is DBNull ? "https://icrier.org/wp-content/uploads/2022/09/Event-Image-Not-Found.jpg" : (string)accesoDatos.Lector["URLimagen"];
+                    hotel = aux;
+                }
+
+                accesoDatos.cerrarConexion();
+                return hotel;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+        }
+
     }
 }

@@ -105,7 +105,7 @@
         <div class="section hotel">
             <div>
                 <label for="hotelSelect">Desplegable Hoteles:</label>
-                <asp:DropDownList ID="ddlHoteles" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlHoteles" AutoPostBack="true" runat="server" OnSelectedIndexChanged="ddlHoteles_SelectedIndexChanged" ></asp:DropDownList>
             </div>
             <div>
                 <asp:Image ID="imgHotel" runat="server" alt="Foto del Hotel" />
