@@ -10,7 +10,7 @@ namespace Dominio
     {
         public int IdDestino { get; set; }
         public int cdgDestino { get; set; }
-        public string Descripcion {  get; set; }
+        public string nombreDestino {  get; set; }
         public int TipoTransporte { get; set; }  // vuelo1 o bus 2
         public decimal Precio { get; set; }
 

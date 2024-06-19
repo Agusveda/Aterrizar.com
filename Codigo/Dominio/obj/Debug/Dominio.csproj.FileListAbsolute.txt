@@ -10,3 +10,9 @@ D:\TRANSFERENCIA\Aterrizar.com\Codigo\Dominio\obj\Debug\Dominio.csproj.AssemblyR
 D:\TRANSFERENCIA\Aterrizar.com\Codigo\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 D:\TRANSFERENCIA\Aterrizar.com\Codigo\Dominio\obj\Debug\Dominio.dll
 D:\TRANSFERENCIA\Aterrizar.com\Codigo\Dominio\obj\Debug\Dominio.pdb
+E:\UTN\Aterrizar.com\Codigo\Dominio\bin\Debug\Dominio.dll
+E:\UTN\Aterrizar.com\Codigo\Dominio\bin\Debug\Dominio.pdb
+E:\UTN\Aterrizar.com\Codigo\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+E:\UTN\Aterrizar.com\Codigo\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+E:\UTN\Aterrizar.com\Codigo\Dominio\obj\Debug\Dominio.dll
+E:\UTN\Aterrizar.com\Codigo\Dominio\obj\Debug\Dominio.pdb

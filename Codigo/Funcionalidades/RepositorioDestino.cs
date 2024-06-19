@@ -28,7 +28,7 @@ namespace Funcionalidades
 
                     aux.IdDestino = (int)AccesoDatos.Lector["IdDestino"];
                     aux.cdgDestino = (int)AccesoDatos.Lector["cdgDestino"];
-                    aux.Descripcion = (string)AccesoDatos.Lector["Descripcion"];
+                    aux.nombreDestino = (string)AccesoDatos.Lector["Descripcion"];
                     aux.TipoTransporte = (int)AccesoDatos.Lector["TipoTransporte"];
                     aux.Precio = (decimal)AccesoDatos.Lector["Precio"];
 
@@ -48,7 +48,43 @@ namespace Funcionalidades
             }
         }
 
+        public Destino ObtenerDestinoPorId(int idDestino)
+        {
+            Destino destino = new Destino();
+            AccesoDatos accesoDatos = new AccesoDatos();
 
+            try
+            {
+                accesoDatos.setearSp("ObtenerDestinoPorId");
+                accesoDatos.setearParametros("@IdDestino", idDestino);
+                accesoDatos.ejecutarLectura();
+
+                if (accesoDatos.Lector.Read())
+                {
+                    Destino aux = new Destino();
+
+
+                    aux.IdDestino = (int)accesoDatos.Lector["IdDestino"];
+                    aux.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
+                    aux.nombreDestino = (string)accesoDatos.Lector["NombreDestino"];
+                    aux.Precio = (decimal)accesoDatos.Lector["PrecioTrasporte"];
+                    aux.TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"];
+                    destino = aux;
+                }
+
+                accesoDatos.cerrarConexion();
+                return destino;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+        }
 
 
     }
