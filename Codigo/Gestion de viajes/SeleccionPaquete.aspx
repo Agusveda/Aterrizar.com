@@ -29,11 +29,7 @@
                 margin-bottom: 20px;
             }
 
-            .detalle-paquete h2 {
-                text-align: center;
-                margin-bottom: 20px;
-                color: #2c3e50;
-            }
+           
 
         .NombrePaquete {
             display: block;
@@ -118,7 +114,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="detalle-paquete">
-        <h2>Detalle del Paquete</h2>
+        
         <asp:Label Text="nombre" ID="lbNombrePaquete" runat="server" CssClass="NombrePaquete" />
         <div class="section">
             <asp:Image ID="imgPaquete" runat="server" alt="Imagen del Paquete" />
@@ -150,10 +146,7 @@
             </div>
             <div>
                 <label>Excursiones Adicionales:</label>
-                <asp:CheckBoxList ID="excursionesAdicionales" runat="server">
-                    <asp:ListItem Text="Excursión adicional 1 +1000" Value="1000"></asp:ListItem>
-                    <asp:ListItem Text="Excursión adicional 2 +1000" Value="1000"></asp:ListItem>
-                    <asp:ListItem Text="Excursión adicional 3 +1000" Value="1000"></asp:ListItem>
+                <asp:CheckBoxList ID="excursionesAdicionales" runat="server" AutoPostBack="true" OnSelectedIndexChanged="excursionesAdicionales_SelectedIndexChanged">
                 </asp:CheckBoxList>
             </div>
         </div>

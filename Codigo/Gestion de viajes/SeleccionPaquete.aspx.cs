@@ -21,7 +21,7 @@ namespace Gestion_de_viajes
 
                 CargarDetallePaquete(idPaquete);
                 PrimerHotel();
-                
+
             }
 
         }
@@ -29,7 +29,7 @@ namespace Gestion_de_viajes
         {
             if (ddlHoteles.SelectedItem == null)
             {
-                
+
                 imgHotel.ImageUrl = "";
                 detalleHotel.Text = "";
                 return;
@@ -50,7 +50,8 @@ namespace Gestion_de_viajes
 
         }
 
-       
+
+
 
         private void CargarDetalleHotel(int cdgDestino)
         {
@@ -60,16 +61,17 @@ namespace Gestion_de_viajes
             {
                 ddlHoteles.DataSource = ListaHoteles;
                 ddlHoteles.DataTextField = "NombreHotel"; // lo que quiero que muestre
-                ddlHoteles.DataValueField= "idHotel"; // lo que quiero que tenga por detras
+                ddlHoteles.DataValueField = "idHotel"; // lo que quiero que tenga por detras
                 ddlHoteles.DataBind();
 
-               
+
             }
 
         }
 
 
-        
+
+
         private void CargarDetallePaquete(int idPaquete)
         {
             RepositorioPaquete repositorio = new RepositorioPaquete();
@@ -80,30 +82,45 @@ namespace Gestion_de_viajes
                 imgPaquete.ImageUrl = paquete.URLimagen;
                 lbNombrePaquete.Text = paquete.NombrePaquete;
                 int cdgdestino = paquete.cdgDestino;
-                reservaTotal.Text = "Reserva Total: $" + paquete.PrecioPaquete;
+
                 CargarDetalleHotel(cdgdestino);
                 CargarExcursiones(cdgdestino);
+                ActualizarReservaTotal(idPaquete);
             }
         }
+
+
+
 
         protected void ddlHoteles_SelectedIndexChanged(object sender, EventArgs e)
         {
-                RepositorioHotel repoHotel = new RepositorioHotel();
-                int idHotel = int.Parse(ddlHoteles.SelectedItem.Value);
+            RepositorioHotel repoHotel = new RepositorioHotel();
+            int idHotel = int.Parse(ddlHoteles.SelectedItem.Value);
 
-                Hotel hotelSeleccionado = repoHotel.ObtenerHotelPorId(idHotel);
-                if (hotelSeleccionado != null)
-                {
-                    imgHotel.ImageUrl = hotelSeleccionado.URLimagen;
-                    detalleHotel.Text = hotelSeleccionado.Descripcion;
-                    PrecioHotel.Text = hotelSeleccionado.PrecioPorNoche.ToString();
+            Hotel hotelSeleccionado = repoHotel.ObtenerHotelPorId(idHotel);
+            if (hotelSeleccionado != null)
+            {
+                imgHotel.ImageUrl = hotelSeleccionado.URLimagen;
+                detalleHotel.Text = hotelSeleccionado.Descripcion;
+                PrecioHotel.Text = hotelSeleccionado.PrecioPorNoche.ToString();
 
+                int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
+                ActualizarReservaTotal(idPaquete);
             }
 
 
         }
 
 
+        //ERROR
+        protected void excursionesAdicionales_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            int CodDestino = Convert.ToInt32(Request.QueryString["cdgdestino"]);
+            ActualizarReservaTotal(CodDestino);
+        }
+
+        
 
 
         private void CargarExcursiones(int cdgDestino)
@@ -111,8 +128,11 @@ namespace Gestion_de_viajes
             RepositorioExcursiones repoExcursion = new RepositorioExcursiones();
             List<Excursiones> excursiones = repoExcursion.ObtenerExcursionesPorDestino(cdgDestino);
 
-          
-            excursionesIncluidas.DataSource = excursiones;
+            //Fitro x duracion
+            var excursionesIncluidasFiltradas = excursiones.Where(e => e.duracion <= 5).ToList();
+            var excursionesAdicionalesFiltradas = excursiones.Where(e => e.duracion > 5).ToList();
+
+            excursionesIncluidas.DataSource = excursionesIncluidasFiltradas;
             excursionesIncluidas.DataTextField = "Nombre";
             excursionesIncluidas.DataValueField = "IdExcursion";
             excursionesIncluidas.DataBind();
@@ -122,12 +142,49 @@ namespace Gestion_de_viajes
             detalleExcursiones.DataValueField = "IdExcursion";
             detalleExcursiones.DataBind();
 
-         
-            excursionesAdicionales.DataSource = excursiones;
-            excursionesAdicionales.DataTextField = "Nombre"; 
-            excursionesAdicionales.DataValueField = "IdExcursion"; 
+
+            excursionesAdicionales.DataSource = excursionesAdicionalesFiltradas;
+            excursionesAdicionales.DataTextField = "Nombre";
+            excursionesAdicionales.DataValueField = "IdExcursion";
             excursionesAdicionales.DataBind();
 
         }
+
+
+
+
+
+        private void ActualizarReservaTotal(int idPaquete)
+        {
+            RepositorioPaquete repositorio = new RepositorioPaquete();
+            PaqueteDeViaje paquete = repositorio.ObtenerPaquetePorId(idPaquete);
+            decimal precioTotal = paquete.PrecioPaquete;
+            
+
+
+
+            if (ddlHoteles.SelectedItem != null)
+            {
+                int idHotel = int.Parse(ddlHoteles.SelectedItem.Value);
+                RepositorioHotel repoHotel = new RepositorioHotel();
+                Hotel hotelSeleccionado = repoHotel.ObtenerHotelPorId(idHotel);
+
+                if (hotelSeleccionado != null)
+                {
+                   
+                   /*decimal precioPorNoche = hotelSeleccionado.PrecioPorNoche;
+                    decimal costoHotelTotal = precioPorNoche * dias;
+                    precioTotal += costoHotelTotal;
+                   */
+                    precioTotal += hotelSeleccionado.PrecioPorNoche;
+                }
+            }
+
+
+
+
+            reservaTotal.Text = "Reserva Total: $" + precioTotal.ToString();
+        }
     }
+
 }

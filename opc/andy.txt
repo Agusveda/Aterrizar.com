@@ -4,3 +4,7 @@
 - reserva total sea paquete+hotel+excursiones adicionales
 - hacer login (opcional)
 - lo de mails (opcional)
+
+
+-Excursiones Adicionales problema al pasar por codigo destino
+-Cambiar los dias a int del paquete
