@@ -20,7 +20,9 @@ namespace Dominio
 
         public TipoUsuario TipoUsuario { get; set; }
 
-        public Usuario() { }
+        public Usuario() {
+            TipoUsuario = TipoUsuario.Normal;
+        }
         public Usuario(string user, string pass, bool admin)
         {
             NombreUsuario = user;

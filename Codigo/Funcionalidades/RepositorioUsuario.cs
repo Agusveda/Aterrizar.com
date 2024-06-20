@@ -3,6 +3,7 @@ using Gestion_de_viajes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -49,7 +50,6 @@ namespace Funcionalidades
             }
 
         }
-
         public Usuario ObtenerUsuarioPorId(int idUsuario)
         {
             Usuario usuario = new Usuario();
@@ -79,8 +79,6 @@ namespace Funcionalidades
                 throw ex;
             }
         }
-
-
         public bool Loguear(Usuario usuario)
         {
 
@@ -118,6 +116,32 @@ namespace Funcionalidades
                 datos.cerrarConexion();
             }
         }
+
+        public void InsUsuario(Usuario nuevo)
+        {
+
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("InsUsuario");
+                accesoDatos.setearParametros("@Nombre", nuevo.NombreUsuario);
+                accesoDatos.setearParametros("@CorreoElectronico", nuevo.CorreoElectronico);
+                accesoDatos.setearParametros("@Password", nuevo.Password);
+                accesoDatos.setearParametros("@DNI", nuevo.DNI);
+                accesoDatos.setearParametros("@telefono", nuevo.Telefono);
+                accesoDatos.setearParametros("@TipoUsuario", nuevo.TipoUsuario);
+
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
 
 
     }

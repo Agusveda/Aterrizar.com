@@ -25,7 +25,7 @@ namespace Gestion_de_viajes
 
             try
             {
-                usuario = new Usuario(txtUsernameLogin.Text, txtPasswordLogin.Text, false);
+                usuario = new Usuario(txtUsuarioLogin.Text, txtPasswordLogin.Text, false);
 
                 if (repousuario.Loguear(usuario))
                 {
@@ -37,42 +37,63 @@ namespace Gestion_de_viajes
                 }
                 else
                 {
-                    lblLoginMessage.Text = "Usuario o contraseña incorrecta";
-                    lblLoginMessage.ForeColor = System.Drawing.Color.Red;
+                    lblmensajeLogin.Text = "Usuario o contraseña incorrecta";
+                    lblmensajeLogin.ForeColor = System.Drawing.Color.Red;
 
                 }
-
+                
             }
             catch (Exception ex)
             {
 
-                lblLoginMessage.Text = "Error: " + ex.Message;
-                lblLoginMessage.ForeColor = System.Drawing.Color.Red;
+                lblmensajeLogin.Text = "Error: " + ex.Message;
+                lblmensajeLogin.ForeColor = System.Drawing.Color.Red;
             }
         
     
          }
 
-        protected void lnkRegister_Click(object sender, EventArgs e) //oculta el panel de inicio sesion y abre el de registro
+        protected void lnkRegistro_Click(object sender, EventArgs e) //oculta el panel de inicio sesion y abre el de registro
         {
             pnlLogin.Visible = false;
-            pnlRegister.Visible = true;
+            pnlRegistro.Visible = true;
         }
 
-        protected void btnRegister_Click(object sender, EventArgs e)
+        protected void btnRegistro_Click(object sender, EventArgs e)
         {
-           
-           
 
-            
-            lblRegisterMessage.Text = "Registro exitoso. Ahora puede iniciar sesión.";
-            lblRegisterMessage.ForeColor = System.Drawing.Color.Green;
+            try
+            {
+                Usuario nuevo = new Usuario();
+                RepositorioUsuario repoUsuario = new RepositorioUsuario();
+                nuevo.NombreUsuario = txtUsuarioRegistro.Text;
+                nuevo.CorreoElectronico = txtEmailRegistro.Text;
+                nuevo.Password = txtPasswordRegistro.Text;
+                nuevo.DNI = int.Parse(txtDNIRegistro.Text);
+                nuevo.Telefono = txtTelefonoRegistro.Text;
+                int tipo = 1;
+                nuevo.TipoUsuario = (TipoUsuario)tipo;
+                repoUsuario.InsUsuario(nuevo);
+                Response.Redirect("Login.aspx",false);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+
+
+            lblmensajeLogin.Text = "Registro exitoso. Ahora puede iniciar sesión.";
+            lblmensajeLogin.ForeColor = System.Drawing.Color.Green;
 
             // Resetea
           
 
             pnlLogin.Visible = true;
-            pnlRegister.Visible = false;
+            pnlRegistro.Visible = false;
         }
     }
 }

@@ -85,10 +85,6 @@
                 <span class="value"><asp:Label ID="lblNombre" runat="server" /></span>
             </div>
             <div class="profile-item">
-                <label for="lblApellido">Apellido:</label>
-                <span class="value"><asp:Label ID="lblApellido" runat="server" /></span>
-            </div>
-            <div class="profile-item">
                 <label for="lblCorreoElectronico">Correo Electrónico:</label>
                 <span class="value"><asp:Label ID="lblCorreoElectronico" runat="server" /></span>
             </div>

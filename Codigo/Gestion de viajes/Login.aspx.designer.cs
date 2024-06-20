@@ -24,31 +24,31 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Panel pnlLogin;
 
         /// <summary>
-        /// Control lblLoginMessage.
+        /// Control lblmensajeLogin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLoginMessage;
+        protected global::System.Web.UI.WebControls.Label lblmensajeLogin;
 
         /// <summary>
-        /// Control lblUsernameLogin.
+        /// Control lblUsuarioLogin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUsernameLogin;
+        protected global::System.Web.UI.WebControls.Label lblUsuarioLogin;
 
         /// <summary>
-        /// Control txtUsernameLogin.
+        /// Control txtUsuarioLogin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsernameLogin;
+        protected global::System.Web.UI.WebControls.TextBox txtUsuarioLogin;
 
         /// <summary>
         /// Control lblPasswordLogin.
@@ -78,103 +78,139 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Button btnLogin;
 
         /// <summary>
-        /// Control lblNoAccount.
+        /// Control lblSinUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNoAccount;
+        protected global::System.Web.UI.WebControls.Label lblSinUsuario;
 
         /// <summary>
-        /// Control lnkRegister.
+        /// Control lnkRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkRegister;
+        protected global::System.Web.UI.WebControls.LinkButton lnkRegistro;
 
         /// <summary>
-        /// Control pnlRegister.
+        /// Control pnlRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlRegister;
+        protected global::System.Web.UI.WebControls.Panel pnlRegistro;
 
         /// <summary>
-        /// Control lblRegisterMessage.
+        /// Control lblMensajeRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRegisterMessage;
+        protected global::System.Web.UI.WebControls.Label lblMensajeRegistro;
 
         /// <summary>
-        /// Control lblUsernameRegister.
+        /// Control lblUsuarioRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUsernameRegister;
+        protected global::System.Web.UI.WebControls.Label lblUsuarioRegistro;
 
         /// <summary>
-        /// Control txtUsernameRegister.
+        /// Control txtUsuarioRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsernameRegister;
+        protected global::System.Web.UI.WebControls.TextBox txtUsuarioRegistro;
 
         /// <summary>
-        /// Control lblEmailRegister.
+        /// Control lblPasswordRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmailRegister;
+        protected global::System.Web.UI.WebControls.Label lblPasswordRegistro;
 
         /// <summary>
-        /// Control txtEmailRegister.
+        /// Control txtPasswordRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmailRegister;
+        protected global::System.Web.UI.WebControls.TextBox txtPasswordRegistro;
 
         /// <summary>
-        /// Control lblPasswordRegister.
+        /// Control lblEmailRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPasswordRegister;
+        protected global::System.Web.UI.WebControls.Label lblEmailRegistro;
 
         /// <summary>
-        /// Control txtPasswordRegister.
+        /// Control txtEmailRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPasswordRegister;
+        protected global::System.Web.UI.WebControls.TextBox txtEmailRegistro;
 
         /// <summary>
-        /// Control btnRegister.
+        /// Control lblDNI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegister;
+        protected global::System.Web.UI.WebControls.Label lblDNI;
+
+        /// <summary>
+        /// Control txtDNIRegistro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDNIRegistro;
+
+        /// <summary>
+        /// Control lblTelefonoRegistro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTelefonoRegistro;
+
+        /// <summary>
+        /// Control txtTelefonoRegistro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTelefonoRegistro;
+
+        /// <summary>
+        /// Control btnRegistro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRegistro;
 
         /// <summary>
         /// Control pnlSessionStatus.
