@@ -34,12 +34,13 @@ namespace Funcionalidades
                     aux.Descripcion = (string)AccesoDatos.Lector["Descripcion"];
                     aux.Precio = (decimal)AccesoDatos.Lector["Precio"];
                     aux.CantidadPersonas = (int)AccesoDatos.Lector["CantidadPersonas"];
-                    aux.duracion = (string)AccesoDatos.Lector["Duracion"];
+                    aux.duracion = (int)AccesoDatos.Lector["Duracion"];
+                    aux.Nombre = (string)AccesoDatos.Lector["Nombre"];
 
-         
 
 
-        listarExcursiones.Add(aux);
+
+                    listarExcursiones.Add(aux);
                 }
 
                 AccesoDatos.cerrarConexion();
@@ -62,13 +63,13 @@ namespace Funcionalidades
 
             try
             {
-                
+
                 accesoDatos.setearSp("SelExcursionesPorDestino");
 
                 accesoDatos.setearParametros("@cdgDestino", cdgDestino);
                 accesoDatos.ejecutarLectura();
 
-              
+
                 while (accesoDatos.Lector.Read())
                 {
                     Excursiones excursion = new Excursiones();
@@ -78,7 +79,8 @@ namespace Funcionalidades
                     excursion.Descripcion = (string)accesoDatos.Lector["Descripcion"];
                     excursion.Precio = (decimal)accesoDatos.Lector["Precio"];
                     excursion.CantidadPersonas = (int)accesoDatos.Lector["CantidadPersonas"];
-                    excursion.duracion = (string)accesoDatos.Lector["Duracion"];
+                    excursion.duracion = (int)accesoDatos.Lector["Duracion"];
+                    excursion.Nombre = (string)accesoDatos.Lector["Nombre"];
 
                     excursiones.Add(excursion);
                 }
