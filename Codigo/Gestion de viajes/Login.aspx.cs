@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Dominio;
+using System;
 using System.Web.UI;
+using Funcionalidades;
+
 
 namespace Gestion_de_viajes
 {
@@ -7,14 +10,48 @@ namespace Gestion_de_viajes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["usuario"] != null)
+            {
+                Response.Redirect("Perfil.aspx", false);
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            
-                lblLoginMessage.Text = "Usuario no registrado. Por favor, regístrese.";
-            
-        }
+
+            Usuario usuario;
+            RepositorioUsuario repousuario = new RepositorioUsuario();
+
+
+            try
+            {
+                usuario = new Usuario(txtUsernameLogin.Text, txtPasswordLogin.Text, false);
+
+                if (repousuario.Loguear(usuario))
+                {
+
+
+                    Session.Add("usuario", usuario);
+                    Response.Redirect("Perfil.aspx", false);
+
+                }
+                else
+                {
+                    lblLoginMessage.Text = "Usuario o contraseña incorrecta";
+                    lblLoginMessage.ForeColor = System.Drawing.Color.Red;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                lblLoginMessage.Text = "Error: " + ex.Message;
+                lblLoginMessage.ForeColor = System.Drawing.Color.Red;
+            }
+        
+    
+         }
 
         protected void lnkRegister_Click(object sender, EventArgs e) //oculta el panel de inicio sesion y abre el de registro
         {

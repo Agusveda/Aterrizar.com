@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Gestion_de_viajes.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style>
+  <style>
         .login-container {
             max-width: 400px;
             margin: 50px auto;
@@ -12,51 +12,60 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-            .login-container h2 {
-                text-align: center;
-                margin-bottom: 20px;
-            }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-            .login-container div {
-                margin-bottom: 10px;
-            }
+        .login-container div {
+            margin-bottom: 10px;
+        }
 
-            .login-container label {
-                display: block;
-                margin-bottom: 5px;
-            }
+        .login-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
 
-            .login-container input {
-                width: 100%;
-                padding: 10px;
-                margin-bottom: 10px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-            }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-            .login-container button {
-                width: 100%;
-                padding: 10px;
-                background-color: #28a745;
-                border: none;
-                border-radius: 5px;
-                color: #fff;
-                font-size: 16px;
-                cursor: pointer;
-            }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-                .login-container button:hover {
-                    background-color: #365a98;
+        .login-container button:hover {
+            background-color: #365a98;
+        }
 
-                }
+        .login-container .link-button {
+            text-align: center;
+            margin-top: 10px;
+        }
 
-            .login-container .link-button {
-                text-align: center;
-                margin-top: 10px;
-
-            }
+        .session-status {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: none; 
+        }
     </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="login-container">
         <asp:Panel ID="pnlLogin" runat="server">
@@ -98,5 +107,9 @@
                 <asp:Button ID="btnRegister" runat="server" Text="Registrarse" OnClick="btnRegister_Click" />
             </div>
         </asp:Panel>
+
+        <div class="session-status" id="pnlSessionStatus" runat="server">
+            <asp:Label ID="lblSessionStatus" runat="server"></asp:Label>
+        </div>
     </div>
 </asp:Content>

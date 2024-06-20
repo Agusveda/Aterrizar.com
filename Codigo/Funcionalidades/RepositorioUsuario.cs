@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Funcionalidades
 {
-    internal class RepositorioUsuario
+    public class RepositorioUsuario
     {
         public List<Usuario> ListarConSp()
         {
@@ -26,7 +26,7 @@ namespace Funcionalidades
                     Usuario aux = new Usuario();
 
 
-                    aux.Nombre = (string)AccesoDatos.Lector["Nombre"];
+                    aux.NombreUsuario = (string)AccesoDatos.Lector["Nombre"];
                     aux.DNI = (int)AccesoDatos.Lector["DNI"];
                     aux.Apellido = (string)AccesoDatos.Lector["Apellido"];
                     aux.CorreoElectronico = (string)AccesoDatos.Lector["CorreoElectronico"];
@@ -66,7 +66,7 @@ namespace Funcionalidades
                 {
                     usuario.IdUsuario = (int)accesoDatos.Lector["IdUsuario"];
                     usuario.DNI = (int)accesoDatos.Lector["DNI"];
-                    usuario.Nombre = (string)accesoDatos.Lector["Nombre"];
+                    usuario.NombreUsuario = (string)accesoDatos.Lector["Nombre"];
                     usuario.Apellido = (string)accesoDatos.Lector["Apellido"];
                     usuario.CorreoElectronico = (string)accesoDatos.Lector["CorreoElectronico"];
                     usuario.Password = (string)accesoDatos.Lector["Password"];
@@ -80,7 +80,46 @@ namespace Funcionalidades
             {
                 throw ex;
             }
-        }   
+        }
+
+
+        public bool Loguear(Usuario usuario)
+        {
+
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("SELECT IdUsuario, Nombre, Password, TipoUsuario FROM USUARIOS where  Nombre = @Nombre and Password = @Contra");
+
+                datos.setearParametros("@Contra", usuario.Password);
+                datos.setearParametros("@Nombre", usuario.NombreUsuario);
+
+
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    usuario.IdUsuario = (int)datos.Lector["IdUsuario"];
+                    usuario.TipoUsuario = (int)(datos.Lector["TipoUsuario"]) == 2 ? TipoUsuario.Admin : TipoUsuario.Normal;
+                    return true;
+
+                }
+
+                return false;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
 
 
     }
