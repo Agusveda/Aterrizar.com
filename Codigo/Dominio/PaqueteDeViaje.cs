@@ -14,7 +14,7 @@ namespace Gestion_de_viajes
         public string Descripcion { get; set; }
         public decimal PrecioPaquete { get; set; }
         public int Mes {get; set; }
-        public string Duracion { get; set; }
+        public int Duracion { get; set; }
         public int TipoTransporte { get; set; }
         public string URLimagen {  get; set; }
         public int Disponibilidad { get; set; }

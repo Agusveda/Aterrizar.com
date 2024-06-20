@@ -136,7 +136,7 @@
                 <asp:Label ID="PrecioHotel" runat="server" Text=""></asp:Label>
             </div>
         </div>
-        <div class="section excursiones">
+        <div class="section excursiones" >
             <div>
                 <label>Excursiones Incluidas:</label>
                 <asp:BulletedList ID="excursionesIncluidas" runat="server"></asp:BulletedList>

@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using Gestion_de_viajes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -98,5 +99,46 @@ namespace Funcionalidades
         }
 
 
+
+
+        public Excursiones ObtenerExcursionesPorId(int idExcursion)
+        {
+            Excursiones excursiones = new Excursiones();
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("ObtenerExcursionesPorId");
+                accesoDatos.setearParametros("@idExcursion", idExcursion);
+                accesoDatos.ejecutarLectura();
+
+                if (accesoDatos.Lector.Read())
+                {
+                    Excursiones aux = new Excursiones();
+
+                    aux.IdExcursion = (int)accesoDatos.Lector["IdExcursion"];
+                    aux.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
+                    aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
+                    aux.Precio = (decimal)accesoDatos.Lector["Precio"];
+                    aux.CantidadPersonas = (int)accesoDatos.Lector["CantidadPersonas"];
+                    aux.duracion = (int)accesoDatos.Lector["Duracion"];
+                    aux.Nombre = (string)accesoDatos.Lector["Nombre"];
+
+                    excursiones = aux;
+                }
+
+                accesoDatos.cerrarConexion();
+                return excursiones;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+        }
     }
 }

@@ -74,7 +74,7 @@
                                     <p class="card-text">Descripción: <%# Eval("Descripcion") %></p>
                                     <p class="card-text">Precio: $<%# Eval("PrecioPaquete") %></p>
                                     <p class="card-text">Mes: <%# Eval("Mes") %></p>
-                                    <p class="card-text">Duracion: <%# Eval("Duracion") %></p>
+                                    <p class="card-text">Duracion: <%# Eval("Duracion") + " Dias." %></p>
                                 </div>
                             </div>
                         </a>

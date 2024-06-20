@@ -34,7 +34,7 @@ namespace Funcionalidades
                     aux.Descripcion = (string)AccesoDatos.Lector["Descripcion"];
                     aux.PrecioPaquete = (decimal)AccesoDatos.Lector["PrecioPaquete"];
                     aux.Mes = (int)AccesoDatos.Lector["Mes"];
-                    aux.Duracion = (string)AccesoDatos.Lector["Duracion"];
+                    aux.Duracion = (int)AccesoDatos.Lector["Duracion"];
                     aux.TipoTransporte = (int)AccesoDatos.Lector["TipoTransporte"];
                     if (AccesoDatos.Lector["URLimagen"] is DBNull) {
                         aux.URLimagen = "https://icrier.org/wp-content/uploads/2022/09/Event-Image-Not-Found.jpg";
@@ -94,7 +94,7 @@ namespace Funcionalidades
                     aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
                     aux.PrecioPaquete = (decimal)accesoDatos.Lector["PrecioPaquete"];
                     aux.Mes = (int)accesoDatos.Lector["Mes"];
-                    aux.Duracion = (string)accesoDatos.Lector["Duracion"];
+                    aux.Duracion = (int)accesoDatos.Lector["Duracion"];
                     aux.TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"];
                     aux.URLimagen = accesoDatos.Lector["URLimagen"] is DBNull ? "https://icrier.org/wp-content/uploads/2022/09/Event-Image-Not-Found.jpg" : (string)accesoDatos.Lector["URLimagen"];
                     
@@ -134,7 +134,7 @@ namespace Funcionalidades
                     aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
                     aux.PrecioPaquete = (decimal)accesoDatos.Lector["PrecioPaquete"];
                     aux.Mes = (int)accesoDatos.Lector["Mes"];
-                    aux.Duracion = (string)accesoDatos.Lector["Duracion"];
+                    aux.Duracion = (int)accesoDatos.Lector["Duracion"];
                     aux.TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"];
                     aux.URLimagen = accesoDatos.Lector["URLimagen"] is DBNull ? "https://icrier.org/wp-content/uploads/2022/09/Event-Image-Not-Found.jpg" : (string)accesoDatos.Lector["URLimagen"];
                         aux.Disponibilidad = (int)accesoDatos.Lector["Disponibilidad"];
