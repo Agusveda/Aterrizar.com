@@ -91,7 +91,7 @@
 
         <asp:Panel ID="pnlRegistro" runat="server" Visible="False">
             <h2>Registro</h2>
-            <asp:Label ID="lblMensajeRegistro" runat="server" ForeColor="Red"></asp:Label>
+            <asp:Label ID="lblMensajeRegistro" ForeColor="Green" Visible="false" runat="server" ></asp:Label>
             <div>
                 <asp:Label ID="lblUsuarioRegistro" runat="server" Text="Nombre de usuario:"></asp:Label>
                 <asp:TextBox ID="txtUsuarioRegistro" runat="server"></asp:TextBox>
@@ -118,7 +118,7 @@
         </asp:Panel>
 
         <div class="session-status" id="pnlSessionStatus" runat="server">
-            <asp:Label ID="lblSessionStatus" runat="server"></asp:Label>
+            <asp:Label ID="lblSessionStatus" runat="server"></asp:Label>lblMensajeRegistro
         </div>
     </div>
 </asp:Content>

@@ -74,26 +74,28 @@ namespace Gestion_de_viajes
                 int tipo = 1;
                 nuevo.TipoUsuario = (TipoUsuario)tipo;
                 repoUsuario.InsUsuario(nuevo);
-                Response.Redirect("Login.aspx",false);
 
+                lblMensajeRegistro.Text = "Registro exitoso. Ahora puede iniciar sesión.";
+                lblMensajeRegistro.ForeColor = System.Drawing.Color.Green;
+                lblMensajeRegistro.Visible = true;
+                // Resetea
 
+              
+
+                pnlLogin.Visible = true;
+                pnlRegistro.Visible = false;
             }
             catch (Exception ex)
             {
 
-                throw ex;
+                lblMensajeRegistro.Text = "Error al registrar usuario: " + ex.Message;
+                lblMensajeRegistro.ForeColor = System.Drawing.Color.Red;
+                lblMensajeRegistro.Visible = true;
             }
 
 
 
-            lblmensajeLogin.Text = "Registro exitoso. Ahora puede iniciar sesión.";
-            lblmensajeLogin.ForeColor = System.Drawing.Color.Green;
-
-            // Resetea
-          
-
-            pnlLogin.Visible = true;
-            pnlRegistro.Visible = false;
+         
         }
     }
 }
