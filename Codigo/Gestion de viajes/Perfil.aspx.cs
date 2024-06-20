@@ -41,7 +41,6 @@ namespace Gestion_de_viajes
             lblIdUsuario.Text =  usuario.IdUsuario.ToString();
             lblDNI.Text =  usuario.DNI.ToString();
             lblNombre.Text =  usuario.NombreUsuario;
-            lblApellido.Text =  usuario.Apellido;
             lblCorreoElectronico.Text =usuario.CorreoElectronico;
             lblTelefono.Text = usuario.Telefono;
         }

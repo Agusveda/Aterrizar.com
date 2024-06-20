@@ -67,8 +67,6 @@ namespace Funcionalidades
                 throw ex;
             }
         }
-
-
         public List<PaqueteDeViaje> ListarConSp(int tipoTransporte)
         {
             List<PaqueteDeViaje> listarPaquete = new List<PaqueteDeViaje>();
@@ -110,8 +108,6 @@ namespace Funcionalidades
                 throw ex;
             }
         }
-
-
         public PaqueteDeViaje ObtenerPaquetePorId(int idPaquete)
         {
             PaqueteDeViaje paquete = new PaqueteDeViaje();
@@ -159,73 +155,7 @@ namespace Funcionalidades
 
 
 
-    //public void Agregar(PaqueteDeViaje nuevoPaquete)
-    //{
-    //    AccesoDatos Accesodatos = new AccesoDatos();
-    //    try
-    //    {
-
-    //        Accesodatos.setearConsulta("");
-    //        Accesodatos.setearParametros("@", nuevoPaquete.IdPaquete);
-    //        Accesodatos.setearParametros("@", nuevoPaquete.NombrePaquete);
-    //        Accesodatos.setearParametros("@", nuevoPaquete.Descripcion);
-    //        Accesodatos.setearParametros("@", nuevoPaquete.PrecioPaquete);
-    //        Accesodatos.setearParametros("@", nuevoPaquete.Mes);
-    //        Accesodatos.setearParametros("@", nuevoPaquete.Duracion);
-    //        Accesodatos.setearParametros("@", nuevoPaquete.IdHotel.IdHotel);
-    //        Accesodatos.ejecutarAccion();
-
-    //    }
-    //    catch (Exception ex)
-    //    {
-
-    //        throw ex;
-    //    }
-    //    finally
-    //    {
-    //        Accesodatos.cerrarConexion();
-
-
-    //    }
-
-
-
-
-
-    //}
-
-
-
-    //public void Modificar(PaqueteDeViaje nuevoPaquete)
-    //{
-    //    AccesoDatos Accesodatos = new AccesoDatos();
-    //    try
-    //    {
-
-    //        Accesodatos.setearConsulta("");
-    //        Accesodatos.setearParametros("@", nuevoPaquete.IdPaquete);
-    //        Accesodatos.setearParametros("@", nuevoPaquete.NombrePaquete);
-    //        Accesodatos.setearParametros("@", nuevoPaquete.Descripcion);
-    //        Accesodatos.setearParametros("@", nuevoPaquete.PrecioPaquete);
-    //        Accesodatos.setearParametros("@", nuevoPaquete.Mes);
-    //        Accesodatos.setearParametros("@", nuevoPaquete.Duracion);
-    //        Accesodatos.setearParametros("@", nuevoPaquete.IdHotel.IdHotel);
-    //        Accesodatos.ejecutarAccion();
-
-    //    }
-    //    catch (Exception ex)
-    //    {
-
-    //        throw ex;
-    //    }
-    //    finally
-    //    {
-    //        Accesodatos.cerrarConexion();
-
-
-    //    }
-
-    //}
+    
 
 }
 

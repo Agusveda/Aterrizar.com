@@ -28,7 +28,6 @@ namespace Funcionalidades
 
                     aux.NombreUsuario = (string)AccesoDatos.Lector["Nombre"];
                     aux.DNI = (int)AccesoDatos.Lector["DNI"];
-                    aux.Apellido = (string)AccesoDatos.Lector["Apellido"];
                     aux.CorreoElectronico = (string)AccesoDatos.Lector["CorreoElectronico"];
                     aux.Password = (string)AccesoDatos.Lector["Password"];
                     aux.Telefono = (string)AccesoDatos.Lector["Telefono"];
@@ -67,7 +66,6 @@ namespace Funcionalidades
                     usuario.IdUsuario = (int)accesoDatos.Lector["IdUsuario"];
                     usuario.DNI = (int)accesoDatos.Lector["DNI"];
                     usuario.NombreUsuario = (string)accesoDatos.Lector["Nombre"];
-                    usuario.Apellido = (string)accesoDatos.Lector["Apellido"];
                     usuario.CorreoElectronico = (string)accesoDatos.Lector["CorreoElectronico"];
                     usuario.Password = (string)accesoDatos.Lector["Password"];
                     usuario.Telefono = (string)accesoDatos.Lector["Telefono"];
