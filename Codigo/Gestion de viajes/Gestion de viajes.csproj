@@ -67,6 +67,7 @@
     <Content Include="Administrador.aspx" />
     <Content Include="BusSeleccionDestino.aspx" />
     <Content Include="Contacto.aspx" />
+    <Content Include="Carrito.aspx" />
     <Content Include="Perfil.aspx" />
     <Content Include="SeleccionPaquete.aspx" />
     <Content Include="Global.asax" />
@@ -100,6 +101,13 @@
     </Compile>
     <Compile Include="Contacto.aspx.designer.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
     </Compile>
     <Compile Include="Perfil.aspx.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>

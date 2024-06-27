@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="AvionSeleccionDestino.aspx.cs" Inherits="Gestion_de_viajes.PaqueteAvionSeleccionMes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="AvionSeleccionDestino.aspx.cs" Inherits="Gestion_de_viajes.PaqueteAvionSeleccionMes" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -75,6 +75,8 @@
                                     <p class="card-text">Precio: $<%# Eval("PrecioPaquete") %></p>
                                     <p class="card-text">Mes: <%# Eval("Mes") %></p>
                                     <p class="card-text">Duracion: <%# Eval("Duracion") + " Dias." %></p>
+                                    
+                                    <asp:Button Text="Añadir al carrito" runat="server" CssClass="btn btn-success btn-large my-2 mx-1 " ID="btnAñadir" CommandArgument='<%# Eval("IdPaquete") %>' CommandName="AddCarrito" OnCommand="btnAñadir_Command" />
                                 </div>
                             </div>
                         </a>
