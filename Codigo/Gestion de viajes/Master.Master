@@ -21,6 +21,8 @@
             font-size: 1.75rem;
             font-weight: bold;
             text-transform: uppercase;
+            color: #ffcc00;
+            font-weight: bold;
         }
 
             .navbar-brand:hover {
@@ -45,7 +47,16 @@
             }
 
 
+              .navbar-nav.ml-auto {
+            margin-left: auto;
+        }
 
+               .nav-link img {
+            margin-left: 8px;
+            vertical-align: middle;
+            width: 35px;  
+            height: 35px; 
+        }
 
         footer {
             display: flex;
@@ -91,9 +102,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Paquetes.aspx">Paquetes</a>
-                        </li>
+                      
                         <li class="nav-item">
                             <a class="nav-link" href="Preguntas.aspx">Preguntas frecuentes</a>
                         </li>
@@ -101,13 +110,19 @@
                             <a class="nav-link" href="Contacto.aspx">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Login.aspx">Login</a>
+                            <a class="nav-link" href="Administrador.aspx">Ventana Administrador</a>
                         </li>
+                       </ul>
+                    <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="Login.aspx">Ventana Administrador</a>
+                            <a class="nav-link" href="Login.aspx">
+                                Inicio de Usuario
+                                <img src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur-gris.png" alt="Usuario">
+                            </a>
                         </li>
-
                     </ul>
+
+                    
                 </div>
             </div>
         </nav>
