@@ -150,14 +150,50 @@ namespace Funcionalidades
             }
 
         }
+        public void AgregarConSp (PaqueteDeViaje nuevo)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("insPaquete");
+                accesoDatos.setearParametros("@cdgDestino", nuevo.cdgDestino);
+                accesoDatos.setearParametros("@NombrePaquete", nuevo.NombrePaquete);
+                accesoDatos.setearParametros("@Descripcion", nuevo.Descripcion);
+                accesoDatos.setearParametros("@Mes", nuevo.Mes);
+                accesoDatos.setearParametros("@Duracion", nuevo.Duracion);
+                accesoDatos.setearParametros("@TipoTransporte", nuevo.TipoTransporte);
+                accesoDatos.setearParametros("@URLimagen", nuevo.URLimagen);
+                accesoDatos.setearParametros("@Disponibilidad", nuevo.Disponibilidad);
+                
+                accesoDatos.ejecutarAccion();
+
+
+
+            }
+            catch (Exception EX )
+            {
+
+                throw EX;
+            }
+
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+
+
+        }
+
+
+
+
+
+
     
 
-
-
-
-    
-
-}
+    }   
 
 }
 

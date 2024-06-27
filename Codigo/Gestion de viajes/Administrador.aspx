@@ -101,6 +101,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="admin-container">
         <h1>Administrador de Paquetes de Viaje</h1>
+        
+        
+        //// HACER BOTONES PARA QUE DEPENDIENDO LO QUE EL ADMINITRADOR CLIQUEE SE HABILITE......
+
 
         <div class="section">
          <h2>Gestionar Paquetes</h2>

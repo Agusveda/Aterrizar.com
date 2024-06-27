@@ -11,11 +11,22 @@ namespace Gestion_de_viajes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
            
         }
 
         protected void btnAgregarPaquete_Click(object sender, EventArgs e)
         {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+                Session.Add("error", ex);
+                throw;
+            }
         }
 
         protected void btnAgregarHotel_Click(object sender, EventArgs e)

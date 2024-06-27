@@ -85,7 +85,37 @@ namespace Funcionalidades
             }
 
         }
+        public void AgregarConSp(Destino nuevo)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
 
+            try
+            {
+                accesoDatos.setearSp("insDestino");
+                accesoDatos.setearParametros("@cdgDestino", nuevo.cdgDestino);
+                accesoDatos.setearParametros("@NombreDestino", nuevo.nombreDestino);
+                accesoDatos.setearParametros("@TipoTransporte", nuevo.TipoTransporte);
+             
+
+                accesoDatos.ejecutarAccion();
+
+
+
+            }
+            catch (Exception EX)
+            {
+
+                throw EX;
+            }
+
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+
+
+        }
 
     }
 }
