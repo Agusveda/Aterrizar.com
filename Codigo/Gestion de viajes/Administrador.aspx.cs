@@ -20,6 +20,7 @@ namespace Gestion_de_viajes
                 phAgregarExcursion.Visible = false;
                 phAgregarExcursion.Visible = false;
                 phAgregarHoteles.Visible = false;
+                CargarPaquetes();
             }
         }
 
@@ -38,6 +39,22 @@ namespace Gestion_de_viajes
 
             }
 
+        }
+
+        private void CargarPaquetes()
+        {
+            RepositorioPaquete repoPaquete = new RepositorioPaquete();
+            List<PaqueteDeViaje> paquetes = repoPaquete.ListarConSp();
+
+            if (paquetes != null)
+            {
+                ddlPaquetes.DataSource = paquetes;
+                ddlPaquetes.DataTextField = "NombrePaquete";
+                ddlPaquetes.DataValueField = "IdPaquete";
+                ddlPaquetes.DataBind();
+
+                ddlPaquetes.Items.Insert(0, new ListItem("Seleccione un paquete", ""));
+            }
         }
 
         protected void btnAgregarPaquete_Click(object sender, EventArgs e)
@@ -67,7 +84,7 @@ namespace Gestion_de_viajes
             phEliminarPaquete.Visible = true;
             
         }
-
+        
         protected void btnGuardarPaquete_Click(object sender, EventArgs e)
         {
             try
@@ -101,6 +118,65 @@ namespace Gestion_de_viajes
 
 
 
+        }
+
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            
+              
+            
+        }
+
+        protected void ddlPaquetesModificar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int paqueteId = int.Parse(ddlPaquetes.SelectedItem.Value);
+            RepositorioPaquete repoPaquete = new RepositorioPaquete();
+            PaqueteDeViaje paquete = repoPaquete.ObtenerPaquetePorId(paqueteId);
+
+            if (paquete != null)
+            {
+               
+                txtNombrePaqueteModificar.Text = paquete.NombrePaquete;
+                txtDescripcionPaqueteModificar.Text = paquete.Descripcion;
+                txtPrecioPaqueteModificar.Text = paquete.PrecioPaquete.ToString();
+                ddlmesModificar.SelectedValue = paquete.Mes.ToString();
+                txtDuracionPaqueteModificar.Text = paquete.Duracion.ToString();
+                ddlTipoTransporteModificar.SelectedValue = paquete.TipoTransporte.ToString();
+                txtURLimagenModificar.Text = paquete.URLimagen;
+                txtDisponibilidadPaqueteModificar.Text = paquete.Disponibilidad.ToString();
+
+                phModificarPaquete.Visible = true;
+            }
+        }
+        
+
+        protected void ddlPaquetesEliminar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int paqueteId = int.Parse(ddlPaquetes.SelectedItem.Value);
+            RepositorioPaquete repoPaquete = new RepositorioPaquete();
+            PaqueteDeViaje paquete = repoPaquete.ObtenerPaquetePorId(paqueteId);
+
+            if (paquete != null)
+            {
+                
+                txtNombrePaqueteModificar.Text = paquete.NombrePaquete;
+                txtDescripcionPaqueteModificar.Text = paquete.Descripcion;
+                txtPrecioPaqueteModificar.Text = paquete.PrecioPaquete.ToString();
+                ddlmesModificar.SelectedValue = paquete.Mes.ToString();
+                txtDuracionPaqueteModificar.Text = paquete.Duracion.ToString();
+                ddlTipoTransporteModificar.SelectedValue = paquete.TipoTransporte.ToString();
+                txtURLimagenModificar.Text = paquete.URLimagen;
+                txtDisponibilidadPaqueteModificar.Text = paquete.Disponibilidad.ToString();
+
+               
+                phModificarPaquete.Visible = true;
+            }
+        }
+
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+          
         }
 
         protected void ddlPaquetesHotel_SelectedIndexChanged(object sender, EventArgs e)
