@@ -13,9 +13,9 @@ namespace Gestion_de_viajes
         {
             if (!IsPostBack)
             {
-                phAgregarPaquete.Visible = false;
                 phModificarPaquete.Visible = false;
                 phEliminarPaquete.Visible = false;
+                phAgregarExcursion.Visible = false;
                 phAgregarExcursion.Visible = false;
                 phAgregarHoteles.Visible = false;
             }
@@ -23,31 +23,28 @@ namespace Gestion_de_viajes
 
       
 
-        protected void btnAgregar_Click(object sender, EventArgs e)
+        protected void btnAgregarPaquete_Click(object sender, EventArgs e)
         {
             phAgregarPaquete.Visible = true;
             phModificarPaquete.Visible = false;
             phEliminarPaquete.Visible = false;
-            phAgregarExcursion.Visible = true;
-            phAgregarHoteles.Visible = true;
+        
         }
 
-        protected void btnModificar_Click(object sender, EventArgs e)
+        protected void btnModificarPaquete_Click(object sender, EventArgs e)
         {
             phAgregarPaquete.Visible = false;
             phModificarPaquete.Visible = true;
             phEliminarPaquete.Visible = false;
-            phAgregarExcursion.Visible = true;
-            phAgregarHoteles.Visible = true;
+          
         }
 
-        protected void btnEliminar_Click(object sender, EventArgs e)
+        protected void btnEliminarPaquete_Click(object sender, EventArgs e)
         {
             phAgregarPaquete.Visible = false;
             phModificarPaquete.Visible = false;
             phEliminarPaquete.Visible = true;
-            phAgregarExcursion.Visible = true;
-            phAgregarHoteles.Visible = true;
+            
         }
 
         protected void btnGuardarPaquete_Click(object sender, EventArgs e)
@@ -67,12 +64,45 @@ namespace Gestion_de_viajes
 
         protected void btnAgregarHotel_Click(object sender, EventArgs e)
         {
-    
+
+            phAgregarHoteles.Visible = true;
+
+
         }
 
+
+        protected void btnGuardarHotel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnModificarHotel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnElminarHotel_Click(object sender, EventArgs e)
+        {
+
+        }
         protected void btnAgregarExcursion_Click(object sender, EventArgs e)
         {
-            
+            phAgregarExcursion.Visible = true;
+        }
+
+        protected void btnGuardarExcursion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnModificarExcursion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnEliminarExcursion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

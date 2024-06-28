@@ -104,9 +104,9 @@
 
         <div class="section">
             <h2>Gestionar Paquetes</h2>
-            <asp:Button ID="btnAgregar" runat="server" Text="Agregar Paquete" CssClass="btn-primary" OnClick="btnAgregar_Click" />
-            <asp:Button ID="btnModificar" runat="server" Text="Modificar Paquete" CssClass="btn-primary" OnClick="btnModificar_Click" />
-            <asp:Button ID="btnEliminar" runat="server" Text="Eliminar Paquete" CssClass="btn-primary" OnClick="btnEliminar_Click" />
+            <asp:Button ID="btnAgregarPaquete" runat="server" Text="Agregar Paquete" CssClass="btn-primary" OnClick="btnAgregarPaquete_Click" />
+            <asp:Button ID="btnModificarPaquete" runat="server" Text="Modificar Paquete" CssClass="btn-primary" OnClick="btnModificarPaquete_Click" />
+            <asp:Button ID="btnEliminarPaquete" runat="server" Text="Eliminar Paquete" CssClass="btn-primary" OnClick="btnEliminarPaquete_Click" />
             
             <asp:PlaceHolder ID="phAgregarPaquete" runat="server" Visible="false">
                 <div class="form-group">
@@ -155,9 +155,14 @@
                 
             </asp:PlaceHolder>
         </div>
-        <asp:PlaceHolder ID="phAgregarHoteles" runat="server" Visible="false">
         <div class="section">
             <h2>Agregar Hoteles al Paquete</h2>
+
+              <asp:Button ID="btnAgregarHotel" runat="server" Text="Agregar Hotel" CssClass="btn-primary" OnClick="btnAgregarHotel_Click" />
+                <asp:Button ID="btnModificarHotel" runat="server" Text="Modificar Hotel" CssClass="btn-primary" OnClick="btnModificarHotel_Click" />
+                 <asp:Button ID="btnElminarHotel" runat="server" Text="Eliminar Hotel" CssClass="btn-primary" OnClick="btnElminarHotel_Click" />
+        <asp:PlaceHolder ID="phAgregarHoteles" runat="server" Visible="false">
+            
             <div class="form-group">
                 <label for="ddlPaquetesHotel">Seleccionar Paquete:</label>
                 <asp:DropDownList ID="ddlPaquetesHotel" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPaquetesHotel_SelectedIndexChanged"></asp:DropDownList>
@@ -174,15 +179,19 @@
                 <label for="txtPrecioHotel">Precio por Noche:</label>
                 <asp:TextBox ID="txtPrecioHotel" runat="server"></asp:TextBox>
             </div>
-            <asp:Button ID="btnAgregarHotel" runat="server" Text="Agregar Hotel al Paquete" CssClass="btn-primary" OnClick="btnAgregarHotel_Click" />
+            <asp:Button ID="btnGuardarHotel" runat="server" Text="Agregar Hotel al Paquete" CssClass="btn-primary" OnClick="btnGuardarHotel_Click" />
 
             <h3>Hoteles en el Paquete</h3>
             <asp:ListBox ID="lstHoteles" runat="server" CssClass="list-group"></asp:ListBox>
-        </div>
             </asp:PlaceHolder>
-         <asp:PlaceHolder ID="phAgregarExcursion" runat="server" Visible="false">
+        </div>
         <div class="section">
             <h2>Agregar Excursiones al Paquete</h2>
+            <asp:Button ID="btnAgregarExcursion" runat="server" Text="Agregar Excursion" CssClass="btn-primary" OnClick="btnAgregarExcursion_Click" />
+            <asp:Button ID="btnModificarExcursion" runat="server" Text="Modificar Excursion" CssClass="btn-primary" OnClick="btnModificarExcursion_Click" />
+            <asp:Button ID="btnEliminarExcursion" runat="server" Text="Eliminar Excursion" CssClass="btn-primary" OnClick="btnEliminarExcursion_Click" />
+       
+            <asp:PlaceHolder ID="phAgregarExcursion" runat="server" Visible="false">
             <div class="form-group">
                 <label for="ddlPaquetesExcursion">Seleccionar Paquete:</label>
                 <asp:DropDownList ID="ddlPaquetesExcursion" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPaquetesExcursion_SelectedIndexChanged"></asp:DropDownList>
@@ -199,12 +208,12 @@
                 <label for="txtPrecioExcursion">Precio:</label>
                 <asp:TextBox ID="txtPrecioExcursion" runat="server"></asp:TextBox>
             </div>
-            <asp:Button ID="btnAgregarExcursion" runat="server" Text="Agregar Excursión al Paquete" CssClass="btn-primary" OnClick="btnAgregarExcursion_Click" />
+            <asp:Button ID="btnGuardarExcursion" runat="server" Text="Agregar Excursión al Paquete" CssClass="btn-primary" OnClick="btnGuardarExcursion_Click" />
 
             <h3>Excursiones en el Paquete</h3>
             <asp:ListBox ID="lstExcursiones" runat="server" CssClass="list-group"></asp:ListBox>
 
-        </div>
              </asp:PlaceHolder>
+        </div>
     </div>
 </asp:Content>

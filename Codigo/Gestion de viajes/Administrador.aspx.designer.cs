@@ -15,31 +15,31 @@ namespace Gestion_de_viajes
     {
 
         /// <summary>
-        /// Control btnAgregar.
+        /// Control btnAgregarPaquete.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregar;
+        protected global::System.Web.UI.WebControls.Button btnAgregarPaquete;
 
         /// <summary>
-        /// Control btnModificar.
+        /// Control btnModificarPaquete.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnModificar;
+        protected global::System.Web.UI.WebControls.Button btnModificarPaquete;
 
         /// <summary>
-        /// Control btnEliminar.
+        /// Control btnEliminarPaquete.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEliminar;
+        protected global::System.Web.UI.WebControls.Button btnEliminarPaquete;
 
         /// <summary>
         /// Control phAgregarPaquete.
@@ -150,6 +150,33 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.PlaceHolder phEliminarPaquete;
 
         /// <summary>
+        /// Control btnAgregarHotel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAgregarHotel;
+
+        /// <summary>
+        /// Control btnModificarHotel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnModificarHotel;
+
+        /// <summary>
+        /// Control btnElminarHotel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnElminarHotel;
+
+        /// <summary>
         /// Control phAgregarHoteles.
         /// </summary>
         /// <remarks>
@@ -195,13 +222,13 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtPrecioHotel;
 
         /// <summary>
-        /// Control btnAgregarHotel.
+        /// Control btnGuardarHotel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregarHotel;
+        protected global::System.Web.UI.WebControls.Button btnGuardarHotel;
 
         /// <summary>
         /// Control lstHoteles.
@@ -211,6 +238,33 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox lstHoteles;
+
+        /// <summary>
+        /// Control btnAgregarExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAgregarExcursion;
+
+        /// <summary>
+        /// Control btnModificarExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnModificarExcursion;
+
+        /// <summary>
+        /// Control btnEliminarExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEliminarExcursion;
 
         /// <summary>
         /// Control phAgregarExcursion.
@@ -258,13 +312,13 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtPrecioExcursion;
 
         /// <summary>
-        /// Control btnAgregarExcursion.
+        /// Control btnGuardarExcursion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregarExcursion;
+        protected global::System.Web.UI.WebControls.Button btnGuardarExcursion;
 
         /// <summary>
         /// Control lstExcursiones.
