@@ -101,52 +101,61 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="admin-container">
         <h1>Administrador de Paquetes de Viaje</h1>
-        
-        
-        //// HACER BOTONES PARA QUE DEPENDIENDO LO QUE EL ADMINITRADOR CLIQUEE SE HABILITE......
-
 
         <div class="section">
-         <h2>Gestionar Paquetes</h2>
-            <div class="form-group">
-                <label for="txtNombrePaquete">Nombre del Paquete:</label>
-                <asp:TextBox ID="txtNombrePaquete" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtDescripcionPaquete">Descripción:</label>
-                <asp:TextBox ID="txtDescripcionPaquete" TextMode="MultiLine" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtPrecioPaquete">Precio:</label>
-                <asp:TextBox ID="txtPrecioPaquete" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtMes">Mes:</label>
-                <asp:TextBox ID="txtMes" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtDuracion">Duración:</label>
-                <asp:TextBox ID="txtDuracion" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="ddlTipoTransporte">Tipo de Transporte:</label>
-                <asp:DropDownList ID="ddlTipoTransporte" runat="server">
-                    <asp:ListItem Text="Avión" Value="1" />
-                    <asp:ListItem Text="Bus" Value="3" />
-                 
-                </asp:DropDownList>
-            </div>
-            <div class="form-group">
-                <label for="txtURLimagen">URL de la Imagen:</label>
-                <asp:TextBox ID="txtURLimagen" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtDisponibilidad">Disponibilidad:</label>
-                <asp:TextBox ID="txtDisponibilidad" runat="server"></asp:TextBox>
-            </div>
-            <asp:Button ID="btnAgregarPaquete" runat="server" Text="Agregar Paquete" CssClass="btn-primary" OnClick="btnAgregarPaquete_Click" />
-        </div>
+            <h2>Gestionar Paquetes</h2>
+            <asp:Button ID="btnAgregar" runat="server" Text="Agregar Paquete" CssClass="btn-primary" OnClick="btnAgregar_Click" />
+            <asp:Button ID="btnModificar" runat="server" Text="Modificar Paquete" CssClass="btn-primary" OnClick="btnModificar_Click" />
+            <asp:Button ID="btnEliminar" runat="server" Text="Eliminar Paquete" CssClass="btn-primary" OnClick="btnEliminar_Click" />
+            
+            <asp:PlaceHolder ID="phAgregarPaquete" runat="server" Visible="false">
+                <div class="form-group">
+                    <label for="txtNombrePaquete">Nombre del Paquete:</label>
+                    <asp:TextBox ID="txtNombrePaquete" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <label for="txtDescripcionPaquete">Descripción:</label>
+                    <asp:TextBox ID="txtDescripcionPaquete" TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <label for="txtPrecioPaquete">Precio:</label>
+                    <asp:TextBox ID="txtPrecioPaquete" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <label for="txtMes">Mes:</label>
+                    <asp:TextBox ID="txtMes" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <label for="txtDuracion">Duración:</label>
+                    <asp:TextBox ID="txtDuracion" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <label for="ddlTipoTransporte">Tipo de Transporte:</label>
+                    <asp:DropDownList ID="ddlTipoTransporte" runat="server">
+                        <asp:ListItem Text="Avión" Value="1" />
+                        <asp:ListItem Text="Bus" Value="3" />
+                    </asp:DropDownList>
+                </div>
+                <div class="form-group">
+                    <label for="txtURLimagen">URL de la Imagen:</label>
+                    <asp:TextBox ID="txtURLimagen" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <label for="txtDisponibilidad">Disponibilidad:</label>
+                    <asp:TextBox ID="txtDisponibilidad" runat="server"></asp:TextBox>
+                </div>
+                <asp:Button ID="btnGuardarPaquete" runat="server" Text="Guardar Paquete" CssClass="btn-primary" OnClick="btnGuardarPaquete_Click" />
+            </asp:PlaceHolder>
 
+            <asp:PlaceHolder ID="phModificarPaquete" runat="server" Visible="false">
+               
+            </asp:PlaceHolder>
+
+            <asp:PlaceHolder ID="phEliminarPaquete" runat="server" Visible="false">
+                
+            </asp:PlaceHolder>
+        </div>
+        <asp:PlaceHolder ID="phAgregarHoteles" runat="server" Visible="false">
         <div class="section">
             <h2>Agregar Hoteles al Paquete</h2>
             <div class="form-group">
@@ -166,11 +175,12 @@
                 <asp:TextBox ID="txtPrecioHotel" runat="server"></asp:TextBox>
             </div>
             <asp:Button ID="btnAgregarHotel" runat="server" Text="Agregar Hotel al Paquete" CssClass="btn-primary" OnClick="btnAgregarHotel_Click" />
-            
+
             <h3>Hoteles en el Paquete</h3>
             <asp:ListBox ID="lstHoteles" runat="server" CssClass="list-group"></asp:ListBox>
         </div>
-
+            </asp:PlaceHolder>
+         <asp:PlaceHolder ID="phAgregarExcursion" runat="server" Visible="false">
         <div class="section">
             <h2>Agregar Excursiones al Paquete</h2>
             <div class="form-group">
@@ -190,9 +200,11 @@
                 <asp:TextBox ID="txtPrecioExcursion" runat="server"></asp:TextBox>
             </div>
             <asp:Button ID="btnAgregarExcursion" runat="server" Text="Agregar Excursión al Paquete" CssClass="btn-primary" OnClick="btnAgregarExcursion_Click" />
-            
+
             <h3>Excursiones en el Paquete</h3>
             <asp:ListBox ID="lstExcursiones" runat="server" CssClass="list-group"></asp:ListBox>
+
         </div>
+             </asp:PlaceHolder>
     </div>
 </asp:Content>
