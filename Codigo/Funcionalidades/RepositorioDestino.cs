@@ -18,7 +18,7 @@ namespace Funcionalidades
             try
             {
 
-                AccesoDatos.setearSp("SelExcursionesCompleto");
+                AccesoDatos.setearSp("SelDestinoCompleto");
                 AccesoDatos.ejecutarLectura();
 
                 while (AccesoDatos.Lector.Read())
@@ -28,9 +28,9 @@ namespace Funcionalidades
 
                     aux.IdDestino = (int)AccesoDatos.Lector["IdDestino"];
                     aux.cdgDestino = (int)AccesoDatos.Lector["cdgDestino"];
-                    aux.nombreDestino = (string)AccesoDatos.Lector["Descripcion"];
+                    aux.nombreDestino = (string)AccesoDatos.Lector["NombreDestino"];
                     aux.TipoTransporte = (int)AccesoDatos.Lector["TipoTransporte"];
-                    aux.Precio = (decimal)AccesoDatos.Lector["Precio"];
+                    aux.Precio = (decimal)AccesoDatos.Lector["PrecioTransporte"];
 
                     listarDestinos.Add(aux);
                 }
@@ -67,8 +67,8 @@ namespace Funcionalidades
                     aux.IdDestino = (int)accesoDatos.Lector["IdDestino"];
                     aux.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
                     aux.nombreDestino = (string)accesoDatos.Lector["NombreDestino"];
-                    aux.Precio = (decimal)accesoDatos.Lector["PrecioTrasporte"];
                     aux.TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"];
+                   // aux.Precio = (decimal)accesoDatos.Lector["PrecioTrasporte"];
                     destino = aux;
                 }
 

@@ -51,6 +51,15 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.PlaceHolder phAgregarPaquete;
 
         /// <summary>
+        /// Control ddlCdgDestino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCdgDestino;
+
+        /// <summary>
         /// Control txtNombrePaquete.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,24 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNombrePaquete;
+
+        /// <summary>
+        /// Control lbidPquete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbidPquete;
+
+        /// <summary>
+        /// Control ddlIdPaquete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlIdPaquete;
 
         /// <summary>
         /// Control txtDescripcionPaquete.
@@ -78,22 +105,22 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtPrecioPaquete;
 
         /// <summary>
-        /// Control txtMes.
+        /// Control ddlmes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMes;
+        protected global::System.Web.UI.WebControls.DropDownList ddlmes;
 
         /// <summary>
-        /// Control txtDuracion.
+        /// Control txtDuracionPaquete.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDuracion;
+        protected global::System.Web.UI.WebControls.TextBox txtDuracionPaquete;
 
         /// <summary>
         /// Control ddlTipoTransporte.
@@ -114,13 +141,13 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtURLimagen;
 
         /// <summary>
-        /// Control txtDisponibilidad.
+        /// Control txtDisponibilidadPaquete.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDisponibilidad;
+        protected global::System.Web.UI.WebControls.TextBox txtDisponibilidadPaquete;
 
         /// <summary>
         /// Control btnGuardarPaquete.

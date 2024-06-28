@@ -107,11 +107,22 @@
             <asp:Button ID="btnAgregarPaquete" runat="server" Text="Agregar Paquete" CssClass="btn-primary" OnClick="btnAgregarPaquete_Click" />
             <asp:Button ID="btnModificarPaquete" runat="server" Text="Modificar Paquete" CssClass="btn-primary" OnClick="btnModificarPaquete_Click" />
             <asp:Button ID="btnEliminarPaquete" runat="server" Text="Eliminar Paquete" CssClass="btn-primary" OnClick="btnEliminarPaquete_Click" />
-            
             <asp:PlaceHolder ID="phAgregarPaquete" runat="server" Visible="false">
+                <div class="form-group">
+                    <br />
+                    <asp:Label Text="Seleccionar el destino del paquete:" runat="server" />
+                    <asp:DropDownList id="ddlCdgDestino" AutoPostBack="true" OnSelectedIndexChanged="ddlCdgDestino_SelectedIndexChanged" runat="server"></asp:DropDownList>
+                </div>
+
                 <div class="form-group">
                     <label for="txtNombrePaquete">Nombre del Paquete:</label>
                     <asp:TextBox ID="txtNombrePaquete" runat="server"></asp:TextBox>
+                    
+                    <asp:label runat="server" text="seleccionar id paquete" ID="lbidPquete"></asp:label>
+                    <asp:DropDownList runat="server" ID="ddlIdPaquete" >
+                        <asp:ListItem Text="text1" />
+                        <asp:ListItem Text="text2" />
+                    </asp:DropDownList>
                 </div>
                 <div class="form-group">
                     <label for="txtDescripcionPaquete">Descripción:</label>
@@ -123,17 +134,30 @@
                 </div>
                 <div class="form-group">
                     <label for="txtMes">Mes:</label>
-                    <asp:TextBox ID="txtMes" runat="server"></asp:TextBox>
+                    <asp:DropDownList ID="ddlmes" runat="server">
+                        <asp:ListItem value="1" Text="Enero"  />
+                        <asp:ListItem value="2" Text="Febrero" />
+                        <asp:ListItem value="3" Text="Marzo" />
+                        <asp:ListItem value="4" Text="Abril" />
+                        <asp:ListItem value="5" Text="Mayo" />
+                        <asp:ListItem value="6" Text="Junio" />
+                        <asp:ListItem value="7" Text="Julio" />
+                        <asp:ListItem value="8" Text="Agosto" />
+                        <asp:ListItem value="9" Text="Septiembre" />
+                        <asp:ListItem value="10" Text="Octubre" />
+                        <asp:ListItem value="11" Text="Noviembre" />
+                        <asp:ListItem value="12" Text="Diciembre" />
+                    </asp:DropDownList>
                 </div>
                 <div class="form-group">
-                    <label for="txtDuracion">Duración:</label>
-                    <asp:TextBox ID="txtDuracion" runat="server"></asp:TextBox>
+                    <label for="txtDuracionPaquete">Duración:</label>
+                    <asp:TextBox ID="txtDuracionPaquete" runat="server"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label for="ddlTipoTransporte">Tipo de Transporte:</label>
                     <asp:DropDownList ID="ddlTipoTransporte" runat="server">
                         <asp:ListItem Text="Avión" Value="1" />
-                        <asp:ListItem Text="Bus" Value="3" />
+                        <asp:ListItem Text="Bus" Value="2" />
                     </asp:DropDownList>
                 </div>
                 <div class="form-group">
@@ -141,8 +165,8 @@
                     <asp:TextBox ID="txtURLimagen" runat="server"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <label for="txtDisponibilidad">Disponibilidad:</label>
-                    <asp:TextBox ID="txtDisponibilidad" runat="server"></asp:TextBox>
+                    <label for="txtDisponibilidadPaquete">Disponibilidad:</label>
+                    <asp:TextBox ID="txtDisponibilidadPaquete" runat="server"></asp:TextBox>
                 </div>
                 <asp:Button ID="btnGuardarPaquete" runat="server" Text="Guardar Paquete" CssClass="btn-primary" OnClick="btnGuardarPaquete_Click" />
             </asp:PlaceHolder>

@@ -160,6 +160,7 @@ namespace Funcionalidades
                 accesoDatos.setearParametros("@cdgDestino", nuevo.cdgDestino);
                 accesoDatos.setearParametros("@NombrePaquete", nuevo.NombrePaquete);
                 accesoDatos.setearParametros("@Descripcion", nuevo.Descripcion);
+                accesoDatos.setearParametros("@PrecioPaquete", nuevo.PrecioPaquete);
                 accesoDatos.setearParametros("@Mes", nuevo.Mes);
                 accesoDatos.setearParametros("@Duracion", nuevo.Duracion);
                 accesoDatos.setearParametros("@TipoTransporte", nuevo.TipoTransporte);

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Dominio;
+using Funcionalidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,14 +23,33 @@ namespace Gestion_de_viajes
             }
         }
 
-      
+        private void cargarDetalleCdgDestino()
+        {
+            RepositorioDestino repoDestino = new RepositorioDestino();
+            List<Destino> listDestinos = repoDestino.ListarConSp();
+
+
+            if (listDestinos != null)
+            {
+                ddlCdgDestino.DataSource = listDestinos;
+                ddlCdgDestino.DataTextField = "NombreDestino";
+                ddlCdgDestino.DataValueField = "cdgDestino";
+                ddlCdgDestino.DataBind();
+
+            }
+
+        }
 
         protected void btnAgregarPaquete_Click(object sender, EventArgs e)
         {
             phAgregarPaquete.Visible = true;
             phModificarPaquete.Visible = false;
             phEliminarPaquete.Visible = false;
-        
+            ddlIdPaquete.Visible = false ;
+            lbidPquete.Visible = false ;
+            cargarDetalleCdgDestino();
+
+
         }
 
         protected void btnModificarPaquete_Click(object sender, EventArgs e)
@@ -49,7 +70,37 @@ namespace Gestion_de_viajes
 
         protected void btnGuardarPaquete_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
+                PaqueteDeViaje nuevo = new PaqueteDeViaje();
+                RepositorioPaquete repoPaquete = new RepositorioPaquete();
+                nuevo.cdgDestino = int.Parse(ddlCdgDestino.SelectedItem.Value);
+                nuevo.NombrePaquete = txtNombrePaquete.Text;
+                nuevo.Descripcion = txtDescripcionPaquete.Text;
+                nuevo.PrecioPaquete = int.Parse(txtPrecioPaquete.Text);
+                nuevo.Mes = int.Parse(ddlmes.SelectedItem.Value);
+                nuevo.Duracion = int.Parse(txtDuracionPaquete.Text);
+                nuevo.TipoTransporte = int.Parse(ddlTipoTransporte.SelectedItem.Value);
+                nuevo.URLimagen = txtURLimagen.Text;
+                nuevo.Disponibilidad = int.Parse(txtDisponibilidadPaquete.Text);
+
+
+                if ( nuevo != null)
+                {
+                    repoPaquete.AgregarConSp(nuevo);
+                }
+
+                Response.Redirect("Administrador.aspx", false);
+            }
+            catch (Exception ex)
+            {
+                Session.Add("erroor..", ex);
+
+                throw;
+            }
+
+
+
         }
 
         protected void ddlPaquetesHotel_SelectedIndexChanged(object sender, EventArgs e)
@@ -103,6 +154,18 @@ namespace Gestion_de_viajes
         protected void btnEliminarExcursion_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void ddlCdgDestino_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RepositorioDestino repoDestino = new RepositorioDestino();
+            int cdgdestino = int.Parse(ddlCdgDestino.SelectedItem.Value);
+
+            Destino destinoSeleccionado = repoDestino.ObtenerDestinoPorId(cdgdestino);
+
+            if (destinoSeleccionado != null )
+            {
+            }
         }
     }
 }
