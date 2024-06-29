@@ -116,20 +116,20 @@
              <!--ABM DE PAQUETE-->
             <asp:PlaceHolder ID="PhABMPaquete" runat="server" Visible="false">
                 <div class="form-group">
-                    <br />
+                    
+                    <asp:label runat="server" ID="lbidPquete" >Seleccionar id paquete</asp:label>
+                    <asp:DropDownList runat="server" ID="ddlIdPaquete" > </asp:DropDownList>
+
+                </div>
+                <div class="form-group">
+
                     <asp:Label Text="Seleccionar el destino del paquete:" runat="server" />
                     <asp:DropDownList id="ddlCdgDestino" AutoPostBack="true" OnSelectedIndexChanged="ddlCdgDestino_SelectedIndexChanged" runat="server"></asp:DropDownList>
-                </div>
-
+                </div>  
                 <div class="form-group">
                     <label for="txtNombrePaquete">Nombre del Paquete:</label>
                     <asp:TextBox ID="txtNombrePaquete" runat="server"></asp:TextBox>
                     
-                    <asp:label runat="server" text="seleccionar id paquete" ID="lbidPquete">Seleccionar id paquete</asp:label>
-                    <asp:DropDownList runat="server" ID="ddlIdPaquete" >
-                        <asp:ListItem Text="text1" />
-                        <asp:ListItem Text="text2" />
-                    </asp:DropDownList>
                 </div>
 
                 <div class="form-group">

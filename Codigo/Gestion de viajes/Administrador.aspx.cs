@@ -39,6 +39,22 @@ namespace Gestion_de_viajes
             }
 
         }
+        private void cargarDetalleIdPaquete()
+        {
+            RepositorioPaquete repoPaquete = new RepositorioPaquete();
+            List<PaqueteDeViaje> listPaquete= repoPaquete.ListarConSp();
+
+
+            if (listPaquete != null)
+            {
+                ddlIdPaquete.DataSource = listPaquete;
+                ddlIdPaquete.DataTextField = "NombrePaquete";
+                ddlIdPaquete.DataValueField = "IdPaquete";
+                ddlIdPaquete.DataBind();
+
+            }
+
+        }
 
         protected void btnAgregarPaquete_Click(object sender, EventArgs e)
         {
@@ -56,10 +72,12 @@ namespace Gestion_de_viajes
         {
             PhABMPaquete.Visible = true;
             ddlIdPaquete.Visible = true;
-
+            lbidPquete.Visible = true;
             //phModificarPaquete.Visible = true;
             phEliminarPaquete.Visible = false;
-          
+            cargarDetalleIdPaquete();
+
+
         }
 
         protected void btnEliminarPaquete_Click(object sender, EventArgs e)

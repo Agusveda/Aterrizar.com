@@ -51,24 +51,6 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.PlaceHolder PhABMPaquete;
 
         /// <summary>
-        /// Control ddlCdgDestino.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCdgDestino;
-
-        /// <summary>
-        /// Control txtNombrePaquete.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombrePaquete;
-
-        /// <summary>
         /// Control lbidPquete.
         /// </summary>
         /// <remarks>
@@ -85,6 +67,24 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlIdPaquete;
+
+        /// <summary>
+        /// Control ddlCdgDestino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCdgDestino;
+
+        /// <summary>
+        /// Control txtNombrePaquete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNombrePaquete;
 
         /// <summary>
         /// Control txtDescripcionPaquete.
