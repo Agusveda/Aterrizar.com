@@ -15,7 +15,7 @@ namespace Gestion_de_viajes
         {
             if (!IsPostBack)
             {
-                phModificarPaquete.Visible = false;
+               // phModificarPaquete.Visible = false;
                 phEliminarPaquete.Visible = false;
                 phAgregarExcursion.Visible = false;
                 phAgregarExcursion.Visible = false;
@@ -42,9 +42,9 @@ namespace Gestion_de_viajes
 
         protected void btnAgregarPaquete_Click(object sender, EventArgs e)
         {
-            phAgregarPaquete.Visible = true;
-            phModificarPaquete.Visible = false;
-            phEliminarPaquete.Visible = false;
+            PhABMPaquete.Visible = true;
+            //phModificarPaquete.Visible = false;
+           // phEliminarPaquete.Visible = false;
             ddlIdPaquete.Visible = false ;
             lbidPquete.Visible = false ;
             cargarDetalleCdgDestino();
@@ -54,16 +54,18 @@ namespace Gestion_de_viajes
 
         protected void btnModificarPaquete_Click(object sender, EventArgs e)
         {
-            phAgregarPaquete.Visible = false;
-            phModificarPaquete.Visible = true;
+            PhABMPaquete.Visible = true;
+            ddlIdPaquete.Visible = true;
+
+            //phModificarPaquete.Visible = true;
             phEliminarPaquete.Visible = false;
           
         }
 
         protected void btnEliminarPaquete_Click(object sender, EventArgs e)
         {
-            phAgregarPaquete.Visible = false;
-            phModificarPaquete.Visible = false;
+            PhABMPaquete.Visible = false;
+            //phModificarPaquete.Visible = false;
             phEliminarPaquete.Visible = true;
             
         }
@@ -122,16 +124,17 @@ namespace Gestion_de_viajes
         }
 
 
-        protected void btnGuardarHotel_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         protected void btnModificarHotel_Click(object sender, EventArgs e)
         {
 
+            phAgregarHoteles.Visible = true;
+
+
         }
 
+        
         protected void btnElminarHotel_Click(object sender, EventArgs e)
         {
 
@@ -166,6 +169,11 @@ namespace Gestion_de_viajes
             if (destinoSeleccionado != null )
             {
             }
+        }
+
+        protected void btnGuardarHotel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -42,13 +42,13 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Button btnEliminarPaquete;
 
         /// <summary>
-        /// Control phAgregarPaquete.
+        /// Control PhABMPaquete.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phAgregarPaquete;
+        protected global::System.Web.UI.WebControls.PlaceHolder PhABMPaquete;
 
         /// <summary>
         /// Control ddlCdgDestino.
@@ -157,15 +157,6 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardarPaquete;
-
-        /// <summary>
-        /// Control phModificarPaquete.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phModificarPaquete;
 
         /// <summary>
         /// Control phEliminarPaquete.

@@ -104,10 +104,17 @@
 
         <div class="section">
             <h2>Gestionar Paquetes</h2>
+         
+            
+            <!--botones-->
             <asp:Button ID="btnAgregarPaquete" runat="server" Text="Agregar Paquete" CssClass="btn-primary" OnClick="btnAgregarPaquete_Click" />
             <asp:Button ID="btnModificarPaquete" runat="server" Text="Modificar Paquete" CssClass="btn-primary" OnClick="btnModificarPaquete_Click" />
             <asp:Button ID="btnEliminarPaquete" runat="server" Text="Eliminar Paquete" CssClass="btn-primary" OnClick="btnEliminarPaquete_Click" />
-            <asp:PlaceHolder ID="phAgregarPaquete" runat="server" Visible="false">
+          
+            
+
+             <!--ABM DE PAQUETE-->
+            <asp:PlaceHolder ID="PhABMPaquete" runat="server" Visible="false">
                 <div class="form-group">
                     <br />
                     <asp:Label Text="Seleccionar el destino del paquete:" runat="server" />
@@ -118,16 +125,18 @@
                     <label for="txtNombrePaquete">Nombre del Paquete:</label>
                     <asp:TextBox ID="txtNombrePaquete" runat="server"></asp:TextBox>
                     
-                    <asp:label runat="server" text="seleccionar id paquete" ID="lbidPquete"></asp:label>
+                    <asp:label runat="server" text="seleccionar id paquete" ID="lbidPquete">Seleccionar id paquete</asp:label>
                     <asp:DropDownList runat="server" ID="ddlIdPaquete" >
                         <asp:ListItem Text="text1" />
                         <asp:ListItem Text="text2" />
                     </asp:DropDownList>
                 </div>
+
                 <div class="form-group">
                     <label for="txtDescripcionPaquete">Descripción:</label>
                     <asp:TextBox ID="txtDescripcionPaquete" TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
+
                 <div class="form-group">
                     <label for="txtPrecioPaquete">Precio:</label>
                     <asp:TextBox ID="txtPrecioPaquete" runat="server"></asp:TextBox>
@@ -171,9 +180,7 @@
                 <asp:Button ID="btnGuardarPaquete" runat="server" Text="Guardar Paquete" CssClass="btn-primary" OnClick="btnGuardarPaquete_Click" />
             </asp:PlaceHolder>
 
-            <asp:PlaceHolder ID="phModificarPaquete" runat="server" Visible="false">
-               
-            </asp:PlaceHolder>
+            <!--TERMINA ABM PAQUETE-->
 
             <asp:PlaceHolder ID="phEliminarPaquete" runat="server" Visible="false">
                 
