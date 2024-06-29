@@ -56,6 +56,8 @@ namespace Gestion_de_viajes
 
         }
 
+
+
         protected void btnAgregarPaquete_Click(object sender, EventArgs e)
         {
             PhABMPaquete.Visible = true;
@@ -63,6 +65,7 @@ namespace Gestion_de_viajes
            // phEliminarPaquete.Visible = false;
             ddlIdPaquete.Visible = false ;
             lbidPquete.Visible = false ;
+            
             cargarDetalleCdgDestino();
 
 
@@ -75,6 +78,7 @@ namespace Gestion_de_viajes
             lbidPquete.Visible = true;
             //phModificarPaquete.Visible = true;
             phEliminarPaquete.Visible = false;
+            txtNombrePaquete.Enabled = true;
             cargarDetalleIdPaquete();
 
 
@@ -82,9 +86,26 @@ namespace Gestion_de_viajes
 
         protected void btnEliminarPaquete_Click(object sender, EventArgs e)
         {
-            PhABMPaquete.Visible = false;
+            PhABMPaquete.Visible = true;
+            ddlIdPaquete.Visible = true;
+            lbidPquete.Visible = true;
             //phModificarPaquete.Visible = false;
-            phEliminarPaquete.Visible = true;
+            //ESTO ESTA MAS PIOLA Y ANDA GOD, ME FUI.
+            if(txtNombrePaquete.Enabled == true)
+            {
+                phEliminarPaquete.Visible = false;
+
+            }
+            
+            cargarDetalleIdPaquete();
+            int idPaquete = int.Parse(ddlIdPaquete.SelectedItem.Value);
+            //Para bloquear la entrada de datos
+            PaqueteDeViaje aux = new PaqueteDeViaje();
+            RepositorioPaquete repoPaquete = new RepositorioPaquete();
+
+            aux = repoPaquete.ObtenerPaquetePorId(idPaquete);
+            txtNombrePaquete.Text = aux.NombrePaquete;
+            txtNombrePaquete.Enabled = false;
             
         }
 
@@ -193,5 +214,7 @@ namespace Gestion_de_viajes
         {
 
         }
+
+        
     }
 }
