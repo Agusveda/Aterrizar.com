@@ -118,7 +118,7 @@
                 <div class="form-group">
                     
                     <asp:label runat="server" ID="lbidPquete" >Seleccionar id paquete</asp:label>
-                    <asp:DropDownList runat="server" ID="ddlIdPaquete" > </asp:DropDownList>
+                    <asp:DropDownList runat="server" ID="ddlIdPaquete" AutoPostBack="true" OnSelectedIndexChanged="ddlIdPaquete_SelectedIndexChanged"> </asp:DropDownList>
 
                 </div>
                 <div class="form-group">

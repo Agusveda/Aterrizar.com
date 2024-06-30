@@ -182,7 +182,7 @@ namespace Gestion_de_viajes
             RepositorioDestino repoDestino = new RepositorioDestino();
             int cdgdestino = int.Parse(ddlCdgDestino.SelectedItem.Value);
 
-            Destino destinoSeleccionado = repoDestino.ObtenerDestinoPorId(cdgdestino);
+            Destino destinoSeleccionado = repoDestino.ObtenerDestinoPorcdgDestino(cdgdestino);
 
             if (destinoSeleccionado != null )
             {
@@ -191,6 +191,55 @@ namespace Gestion_de_viajes
 
         protected void btnGuardarHotel_Click(object sender, EventArgs e)
         {
+
+        }
+
+
+        //para que carge la descripcion de los paquetes, cuando das clic en "modificar paquete" 
+        protected void ddlIdPaquete_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RepositorioPaquete repoPaquete = new RepositorioPaquete();
+            RepositorioDestino repoDestino = new RepositorioDestino();
+            Destino DestinoSeleccionado = new Destino();
+            int idpaquete = int.Parse(ddlIdPaquete.SelectedItem.Value);
+
+            PaqueteDeViaje paqueteSeleccionado = repoPaquete.ObtenerPaquetePorId(idpaquete);
+            if(paqueteSeleccionado !=null)
+            {
+                txtNombrePaquete.Text = paqueteSeleccionado.NombrePaquete;
+                
+                // para que se visualice el destino
+                DestinoSeleccionado = repoDestino.ObtenerDestinoPorcdgDestino(paqueteSeleccionado.cdgDestino);
+                cargarDetalleCdgDestino();
+                ddlCdgDestino.SelectedValue = DestinoSeleccionado.cdgDestino.ToString();
+
+
+                txtDescripcionPaquete.Text = paqueteSeleccionado.Descripcion;
+                txtPrecioPaquete.Text = paqueteSeleccionado.PrecioPaquete.ToString();
+                ddlmes.SelectedValue = paqueteSeleccionado.Mes.ToString();
+                //ddlmes.DataTextField = "text";
+
+
+                txtDuracionPaquete.Text = paqueteSeleccionado.Duracion.ToString();
+                ddlTipoTransporte.DataValueField = paqueteSeleccionado.TipoTransporte.ToString();
+                if (paqueteSeleccionado.TipoTransporte == 1)
+                {
+                    ddlTipoTransporte.SelectedValue = "1";
+                    ddlTipoTransporte.DataTextField = "Avion";
+                }
+                else
+                {
+                    ddlTipoTransporte.SelectedValue = "2";
+                    ddlTipoTransporte.DataTextField = "Bus";
+
+                }
+                txtURLimagen.Text = paqueteSeleccionado.URLimagen;
+                txtDisponibilidadPaquete.Text = paqueteSeleccionado.Disponibilidad.ToString();
+
+
+
+            }
+
 
         }
     }
