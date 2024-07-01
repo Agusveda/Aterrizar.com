@@ -69,6 +69,15 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.DropDownList ddlIdPaquete;
 
         /// <summary>
+        /// Control lblDestPaquete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDestPaquete;
+
+        /// <summary>
         /// Control ddlCdgDestino.
         /// </summary>
         /// <remarks>
@@ -157,6 +166,24 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardarPaquete;
+
+        /// <summary>
+        /// Control btnEliminarPaqueteBoton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEliminarPaqueteBoton;
+
+        /// <summary>
+        /// Control lblConfirmacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblConfirmacion;
 
         /// <summary>
         /// Control phEliminarPaquete.

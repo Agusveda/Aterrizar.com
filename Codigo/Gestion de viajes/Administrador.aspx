@@ -118,12 +118,12 @@
                 <div class="form-group">
                     
                     <asp:label runat="server" ID="lbidPquete" >Seleccionar id paquete</asp:label>
-                    <asp:DropDownList runat="server" ID="ddlIdPaquete" AutoPostBack="true" OnSelectedIndexChanged="ddlIdPaquete_SelectedIndexChanged"> </asp:DropDownList>
+                    <asp:DropDownList runat="server" ID="ddlIdPaquete" AutoPostBack="true" OnSelectedIndexChanged="ddlIdPaquete_SelectedIndexChanged" > </asp:DropDownList>
 
                 </div>
                 <div class="form-group">
 
-                    <asp:Label Text="Seleccionar el destino del paquete:" runat="server" />
+                    <asp:Label ID="lblDestPaquete" Text="Seleccionar el destino del paquete:" runat="server" />
                     <asp:DropDownList ID="ddlCdgDestino" AutoPostBack="true" runat="server"></asp:DropDownList>
                 </div>
                 <div class="form-group">
@@ -178,6 +178,8 @@
                     <asp:TextBox ID="txtDisponibilidadPaquete" runat="server"></asp:TextBox>
                 </div>
                 <asp:Button ID="btnGuardarPaquete" runat="server" Text="Guardar Paquete" CssClass="btn-primary" OnClick="btnGuardarPaquete_Click" />
+                <asp:Button ID="btnEliminarPaqueteBoton" runat="server" Text="Eliminar Paquete" CssClass="btn-primary" Visible="false" OnClientClick="return confirm('¿Esta seguro que desea eliminar este paquete?');" OnClick="btnEliminarPaqueteBoton_Click" />
+                <asp:Label ID="lblConfirmacion" runat="server" CssClass="success-message" Visible="false"></asp:Label>
             </asp:PlaceHolder>
 
             <asp:PlaceHolder ID="phEliminarPaquete" runat="server" Visible="false">

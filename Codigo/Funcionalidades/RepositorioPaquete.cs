@@ -124,7 +124,7 @@ namespace Funcionalidades
                     PaqueteDeViaje aux = new PaqueteDeViaje();
 
 
-                        aux.IdPaquete = (int)accesoDatos.Lector["IdPaquete"];
+                    aux.IdPaquete = (int)accesoDatos.Lector["IdPaquete"];
                     aux.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
                     aux.NombrePaquete = (string)accesoDatos.Lector["NombrePaquete"];
                     aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
@@ -189,7 +189,25 @@ namespace Funcionalidades
 
 
 
+        public void EliminarConSp(int idPaquete)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
 
+            try
+            {
+                accesoDatos.setearSp("DelPaquete");
+                accesoDatos.setearParametros("@IdPaquete", idPaquete);
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+        }
 
 
     

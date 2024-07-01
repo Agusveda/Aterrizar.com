@@ -47,7 +47,7 @@ namespace Funcionalidades
                 throw ex;
             }
         }
-       
+
         public Destino ObtenerDestinoPorcdgDestino(int cdgDestino)
         {
             Destino destino = new Destino();
@@ -84,6 +84,7 @@ namespace Funcionalidades
                 accesoDatos.cerrarConexion();
             }
 
+
         }
         public Destino ObtenerDestinoPorId(int idDestino)
         {
@@ -105,7 +106,7 @@ namespace Funcionalidades
                     aux.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
                     aux.nombreDestino = (string)accesoDatos.Lector["NombreDestino"];
                     aux.TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"];
-                   // aux.Precio = (decimal)accesoDatos.Lector["PrecioTrasporte"];
+                    // aux.Precio = (decimal)accesoDatos.Lector["PrecioTrasporte"];
                     destino = aux;
                 }
 
@@ -132,7 +133,7 @@ namespace Funcionalidades
                 accesoDatos.setearParametros("@cdgDestino", nuevo.cdgDestino);
                 accesoDatos.setearParametros("@NombreDestino", nuevo.nombreDestino);
                 accesoDatos.setearParametros("@TipoTransporte", nuevo.TipoTransporte);
-             
+
 
                 accesoDatos.ejecutarAccion();
 

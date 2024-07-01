@@ -16,6 +16,7 @@ namespace Gestion_de_viajes
             if (!IsPostBack)
             {
                // phModificarPaquete.Visible = false;
+
                 phEliminarPaquete.Visible = false;
                 phAgregarExcursion.Visible = false;
                 phAgregarExcursion.Visible = false;
@@ -65,7 +66,9 @@ namespace Gestion_de_viajes
            // phEliminarPaquete.Visible = false;
             ddlIdPaquete.Visible = false ;
             lbidPquete.Visible = false ;
-            
+            ddlCdgDestino.Visible = true;
+            lblDestPaquete.Visible = true;
+            DesbloquearEntradaDatos();
             cargarDetalleCdgDestino();
 
 
@@ -73,39 +76,68 @@ namespace Gestion_de_viajes
 
         protected void btnModificarPaquete_Click(object sender, EventArgs e)
         {
+            ddlCdgDestino.Visible = true;
             PhABMPaquete.Visible = true;
             ddlIdPaquete.Visible = true;
             lbidPquete.Visible = true;
+            lblDestPaquete.Visible = true;
+            DesbloquearEntradaDatos();
             //phModificarPaquete.Visible = true;
-            phEliminarPaquete.Visible = false;
-            txtNombrePaquete.Enabled = true;
+
+            
             cargarDetalleIdPaquete();
 
 
+        }
+
+        protected void BloquearEntradaDatos()
+        {
+            txtNombrePaquete.Enabled = false;
+            txtDescripcionPaquete.Enabled = false;
+            txtPrecioPaquete.Enabled = false;
+            ddlmes.Enabled = false;
+            txtDuracionPaquete.Enabled = false;
+            ddlTipoTransporte.Enabled = false;
+            txtURLimagen.Enabled = false;
+            txtDisponibilidadPaquete.Enabled = false;
+            btnGuardarExcursion.Enabled = false;
+            btnEliminarPaqueteBoton.Visible = true;
+            btnGuardarPaquete.Visible = false;
+            
+        }
+
+        protected void DesbloquearEntradaDatos()
+        {
+            txtNombrePaquete.Enabled = true;
+            txtDescripcionPaquete.Enabled = true;
+            txtPrecioPaquete.Enabled = true;
+            ddlmes.Enabled = true;
+            txtDuracionPaquete.Enabled = true;
+            ddlTipoTransporte.Enabled = true;
+            txtURLimagen.Enabled = true;
+            txtDisponibilidadPaquete.Enabled = true;
+            btnGuardarExcursion.Enabled = true;
+            btnEliminarPaqueteBoton.Visible = false;
+            btnGuardarPaquete.Visible = true;
+            lblConfirmacion.Visible = false;
         }
 
         protected void btnEliminarPaquete_Click(object sender, EventArgs e)
         {
             PhABMPaquete.Visible = true;
             ddlIdPaquete.Visible = true;
+            ddlCdgDestino.Visible = false;
+            lblDestPaquete.Visible = false;
             lbidPquete.Visible = true;
+            lblConfirmacion.Visible = false;
+
             //phModificarPaquete.Visible = false;
             //ESTO ESTA MAS PIOLA Y ANDA GOD, ME FUI.
-            if(txtNombrePaquete.Enabled == true)
-            {
-                phEliminarPaquete.Visible = false;
-
-            }
+            BloquearEntradaDatos();
             
             cargarDetalleIdPaquete();
-            int idPaquete = int.Parse(ddlIdPaquete.SelectedItem.Value);
-            //Para bloquear la entrada de datos
-            PaqueteDeViaje aux = new PaqueteDeViaje();
-            RepositorioPaquete repoPaquete = new RepositorioPaquete();
-
-            aux = repoPaquete.ObtenerPaquetePorId(idPaquete);
-            txtNombrePaquete.Text = aux.NombrePaquete;
-            txtNombrePaquete.Enabled = false;
+            
+            
             
         }
 
@@ -176,7 +208,7 @@ namespace Gestion_de_viajes
         
         protected void btnElminarHotel_Click(object sender, EventArgs e)
         {
-
+            
         }
         protected void btnAgregarExcursion_Click(object sender, EventArgs e)
         {
@@ -204,6 +236,7 @@ namespace Gestion_de_viajes
             int cdgdestino = int.Parse(ddlCdgDestino.SelectedItem.Value);
 
             Destino destinoSeleccionado = repoDestino.ObtenerDestinoPorcdgDestino(cdgdestino);
+            
 
             if (destinoSeleccionado != null )
             {
@@ -262,6 +295,32 @@ namespace Gestion_de_viajes
             }
 
 
+        }
+
+        protected void btnEliminarPaqueteBoton_Click(object sender, EventArgs e)
+        {
+            
+            //boton de borrar
+            int idPaquete = int.Parse(ddlIdPaquete.SelectedItem.Value);
+           
+            PaqueteDeViaje aux = new PaqueteDeViaje();
+            RepositorioPaquete repoPaquete = new RepositorioPaquete();
+
+            aux = repoPaquete.ObtenerPaquetePorId(idPaquete);
+            if (aux != null)
+            {
+                repoPaquete.EliminarConSp(aux.IdPaquete);
+                lblConfirmacion.Text = "Paquete eliminado con exito";
+                lblConfirmacion.Visible = true;
+            }
+            else
+            {
+                lblConfirmacion.Text = "No se pudo eliminar el paquete";
+                lblConfirmacion.Visible = true;
+            }
+            //Recarga de objetos en el ddl
+
+            cargarDetalleIdPaquete();
         }
     }
 }
