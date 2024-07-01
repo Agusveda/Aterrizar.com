@@ -7,11 +7,7 @@ using System.Threading.Tasks;
 using Dominio;
 using Gestion_de_viajes;
 
-
-    // prueba agu aca
-
-
-namespace Funcionalidades //facu estuvo aqui
+namespace Funcionalidades 
 {
     public class RepositorioPaquete
     {

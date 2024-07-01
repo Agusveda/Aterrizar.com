@@ -116,9 +116,9 @@
             <!--ABM DE PAQUETE-->
             <asp:PlaceHolder ID="PhABMPaquete" runat="server" Visible="false" >
                 <div class="form-group">
-
-                    <asp:Label runat="server" ID="lbidPquete">Seleccionar id paquete</asp:Label>
-                    <asp:DropDownList runat="server" ID="ddlIdPaquete"></asp:DropDownList>
+                    
+                    <asp:label runat="server" ID="lbidPquete" >Seleccionar id paquete</asp:label>
+                    <asp:DropDownList runat="server" ID="ddlIdPaquete" AutoPostBack="true" OnSelectedIndexChanged="ddlIdPaquete_SelectedIndexChanged"> </asp:DropDownList>
 
                 </div>
                 <div class="form-group">

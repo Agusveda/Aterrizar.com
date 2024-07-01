@@ -47,7 +47,44 @@ namespace Funcionalidades
                 throw ex;
             }
         }
+       
+        public Destino ObtenerDestinoPorcdgDestino(int cdgDestino)
+        {
+            Destino destino = new Destino();
+            AccesoDatos accesoDatos = new AccesoDatos();
 
+            try
+            {
+                accesoDatos.setearSp("ObtenerDestinoPorcdgDestino");
+                accesoDatos.setearParametros("@cdgDestino", cdgDestino);
+                accesoDatos.ejecutarLectura();
+
+                if (accesoDatos.Lector.Read())
+                {
+                    Destino aux = new Destino();
+
+
+                    aux.IdDestino = (int)accesoDatos.Lector["IdDestino"];
+                    aux.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
+                    aux.nombreDestino = (string)accesoDatos.Lector["NombreDestino"];
+                    aux.TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"];
+                    // aux.Precio = (decimal)accesoDatos.Lector["PrecioTrasporte"];
+                    destino = aux;
+                }
+
+                accesoDatos.cerrarConexion();
+                return destino;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+        }
         public Destino ObtenerDestinoPorId(int idDestino)
         {
             Destino destino = new Destino();
