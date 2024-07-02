@@ -178,6 +178,7 @@
                     <asp:TextBox ID="txtDisponibilidadPaquete" runat="server"></asp:TextBox>
                 </div>
                 <asp:Button ID="btnGuardarPaquete" runat="server" Text="Guardar Paquete" CssClass="btn-primary" OnClick="btnGuardarPaquete_Click" />
+                <asp:Button ID="btnAceptarModificarPaquete" runat="server" Text="Aceptar modificacion del Paquete" CssClass="btn-primary" OnClick="btnAceptarModificarPaquete_Click" />
                 <asp:Button ID="btnEliminarPaqueteBoton" runat="server" Text="Eliminar Paquete" CssClass="btn-primary" Visible="false" OnClientClick="return confirm('¿Esta seguro que desea eliminar este paquete?');" OnClick="btnEliminarPaqueteBoton_Click" />
                 <asp:Label ID="lblConfirmacion" runat="server" CssClass="success-message" Visible="false"></asp:Label>
             </asp:PlaceHolder>

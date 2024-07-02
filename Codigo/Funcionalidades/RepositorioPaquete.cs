@@ -187,8 +187,41 @@ namespace Funcionalidades
 
         }
 
+        public void ModificarConSp(PaqueteDeViaje modificado)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("updPaquetes");
+                accesoDatos.setearParametros("@cdgDestino", modificado.cdgDestino);
+                accesoDatos.setearParametros("@NombrePaquete", modificado.NombrePaquete);
+                accesoDatos.setearParametros("@Descripcion", modificado.Descripcion);
+                accesoDatos.setearParametros("@PrecioPaquete", modificado.PrecioPaquete);
+                accesoDatos.setearParametros("@Mes", modificado.Mes);
+                accesoDatos.setearParametros("@Duracion", modificado.Duracion);
+                accesoDatos.setearParametros("@TipoTransporte", modificado.TipoTransporte);
+                accesoDatos.setearParametros("@URLimagen", modificado.URLimagen);
+                accesoDatos.setearParametros("@Disponibilidad", modificado.Disponibilidad);
+                accesoDatos.setearParametros("@IdPaquete", modificado.IdPaquete);
+
+                accesoDatos.ejecutarAccion();
 
 
+
+            }
+            catch (Exception EX)
+            {
+
+                throw EX;
+            }
+
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+        }
         public void EliminarConSp(int idPaquete)
         {
             AccesoDatos accesoDatos = new AccesoDatos();

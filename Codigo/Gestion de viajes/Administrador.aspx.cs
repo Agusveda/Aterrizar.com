@@ -150,7 +150,7 @@ namespace Gestion_de_viajes
                 nuevo.cdgDestino = int.Parse(ddlCdgDestino.SelectedItem.Value);
                 nuevo.NombrePaquete = txtNombrePaquete.Text;
                 nuevo.Descripcion = txtDescripcionPaquete.Text;
-                nuevo.PrecioPaquete = int.Parse(txtPrecioPaquete.Text);
+                nuevo.PrecioPaquete = decimal.Parse(txtPrecioPaquete.Text);
                 nuevo.Mes = int.Parse(ddlmes.SelectedItem.Value);
                 nuevo.Duracion = int.Parse(txtDuracionPaquete.Text);
                 nuevo.TipoTransporte = int.Parse(ddlTipoTransporte.SelectedItem.Value);
@@ -321,6 +321,45 @@ namespace Gestion_de_viajes
             //Recarga de objetos en el ddl
 
             cargarDetalleIdPaquete();
+        }
+
+        protected void btnAceptarModificarPaquete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PaqueteDeViaje nuevo = new PaqueteDeViaje();
+                RepositorioPaquete repoPaquete = new RepositorioPaquete();
+                int idpaquete = int.Parse(ddlIdPaquete.SelectedItem.Value);
+                nuevo.IdPaquete = idpaquete;
+                nuevo.cdgDestino = int.Parse(ddlCdgDestino.SelectedItem.Value);
+                nuevo.NombrePaquete = txtNombrePaquete.Text;
+                nuevo.Descripcion = txtDescripcionPaquete.Text;
+                nuevo.PrecioPaquete = decimal.Parse(txtPrecioPaquete.Text);
+                nuevo.Mes = int.Parse(ddlmes.SelectedItem.Value);
+                nuevo.Duracion = int.Parse(txtDuracionPaquete.Text);
+                nuevo.TipoTransporte = int.Parse(ddlTipoTransporte.SelectedItem.Value);
+                nuevo.URLimagen = txtURLimagen.Text;
+                nuevo.Disponibilidad = int.Parse(txtDisponibilidadPaquete.Text);
+
+
+                if (nuevo != null)
+                {
+                    repoPaquete.ModificarConSp(nuevo);
+                }
+
+                Response.Redirect("Administrador.aspx", false);
+            }
+            catch (Exception ex)
+            {
+                Session.Add("erroor..", ex);
+
+                throw;
+            }
+
+
+
+
+
         }
     }
 }
