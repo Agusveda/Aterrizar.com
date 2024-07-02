@@ -13,14 +13,23 @@ namespace Gestion_de_viajes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["usuario"] != null)
             {
-               // phModificarPaquete.Visible = false;
-
-                phEliminarPaquete.Visible = false;
-                phAgregarExcursion.Visible = false;
-                phAgregarExcursion.Visible = false;
-                phAgregarHoteles.Visible = false;
+                Dominio.Usuario usuario = Session["usuario"] as Dominio.Usuario;
+                if (usuario != null && usuario.TipoUsuario == Dominio.TipoUsuario.Admin)
+                {
+                    phEliminarPaquete.Visible = false;
+                    phAgregarExcursion.Visible = false;
+                    phAgregarHoteles.Visible = false;
+                }
+                else
+                {
+                    Response.Redirect("Inicio.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
             }
         }
 
