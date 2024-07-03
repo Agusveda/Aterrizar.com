@@ -14,12 +14,15 @@ namespace Gestion_de_viajes
         public List<PaqueteDeViaje> listapaquete { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            RepositorioPaquete repositorioPaquete = new RepositorioPaquete();
-            listapaquete = repositorioPaquete.ListarConSp(1);
-            repPaquetesAvion.DataSource = listapaquete;
-            repPaquetesAvion.DataBind();
 
+            if (!IsPostBack)
+            {
+                int mesSeleccionado = Convert.ToInt32(Request.QueryString["mes"]); // Obtener el mes desde la query string
+                RepositorioPaquete repositorioPaquete = new RepositorioPaquete();
+                listapaquete = repositorioPaquete.ListarConSp(1, mesSeleccionado); // Filtrar por tipo de transporte 1 y mes seleccionado
+                repPaquetesAvion.DataSource = listapaquete;
+                repPaquetesAvion.DataBind();
+            }
 
         }
 

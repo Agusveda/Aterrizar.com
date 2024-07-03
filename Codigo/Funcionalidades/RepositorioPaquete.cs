@@ -67,7 +67,7 @@ namespace Funcionalidades
                 throw ex;
             }
         }
-        public List<PaqueteDeViaje> ListarConSp(int tipoTransporte)
+        public List<PaqueteDeViaje> ListarConSp(int tipoTransporte,  int? mes = null)
         {
             List<PaqueteDeViaje> listarPaquete = new List<PaqueteDeViaje>();
             AccesoDatos accesoDatos = new AccesoDatos();
@@ -78,7 +78,10 @@ namespace Funcionalidades
 
                
                 accesoDatos.setearParametros("@TipoTransporte", tipoTransporte);
-                
+                if (mes.HasValue)
+                {
+                    accesoDatos.setearParametros("@Mes", mes.Value);
+                }
 
                 accesoDatos.ejecutarLectura();
 
