@@ -152,37 +152,75 @@ namespace Gestion_de_viajes
 
         protected void btnGuardarPaquete_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidarDatosPaquete())
             {
-                PaqueteDeViaje nuevo = new PaqueteDeViaje();
-                RepositorioPaquete repoPaquete = new RepositorioPaquete();
-                nuevo.cdgDestino = int.Parse(ddlCdgDestino.SelectedItem.Value);
-                nuevo.NombrePaquete = txtNombrePaquete.Text;
-                nuevo.Descripcion = txtDescripcionPaquete.Text;
-                nuevo.PrecioPaquete = decimal.Parse(txtPrecioPaquete.Text);
-                nuevo.Mes = int.Parse(ddlmes.SelectedItem.Value);
-                nuevo.Duracion = int.Parse(txtDuracionPaquete.Text);
-                nuevo.TipoTransporte = int.Parse(ddlTipoTransporte.SelectedItem.Value);
-                nuevo.URLimagen = txtURLimagen.Text;
-                nuevo.Disponibilidad = int.Parse(txtDisponibilidadPaquete.Text);
-
-
-                if ( nuevo != null)
+                try
                 {
-                    repoPaquete.AgregarConSp(nuevo);
+                    PaqueteDeViaje nuevo = new PaqueteDeViaje();
+                    RepositorioPaquete repoPaquete = new RepositorioPaquete();
+                    nuevo.cdgDestino = int.Parse(ddlCdgDestino.SelectedItem.Value);
+                    nuevo.NombrePaquete = txtNombrePaquete.Text;
+                    nuevo.Descripcion = txtDescripcionPaquete.Text;
+                    nuevo.PrecioPaquete = decimal.Parse(txtPrecioPaquete.Text);
+                    nuevo.Mes = int.Parse(ddlmes.SelectedItem.Value);
+                    nuevo.Duracion = int.Parse(txtDuracionPaquete.Text);
+                    nuevo.TipoTransporte = int.Parse(ddlTipoTransporte.SelectedItem.Value);
+                    nuevo.URLimagen = txtURLimagen.Text;
+                    nuevo.Disponibilidad = int.Parse(txtDisponibilidadPaquete.Text);
+
+
+                    if (nuevo != null)
+                    {
+                        repoPaquete.AgregarConSp(nuevo);
+                    }
+
+                    Response.Redirect("Administrador.aspx", false);
+                }
+                catch (Exception ex)
+                {
+                    Session.Add("erroor..", ex);
+
+                    throw;
                 }
 
-                Response.Redirect("Administrador.aspx", false);
             }
-            catch (Exception ex)
+
+        }
+
+        private bool ValidarDatosPaquete()
+        {
+            lblConfirmacion.ForeColor = System.Drawing.Color.Red;
+
+
+
+            if (string.IsNullOrWhiteSpace(txtNombrePaquete.Text) ||
+                string.IsNullOrWhiteSpace(txtDescripcionPaquete.Text) ||
+                string.IsNullOrWhiteSpace(txtPrecioPaquete.Text) ||
+                string.IsNullOrWhiteSpace(txtDuracionPaquete.Text) ||
+                string.IsNullOrWhiteSpace(txtURLimagen.Text) ||
+                string.IsNullOrWhiteSpace(txtDisponibilidadPaquete.Text) )
             {
-                Session.Add("erroor..", ex);
-
-                throw;
+                lblConfirmacion.Text = "Por favor, complete todos los campos.";
+                lblConfirmacion.Visible = true;
+                return false;
             }
 
+            decimal precio;
+            int duracion, disponibilidad;
 
+            bool precioValido = decimal.TryParse(txtPrecioPaquete.Text, out precio);
+            bool duracionValida = int.TryParse(txtDuracionPaquete.Text, out duracion);
+            bool disponibilidadValida = int.TryParse(txtDisponibilidadPaquete.Text, out disponibilidad);
 
+          
+            if (!precioValido || !duracionValida || !disponibilidadValida)
+            {
+                lblConfirmacion.Text = "Por favor, ingrese valores válidos.";
+                lblConfirmacion.Visible = true;
+                return false;
+            }
+
+            return true;
         }
 
         protected void ddlPaquetesHotel_SelectedIndexChanged(object sender, EventArgs e)
