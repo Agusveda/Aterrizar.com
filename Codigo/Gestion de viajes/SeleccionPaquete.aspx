@@ -163,8 +163,9 @@
             </div>
             <div>
                 <label>Excursiones Adicionales:</label>
-                <asp:CheckBoxList ID="excursionesAdicionales" runat="server" AutoPostBack="true" OnSelectedIndexChanged="excursionesAdicionales_SelectedIndexChanged">
+                <asp:CheckBoxList ID="excursionesAdicionales" runat="server" AutoPostBack="true" OnSelectedIndexChanged="excursionesAdicionales_SelectedIndexChanged" >
                 </asp:CheckBoxList>
+                <asp:DropDownList ID="DropDownList1" AutoPostBack="true" runat="server"></asp:DropDownList>
             </div>
         </div>
         <div class="section reserva-total">

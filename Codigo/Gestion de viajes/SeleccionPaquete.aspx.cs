@@ -96,14 +96,25 @@ namespace Gestion_de_viajes
         protected void excursionesAdicionales_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<int> idsExcursionesSeleccionadas = new List<int>();
+            Reserva aux = new Reserva();
+            RepositorioExcursiones repositorioExcursiones = new RepositorioExcursiones();
             foreach (ListItem item in excursionesAdicionales.Items)
             {
                 if (item.Selected)
                 {
                     idsExcursionesSeleccionadas.Add(Convert.ToInt32(item.Value));
+                    aux.SelExcursiones.Add(repositorioExcursiones.ObtenerExcursionesPorId(Convert.ToInt32(item.Value)));
+                }
+
+                if(!item.Selected)
+                {
+                    aux.SelExcursiones.Remove(repositorioExcursiones.ObtenerExcursionesPorId(Convert.ToInt32(item.Value)));
                 }
             }
-
+            DropDownList1.DataSource = aux.SelExcursiones;
+            DropDownList1.DataTextField = "Nombre";
+            DropDownList1.DataValueField = "IdExcursion";
+            ddlHoteles.DataBind();
             int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
             ActualizarReservaTotal(idPaquete, idsExcursionesSeleccionadas);
         }
@@ -175,6 +186,7 @@ namespace Gestion_de_viajes
             }
 
             reservaTotal.Text = "Reserva Total: $" + precioTotal.ToString();
+            
         }
     }
 }
