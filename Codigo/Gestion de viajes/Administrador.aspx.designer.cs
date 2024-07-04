@@ -231,22 +231,31 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Button btnElminarHotel;
 
         /// <summary>
-        /// Control phAgregarHoteles.
+        /// Control PhABMHotel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phAgregarHoteles;
+        protected global::System.Web.UI.WebControls.PlaceHolder PhABMHotel;
 
         /// <summary>
-        /// Control ddlPaquetesHotel.
+        /// Control lbIdHotel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPaquetesHotel;
+        protected global::System.Web.UI.WebControls.Label lbIdHotel;
+
+        /// <summary>
+        /// Control ddlIdHoteles.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlIdHoteles;
 
         /// <summary>
         /// Control txtNombreHotel.
@@ -276,6 +285,33 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtPrecioHotel;
 
         /// <summary>
+        /// Control lbCdgDestinoEnHotel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbCdgDestinoEnHotel;
+
+        /// <summary>
+        /// Control ddlCdgDestinoEnHotel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCdgDestinoEnHotel;
+
+        /// <summary>
+        /// Control txtURLImagenHotel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtURLImagenHotel;
+
+        /// <summary>
         /// Control btnGuardarHotel.
         /// </summary>
         /// <remarks>
@@ -285,13 +321,31 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Button btnGuardarHotel;
 
         /// <summary>
-        /// Control lstHoteles.
+        /// Control btnAceptarModificarHotel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lstHoteles;
+        protected global::System.Web.UI.WebControls.Button btnAceptarModificarHotel;
+
+        /// <summary>
+        /// Control btnEliminarHotelboton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEliminarHotelboton;
+
+        /// <summary>
+        /// Control lbConfirmacionEliminacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbConfirmacionEliminacion;
 
         /// <summary>
         /// Control btnAgregarExcursion.

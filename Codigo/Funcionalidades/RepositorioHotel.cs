@@ -133,5 +133,92 @@ namespace Funcionalidades
 
         }
 
+        public void AgregarConSp (Hotel nuevo)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("insHotel");
+                accesoDatos.setearParametros("@NombreHotel", nuevo.NombreHotel);
+                accesoDatos.setearParametros("@Descripcion", nuevo.Descripcion);
+                accesoDatos.setearParametros("@PrecioPorNoche", nuevo.PrecioPorNoche);
+                accesoDatos.setearParametros("@cdgDestino", nuevo.cdgDestino);
+                accesoDatos.setearParametros("@URLimagen", nuevo.URLimagen);
+
+                accesoDatos.ejecutarAccion();
+
+
+
+            }
+            catch (Exception EX)
+            {
+
+                throw EX;
+            }
+
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+        }
+
+        public void ModificarConSp(Hotel Modificado)
+        {
+
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("updHotel");
+                accesoDatos.setearParametros("@NombreHotel", Modificado.NombreHotel);
+                accesoDatos.setearParametros("@Descripcion", Modificado.Descripcion);
+                accesoDatos.setearParametros("@PrecioPorNoche", Modificado.PrecioPorNoche);
+                accesoDatos.setearParametros("@cdgDestino", Modificado.cdgDestino);
+                accesoDatos.setearParametros("@URLimagen", Modificado.URLimagen);
+
+
+                accesoDatos.ejecutarAccion();
+
+
+
+            }
+            catch (Exception EX)
+            {
+
+                throw EX;
+            }
+
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+
+
+
+
+        }
+        public void EliminarConSp(int idHotel)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("DelHotel");
+                accesoDatos.setearParametros("@IdHotel", idHotel);
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+        }
+
     }
 }

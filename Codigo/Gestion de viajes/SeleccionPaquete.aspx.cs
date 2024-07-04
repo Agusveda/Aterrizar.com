@@ -103,12 +103,12 @@ namespace Gestion_de_viajes
                 if (item.Selected)
                 {
                     idsExcursionesSeleccionadas.Add(Convert.ToInt32(item.Value));
-                    aux.SelExcursiones.Add(repositorioExcursiones.ObtenerExcursionesPorId(Convert.ToInt32(item.Value)));
+         //           aux.SelExcursiones.Add(repositorioExcursiones.ObtenerExcursionesPorId(Convert.ToInt32(item.Value)));
                 }
 
                 if(!item.Selected)
                 {
-                    aux.SelExcursiones.Remove(repositorioExcursiones.ObtenerExcursionesPorId(Convert.ToInt32(item.Value)));
+              //      aux.SelExcursiones.Remove(repositorioExcursiones.ObtenerExcursionesPorId(Convert.ToInt32(item.Value)));
                 }
             }
             DropDownList1.DataSource = aux.SelExcursiones;
