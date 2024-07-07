@@ -86,9 +86,9 @@
                 <h4>Enero</h4>
                 <div>
                     
-                    <asp:Button ID="btnMostrarEnero" runat="server" Text="Mostrar Enero" OnClick="btnMostrarEnero_Click"  />
+                   <%-- <asp:Button ID="btnMostrarEnero" runat="server" Text="Mostrar Enero" OnClick="btnMostrarEnero_Click"  />
                     <asp:Button ID="btnOcultarEnero" runat="server" Text="Ocultar Enero" OnClick="btnOcultarEnero_Click"  />
-                </div>
+             --%>   </div>
             </div>
     <% } %>
     

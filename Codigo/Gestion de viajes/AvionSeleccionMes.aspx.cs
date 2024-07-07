@@ -33,20 +33,20 @@ namespace Gestion_de_viajes
             RepeaterMeses.DataBind();
         }
 
-        protected void btnMostrarEnero_Click(object sender, EventArgs e)
-        {
-            RepositorioPaquete repo = new RepositorioPaquete();
-            repo.EliminarLogicoPorMes(1, true);
-            CargarPaquetesActivos();
-        }
+        //protected void btnMostrarEnero_Click(object sender, EventArgs e)
+        //{
+        //    RepositorioPaquete repo = new RepositorioPaquete();
+        //    repo.EliminarLogicoPorMes(1, true);
+        //    CargarPaquetesActivos();
+        //}
 
-        protected void btnOcultarEnero_Click(object sender, EventArgs e)
-        {
-          RepositorioPaquete repo = new RepositorioPaquete();
-            repo.EliminarLogicoPorMes(1, false);
-            CargarPaquetesActivos();
+        //protected void btnOcultarEnero_Click(object sender, EventArgs e)
+        //{
+        //  RepositorioPaquete repo = new RepositorioPaquete();
+        //    repo.EliminarLogicoPorMes(1, false);
+        //    CargarPaquetesActivos();
 
 
-        }
+        //}
     }
 }

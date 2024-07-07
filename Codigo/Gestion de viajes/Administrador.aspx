@@ -109,6 +109,7 @@
 
 
             <!--botones-->
+
             <asp:Button ID="btnAgregarPaquete" runat="server" Text="Agregar Paquete" CssClass="btn-primary" OnClick="btnAgregarPaquete_Click" />
             <asp:Button ID="btnModificarPaquete" runat="server" Text="Modificar Paquete" CssClass="btn-primary" OnClick="btnModificarPaquete_Click" />
             <asp:Button ID="btnEliminarPaquete" runat="server" Text="Eliminar Paquete" CssClass="btn-primary" OnClick="btnEliminarPaquete_Click" />
@@ -260,9 +261,9 @@
             </asp:PlaceHolder>
         </div>
 
-        <!--TERMINA ABM PAQUETE-->
+        <!--TERMINA ABM HOTEL-->
 
-
+        <!--INICIO ABM EXCURSION-->
 
         <div class="section">
             <h2>Agregar Excursiones al Paquete</h2>
@@ -272,7 +273,7 @@
 
             <asp:PlaceHolder ID="phABMExcursion" runat="server" Visible="false">
                 <div class="form-group">
-                    <label id="lbidExcursion" runat="server"  >Seleccionar id excursion:</label>
+                    <label id="lbidExcursion" runat="server">Seleccionar id excursion:</label>
                     <asp:DropDownList ID="ddlIdExcursion" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlIdExcursion_SelectedIndexChanged"></asp:DropDownList>
                 </div>
                 <div class="form-group">
@@ -314,7 +315,19 @@
 
 
             </asp:PlaceHolder>
+        <!--INICIO MESES-->
+            <asp:PlaceHolder ID="phABMMes" runat="server" Visible="true">
+       
+                <asp:Label Text="meses activos" runat="server" />
+                <asp:DropDownList ID="ddlMesesactivos" runat="server" ></asp:DropDownList>
+                <asp:Button Text="descativar mes" ID="btn" runat="server" />
+                
+        
+            </asp:PlaceHolder>
         </div>
+
+        <!--FIN ABM EXCURSION-->
+
     </div>
 </asp:Content>
 <%--<h3>Excursiones en el Paquete</h3>

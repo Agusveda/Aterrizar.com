@@ -639,6 +639,7 @@ namespace Gestion_de_viajes
 
         }
 
+    
 
         //Funciones Extra de EXCURSIONES
         protected void CargarDetalleCdgDestinoEnExcursion()
@@ -673,30 +674,16 @@ namespace Gestion_de_viajes
 
         }
 
-        // funciones de los obj EXCURSIONES
-
-        protected void ddlIdExcursion_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ddlMesesactivos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            RepositorioExcursiones RepoExcursion = new RepositorioExcursiones();
-            RepositorioDestino repoDestino = new RepositorioDestino();
-            Destino DestinoSeleccionado = new Destino();
-            int idExcursion = int.Parse(ddlIdExcursion.SelectedItem.Value);
 
-            Excursiones ExcursionSeleccionada = RepoExcursion.ObtenerExcursionesPorId(idExcursion);
-            if (ExcursionSeleccionada != null)
-            {
-                txtNombreExcursion.Text = ExcursionSeleccionada.Nombre;
-                txtDescripcionExcursion.Text = ExcursionSeleccionada.Descripcion;
-                txtPrecioExcursion.Text = ExcursionSeleccionada.Precio.ToString();
+            //fds
 
-                //para que se visualice el destino 
-                DestinoSeleccionado = repoDestino.ObtenerDestinoPorcdgDestino(ExcursionSeleccionada.cdgDestino);
-                CargarDetalleCdgDestinoEnExcursion();
-                ddlCdgDestinoEnExcursion.SelectedValue = DestinoSeleccionado.cdgDestino.ToString();
-
-                txtDuracionExcursion.Text = ExcursionSeleccionada.duracion.ToString();
-            }
         }
+
+
+
+        // funciones de los obj EXCURSIONES
 
 
     }
