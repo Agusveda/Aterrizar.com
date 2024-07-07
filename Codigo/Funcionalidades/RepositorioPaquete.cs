@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -43,6 +45,7 @@ namespace Funcionalidades
                         aux.URLimagen = (string)AccesoDatos.Lector["URLimagen"];
                     }
                     aux.Disponibilidad = (int)AccesoDatos.Lector["Disponibilidad"];
+                   
 
 
 
@@ -246,7 +249,30 @@ namespace Funcionalidades
         }
 
 
-    
+
+        public void EliminarLogicoPorMes(int mes, bool activo)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearConsulta("UPDATE MES SET Activo = @Activo WHERE IdMes = @IdMes");
+                accesoDatos.setearParametros("@IdMes", mes);
+                accesoDatos.setearParametros("@Activo", activo );
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+        }
+
+
+       
 
     }   
 

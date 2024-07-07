@@ -2,6 +2,30 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+    
+        .mes-block {
+            display: inline-block;
+            width: 150px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #f0f0f0;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .mes-block h4 {
+            margin-top: 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .mes-block .btn {
+            margin-top: 5px;
+            width: 100%;
+        }
+
         .card {
             margin: 10px 50px 1px 50px;
             width: 90%;
@@ -15,10 +39,10 @@
             text-decoration: none;
         }
 
-            .card:hover {
-                transform: scale(1.05);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
         .card-img-top {
             border: 2px solid #ddd;
@@ -46,6 +70,7 @@
             margin-top: 10px;
             font-size: 24px;
         }
+
     </style>
 </asp:Content>
 
@@ -54,134 +79,33 @@
     <div class="container">
 
         <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-                <a href="AvionSeleccionDestino.aspx?mes=1">
-                    <div class="card">
-                        <img src="/imagenes/ENERO.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN ENERO</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="AvionSeleccionDestino.aspx?mes=2">
-                    <div class="card">
-                        <img src="/imagenes/FEBRERO.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN FEBRERO</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="AvionSeleccionDestino.aspx?mes=3">
-                    <div class="card">
-                        <img src="/imagenes/MARZO.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN MARZO</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="AvionSeleccionDestino.aspx?mes=4">
-                    <div class="card">
-                        <img src="/imagenes/ABRIL.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN ABRIL</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="AvionSeleccionDestino.aspx?mes=5">
-                    <div class="card">
-                        <img src="/imagenes/MAYO.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN MAYO</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="AvionSeleccionDestino.aspx?mes=6">
-                    <div class="card">
-                        <img src="/imagenes/JUNIO.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN JUNIO</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <!--PANEL ADMINISTRADOR-->
 
-
-            <div class="col">
-
-                <a href="AvionSeleccionDestino.aspx?mes=7">
-
-                    <div class="card">
-                        <img src="/imagenes/JULIO.JPG" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN JULIO</h5>
-                        </div>
-                    </div>
-                </a>
+     <% if (Session["usuario"] != null && ((Dominio.Usuario)Session["usuario"]).TipoUsuario == Dominio.TipoUsuario.Admin) { %>
+            <div class="mes-block">
+                <h4>Enero</h4>
+                <div>
+                    
+                    <asp:Button ID="btnMostrarEnero" runat="server" Text="Mostrar Enero" OnClick="btnMostrarEnero_Click"  />
+                    <asp:Button ID="btnOcultarEnero" runat="server" Text="Ocultar Enero" OnClick="btnOcultarEnero_Click"  />
+                </div>
             </div>
-            <div class="col">
-                <a href="AvionSeleccionDestino.aspx?mes=8">
-
-                    <div class="card">
-                        <img src="/imagenes/Agosto.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN AGOSTO</h5>
-                        </div>
+    <% } %>
+    
+    <asp:Repeater ID="RepeaterMeses" runat="server">
+                <ItemTemplate>
+                    <div class="col">
+                        <a href="AvionSeleccionDestino.aspx?mes=<%# Eval("IdMes") %>">
+                            <div class="card">
+                                <img src='/imagenes/<%# Eval("NombreMes") %>.jpg' class="card-img-top" alt='<%# Eval("NombreMes") %>'>
+                                <div class="card-body">
+                                    <h5 class="card-title">SALIDAS EN <%# Eval("NombreMes").ToString() %></h5>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="AvionSeleccionDestino.aspx?mes=9">
-
-                    <div class="card">
-                        <img src="/imagenes/Septiembre.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN SEPTIEMBRE</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="AvionSeleccionDestino.aspx?mes=10">
-
-                    <div class="card">
-                        <img src="/imagenes/octubre.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN OCTUBRE</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-           
-            <div class="col">
-                <a href="AvionSeleccionDestino.aspx?mes=11">
-                    <div class="card">
-                        <img src="/imagenes/NOVIEMBRE.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN NOVIEMBRE</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="AvionSeleccionDestino.aspx?mes=12">
-                    <div class="card">
-                        <img src="/imagenes/DICIEMBRE.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN DICIEMBRE</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
 
     </div>
