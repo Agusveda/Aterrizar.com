@@ -102,6 +102,8 @@
     <div class="admin-container">
         <h1>Administrador de Paquetes de Viaje</h1>
 
+        <!--EMPIEZA ABM PAQUETE-->
+
         <div class="section">
             <h2>Gestionar Paquetes</h2>
 

@@ -20,7 +20,8 @@ namespace Gestion_de_viajes
                 {
                     phEliminarPaquete.Visible = false;
                     phAgregarExcursion.Visible = false;
-                    PhABMHotel.Visible = false;
+                    //PhABMHotel.Visible = false;
+                    
                 }
                 else
                 {
@@ -352,15 +353,14 @@ namespace Gestion_de_viajes
         // BOTONES PRINCIPALES HOTEL 
         protected void btnAgregarHotel_Click(object sender, EventArgs e)
         {
-            CargarDetalleCdgDestinoEnHotel();
             lbIdHotel.Visible = false;
             ddlIdHoteles.Visible = false;
             PhABMHotel.Visible = true;
-            phAgregarExcursion.Visible = true;
             btnAceptarModificarHotel.Visible = false;
             btnEliminarHotelboton.Visible = false;
             lbConfirmacionEliminacion.Visible = false;
-
+            CargarDetalleCdgDestinoEnHotel();
+            desbloquearEntradaDatosHotel();
 
         }
 
@@ -369,18 +369,34 @@ namespace Gestion_de_viajes
 
         protected void btnModificarHotel_Click(object sender, EventArgs e)
         {
-
+            
+            lbIdHotel.Visible = true;
+            ddlIdHoteles.Visible = true;
             PhABMHotel.Visible = true;
-
-
+            btnAceptarModificarHotel.Visible = true;
+            btnEliminarHotelboton.Visible = false;
+            lbConfirmacionEliminacion.Visible = false;
+            btnGuardarHotel.Visible = false;
+            cargarIdHotel();
+            CargarDetalleCdgDestinoEnHotel();
+            desbloquearEntradaDatosHotel();
         }
 
         
         protected void btnElminarHotel_Click(object sender, EventArgs e)
         {
-            
+            lbIdHotel.Visible = true;
+            ddlIdHoteles.Visible = true;
+            PhABMHotel.Visible = true;
+            btnAceptarModificarHotel.Visible = false;
+            btnEliminarHotelboton.Visible = true;
+            lbConfirmacionEliminacion.Visible = false;
+            btnGuardarHotel.Visible = false;
+            cargarIdHotel();
+            CargarDetalleCdgDestinoEnHotel();
+            bloquearEntradaDatosHotel();
         }
-        
+
 
         //botones de hotel con funciones
 
@@ -412,12 +428,132 @@ namespace Gestion_de_viajes
                     throw;
                 }
         }
+        protected void btnAceptarModificarHotel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Hotel nuevo = new Hotel();
+                RepositorioHotel repoHotel= new RepositorioHotel();
+                int IdHotel= int.Parse(ddlIdHoteles.SelectedItem.Value);
+                nuevo.IdHotel= IdHotel;
+                nuevo.NombreHotel = txtNombreHotel.Text;
+                nuevo.cdgDestino = int.Parse(ddlCdgDestinoEnHotel.SelectedItem.Value);
+                nuevo.Descripcion= txtDescripcionHotel.Text;
+                nuevo.PrecioPorNoche= decimal.Parse(txtPrecioHotel.Text);
+                nuevo.URLimagen = txtURLImagenHotel.Text;
+
+
+                if (nuevo != null)
+                {
+                    repoHotel.ModificarConSp(nuevo);
+                }
+
+                Response.Redirect("Administrador.aspx", false);
+            }
+            catch (Exception ex)
+            {
+                Session.Add("erroor..", ex);
+
+                throw;
+            }
+
+            }
+
+        protected void btnEliminarHotelboton_Click(object sender, EventArgs e)
+        { //boton de borrar
+            int IdHotel = int.Parse(ddlIdHoteles.SelectedItem.Value);
+
+            Hotel aux = new Hotel();
+            RepositorioHotel repoHotel= new RepositorioHotel();
+
+            aux = repoHotel.ObtenerHotelPorId(IdHotel);
+            if (aux != null)
+            {
+                repoHotel.EliminarConSp(aux.IdHotel);
+                lblConfirmacion.Text = "Hotel eliminado con exito";
+                lblConfirmacion.Visible = true;
+            }
+            else
+            {
+                lblConfirmacion.Text = "No se pudo eliminar el Hotel";
+                lblConfirmacion.Visible = true;
+            }
+            //Recarga de objetos en el ddl
+
+            cargarIdHotel();
+
+        }
+
+        //Funciones Extra de hotel
+        private void cargarIdHotel()
+        {
+            RepositorioHotel repoHotel = new RepositorioHotel();
+            List <Hotel> listaHotel= repoHotel.ListarConSp();
+
+
+            if (listaHotel != null)
+            {
+                ddlIdHoteles.DataSource = listaHotel;
+                ddlIdHoteles.DataTextField = "NombreHotel";
+                ddlIdHoteles.DataValueField = "IdHotel";
+                ddlIdHoteles.DataBind();
+
+            }
+
+        }
+
+        private void desbloquearEntradaDatosHotel()
+        {
+            txtNombreHotel.Enabled = true;
+            txtDescripcionHotel.Enabled = true;
+            txtPrecioHotel.Enabled = true;
+            ddlCdgDestinoEnHotel.Enabled = true;
+            txtURLImagenHotel.Enabled = true;
+        }
+        private void bloquearEntradaDatosHotel()
+        {
+            txtNombreHotel.Enabled = false;
+            txtDescripcionHotel.Enabled = false;
+            txtPrecioHotel.Enabled = false;
+            ddlCdgDestinoEnHotel.Enabled = false;
+            txtURLImagenHotel.Enabled = false;
+        }
+
+        // funciones de los obj PAQUETE
+
+        protected void ddlIdHoteles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RepositorioHotel repoHotel = new RepositorioHotel();
+            RepositorioDestino repoDestino = new RepositorioDestino();
+            Destino DestinoSeleccionado = new Destino();
+            int idHotel = int.Parse(ddlIdHoteles.SelectedItem.Value);
+
+            Hotel HotelSeleccionado = repoHotel.ObtenerHotelPorId(idHotel);
+            if (HotelSeleccionado != null)
+            {
+                txtNombreHotel.Text = HotelSeleccionado.NombreHotel;
+                txtDescripcionHotel.Text = HotelSeleccionado.Descripcion;
+                txtPrecioHotel.Text = HotelSeleccionado.PrecioPorNoche.ToString();
+
+                //para que se visualice el destino 
+                DestinoSeleccionado = repoDestino.ObtenerDestinoPorcdgDestino(HotelSeleccionado.cdgDestino);
+                CargarDetalleCdgDestinoEnHotel();
+                ddlCdgDestinoEnHotel.SelectedValue = DestinoSeleccionado.cdgDestino.ToString();
+
+                txtURLImagenHotel.Text = HotelSeleccionado.URLimagen;
+            }
+        }
+
+
         protected void btnGuardarExcursion_Click(object sender, EventArgs e)
         {
 
 
 
         }
+
+
+
 
         protected void btnModificarExcursion_Click(object sender, EventArgs e)
         {
@@ -452,10 +588,6 @@ namespace Gestion_de_viajes
 
         }
 
-        protected void ddlPaquetesHotel_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         protected void ddlPaquetesExcursion_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -463,19 +595,7 @@ namespace Gestion_de_viajes
         }
 
 
-        protected void ddlIdHoteles_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        protected void btnAceptarModificarHotel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnEliminarHotelboton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

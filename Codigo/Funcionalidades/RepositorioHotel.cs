@@ -30,7 +30,7 @@ namespace Funcionalidades
                     aux.NombreHotel = (string)AccesoDatos.Lector["NombreHotel"];
                     aux.Descripcion = (string)AccesoDatos.Lector["Descripcion"];
                     aux.PrecioPorNoche = (decimal)AccesoDatos.Lector["PrecioPorNoche"];
-                    aux.cdgDestino = (int)AccesoDatos.Lector["IdDestino"];
+                    aux.cdgDestino = (int)AccesoDatos.Lector["cdgDestino"];
                     aux.URLimagen = (string)AccesoDatos.Lector["URLimagen"];
 
 
@@ -172,6 +172,7 @@ namespace Funcionalidades
             try
             {
                 accesoDatos.setearSp("updHotel");
+                accesoDatos.setearParametros("@idHotel", Modificado.IdHotel);
                 accesoDatos.setearParametros("@NombreHotel", Modificado.NombreHotel);
                 accesoDatos.setearParametros("@Descripcion", Modificado.Descripcion);
                 accesoDatos.setearParametros("@PrecioPorNoche", Modificado.PrecioPorNoche);
