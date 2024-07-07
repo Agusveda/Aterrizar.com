@@ -12,7 +12,6 @@ namespace Dominio
         public int cdgDestino { get; set; }
         public string Descripcion { get; set; }
         public decimal Precio { get; set; }
-        public int CantidadPersonas { get; set; }
         public int duracion { get; set; }
 
         public string Nombre { get; set; }

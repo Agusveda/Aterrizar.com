@@ -34,7 +34,6 @@ namespace Funcionalidades
                     aux.cdgDestino = (int)AccesoDatos.Lector["cdgdestino"];
                     aux.Descripcion = (string)AccesoDatos.Lector["Descripcion"];
                     aux.Precio = (decimal)AccesoDatos.Lector["Precio"];
-                    aux.CantidadPersonas = (int)AccesoDatos.Lector["CantidadPersonas"];
                     aux.duracion = (int)AccesoDatos.Lector["Duracion"];
                     aux.Nombre = (string)AccesoDatos.Lector["Nombre"];
 
@@ -79,7 +78,6 @@ namespace Funcionalidades
                     excursion.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
                     excursion.Descripcion = (string)accesoDatos.Lector["Descripcion"];
                     excursion.Precio = (decimal)accesoDatos.Lector["Precio"];
-                    excursion.CantidadPersonas = (int)accesoDatos.Lector["CantidadPersonas"];
                     excursion.duracion = (int)accesoDatos.Lector["Duracion"];
                     excursion.Nombre = (string)accesoDatos.Lector["Nombre"];
 
@@ -97,10 +95,6 @@ namespace Funcionalidades
                 accesoDatos.cerrarConexion();
             }
         }
-
-
-
-
         public Excursiones ObtenerExcursionesPorId(int idExcursion)
         {
             Excursiones excursiones = new Excursiones();
@@ -120,7 +114,6 @@ namespace Funcionalidades
                     aux.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
                     aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
                     aux.Precio = (decimal)accesoDatos.Lector["Precio"];
-                    aux.CantidadPersonas = (int)accesoDatos.Lector["CantidadPersonas"];
                     aux.duracion = (int)accesoDatos.Lector["Duracion"];
                     aux.Nombre = (string)accesoDatos.Lector["Nombre"];
 
@@ -134,6 +127,69 @@ namespace Funcionalidades
             {
                 throw ex;
             }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+        }
+
+        public void AgregarConSp(Excursiones nuevo)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("insExcursiones");
+                accesoDatos.setearParametros("@cdgDestino", nuevo.cdgDestino);
+                accesoDatos.setearParametros("@Descripcion", nuevo.Descripcion);
+                accesoDatos.setearParametros("@Precio", nuevo.Precio);
+                accesoDatos.setearParametros("@Duracion", nuevo.duracion);
+                accesoDatos.setearParametros("@Nombre", nuevo.Nombre);
+
+                accesoDatos.ejecutarAccion();
+
+
+
+            }
+            catch (Exception EX)
+            {
+
+                throw EX;
+            }
+
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+        }
+
+        public void ModificarConSp(Excursiones modificado)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("updExcursiones");
+                accesoDatos.setearParametros("@IdExcursion", modificado.IdExcursion);
+                accesoDatos.setearParametros("@cdgDestino", modificado.cdgDestino);
+                accesoDatos.setearParametros("@Descripcion", modificado.Descripcion);
+                accesoDatos.setearParametros("@Precio", modificado.Precio);
+                accesoDatos.setearParametros("@Duracion", modificado.duracion);
+                accesoDatos.setearParametros("@Nombre", modificado.Nombre);
+
+                accesoDatos.ejecutarAccion();
+
+
+
+            }
+            catch (Exception EX)
+            {
+
+                throw EX;
+            }
+
             finally
             {
                 accesoDatos.cerrarConexion();

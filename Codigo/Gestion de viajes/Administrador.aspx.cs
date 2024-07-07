@@ -13,25 +13,7 @@ namespace Gestion_de_viajes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["usuario"] != null)
-            {
-                Dominio.Usuario usuario = Session["usuario"] as Dominio.Usuario;
-                if (usuario != null && usuario.TipoUsuario == Dominio.TipoUsuario.Admin)
-                {
-                    phEliminarPaquete.Visible = false;
-                    phAgregarExcursion.Visible = false;
-                    //PhABMHotel.Visible = false;
-                    
-                }
-                else
-                {
-                    Response.Redirect("Inicio.aspx");
-                }
-            }
-            else
-            {
-                Response.Redirect("Login.aspx");
-            }
+                
         }
 
         
@@ -92,7 +74,7 @@ namespace Gestion_de_viajes
 
         }
 
-        // botones de paquete con funciones
+        // botones de con funciones PAQUETE
         protected void btnGuardarPaquete_Click(object sender, EventArgs e)
         {
             if (ValidarDatosPaquete())
@@ -346,9 +328,11 @@ namespace Gestion_de_viajes
             return true;
         }
 
+        // FIN PAQUETE
 
 
-        
+
+        // INICIO HOTEL
 
         // BOTONES PRINCIPALES HOTEL 
         protected void btnAgregarHotel_Click(object sender, EventArgs e)
@@ -358,15 +342,11 @@ namespace Gestion_de_viajes
             PhABMHotel.Visible = true;
             btnAceptarModificarHotel.Visible = false;
             btnEliminarHotelboton.Visible = false;
-            lbConfirmacionEliminacion.Visible = false;
+            lbConfirmacionEliminacionHotel.Visible = false;
             CargarDetalleCdgDestinoEnHotel();
             desbloquearEntradaDatosHotel();
 
         }
-
-
-       
-
         protected void btnModificarHotel_Click(object sender, EventArgs e)
         {
             
@@ -375,14 +355,12 @@ namespace Gestion_de_viajes
             PhABMHotel.Visible = true;
             btnAceptarModificarHotel.Visible = true;
             btnEliminarHotelboton.Visible = false;
-            lbConfirmacionEliminacion.Visible = false;
+            lbConfirmacionEliminacionHotel.Visible = false;
             btnGuardarHotel.Visible = false;
             cargarIdHotel();
             CargarDetalleCdgDestinoEnHotel();
             desbloquearEntradaDatosHotel();
         }
-
-        
         protected void btnElminarHotel_Click(object sender, EventArgs e)
         {
             lbIdHotel.Visible = true;
@@ -390,16 +368,15 @@ namespace Gestion_de_viajes
             PhABMHotel.Visible = true;
             btnAceptarModificarHotel.Visible = false;
             btnEliminarHotelboton.Visible = true;
-            lbConfirmacionEliminacion.Visible = false;
+            lbConfirmacionEliminacionHotel.Visible = false;
             btnGuardarHotel.Visible = false;
             cargarIdHotel();
             CargarDetalleCdgDestinoEnHotel();
             bloquearEntradaDatosHotel();
         }
-
-
-        //botones de hotel con funciones
-
+        
+        //botones de con funciones HOTEL
+        
         protected void btnGuardarHotel_Click(object sender, EventArgs e)
         {
             
@@ -458,7 +435,6 @@ namespace Gestion_de_viajes
             }
 
             }
-
         protected void btnEliminarHotelboton_Click(object sender, EventArgs e)
         { //boton de borrar
             int IdHotel = int.Parse(ddlIdHoteles.SelectedItem.Value);
@@ -484,7 +460,7 @@ namespace Gestion_de_viajes
 
         }
 
-        //Funciones Extra de hotel
+        //Funciones Extra de HOTEL
         private void cargarIdHotel()
         {
             RepositorioHotel repoHotel = new RepositorioHotel();
@@ -501,7 +477,21 @@ namespace Gestion_de_viajes
             }
 
         }
+        protected void CargarDetalleCdgDestinoEnHotel()
+        {
+            RepositorioDestino repoDestino = new RepositorioDestino();
+            List<Destino> listDestinos = repoDestino.ListarConSp();
 
+
+            if (listDestinos != null)
+            {
+                ddlCdgDestinoEnHotel.DataSource = listDestinos;
+                ddlCdgDestinoEnHotel.DataTextField = "NombreDestino";
+                ddlCdgDestinoEnHotel.DataValueField = "cdgDestino";
+                ddlCdgDestinoEnHotel.DataBind();
+
+            }
+        }
         private void desbloquearEntradaDatosHotel()
         {
             txtNombreHotel.Enabled = true;
@@ -519,7 +509,7 @@ namespace Gestion_de_viajes
             txtURLImagenHotel.Enabled = false;
         }
 
-        // funciones de los obj PAQUETE
+        // funciones de los obj HOTEL
 
         protected void ddlIdHoteles_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -544,19 +534,37 @@ namespace Gestion_de_viajes
             }
         }
 
+        // VALIDACIONES HOTEL
 
-        protected void btnGuardarExcursion_Click(object sender, EventArgs e)
+
+        // FIN HOTEL
+         
+
+
+        //INICIO EXCURSION
+
+        // BOTONES PRINCIPALES EXCURSIONES 
+
+
+        protected void btnAgregarExcursion_Click(object sender, EventArgs e)
         {
-
-
-
+            phABMExcursion.Visible = true;
+            ddlIdExcursion.Visible = false;
+            lbidExcursion.Visible = false;
+            btnAceptarModificarExcursion.Visible = false;
+            btnaceptarEliminarExcursion.Visible = true;
+            CargarDetalleCdgDestinoEnExcursion();
         }
-
-
-
-
         protected void btnModificarExcursion_Click(object sender, EventArgs e)
         {
+            phABMExcursion.Visible = true;
+            ddlIdExcursion.Visible = true;
+            lbidExcursion.Visible = true;
+            btnAceptarModificarExcursion.Visible = true;
+            btnaceptarEliminarExcursion.Visible = true;
+            btnGuardarExcursion.Visible = false;
+            CargarDetalleCdgDestinoEnExcursion();
+            cargarIdExcursion();
 
         }
 
@@ -564,8 +572,76 @@ namespace Gestion_de_viajes
         {
 
         }
+        //botones de con funciones EXCURSIONES
+        protected void btnGuardarExcursion_Click(object sender, EventArgs e)
+        {
 
-        protected void CargarDetalleCdgDestinoEnHotel()
+            try
+            {
+                Excursiones nuevo = new Excursiones();
+                RepositorioExcursiones repoExcursion = new RepositorioExcursiones();
+                nuevo.Nombre = txtNombreExcursion.Text;
+                nuevo.Descripcion= txtDescripcionExcursion.Text;
+                nuevo.Precio= decimal.Parse(txtPrecioExcursion.Text);
+                nuevo.cdgDestino = int.Parse(ddlCdgDestinoEnExcursion.SelectedItem.Value);
+                nuevo.duracion = int.Parse(txtDuracionExcursion.Text);
+
+
+                if (nuevo != null)
+                {
+                    repoExcursion.AgregarConSp(nuevo);
+                }
+
+                Response.Redirect("Administrador.aspx", false);
+            }
+            catch (Exception ex)
+            {
+                Session.Add("erroor..", ex);
+
+                throw;
+            }
+
+
+        }
+        protected void btnAceptarModificarExcursion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Excursiones nuevo = new Excursiones();
+                RepositorioExcursiones repoExcursion = new RepositorioExcursiones();
+                nuevo.IdExcursion = int.Parse(ddlIdExcursion.SelectedItem.Value);
+                nuevo.Nombre = txtNombreExcursion.Text;
+                nuevo.Descripcion = txtDescripcionExcursion.Text;
+                nuevo.Precio = decimal.Parse(txtPrecioExcursion.Text);
+                nuevo.cdgDestino = int.Parse(ddlCdgDestinoEnExcursion.SelectedItem.Value);
+                nuevo.duracion = int.Parse(txtDuracionExcursion.Text);
+
+
+
+                if (nuevo != null)
+                {
+                    repoExcursion.ModificarConSp(nuevo);
+                }
+
+                Response.Redirect("Administrador.aspx", false);
+            }
+            catch (Exception ex)
+            {
+                Session.Add("erroor..", ex);
+
+                throw;
+            }
+
+
+        }
+        protected void btnaceptarEliminarExcursion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //Funciones Extra de EXCURSIONES
+        protected void CargarDetalleCdgDestinoEnExcursion()
         {
             RepositorioDestino repoDestino = new RepositorioDestino();
             List<Destino> listDestinos = repoDestino.ListarConSp();
@@ -573,28 +649,54 @@ namespace Gestion_de_viajes
 
             if (listDestinos != null)
             {
-                ddlCdgDestinoEnHotel.DataSource = listDestinos;
-                ddlCdgDestinoEnHotel.DataTextField = "NombreDestino";
-                ddlCdgDestinoEnHotel.DataValueField = "cdgDestino";
-                ddlCdgDestinoEnHotel.DataBind();
+                ddlCdgDestinoEnExcursion.DataSource = listDestinos;
+                ddlCdgDestinoEnExcursion.DataTextField = "NombreDestino";
+                ddlCdgDestinoEnExcursion.DataValueField = "cdgDestino";
+                ddlCdgDestinoEnExcursion.DataBind();
 
             }
         }
-        
-
-
-        protected void btnAgregarExcursion_Click(object sender, EventArgs e)
+        private void cargarIdExcursion()
         {
+            RepositorioExcursiones repoexcursion = new RepositorioExcursiones();
+            List<Excursiones> listaExcursion = repoexcursion.ListarConSp();
+
+
+            if (listaExcursion != null)
+            {
+                ddlIdExcursion.DataSource = listaExcursion;
+                ddlIdExcursion.DataTextField = "Nombre";
+                ddlIdExcursion.DataValueField = "IdExcursion";
+                ddlIdExcursion.DataBind();
+
+            }
 
         }
 
+        // funciones de los obj EXCURSIONES
 
-        protected void ddlPaquetesExcursion_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ddlIdExcursion_SelectedIndexChanged(object sender, EventArgs e)
         {
+            RepositorioExcursiones RepoExcursion = new RepositorioExcursiones();
+            RepositorioDestino repoDestino = new RepositorioDestino();
+            Destino DestinoSeleccionado = new Destino();
+            int idExcursion = int.Parse(ddlIdExcursion.SelectedItem.Value);
 
+            Excursiones ExcursionSeleccionada = RepoExcursion.ObtenerExcursionesPorId(idExcursion);
+            if (ExcursionSeleccionada != null)
+            {
+                txtNombreExcursion.Text = ExcursionSeleccionada.Nombre;
+                txtDescripcionExcursion.Text = ExcursionSeleccionada.Descripcion;
+                txtPrecioExcursion.Text = ExcursionSeleccionada.Precio.ToString();
+
+                //para que se visualice el destino 
+                DestinoSeleccionado = repoDestino.ObtenerDestinoPorcdgDestino(ExcursionSeleccionada.cdgDestino);
+                CargarDetalleCdgDestinoEnExcursion();
+                ddlCdgDestinoEnExcursion.SelectedValue = DestinoSeleccionado.cdgDestino.ToString();
+
+                txtDuracionExcursion.Text = ExcursionSeleccionada.duracion.ToString();
+            }
         }
-
-
 
 
     }

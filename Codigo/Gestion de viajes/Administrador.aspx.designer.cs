@@ -339,13 +339,13 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Button btnEliminarHotelboton;
 
         /// <summary>
-        /// Control lbConfirmacionEliminacion.
+        /// Control lbConfirmacionEliminacionHotel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbConfirmacionEliminacion;
+        protected global::System.Web.UI.WebControls.Label lbConfirmacionEliminacionHotel;
 
         /// <summary>
         /// Control btnAgregarExcursion.
@@ -375,22 +375,31 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Button btnEliminarExcursion;
 
         /// <summary>
-        /// Control phAgregarExcursion.
+        /// Control phABMExcursion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phAgregarExcursion;
+        protected global::System.Web.UI.WebControls.PlaceHolder phABMExcursion;
 
         /// <summary>
-        /// Control ddlPaquetesExcursion.
+        /// Control lbidExcursion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPaquetesExcursion;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lbidExcursion;
+
+        /// <summary>
+        /// Control ddlIdExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlIdExcursion;
 
         /// <summary>
         /// Control txtNombreExcursion.
@@ -411,6 +420,33 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtDescripcionExcursion;
 
         /// <summary>
+        /// Control lbCdgDestinoEnExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbCdgDestinoEnExcursion;
+
+        /// <summary>
+        /// Control ddlCdgDestinoEnExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCdgDestinoEnExcursion;
+
+        /// <summary>
+        /// Control txtDuracionExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDuracionExcursion;
+
+        /// <summary>
         /// Control txtPrecioExcursion.
         /// </summary>
         /// <remarks>
@@ -429,12 +465,30 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Button btnGuardarExcursion;
 
         /// <summary>
-        /// Control lstExcursiones.
+        /// Control btnAceptarModificarExcursion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lstExcursiones;
+        protected global::System.Web.UI.WebControls.Button btnAceptarModificarExcursion;
+
+        /// <summary>
+        /// Control btnaceptarEliminarExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnaceptarEliminarExcursion;
+
+        /// <summary>
+        /// Control Label1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }

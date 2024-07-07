@@ -242,25 +242,27 @@
                     <label for="lbURLImagen">UrlImagen:</label>
                     <asp:TextBox ID="txtURLImagenHotel" runat="server"></asp:TextBox>
                 </div>
-        <!--Boton al agregar hotel-->
+                <!--Boton al agregar hotel-->
 
                 <asp:Button ID="btnGuardarHotel" runat="server" Text="Agregar Hotel al Paquete" CssClass="btn-primary" OnClick="btnGuardarHotel_Click" />
 
-        <!--Boton al modificar hotel-->
-        
+                <!--Boton al modificar hotel-->
+
                 <asp:Button ID="btnAceptarModificarHotel" runat="server" Text="Aceptar modificacion del hotel" CssClass="btn-primary" OnClick="btnAceptarModificarHotel_Click" />
 
-        <!--Boton al elimnar hotel-->
+                <!--Boton al elimnar hotel-->
 
 
                 <asp:Button ID="btnEliminarHotelboton" runat="server" Text="Elimnar Hotel" CssClass="btn-primary" OnClientClick="return confirm('¿Esta seguro que desea eliminar este hotel?')" OnClick="btnEliminarHotelboton_Click" />
-                <asp:Label ID="lbConfirmacionEliminacion" runat="server" CssClass="success-message" Visible="false"></asp:Label>
+                <asp:Label ID="lbConfirmacionEliminacionHotel" runat="server" CssClass="success-message" Visible="false"></asp:Label>
 
-             
+
             </asp:PlaceHolder>
         </div>
 
         <!--TERMINA ABM PAQUETE-->
+
+
 
         <div class="section">
             <h2>Agregar Excursiones al Paquete</h2>
@@ -268,10 +270,10 @@
             <asp:Button ID="btnModificarExcursion" runat="server" Text="Modificar Excursion" CssClass="btn-primary" OnClick="btnModificarExcursion_Click" />
             <asp:Button ID="btnEliminarExcursion" runat="server" Text="Eliminar Excursion" CssClass="btn-primary" OnClick="btnEliminarExcursion_Click" />
 
-            <asp:PlaceHolder ID="phAgregarExcursion" runat="server" Visible="false">
+            <asp:PlaceHolder ID="phABMExcursion" runat="server" Visible="false">
                 <div class="form-group">
-                    <label for="ddlPaquetesExcursion">Seleccionar Paquete:</label>
-                    <asp:DropDownList ID="ddlPaquetesExcursion" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPaquetesExcursion_SelectedIndexChanged"></asp:DropDownList>
+                    <label id="lbidExcursion" runat="server"  >Seleccionar id excursion:</label>
+                    <asp:DropDownList ID="ddlIdExcursion" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlIdExcursion_SelectedIndexChanged"></asp:DropDownList>
                 </div>
                 <div class="form-group">
                     <label for="txtNombreExcursion">Nombre de la Excursión:</label>
@@ -282,15 +284,38 @@
                     <asp:TextBox ID="txtDescripcionExcursion" TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
                 <div class="form-group">
+
+                    <asp:Label ID="lbCdgDestinoEnExcursion" Text="Seleccionar el destino de la excrusion:" runat="server" />
+                    <asp:DropDownList ID="ddlCdgDestinoEnExcursion" AutoPostBack="true" runat="server"></asp:DropDownList>
+
+                </div>
+                <div class="form-group">
+                    <label for="lbDuracion">Duracion de la excursion (en horas):</label>
+                    <asp:TextBox ID="txtDuracionExcursion" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group">
                     <label for="txtPrecioExcursion">Precio:</label>
                     <asp:TextBox ID="txtPrecioExcursion" runat="server"></asp:TextBox>
                 </div>
+                <!--Boton al agregar Excursion-->
+
                 <asp:Button ID="btnGuardarExcursion" runat="server" Text="Agregar Excursión al Paquete" CssClass="btn-primary" OnClick="btnGuardarExcursion_Click" />
 
-                <h3>Excursiones en el Paquete</h3>
-                <asp:ListBox ID="lstExcursiones" runat="server" CssClass="list-group"></asp:ListBox>
+                <!--Boton al modificar hotel-->
+
+                <asp:Button ID="btnAceptarModificarExcursion" runat="server" Text="Aceptar modificacion de la excursion" CssClass="btn-primary" OnClick="btnAceptarModificarExcursion_Click" />
+
+                <!--Boton al elimnar hotel-->
+
+
+                <asp:Button ID="btnaceptarEliminarExcursion" runat="server" Text="Elimnar Excursion" CssClass="btn-primary" OnClientClick="return confirm('¿Esta seguro que desea eliminar este hotel?')" OnClick="btnaceptarEliminarExcursion_Click" />
+                <asp:Label ID="Label1" runat="server" CssClass="success-message" Visible="false"></asp:Label>
+
+
 
             </asp:PlaceHolder>
         </div>
     </div>
 </asp:Content>
+<%--<h3>Excursiones en el Paquete</h3>
+                <asp:ListBox ID="lstExcursiones" runat="server" CssClass="list-group"></asp:ListBox>--%>
