@@ -79,18 +79,9 @@
     <div class="container">
 
         <div class="row row-cols-1 row-cols-md-2 g-4">
-            <!--PANEL ADMINISTRADOR-->
+       
 
-     <% if (Session["usuario"] != null && ((Dominio.Usuario)Session["usuario"]).TipoUsuario == Dominio.TipoUsuario.Admin) { %>
-            <div class="mes-block">
-                <h4>Enero</h4>
-                <div>
-                    
-                   <%-- <asp:Button ID="btnMostrarEnero" runat="server" Text="Mostrar Enero" OnClick="btnMostrarEnero_Click"  />
-                    <asp:Button ID="btnOcultarEnero" runat="server" Text="Ocultar Enero" OnClick="btnOcultarEnero_Click"  />
-             --%>   </div>
-            </div>
-    <% } %>
+    
     
     <asp:Repeater ID="RepeaterMeses" runat="server">
                 <ItemTemplate>

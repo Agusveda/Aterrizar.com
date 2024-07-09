@@ -501,21 +501,39 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.PlaceHolder phABMMes;
 
         /// <summary>
-        /// Control ddlMesesactivos.
+        /// Control ddlMesesActivos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMesesactivos;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMesesActivos;
 
         /// <summary>
-        /// Control btn.
+        /// Control btnDesactivarMes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn;
+        protected global::System.Web.UI.WebControls.Button btnDesactivarMes;
+
+        /// <summary>
+        /// Control ddlMesesInactivos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlMesesInactivos;
+
+        /// <summary>
+        /// Control btnActivarMes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnActivarMes;
     }
 }

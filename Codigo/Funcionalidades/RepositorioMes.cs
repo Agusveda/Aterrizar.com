@@ -78,6 +78,27 @@ namespace Funcionalidades
                 accesoDatos.cerrarConexion();
             }
         }
+
+        public void ActualizarEstadoMes(int idMes, bool activo)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("updEstadoMes");
+                accesoDatos.setearParametros("@IdMes", idMes);
+                accesoDatos.setearParametros("@Activo", activo);
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+        }
     }
     
 }

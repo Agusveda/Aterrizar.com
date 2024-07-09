@@ -3,6 +3,7 @@ using Funcionalidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -13,7 +14,11 @@ namespace Gestion_de_viajes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-                
+            if (!IsPostBack)
+            {
+                CargarMesesActivos();
+                CargarMesesInactivos();
+            }
         }
 
         
@@ -674,15 +679,55 @@ namespace Gestion_de_viajes
 
         }
 
-        protected void ddlMesesactivos_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ddlIdExcursion_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int idExcursionSeleccionado = int.Parse(ddlIdExcursion.SelectedValue);
 
-            //fds
-
+           
         }
 
 
+        private void CargarMesesActivos()
+        {
+            RepositorioMes repositorioMes = new RepositorioMes();
+            List<Mes> mesesActivos = repositorioMes.ObtenerMesActivoPorId(1); // Método que obtiene solo los meses activos
 
+            ddlMesesActivos.DataSource = mesesActivos;
+            ddlMesesActivos.DataTextField = "NombreMes";
+            ddlMesesActivos.DataValueField = "IdMes";
+            ddlMesesActivos.DataBind();
+        }
+
+        private void CargarMesesInactivos()
+        {
+            RepositorioMes repositorioMes = new RepositorioMes();
+            List<Mes> mesesActivos = repositorioMes.ObtenerMesActivoPorId(0); // Método que obtiene solo los meses activos
+
+            ddlMesesInactivos.DataSource = mesesActivos;
+            ddlMesesInactivos.DataTextField = "NombreMes";
+            ddlMesesInactivos.DataValueField = "IdMes";
+            ddlMesesInactivos.DataBind();
+        }
+
+      
+        protected void btnDesactivarMes_Click(object sender, EventArgs e)
+        {
+            int idMesSeleccionado = int.Parse(ddlMesesActivos.SelectedValue);
+            RepositorioMes repositorioMes = new RepositorioMes();
+            repositorioMes.ActualizarEstadoMes(idMesSeleccionado, false);
+        }
+
+        protected void btnActivarMes_Click(object sender, EventArgs e)
+        {
+            int idMesSeleccionado = int.Parse(ddlMesesInactivos.SelectedValue);
+            RepositorioMes repositorioMes = new RepositorioMes();
+            repositorioMes.ActualizarEstadoMes(idMesSeleccionado, true);
+        }
+
+      
+
+
+       
         // funciones de los obj EXCURSIONES
 
 

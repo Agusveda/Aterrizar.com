@@ -22,6 +22,7 @@
         h1 {
             text-align: center;
             color: #2c3e50;
+      
         }
 
         .section {
@@ -315,15 +316,34 @@
 
 
             </asp:PlaceHolder>
-        <!--INICIO MESES-->
-            <asp:PlaceHolder ID="phABMMes" runat="server" Visible="true">
-       
-                <asp:Label Text="meses activos" runat="server" />
-                <asp:DropDownList ID="ddlMesesactivos" runat="server" ></asp:DropDownList>
-                <asp:Button Text="descativar mes" ID="btn" runat="server" />
-                
-        
+            <!--INICIO MESES-->
+            <asp:PlaceHolder ID="phABMMes" runat="server" Visible="true"  >
+
+            <!--Activos-->
+                 <h1>Gestionar Meses</h1>
+                <div>
+
+                <h2>Meses Activos</h2>
+                <asp:DropDownList ID="ddlMesesActivos" runat="server" CssClass="select">
+                </asp:DropDownList>
+               
+                <asp:Button Text="Desactivar mes" ID="btnDesactivarMes" runat="server" CssClass="btn-primary" OnClick="btnDesactivarMes_Click" />
+                </div>
+                <div>
+
+            <!--Inactivos-->
+                <h2>Meses Incativos</h2>
+                <asp:DropDownList ID="ddlMesesInactivos" runat="server" CssClass="select">
+                </asp:DropDownList>
+                <asp:Button Text="Activar mes" ID="btnActivarMes" runat="server" CssClass="btn-primary" OnClick="btnActivarMes_Click" />
+               
+                </div>
             </asp:PlaceHolder>
+
+            
+
+
+          
         </div>
 
         <!--FIN ABM EXCURSION-->
