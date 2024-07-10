@@ -46,6 +46,7 @@
     <Compile Include="RepositorioArticulo.cs" />
     <Compile Include="RepositorioDestino.cs" />
     <Compile Include="RepositorioExcursiones.cs" />
+    <Compile Include="RepositorioFecha.cs" />
     <Compile Include="RepositorioHotel.cs" />
     <Compile Include="RepositorioMes.cs" />
     <Compile Include="RepositorioPaquete.cs" />

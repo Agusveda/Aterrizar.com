@@ -96,6 +96,33 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.CheckBoxList excursionesAdicionales;
 
         /// <summary>
+        /// Control BtnFechas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnFechas;
+
+        /// <summary>
+        /// Control PhFechas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PhFechas;
+
+        /// <summary>
+        /// Control repFechas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repFechas;
+
+        /// <summary>
         /// Control reservaTotal.
         /// </summary>
         /// <remarks>

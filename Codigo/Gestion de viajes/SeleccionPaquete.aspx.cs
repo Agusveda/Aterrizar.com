@@ -194,5 +194,28 @@ namespace Gestion_de_viajes
             reservaTotal.Text = "Reserva Total: $" + precioTotal.ToString();
             
         }
+
+
+        protected void BtnFechas_Click(object sender, EventArgs e)
+        {
+            PhFechas.Visible = true;
+            int mesSeleccionado;
+            List<Fechas> listafechas = new List<Fechas>();
+
+            RepositorioFecha repofechas = new RepositorioFecha();
+            RepositorioPaquete repopaquete = new RepositorioPaquete();
+            Fechas auxfecha = new Fechas();
+            int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
+            PaqueteDeViaje aux = repopaquete.ObtenerPaquetePorId(idPaquete);
+            mesSeleccionado = aux.Mes;
+            listafechas = repofechas.ListarConSpPorMes(mesSeleccionado);
+
+            repFechas.DataSource = listafechas;
+            repFechas.DataBind();
+
+
+
+
+        }
     }
 }
