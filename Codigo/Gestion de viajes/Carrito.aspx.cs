@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,9 +15,12 @@ namespace Gestion_de_viajes
             try
             {
                 List<PaqueteDeViaje> carrito = (List<PaqueteDeViaje>)Session["carrito"];
+                List<Reserva> Prueba = (List<Reserva>)Session["SelExcursionReserva"];
+                
                 if (!IsPostBack)
                 {
-                    if (Session["carrito"] == null)
+                    //if (Session["carrito"] == null)
+                    if (Session["SelExcursionReserva"] == null)
                     {
                         lbTotal.Text = "No hay artículos en el carrito";
                         
@@ -37,7 +41,7 @@ namespace Gestion_de_viajes
 
                                    }).ToList();
 
-                    repCarrito.DataSource = agrupados; // Usar la lista agrupada en lugar de la lista original
+                    repCarrito.DataSource = Prueba; // Usar la lista agrupada en lugar de la lista original
                     
                     repCarrito.DataBind();
 
@@ -48,7 +52,8 @@ namespace Gestion_de_viajes
                     //hcaer nuevo label para mostrar el mensaje de vacio
                     if (total == 0)
                     {
-                        lbTotal.Text = "No hay artículos en el carrito";
+                        
+                        lbTotal.Text = "No hay elementos en el carrito";
                         return;
                     }
                     if (total > 0)

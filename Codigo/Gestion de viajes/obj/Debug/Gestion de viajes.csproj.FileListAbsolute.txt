@@ -251,3 +251,48 @@ E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.csproj
 E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion .416D0B75.Up2Date
 E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.dll
 E:\UTN\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.pdb
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\Gestion de viajes.dll.config
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\Gestion de viajes.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\Gestion de viajes.pdb
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csc.exe
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csc.exe.config
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csc.rsp
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csi.exe
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csi.exe.config
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\csi.rsp
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Buffers.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Memory.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\vbc.exe
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\vbc.exe.config
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\vbc.rsp
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\VBCSCompiler.exe
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\Dominio.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\Funcionalidades.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\Dominio.pdb
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\Funcionalidades.pdb
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.csproj.AssemblyReference.cache
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.csproj.CoreCompileInputs.cache
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion .416D0B75.Up2Date
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Gestion de viajes\obj\Debug\Gestion de viajes.pdb

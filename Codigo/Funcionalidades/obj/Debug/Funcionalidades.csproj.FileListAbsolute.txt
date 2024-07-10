@@ -34,3 +34,12 @@ D:\TRANSFERENCIA\Aterrizar.com\Codigo\Funcionalidades\bin\Debug\Funcionalidades.
 D:\TRANSFERENCIA\Aterrizar.com\Codigo\Funcionalidades\bin\Debug\Dominio.dll
 D:\TRANSFERENCIA\Aterrizar.com\Codigo\Funcionalidades\bin\Debug\Dominio.pdb
 D:\TRANSFERENCIA\Aterrizar.com\Codigo\Funcionalidades\obj\Debug\Funciona.62B5C317.Up2Date
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Funcionalidades\bin\Debug\Funcionalidades.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Funcionalidades\bin\Debug\Funcionalidades.pdb
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Funcionalidades\bin\Debug\Dominio.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Funcionalidades\bin\Debug\Dominio.pdb
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Funcionalidades\obj\Debug\Funcionalidades.csproj.AssemblyReference.cache
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Funcionalidades\obj\Debug\Funcionalidades.csproj.CoreCompileInputs.cache
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Funcionalidades\obj\Debug\Funciona.62B5C317.Up2Date
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Funcionalidades\obj\Debug\Funcionalidades.dll
+C:\Users\facun\OneDrive\Escritorio\Facultad\Aterrizar.com\Codigo\Funcionalidades\obj\Debug\Funcionalidades.pdb
