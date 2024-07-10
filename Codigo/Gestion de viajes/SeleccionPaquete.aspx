@@ -130,44 +130,53 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="detalle-paquete">
 
-        <asp:Label Text="nombre" ID="lbNombrePaquete" runat="server" CssClass="NombrePaquete" />
-        <div class="section">
-            <asp:Image ID="imgPaquete" runat="server" alt="Imagen del Paquete" />
-        </div>
-        <div class="section hotel">
-            <div>
-                <label for="hotelSelect">Desplegable Hoteles:</label>
-                <asp:DropDownList ID="ddlHoteles" AutoPostBack="true" runat="server" OnSelectedIndexChanged="ddlHoteles_SelectedIndexChanged"></asp:DropDownList>
+    <div class="detalle-paquete">
+        <asp:PlaceHolder ID="PhPrincipalesPaquete" runat="server">
+            <!--principales del paquete, hotel, excursiones-->
+
+            <asp:Label Text="nombre" ID="lbNombrePaquete" runat="server" CssClass="NombrePaquete" />
+            <div class="section">
+                <asp:Image ID="imgPaquete" runat="server" alt="Imagen del Paquete" />
             </div>
-            <div>
-                <asp:Image ID="imgHotel" runat="server" alt="Foto del Hotel" />
+            <div class="section hotel">
+                <div>
+                    <label for="hotelSelect">Desplegable Hoteles:</label>
+                    <asp:DropDownList ID="ddlHoteles" AutoPostBack="true" runat="server" OnSelectedIndexChanged="ddlHoteles_SelectedIndexChanged"></asp:DropDownList>
+                </div>
+                <div>
+                    <asp:Image ID="imgHotel" runat="server" alt="Foto del Hotel" />
+                </div>
+                <div>
+                    <label>Detalle del Hotel</label>
+                    <asp:Label ID="detalleHotel" runat="server" Text=""></asp:Label>
+                </div>
+                <div>
+                    <label>Precio por noche</label>
+                    <asp:Label ID="PrecioHotel" runat="server" Text=""></asp:Label>
+                    <label>Duracion del paquete: </label>
+                    <asp:Label ID="lbduracionpaquete" runat="server" Text=""></asp:Label>
+
+                </div>
             </div>
-            <div>
-                <label>Detalle del Hotel</label>
-                <asp:Label ID="detalleHotel" runat="server" Text=""></asp:Label>
+            <div class="section excursiones">
+                <div>
+                    <label>Excursiones Incluidas:</label>
+                    <asp:BulletedList ID="excursionesIncluidas" runat="server"></asp:BulletedList>
+                </div>
+                <div>
+                    <asp:BulletedList ID="detalleExcursiones" runat="server" CssClass="detalle-excursiones"></asp:BulletedList>
+                </div>
+                <div>
+                    <label>Excursiones Adicionales: ($ 15.000 cda/una)</label>
+                    <asp:CheckBoxList ID="excursionesAdicionales" runat="server" AutoPostBack="true" OnSelectedIndexChanged="excursionesAdicionales_SelectedIndexChanged">
+                    </asp:CheckBoxList>
+                </div>
             </div>
-            <div>
-                <label>Precio por noche</label>
-                <asp:Label ID="PrecioHotel" runat="server" Text=""></asp:Label>
-            </div>
-        </div>
-        <div class="section excursiones">
-            <div>
-                <label>Excursiones Incluidas:</label>
-                <asp:BulletedList ID="excursionesIncluidas" runat="server"></asp:BulletedList>
-            </div>
-            <div>
-                <asp:BulletedList ID="detalleExcursiones" runat="server" CssClass="detalle-excursiones"></asp:BulletedList>
-            </div>
-            <div>
-                <label>Excursiones Adicionales: ($ 15.000 cda/una)</label>
-                <asp:CheckBoxList ID="excursionesAdicionales" runat="server" AutoPostBack="true" OnSelectedIndexChanged="excursionesAdicionales_SelectedIndexChanged">
-                </asp:CheckBoxList>
-            </div>
-        </div>
-            <asp:Button ID="BtnFechas" Text="Fechas" runat="server" OnClick="BtnFechas_Click" />
+        </asp:PlaceHolder>
+
+
+        <asp:Button ID="BtnFechas" Text="Fechas" runat="server" OnClick="BtnFechas_Click" />
         <asp:PlaceHolder ID="PhFechas" runat="server" Visible="true">
 
             <div class="fechas-paquetes">
@@ -185,15 +194,38 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-
-
-
             </div>
+
         </asp:PlaceHolder>
+        <asp:PlaceHolder runat="server" ID="PhPasajeros"> 
+
+        <asp:Label ID="lblMensajeRegistro" ForeColor="Green" Visible="false" runat="server"></asp:Label>
+        <div>
+            <asp:Label ID="lblUsuarioRegistro" runat="server" Text="Nombre de usuario:"></asp:Label>
+            <asp:TextBox ID="txtUsuarioRegistro" runat="server"></asp:TextBox>
+        </div>
+        <div>
+            <asp:Label ID="lblPasswordRegistro" runat="server" Text="Contraseña:"></asp:Label>
+            <asp:TextBox ID="txtPasswordRegistro" runat="server" TextMode="Password"></asp:TextBox>
+        </div>
+        <div>
+            <asp:Label ID="lblEmailRegistro" runat="server" Text="Correo electrónico:"></asp:Label>
+            <asp:TextBox ID="txtEmailRegistro" runat="server"></asp:TextBox>
+        </div>
+        <div>
+            <asp:Label ID="lblDNI" runat="server" Text="DNI:"></asp:Label>
+            <asp:TextBox ID="txtDNIRegistro" runat="server"></asp:TextBox>
+        </div>
+        <div>
+            <asp:Label ID="lblTelefonoRegistro" runat="server" Text="telefono(Opcional):"></asp:Label>
+            <asp:TextBox ID="txtTelefonoRegistro" runat="server"></asp:TextBox>
+        </div>
+
         <div class="section reserva-total">
             <asp:Label ID="reservaTotal" runat="server"></asp:Label>
 
         </div>
+        </asp:PlaceHolder>
 
         <div class="section">
             Métodos de Pago, Información Extra, Contacto, etc.
