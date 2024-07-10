@@ -196,5 +196,27 @@ namespace Funcionalidades
             }
 
         }
+
+        public void EliminarConSp(int idExcursiones)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("DelExcursiones");
+                accesoDatos.setearParametros("@IdExcursiones", idExcursiones);
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+        }
+
+
     }
 }

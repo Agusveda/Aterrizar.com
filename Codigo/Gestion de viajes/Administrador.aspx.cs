@@ -569,13 +569,22 @@ namespace Gestion_de_viajes
             btnaceptarEliminarExcursion.Visible = true;
             btnGuardarExcursion.Visible = false;
             CargarDetalleCdgDestinoEnExcursion();
+            desbloquearEntradaDatosExcursiones();
             cargarIdExcursion();
 
         }
 
         protected void btnEliminarExcursion_Click(object sender, EventArgs e)
         {
-
+            phABMExcursion.Visible = true;
+            ddlIdExcursion.Visible = true;
+            lbidExcursion.Visible = true;
+            btnAceptarModificarExcursion.Visible = false;
+            btnaceptarEliminarExcursion.Visible = true;
+            btnGuardarExcursion.Visible = false;
+            CargarDetalleCdgDestinoEnExcursion();
+            bloquearEntradaDatosExcursiones();
+            cargarIdExcursion();
         }
         //botones de con funciones EXCURSIONES
         protected void btnGuardarExcursion_Click(object sender, EventArgs e)
@@ -641,7 +650,26 @@ namespace Gestion_de_viajes
         }
         protected void btnaceptarEliminarExcursion_Click(object sender, EventArgs e)
         {
+            int IdExcursion = int.Parse(ddlIdExcursion.SelectedItem.Value);
 
+            Excursiones aux = new Excursiones();
+            RepositorioExcursiones repoExcursiones = new RepositorioExcursiones();
+
+            aux = repoExcursiones.ObtenerExcursionesPorId(IdExcursion);
+            if (aux != null)
+            {
+                repoExcursiones.EliminarConSp(aux.IdExcursion);
+                lblConfirmacion.Text = "Excursion eliminado con exito";
+                lblConfirmacion.Visible = true;
+            }
+            else
+            {
+                lblConfirmacion.Text = "No se pudo eliminar la excursion";
+                lblConfirmacion.Visible = true;
+            }
+            //Recarga de objetos en el ddl
+
+            cargarIdExcursion();
         }
 
     
@@ -679,13 +707,58 @@ namespace Gestion_de_viajes
 
         }
 
-        protected void ddlIdExcursion_SelectedIndexChanged(object sender, EventArgs e)
+        protected void bloquearEntradaDatosExcursiones()
         {
-            int idExcursionSeleccionado = int.Parse(ddlIdExcursion.SelectedValue);
+            txtNombreExcursion.Enabled = false;
+            txtDescripcionExcursion.Enabled = false;
+            ddlCdgDestinoEnExcursion.Enabled = false;
+            txtDuracionExcursion.Enabled = false;
+            txtPrecioExcursion.Enabled = false;
+            
 
-           
+        }
+        protected void desbloquearEntradaDatosExcursiones()
+        {
+            txtNombreExcursion.Enabled = true;
+            txtDescripcionExcursion.Enabled = true;
+            ddlCdgDestinoEnExcursion.Enabled = true;
+            txtDuracionExcursion.Enabled = true;
+            txtPrecioExcursion.Enabled = true;
+
+
         }
 
+
+        // funciones de los obj EXCURSIONES
+        protected void ddlIdExcursion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            RepositorioExcursiones repoExcursiones = new RepositorioExcursiones();
+            RepositorioDestino repoDestino = new RepositorioDestino();
+            Destino DestinoSeleccionado = new Destino();
+            int idExcursion = int.Parse(ddlIdExcursion.SelectedValue);
+
+            Excursiones excursionSeleccionado = repoExcursiones.ObtenerExcursionesPorId(idExcursion);
+            if (excursionSeleccionado != null)
+            {
+                txtNombreExcursion.Text = excursionSeleccionado.Nombre;
+                txtDescripcionExcursion.Text = excursionSeleccionado.Descripcion;
+                //para que se visualice el destino 
+                DestinoSeleccionado = repoDestino.ObtenerDestinoPorcdgDestino(excursionSeleccionado.cdgDestino);
+                CargarDetalleCdgDestinoEnHotel();
+                ddlCdgDestinoEnHotel.SelectedValue = DestinoSeleccionado.cdgDestino.ToString();
+
+                txtDuracionExcursion.Text = excursionSeleccionado.duracion.ToString();
+                txtPrecioExcursion.Text = excursionSeleccionado.Precio.ToString();
+
+            }
+
+        }
+
+
+
+
+        // MESES
 
         private void CargarMesesActivos()
         {
@@ -715,6 +788,8 @@ namespace Gestion_de_viajes
             int idMesSeleccionado = int.Parse(ddlMesesActivos.SelectedValue);
             RepositorioMes repositorioMes = new RepositorioMes();
             repositorioMes.ActualizarEstadoMes(idMesSeleccionado, false);
+            CargarMesesActivos();
+            CargarMesesInactivos();
         }
 
         protected void btnActivarMes_Click(object sender, EventArgs e)
@@ -722,13 +797,15 @@ namespace Gestion_de_viajes
             int idMesSeleccionado = int.Parse(ddlMesesInactivos.SelectedValue);
             RepositorioMes repositorioMes = new RepositorioMes();
             repositorioMes.ActualizarEstadoMes(idMesSeleccionado, true);
+            CargarMesesActivos();
+            CargarMesesInactivos();
+
         }
 
-      
 
 
-       
-        // funciones de los obj EXCURSIONES
+
+
 
 
     }
