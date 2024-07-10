@@ -69,29 +69,15 @@
             <input type="text" id="nombreApellido" class="input-padron" required>
 
             <label for="correoElectronico">Correo Electronico</label>
-            <input type="email" id="correoElectronico" class="input-padron" required placeholder="email@dominio.com">
+            <asp:TextBox id="txtEmail" placeholder="email@dominio.com" runat="server" />  
+            
 
             <label for="telefono">Telefono</label>
             <input type="tel" id="telefono" class="input-padron" required placeholder="(xx) xxxx xxxx">
 
             <label for="Mensaje">Mensaje</label>
-            <textarea name="" id="Mensaje" cols="70" rows="10" class="input-padron"></textarea>
-
-            <fieldset>
-                <legend class="test" id="test">¿Como le gustaria que le contactemos?</legend>
-
-                <label for="boton">
-                    <input type="radio" name="contacto" value="email" id="boton">Email</label>
-
-                <label for="telefonoRadio">
-                    <input type="radio" name="contacto" value="telefono" id="telefonoRadio" checked>Telefono</label>
-
-
-
-                <label for="whatsappRadio">
-                    <input type="radio" name="contacto" value="whatsapp" id="whatsappRadio">Whatsapp</label>
-
-            </fieldset>
+            <asp:TextBox id="txtMensaje" runat="server" TextMode="MultiLine" />
+            
 
             <fieldset>
                 <legend>¿En cual horario prefiere ser atendido?</legend>
@@ -104,7 +90,7 @@
             <label class="checkbox">
                 <input type="checkbox" checked>¿Le gustaria recibir novedades de Aterrizando?</label>
 
-            <input type="submit" value="Enviar formulario" class="enviar">
+            <asp:Button ID="btnEnviar" runat="server" Text="Enviar Formulario" CssClass="enviar" OnClick="btnEnviar_Click" />
         </form>
 
     </div>
