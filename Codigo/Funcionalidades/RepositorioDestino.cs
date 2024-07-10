@@ -29,8 +29,7 @@ namespace Funcionalidades
                     aux.IdDestino = (int)AccesoDatos.Lector["IdDestino"];
                     aux.cdgDestino = (int)AccesoDatos.Lector["cdgDestino"];
                     aux.nombreDestino = (string)AccesoDatos.Lector["NombreDestino"];
-                    aux.TipoTransporte = (int)AccesoDatos.Lector["TipoTransporte"];
-                    aux.Precio = (decimal)AccesoDatos.Lector["PrecioTransporte"];
+                
 
                     listarDestinos.Add(aux);
                 }
@@ -67,8 +66,7 @@ namespace Funcionalidades
                     aux.IdDestino = (int)accesoDatos.Lector["IdDestino"];
                     aux.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
                     aux.nombreDestino = (string)accesoDatos.Lector["NombreDestino"];
-                    aux.TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"];
-                    // aux.Precio = (decimal)accesoDatos.Lector["PrecioTrasporte"];
+                   
                     destino = aux;
                 }
 
@@ -105,8 +103,7 @@ namespace Funcionalidades
                     aux.IdDestino = (int)accesoDatos.Lector["IdDestino"];
                     aux.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
                     aux.nombreDestino = (string)accesoDatos.Lector["NombreDestino"];
-                    aux.TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"];
-                    // aux.Precio = (decimal)accesoDatos.Lector["PrecioTrasporte"];
+                 
                     destino = aux;
                 }
 
@@ -132,7 +129,7 @@ namespace Funcionalidades
                 accesoDatos.setearSp("insDestino");
                 accesoDatos.setearParametros("@cdgDestino", nuevo.cdgDestino);
                 accesoDatos.setearParametros("@NombreDestino", nuevo.nombreDestino);
-                accesoDatos.setearParametros("@TipoTransporte", nuevo.TipoTransporte);
+              
 
 
                 accesoDatos.ejecutarAccion();
@@ -155,5 +152,26 @@ namespace Funcionalidades
 
         }
 
+
+        public void EliminarDestino(int idDestino)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("Del_Destino");
+                accesoDatos.setearParametros("@IdDestino", idDestino);
+
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+        }
     }
 }

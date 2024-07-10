@@ -18,6 +18,7 @@ namespace Gestion_de_viajes
             {
                 CargarMesesActivos();
                 CargarMesesInactivos();
+                CargarDestinosActivos();
             }
         }
 
@@ -802,7 +803,77 @@ namespace Gestion_de_viajes
 
         }
 
+        protected void btnEliminarDestino_Click(object sender, EventArgs e)
+        {
+            int idDestino = int.Parse(ddlDestinosActivos.SelectedValue);
+            RepositorioDestino repoDestino = new RepositorioDestino();
+            repoDestino.EliminarDestino(idDestino);
+            CargarDestinosActivos();
+        }
 
+        protected void btnAgregarDestino_Click(object sender, EventArgs e)
+        {
+
+            int cdgDestino = int.Parse(txtCodigoDestino.Text);
+            string nombreDestino = txtNombreDestino.Text;
+
+            Destino nuevoDestino = new Destino
+            {
+                cdgDestino = cdgDestino,
+                nombreDestino = nombreDestino
+            };
+
+            RepositorioDestino repoDestino = new RepositorioDestino();
+            repoDestino.AgregarConSp(nuevoDestino);
+        }
+
+        private void CargarDestinosActivos()
+        {
+            RepositorioDestino repoDestino = new RepositorioDestino();
+            List<Destino> destinos = repoDestino.ListarConSp();
+
+            ddlDestinosActivos.DataSource = destinos;
+            ddlDestinosActivos.DataTextField = "nombreDestino";
+            ddlDestinosActivos.DataValueField = "IdDestino";
+            ddlDestinosActivos.DataBind();
+        }
+
+        protected void btnCerrarPaquete_Click(object sender, EventArgs e)
+        {
+            PhABMPaquete.Visible = false;
+        }
+
+        protected void btnCerrarHotel_Click(object sender, EventArgs e)
+        {
+            PhABMHotel.Visible = false;
+        }
+
+        protected void btnCerrarExcursion_Click(object sender, EventArgs e)
+        {
+            phABMExcursion.Visible = false;
+        }
+
+
+        protected void btAdministrarMes_Click(object sender, EventArgs e)
+        {
+            phABMMes.Visible = true;
+        }
+
+        protected void btnCerrarMeses_Click(object sender, EventArgs e)
+        {
+            phABMMes.Visible = false;
+        }
+
+        protected void btnCerrarDestinos_Click(object sender, EventArgs e)
+        {
+            phABMDestino.Visible = false;
+        }
+
+
+        protected void btnAdministrarDestino_Click(object sender, EventArgs e)
+        {
+            phABMDestino.Visible = true;
+        }
 
 
 

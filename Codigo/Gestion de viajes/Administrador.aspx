@@ -19,16 +19,19 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
+        .section h2, h1 {
             text-align: center;
+            font-size: 24px;
             color: #2c3e50;
-      
+            margin-top: 40px;
+            margin-bottom: 10px;
         }
 
         .section {
             margin-top: 20px;
             padding-bottom: 20px;
             border-bottom: 1px solid #ccc;
+            text-align: center;
         }
 
             .section:last-child {
@@ -63,20 +66,39 @@
             font-size: 16px;
         }
 
-        .btn-primary {
+        .btnPrimario {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #3498db;
+            background-color: #218838;
             color: #fff;
             text-align: center;
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s;
             cursor: pointer;
+            margin: 10px;
         }
 
-            .btn-primary:hover {
-                background-color: #2980b9;
+            .btnPrimario:hover {
+                background-color: #1e7e34;
+            }
+
+
+        .btnPeligro {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+            .btnPeligro:hover {
+                background-color: #c82333;
             }
 
         .form-group {
@@ -111,9 +133,9 @@
 
             <!--botones-->
 
-            <asp:Button ID="btnAgregarPaquete" runat="server" Text="Agregar Paquete" CssClass="btn-primary" OnClick="btnAgregarPaquete_Click" />
-            <asp:Button ID="btnModificarPaquete" runat="server" Text="Modificar Paquete" CssClass="btn-primary" OnClick="btnModificarPaquete_Click" />
-            <asp:Button ID="btnEliminarPaquete" runat="server" Text="Eliminar Paquete" CssClass="btn-primary" OnClick="btnEliminarPaquete_Click" />
+            <asp:Button ID="btnAgregarPaquete" runat="server" Text="Agregar Paquete" CssClass="btnPrimario" OnClick="btnAgregarPaquete_Click" />
+            <asp:Button ID="btnModificarPaquete" runat="server" Text="Modificar Paquete" CssClass="btnPrimario" OnClick="btnModificarPaquete_Click" />
+            <asp:Button ID="btnEliminarPaquete" runat="server" Text="Eliminar Paquete" CssClass="btnPeligro" OnClick="btnEliminarPaquete_Click" />
 
 
 
@@ -183,15 +205,16 @@
                 </div>
                 <!--Boton al agregar paquete-->
 
-                <asp:Button ID="btnGuardarPaquete" runat="server" Text="Guardar Paquete" CssClass="btn-primary" OnClick="btnGuardarPaquete_Click" />
+                <asp:Button ID="btnGuardarPaquete" runat="server" Text="Guardar Paquete" CssClass="btnPrimario" OnClick="btnGuardarPaquete_Click" />
                 <!--Boton al aceptar la modificacion del paquete-->
 
-                <asp:Button ID="btnAceptarModificarPaquete" runat="server" Text="Aceptar modificacion del Paquete" CssClass="btn-primary" OnClick="btnAceptarModificarPaquete_Click" />
+                <asp:Button ID="btnAceptarModificarPaquete" runat="server" Text="Aceptar modificacion del Paquete" CssClass="btnPrimario" OnClick="btnAceptarModificarPaquete_Click" />
                 <!--Boton al eliminar paquete-->
 
-                <asp:Button ID="btnEliminarPaqueteBoton" runat="server" Text="Eliminar Paquete" CssClass="btn-primary" Visible="false" OnClientClick="return confirm('¿Esta seguro que desea eliminar este paquete?');" OnClick="btnEliminarPaqueteBoton_Click" />
+                <asp:Button ID="btnEliminarPaqueteBoton" runat="server" Text="Eliminar Paquete" CssClass="btnPeligro" Visible="false" OnClientClick="return confirm('¿Esta seguro que desea eliminar este paquete?');" OnClick="btnEliminarPaqueteBoton_Click" />
 
                 <asp:Label ID="lblConfirmacion" runat="server" CssClass="success-message" Visible="false"></asp:Label>
+                <asp:Button ID="btnCerrarPaquete" runat="server" Text="Cerrar" OnClick="btnCerrarPaquete_Click" CssClass="btnPeligro" />
             </asp:PlaceHolder>
 
             <asp:PlaceHolder ID="phEliminarPaquete" runat="server" Visible="false">
@@ -206,12 +229,12 @@
         <!--ABM HOTELES-->
 
         <div class="section">
-            <h2>Agregar Hoteles al Paquete</h2>
+            <h2>Gestionar Hoteles del Paquete</h2>
             <!--Botones principales-->
 
-            <asp:Button ID="btnAgregarHotel" runat="server" Text="Agregar Hotel" CssClass="btn-primary" OnClick="btnAgregarHotel_Click" />
-            <asp:Button ID="btnModificarHotel" runat="server" Text="Modificar Hotel" CssClass="btn-primary" OnClick="btnModificarHotel_Click" />
-            <asp:Button ID="btnElminarHotel" runat="server" Text="Eliminar Hotel" CssClass="btn-primary" OnClick="btnElminarHotel_Click" />
+            <asp:Button ID="btnAgregarHotel" runat="server" Text="Agregar Hotel" CssClass="btnPrimario" OnClick="btnAgregarHotel_Click" />
+            <asp:Button ID="btnModificarHotel" runat="server" Text="Modificar Hotel" CssClass="btnPrimario" OnClick="btnModificarHotel_Click" />
+            <asp:Button ID="btnElminarHotel" runat="server" Text="Eliminar Hotel" CssClass="btnPeligro" OnClick="btnElminarHotel_Click" />
             <!--ABM HOTELES-->
 
             <asp:PlaceHolder ID="PhABMHotel" runat="server" Visible="false">
@@ -246,19 +269,19 @@
                 </div>
                 <!--Boton al agregar hotel-->
 
-                <asp:Button ID="btnGuardarHotel" runat="server" Text="Agregar Hotel al Paquete" CssClass="btn-primary" OnClick="btnGuardarHotel_Click" />
+                <asp:Button ID="btnGuardarHotel" runat="server" Text="Agregar Hotel al Paquete" CssClass="btnPrimario" OnClick="btnGuardarHotel_Click" />
 
                 <!--Boton al modificar hotel-->
 
-                <asp:Button ID="btnAceptarModificarHotel" runat="server" Text="Aceptar modificacion del hotel" CssClass="btn-primary" OnClick="btnAceptarModificarHotel_Click" />
+                <asp:Button ID="btnAceptarModificarHotel" runat="server" Text="Aceptar modificacion del hotel" CssClass="btnPrimario" OnClick="btnAceptarModificarHotel_Click" />
 
                 <!--Boton al elimnar hotel-->
 
 
-                <asp:Button ID="btnEliminarHotelboton" runat="server" Text="Elimnar Hotel" CssClass="btn-primary" OnClientClick="return confirm('¿Esta seguro que desea eliminar este hotel?')" OnClick="btnEliminarHotelboton_Click" />
+                <asp:Button ID="btnEliminarHotelboton" runat="server" Text="Elimnar Hotel" CssClass="btnPeligro" OnClientClick="return confirm('¿Esta seguro que desea eliminar este hotel?')" OnClick="btnEliminarHotelboton_Click" />
                 <asp:Label ID="lbConfirmacionEliminacionHotel" runat="server" CssClass="success-message" Visible="false"></asp:Label>
 
-
+                <asp:Button ID="btnCerrarHotel" runat="server" Text="Cerrar" OnClick="btnCerrarHotel_Click" CssClass="btnPeligro" />
             </asp:PlaceHolder>
         </div>
 
@@ -267,10 +290,10 @@
         <!--INICIO ABM EXCURSION-->
 
         <div class="section">
-            <h2>Agregar Excursiones al Paquete</h2>
-            <asp:Button ID="btnAgregarExcursion" runat="server" Text="Agregar Excursion" CssClass="btn-primary" OnClick="btnAgregarExcursion_Click" />
-            <asp:Button ID="btnModificarExcursion" runat="server" Text="Modificar Excursion" CssClass="btn-primary" OnClick="btnModificarExcursion_Click" />
-            <asp:Button ID="btnEliminarExcursion" runat="server" Text="Eliminar Excursion" CssClass="btn-primary" OnClick="btnEliminarExcursion_Click" />
+            <h2>Gestionar Excursiones del Paquete</h2>
+            <asp:Button ID="btnAgregarExcursion" runat="server" Text="Agregar Excursion" CssClass="btnPrimario" OnClick="btnAgregarExcursion_Click" />
+            <asp:Button ID="btnModificarExcursion" runat="server" Text="Modificar Excursion" CssClass="btnPrimario" OnClick="btnModificarExcursion_Click" />
+            <asp:Button ID="btnEliminarExcursion" runat="server" Text="Eliminar Excursion" CssClass="btnPeligro" OnClick="btnEliminarExcursion_Click" />
 
             <asp:PlaceHolder ID="phABMExcursion" runat="server" Visible="false">
                 <div class="form-group">
@@ -301,54 +324,84 @@
                 </div>
                 <!--Boton al agregar Excursion-->
 
-                <asp:Button ID="btnGuardarExcursion" runat="server" Text="Agregar Excursión al Paquete" CssClass="btn-primary" OnClick="btnGuardarExcursion_Click" />
+                <asp:Button ID="btnGuardarExcursion" runat="server" Text="Agregar Excursión al Paquete" CssClass="btnPrimario" OnClick="btnGuardarExcursion_Click" />
 
                 <!--Boton al modificar hotel-->
 
-                <asp:Button ID="btnAceptarModificarExcursion" runat="server" Text="Aceptar modificacion de la excursion" CssClass="btn-primary" OnClick="btnAceptarModificarExcursion_Click" />
+                <asp:Button ID="btnAceptarModificarExcursion" runat="server" Text="Aceptar modificacion de la excursion" CssClass="btnPrimario" OnClick="btnAceptarModificarExcursion_Click" />
 
                 <!--Boton al elimnar hotel-->
 
 
-                <asp:Button ID="btnaceptarEliminarExcursion" runat="server" Text="Elimnar Excursion" CssClass="btn-primary" OnClientClick="return confirm('¿Esta seguro que desea eliminar este hotel?')" OnClick="btnaceptarEliminarExcursion_Click" />
+                <asp:Button ID="btnaceptarEliminarExcursion" runat="server" Text="Elimnar Excursion" CssClass="btnPeligro" OnClientClick="return confirm('¿Esta seguro que desea eliminar este hotel?')" OnClick="btnaceptarEliminarExcursion_Click" />
                 <asp:Label ID="Label1" runat="server" CssClass="success-message" Visible="false"></asp:Label>
 
 
-
+                <asp:Button ID="btnCerrarExcursion" runat="server" Text="Cerrar" OnClick="btnCerrarExcursion_Click" CssClass="btnPeligro" />
             </asp:PlaceHolder>
             <!--INICIO MESES-->
-            <asp:PlaceHolder ID="phABMMes" runat="server" Visible="true"  >
-
-            <!--Activos-->
-                 <h1>Gestionar Meses</h1>
+        </div>
+        <!--Activos-->
+        <div class="section">
+            <h1>Gestionar Meses</h1>
+            <asp:Button Text="Administrar mes" ID="btAdministrarMes" runat="server" CssClass="btnPrimario" OnClick="btAdministrarMes_Click" />
+            <asp:PlaceHolder ID="phABMMes" runat="server" Visible="false">
                 <div>
 
-                <h2>Meses Activos</h2>
-                <asp:DropDownList ID="ddlMesesActivos" runat="server" CssClass="select">
-                </asp:DropDownList>
-               
-                <asp:Button Text="Desactivar mes" ID="btnDesactivarMes" runat="server" CssClass="btn-primary" OnClick="btnDesactivarMes_Click" />
+                    <h2>Meses Activos</h2>
+                    <asp:DropDownList ID="ddlMesesActivos" runat="server" CssClass="select">
+                    </asp:DropDownList>
+                    <asp:Button Text="Desactivar mes" ID="btnDesactivarMes" runat="server" CssClass="btnPeligro" OnClick="btnDesactivarMes_Click" />
+
                 </div>
                 <div>
 
-            <!--Inactivos-->
-                <h2>Meses Incativos</h2>
-                <asp:DropDownList ID="ddlMesesInactivos" runat="server" CssClass="select">
-                </asp:DropDownList>
-                <asp:Button Text="Activar mes" ID="btnActivarMes" runat="server" CssClass="btn-primary" OnClick="btnActivarMes_Click" />
-               
+                    <!--Inactivos-->
+                    <h2>Meses Incativos</h2>
+                    <asp:DropDownList ID="ddlMesesInactivos" runat="server" CssClass="select">
+                    </asp:DropDownList>
+                    <asp:Button Text="Activar mes" ID="btnActivarMes" runat="server" CssClass="btnPrimario" OnClick="btnActivarMes_Click" />
+
                 </div>
+                <asp:Button ID="btnCerrarMeses" runat="server" Text="Cerrar" OnClick="btnCerrarMeses_Click" CssClass="btnPeligro" />
+
             </asp:PlaceHolder>
 
-            
-
-
-          
         </div>
 
-        <!--FIN ABM EXCURSION-->
+        <!--Gestionar Destinos-->
+        <div class="section">
+            <h1>Gestionar Destinos</h1>
+            <asp:Button Text="Administrar Destino" ID="btnAdministrarDestino" runat="server" CssClass="btnPrimario" OnClick="btnAdministrarDestino_Click" />
 
+            <asp:PlaceHolder ID="phABMDestino" runat="server" Visible="false">
+                <div>
+                    <h2>Destinos Activos</h2>
+                    <asp:DropDownList ID="ddlDestinosActivos" runat="server" CssClass="select"></asp:DropDownList>
+                    <asp:Button Text="Eliminar Destino" ID="btnEliminarDestino" runat="server" CssClass="btnPeligro" OnClick="btnEliminarDestino_Click" />
+                </div>
+
+                <div>
+                    <h2>Agregar Destino</h2>
+                    <div>
+                        <label>Código de Destino:</label>
+                        <asp:TextBox ID="txtCodigoDestino" runat="server" CssClass="form-control"></asp:TextBox>
+                    </div>
+                    <div>
+                        <label>Nombre de Destino:</label>
+                        <asp:TextBox ID="txtNombreDestino" runat="server" CssClass="form-control"></asp:TextBox>
+                    </div>
+                        <asp:Button Text="Agregar Destino" ID="btnAgregarDestino" runat="server" CssClass="btnPrimario" OnClick="btnAgregarDestino_Click" />
+                </div>
+                <asp:Button ID="btnCerrarDestinos" runat="server" Text="Cerrar" OnClick="btnCerrarDestinos_Click" CssClass="btnPeligro" />
+            </asp:PlaceHolder>
+
+        </div>
     </div>
+
+    <!--FIN ABM EXCURSION-->
+
+
 </asp:Content>
 <%--<h3>Excursiones en el Paquete</h3>
                 <asp:ListBox ID="lstExcursiones" runat="server" CssClass="list-group"></asp:ListBox>--%>

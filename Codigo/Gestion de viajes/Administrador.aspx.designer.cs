@@ -195,6 +195,15 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Label lblConfirmacion;
 
         /// <summary>
+        /// Control btnCerrarPaquete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCerrarPaquete;
+
+        /// <summary>
         /// Control phEliminarPaquete.
         /// </summary>
         /// <remarks>
@@ -348,6 +357,15 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Label lbConfirmacionEliminacionHotel;
 
         /// <summary>
+        /// Control btnCerrarHotel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCerrarHotel;
+
+        /// <summary>
         /// Control btnAgregarExcursion.
         /// </summary>
         /// <remarks>
@@ -492,6 +510,24 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
+        /// Control btnCerrarExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCerrarExcursion;
+
+        /// <summary>
+        /// Control btAdministrarMes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btAdministrarMes;
+
+        /// <summary>
         /// Control phABMMes.
         /// </summary>
         /// <remarks>
@@ -535,5 +571,86 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnActivarMes;
+
+        /// <summary>
+        /// Control btnCerrarMeses.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCerrarMeses;
+
+        /// <summary>
+        /// Control btnAdministrarDestino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAdministrarDestino;
+
+        /// <summary>
+        /// Control phABMDestino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phABMDestino;
+
+        /// <summary>
+        /// Control ddlDestinosActivos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlDestinosActivos;
+
+        /// <summary>
+        /// Control btnEliminarDestino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEliminarDestino;
+
+        /// <summary>
+        /// Control txtCodigoDestino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCodigoDestino;
+
+        /// <summary>
+        /// Control txtNombreDestino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNombreDestino;
+
+        /// <summary>
+        /// Control btnAgregarDestino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAgregarDestino;
+
+        /// <summary>
+        /// Control btnCerrarDestinos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCerrarDestinos;
     }
 }

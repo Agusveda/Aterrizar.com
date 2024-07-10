@@ -1,42 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\",
+  "WorkspaceRootPath": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\codigo\\funcionalidades\\repositoriofecha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\repositoriofecha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|d:\\transferencia\\aterrizar.com\\codigo\\gestion de viajes\\administrador.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\administrador.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\codigo\\gestion de viajes\\avionselecciondestino.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\avionselecciondestino.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|d:\\transferencia\\aterrizar.com\\codigo\\gestion de viajes\\administrador.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\administrador.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\codigo\\gestion de viajes\\avionselecciondestino.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\avionselecciondestino.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\gestion de viajes\\seleccionpaquete.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\seleccionpaquete.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\codigo\\gestion de viajes\\seleccionpaquete.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\seleccionpaquete.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\codigo\\gestion de viajes\\inicio.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\inicio.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\codigo\\gestion de viajes\\avionseleccionmes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\avionseleccionmes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\codigo\\funcionalidades\\repositoriomes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\repositoriomes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A12281A-6722-4ED4-A0BA-AD7832449210}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\aterrizar.com\\codigo\\dominio\\fechas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A12281A-6722-4ED4-A0BA-AD7832449210}|Dominio\\Dominio.csproj|solutionrelative:dominio\\fechas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|d:\\transferencia\\aterrizar.com\\codigo\\funcionalidades\\repositoriodestino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\repositoriodestino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,123 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Inicio.aspx",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Gestion de viajes\\Inicio.aspx",
-              "RelativeDocumentMoniker": "Gestion de viajes\\Inicio.aspx",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Gestion de viajes\\Inicio.aspx",
-              "RelativeToolTip": "Gestion de viajes\\Inicio.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-07-10T19:55:09.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Fechas.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Dominio\\Fechas.cs",
-              "RelativeDocumentMoniker": "Dominio\\Fechas.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Dominio\\Fechas.cs",
-              "RelativeToolTip": "Dominio\\Fechas.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
+              "DocumentIndex": 2,
+              "Title": "RepositorioDestino.cs",
+              "DocumentMoniker": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioDestino.cs",
+              "RelativeDocumentMoniker": "Funcionalidades\\RepositorioDestino.cs",
+              "ToolTip": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioDestino.cs",
+              "RelativeToolTip": "Funcionalidades\\RepositorioDestino.cs",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAwwIMAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T19:37:46.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RepositorioMes.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioMes.cs",
-              "RelativeDocumentMoniker": "Funcionalidades\\RepositorioMes.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioMes.cs",
-              "RelativeToolTip": "Funcionalidades\\RepositorioMes.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwCwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T19:37:19.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RepositorioFecha.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioFecha.cs",
-              "RelativeDocumentMoniker": "Funcionalidades\\RepositorioFecha.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioFecha.cs",
-              "RelativeToolTip": "Funcionalidades\\RepositorioFecha.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T19:37:09.173Z",
+              "WhenOpened": "2024-07-10T20:27:02.957Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AvionSeleccionDestino.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Gestion de viajes\\AvionSeleccionDestino.aspx.cs",
-              "RelativeDocumentMoniker": "Gestion de viajes\\AvionSeleccionDestino.aspx.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Gestion de viajes\\AvionSeleccionDestino.aspx.cs",
-              "RelativeToolTip": "Gestion de viajes\\AvionSeleccionDestino.aspx.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAB6AAAA",
+              "Title": "Administrador.aspx.cs",
+              "DocumentMoniker": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Gestion de viajes\\Administrador.aspx.cs",
+              "RelativeDocumentMoniker": "Gestion de viajes\\Administrador.aspx.cs",
+              "ToolTip": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Gestion de viajes\\Administrador.aspx.cs",
+              "RelativeToolTip": "Gestion de viajes\\Administrador.aspx.cs",
+              "ViewState": "AQIAAFwDAAAAAAAAAAAewGoDAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T19:33:55.899Z",
+              "WhenOpened": "2024-07-10T20:26:27.066Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AvionSeleccionDestino.aspx",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Gestion de viajes\\AvionSeleccionDestino.aspx",
-              "RelativeDocumentMoniker": "Gestion de viajes\\AvionSeleccionDestino.aspx",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Gestion de viajes\\AvionSeleccionDestino.aspx",
-              "RelativeToolTip": "Gestion de viajes\\AvionSeleccionDestino.aspx",
+              "DocumentIndex": 0,
+              "Title": "Administrador.aspx",
+              "DocumentMoniker": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Gestion de viajes\\Administrador.aspx",
+              "RelativeDocumentMoniker": "Gestion de viajes\\Administrador.aspx",
+              "ToolTip": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Gestion de viajes\\Administrador.aspx",
+              "RelativeToolTip": "Gestion de viajes\\Administrador.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-07-10T19:30:53.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SeleccionPaquete.aspx",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Gestion de viajes\\SeleccionPaquete.aspx",
-              "RelativeDocumentMoniker": "Gestion de viajes\\SeleccionPaquete.aspx",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Gestion de viajes\\SeleccionPaquete.aspx",
-              "RelativeToolTip": "Gestion de viajes\\SeleccionPaquete.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-07-10T19:19:23.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SeleccionPaquete.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Gestion de viajes\\SeleccionPaquete.aspx.cs",
-              "RelativeDocumentMoniker": "Gestion de viajes\\SeleccionPaquete.aspx.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Gestion de viajes\\SeleccionPaquete.aspx.cs",
-              "RelativeToolTip": "Gestion de viajes\\SeleccionPaquete.aspx.cs",
-              "ViewState": "AQIAAL8AAAAAAAAAAAAqwMcAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T17:42:53.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AvionSeleccionMes.aspx",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Gestion de viajes\\AvionSeleccionMes.aspx",
-              "RelativeDocumentMoniker": "Gestion de viajes\\AvionSeleccionMes.aspx",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Aterrizar.com\\Codigo\\Gestion de viajes\\AvionSeleccionMes.aspx",
-              "RelativeToolTip": "Gestion de viajes\\AvionSeleccionMes.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-07-10T19:34:34.656Z",
+              "WhenOpened": "2024-07-10T20:25:43.762Z",
               "EditorCaption": ""
             }
           ]
