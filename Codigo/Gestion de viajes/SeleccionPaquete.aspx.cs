@@ -97,55 +97,22 @@ namespace Gestion_de_viajes
         protected void excursionesAdicionales_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<int> idsExcursionesSeleccionadas = new List<int>();
-            
-            RepositorioExcursiones repo = new RepositorioExcursiones();
-            List<Excursiones> SelExcursionesAdicionales = Session["SelExcursionAdicionales"] as List<Excursiones>;
-            
-            if (SelExcursionesAdicionales == null)
-            {
-                SelExcursionesAdicionales = new List<Excursiones>();
-            }
-            
+            Reserva aux = new Reserva();
+            RepositorioExcursiones repositorioExcursiones = new RepositorioExcursiones();
             foreach (ListItem item in excursionesAdicionales.Items)
             {
                 if (item.Selected)
                 {
                     idsExcursionesSeleccionadas.Add(Convert.ToInt32(item.Value));
-                    Excursiones exsel = repo.ObtenerExcursionesPorId(Convert.ToInt32(item.Value));
-                    if (exsel != null)
-                    {
-                        
-                        SelExcursionesAdicionales.Add(exsel);
-                        Session["SelExcursionAdicionales"] = SelExcursionesAdicionales;
-                    }
-                     
-                    
-                    
-                    
-
+                    //           aux.SelExcursiones.Add(repositorioExcursiones.ObtenerExcursionesPorId(Convert.ToInt32(item.Value)));
                 }
 
-                if(!item.Selected)
+                if (!item.Selected)
                 {
-                    idsExcursionesSeleccionadas.Remove(Convert.ToInt32(item.Value));
-                    var exsel = repo.ObtenerExcursionesPorId(Convert.ToInt32(item.Value));
-                    if (exsel != null)
-                    {
-                        
-                        SelExcursionesAdicionales.Remove(exsel);
-                        Session["SelExcursionAdicionales"] = SelExcursionesAdicionales;
-                    }
-
-                    
-
+                    //      aux.SelExcursiones.Remove(repositorioExcursiones.ObtenerExcursionesPorId(Convert.ToInt32(item.Value)));
                 }
             }
-            
-           
-            DropDownList1.DataSource = SelExcursionesAdicionales;
-            DropDownList1.DataTextField = "Nombre";
-            DropDownList1.DataValueField = "IdExcursion";
-            DropDownList1.DataBind();
+
             ddlHoteles.DataBind();
             int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
             ActualizarReservaTotal(idPaquete, idsExcursionesSeleccionadas);
@@ -177,11 +144,18 @@ namespace Gestion_de_viajes
             detalleExcursiones.DataTextField = "Descripcion";
             detalleExcursiones.DataValueField = "IdExcursion";
             detalleExcursiones.DataBind();
+                
+                
 
             excursionesAdicionales.DataSource = excursionesAdicionalesFiltradas;
             excursionesAdicionales.DataTextField = "Nombre";
             excursionesAdicionales.DataValueField = "IdExcursion";
             excursionesAdicionales.DataBind();
+
+            //excursionesAdicionales.DataSource = excursionesAdicionalesFiltradas;
+            //excursionesAdicionales.DataTextField = "Nombre " + "Precio";
+            //excursionesAdicionales.DataValueField = "IdExcursion";
+            //excursionesAdicionales.DataBind();
         }
 
         private void ActualizarReservaTotal(int idPaquete, List<int> idsExcursiones)

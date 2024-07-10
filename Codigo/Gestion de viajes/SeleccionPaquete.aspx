@@ -162,10 +162,9 @@
                 <asp:BulletedList ID="detalleExcursiones" runat="server" CssClass="detalle-excursiones"></asp:BulletedList>
             </div>
             <div>
-                <label>Excursiones Adicionales:</label>
+                <label>Excursiones Adicionales: ($ 15.000 cda/una)</label>
                 <asp:CheckBoxList ID="excursionesAdicionales" runat="server" AutoPostBack="true" OnSelectedIndexChanged="excursionesAdicionales_SelectedIndexChanged" >
                 </asp:CheckBoxList>
-                <asp:DropDownList ID="DropDownList1" AutoPostBack="true" runat="server"></asp:DropDownList>
             </div>
         </div>
         <div class="section reserva-total">
