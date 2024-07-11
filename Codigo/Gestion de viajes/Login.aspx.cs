@@ -39,7 +39,6 @@ namespace Gestion_de_viajes
                 {
                     lblmensajeLogin.Text = "Usuario o contraseña incorrecta";
                     lblmensajeLogin.ForeColor = System.Drawing.Color.Red;
-
                 }
                 
             }
@@ -49,8 +48,7 @@ namespace Gestion_de_viajes
                 lblmensajeLogin.Text = "Error: " + ex.Message;
                 lblmensajeLogin.ForeColor = System.Drawing.Color.Red;
             }
-        
-    
+
          }
 
         protected void lnkRegistro_Click(object sender, EventArgs e) //oculta el panel de inicio sesion y abre el de registro

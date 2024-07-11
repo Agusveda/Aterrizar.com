@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="SeleccionPaquete.aspx.cs" Inherits="Gestion_de_viajes.Detalle" MaintainScrollPositionOnPostback="true" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="SeleccionPaquete.aspx.cs" Inherits="Gestion_de_viajes.Detalle"  %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -130,15 +130,21 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <asp:ScriptManager ID="ScriptManager" runat="server" />
     <div class="detalle-paquete">
-        <asp:PlaceHolder ID="PhPrincipalesPaquete" runat="server">
+        <asp:UpdatePanel ID="PhPrincipalesPaquete" runat="server">
+            <ContentTemplate>
             <!--principales del paquete, hotel, excursiones-->
 
             <asp:Label Text="nombre" ID="lbNombrePaquete" runat="server" CssClass="NombrePaquete" />
             <div class="section">
                 <asp:Image ID="imgPaquete" runat="server" alt="Imagen del Paquete" />
             </div>
+                </ContentTemplate>
+              </asp:UpdatePanel>
+
+         <asp:UpdatePanel ID="PhHotel" runat="server">
+             <ContentTemplate>
             <div class="section hotel">
                 <div>
                     <label for="hotelSelect">Desplegable Hoteles:</label>
@@ -159,6 +165,11 @@
 
                 </div>
             </div>
+                 </ContentTemplate>
+              </asp:UpdatePanel>
+
+          <asp:UpdatePanel ID="PhExcursiones" runat="server">
+                <ContentTemplate>
             <div class="section excursiones">
                 <div>
                     <label>Excursiones Incluidas:</label>
@@ -173,7 +184,9 @@
                     </asp:CheckBoxList>
                 </div>
             </div>
-        </asp:PlaceHolder>
+             
+            </ContentTemplate>
+        </asp:UpdatePanel>
 
 
         <asp:Button ID="BtnFechas" Text="Fechas" runat="server" OnClick="BtnFechas_Click" />
@@ -222,14 +235,23 @@
         </div>
 
         <div class="section reserva-total">
-            <asp:Label ID="reservaTotal" runat="server"></asp:Label>
 
         </div>
         </asp:PlaceHolder>
 
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <ContentTemplate>
+        <asp:Label ID="reservaTotal" runat="server" Text="Reserva Total: $0"></asp:Label>
+        <!-- Otros controles -->
+    </ContentTemplate>
+  
+</asp:UpdatePanel>
         <div class="section">
             Métodos de Pago, Información Extra, Contacto, etc.
        
         </div>
     </div>
+
+   
+
 </asp:Content>

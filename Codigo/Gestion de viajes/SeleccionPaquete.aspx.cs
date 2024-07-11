@@ -87,7 +87,9 @@ namespace Gestion_de_viajes
                     item.Selected = false;
                 }
                 int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
+                
                 ActualizarReservaTotal(idPaquete, new List<int>());
+                    
             }
         }
         protected void excursionesAdicionales_SelectedIndexChanged(object sender, EventArgs e)
@@ -184,8 +186,8 @@ namespace Gestion_de_viajes
                     }
                 }
             }
-
-            reservaTotal.Text = "Reserva Total: $" + precioTotal.ToString();
+           
+                reservaTotal.Text = "Reserva Total: $" + precioTotal.ToString();
             
         }
         protected void BtnFechas_Click(object sender, EventArgs e)

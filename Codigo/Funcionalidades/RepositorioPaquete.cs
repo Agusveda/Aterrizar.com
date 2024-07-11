@@ -139,7 +139,7 @@ namespace Funcionalidades
                     aux.Duracion = (int)accesoDatos.Lector["Duracion"];
                     aux.TipoTransporte = (int)accesoDatos.Lector["TipoTransporte"];
                     aux.URLimagen = accesoDatos.Lector["URLimagen"] is DBNull ? "https://icrier.org/wp-content/uploads/2022/09/Event-Image-Not-Found.jpg" : (string)accesoDatos.Lector["URLimagen"];
-                        aux.Disponibilidad = (int)accesoDatos.Lector["Disponibilidad"];
+                    aux.Disponibilidad = (int)accesoDatos.Lector["Disponibilidad"];
                     paquete = aux;
                 }
 
