@@ -19,9 +19,11 @@ namespace Gestion_de_viajes
         {
             RepositorioMail mail = new RepositorioMail();
             mail.EmailService();
-            mail.armarCorreo(txtEmail.Text, "Datos registrados", txtMensaje.Text);
+            //mail.armarCorreo(txtEmail.Text, "Datos registrados", txtMensaje.Text);
+            mail.ArmarCorreoConImagen(txtEmail.Text, "Confirmacion de Reserva :P", txtMensaje.Text);
+
             mail.enviarCorreo();
-        
+
         }
     }
 }
