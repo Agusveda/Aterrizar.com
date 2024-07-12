@@ -66,6 +66,7 @@
   <ItemGroup>
     <Content Include="Administrador.aspx" />
     <Content Include="BusSeleccionDestino.aspx" />
+    <Content Include="ConfirmacionReserva.aspx" />
     <Content Include="Contacto.aspx" />
     <Content Include="Carrito.aspx" />
     <Content Include="Perfil.aspx" />
@@ -94,6 +95,13 @@
     </Compile>
     <Compile Include="BusSeleccionDestino.aspx.designer.cs">
       <DependentUpon>BusSeleccionDestino.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmacionReserva.aspx.cs">
+      <DependentUpon>ConfirmacionReserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfirmacionReserva.aspx.designer.cs">
+      <DependentUpon>ConfirmacionReserva.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contacto.aspx.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
