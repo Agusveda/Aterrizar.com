@@ -59,13 +59,13 @@ namespace Gestion_de_viajes
         private void CargarDetallePaquete(int idPaquete)
         {
             RepositorioPaquete repositorio = new RepositorioPaquete();
-            PaqueteDeViaje paquete = repositorio.ObtenerPaquetePorId(idPaquete);
+            PaqueteDeViaje paquete = repositorio.ObtenerPaquetePorId(idPaquete); 
             if (paquete != null)
             {
                 imgPaquete.ImageUrl = paquete.URLimagen;
                 lbNombrePaquete.Text = paquete.NombrePaquete;
                 int cdgdestino = paquete.cdgDestino;
-                lbduracionpaquete.Text = paquete.Duracion.ToString();
+                lbduracionpaquete.Text = paquete.Duracion.ToString() + " Días";
                 CargarDetalleHotel(cdgdestino);
                 CargarExcursiones(cdgdestino);
                 ActualizarReservaTotal(idPaquete, new List<int>());
@@ -192,8 +192,8 @@ namespace Gestion_de_viajes
         }
         protected void BtnFechas_Click(object sender, EventArgs e)
         {
-            PhFechas.Visible = true;
-            PhPrincipalesPaquete.Visible = false;
+            UpFechas.Visible = true;
+            UpPrincipalesPaquete.Visible = false;
 
             List<Fechas> listafechas = new List<Fechas>();
 

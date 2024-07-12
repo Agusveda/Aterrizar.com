@@ -22,8 +22,8 @@ namespace Funcionalidades
         public AccesoDatos()
         {
            //conexion = new SqlConnection("server= DESKTOP-DLD9B46; database=ATERRIZAR_COM; Integrated Security = True");
-         conexion = new SqlConnection("server= FACU; database=ATERRIZAR_COM; Integrated Security = True");
-            //conexion = new SqlConnection("server= DESKTOP-A3HCDG7\\SQLEXPRESS; database=ATERRIZAR_COM; Integrated Security = True");
+         //conexion = new SqlConnection("server= FACU; database=ATERRIZAR_COM; Integrated Security = True");
+            conexion = new SqlConnection("server= DESKTOP-A3HCDG7\\SQLEXPRESS; database=ATERRIZAR_COM; Integrated Security = True");
 
             comando = new SqlCommand();
         }

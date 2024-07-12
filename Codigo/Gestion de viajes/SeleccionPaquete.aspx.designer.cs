@@ -24,13 +24,13 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.ScriptManager ScriptManager;
 
         /// <summary>
-        /// Control PhPrincipalesPaquete.
+        /// Control UpPrincipalesPaquete.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel PhPrincipalesPaquete;
+        protected global::System.Web.UI.UpdatePanel UpPrincipalesPaquete;
 
         /// <summary>
         /// Control lbNombrePaquete.
@@ -51,13 +51,13 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Image imgPaquete;
 
         /// <summary>
-        /// Control PhHotel.
+        /// Control UpHotel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel PhHotel;
+        protected global::System.Web.UI.UpdatePanel UpHotel;
 
         /// <summary>
         /// Control ddlHoteles.
@@ -105,13 +105,13 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Label lbduracionpaquete;
 
         /// <summary>
-        /// Control PhExcursiones.
+        /// Control UpExcursiones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel PhExcursiones;
+        protected global::System.Web.UI.UpdatePanel UpExcursiones;
 
         /// <summary>
         /// Control excursionesIncluidas.
@@ -150,13 +150,13 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Button BtnFechas;
 
         /// <summary>
-        /// Control PhFechas.
+        /// Control UpFechas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder PhFechas;
+        protected global::System.Web.UI.UpdatePanel UpFechas;
 
         /// <summary>
         /// Control repFechas.
