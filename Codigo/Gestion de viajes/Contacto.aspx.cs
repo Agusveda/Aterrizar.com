@@ -17,11 +17,15 @@ namespace Gestion_de_viajes
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
+            //Linea para enviar correo con QR de confirmaion de reserva.
+            //Usar en Boton de confirmacion de reserva.
+            //Con esta misma estructura.
+            //RepositorioMail mail = new RepositorioMail();
+            //mail.EmailService();
+            //mail.ArmarCorreoConImagen(txtEmail.Text, "Confirmacion de Reserva", txtMensaje.Text);
             RepositorioMail mail = new RepositorioMail();
             mail.EmailService();
-            //mail.armarCorreo(txtEmail.Text, "Datos registrados", txtMensaje.Text);
-            mail.ArmarCorreoConImagen(txtEmail.Text, "Confirmacion de Reserva :P", txtMensaje.Text);
-
+            mail.armarCorreo(txtEmail.Text, "Datos registrados", txtMensaje.Text,txtNombre.Text,txtApellido.Text);
             mail.enviarCorreo();
 
         }

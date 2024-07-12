@@ -65,20 +65,16 @@
     <div class="Formulario">
 
         <form>
-            <label for="nombreApellido">Nombre y Apellido</label>
-            <input type="text" id="nombreApellido" class="input-padron" required>
-
+            <label for="nombre">Nombre</label>
+            <asp:TextBox id="txtNombre" runat="server" />  
+            <label for="apellido">Apellido</label>
+            <asp:TextBox id="txtApellido" runat="server" />  
             <label for="correoElectronico">Correo Electronico</label>
-            <asp:TextBox id="txtEmail" placeholder="email@dominio.com" runat="server" />  
-            
-
+            <asp:TextBox id="txtEmail" placeholder="Email@Dominio.com" runat="server" />  
             <label for="telefono">Telefono</label>
-            <input type="tel" id="telefono" class="input-padron" required placeholder="(xx) xxxx xxxx">
-
+            <input type="tel" id="telefono" class="input-padron" required placeholder="(+54) xxxx xxxx">
             <label for="Mensaje">Mensaje</label>
             <asp:TextBox id="txtMensaje" runat="server" TextMode="MultiLine" />
-            
-
             <fieldset>
                 <legend>¿En cual horario prefiere ser atendido?</legend>
                 <select name="" id="">
@@ -89,7 +85,6 @@
             </fieldset>
             <label class="checkbox">
                 <input type="checkbox" checked>¿Le gustaria recibir novedades de Aterrizando?</label>
-
             <asp:Button ID="btnEnviar" runat="server" Text="Enviar Formulario" CssClass="enviar" OnClick="btnEnviar_Click" />
         </form>
 
