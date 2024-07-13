@@ -20,8 +20,8 @@ namespace Gestion_de_viajes
                 int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
                 CargarDetallePaquete(idPaquete);
                 PrimerHotel();
-                UpFechas.Visible = false;
-            upPasajero.Visible = false;
+                //UpFechas.Visible = false;
+            
             }
         }
 
@@ -193,7 +193,7 @@ namespace Gestion_de_viajes
         }
         protected void BtnFechas_Click(object sender, EventArgs e)
         {
-            UpFechas.Visible = true;
+            PhFechas.Visible = true;
             UpPrincipalesPaquete.Visible = false;
             UpExcursiones.Visible = false;
             UpHotel.Visible = false;
@@ -215,14 +215,31 @@ namespace Gestion_de_viajes
         
         protected void btnElegirFecha_Click(object sender, EventArgs e)
         {
-            string IdFecha = ((Button)sender).CommandArgument; // posible variable fuera para tomarla 
-            UpFechas.Visible = false;
-            upPasajero.Visible = true;
-
-           
-
+            // string IdFecha = ((Button)sender).CommandArgument; // posible variable fuera para tomarla 
+            PhFechas.Visible = false;
+            PhPasajero1.Visible = true;
+          
 
 
         }
+
+       
+              protected void btnPasajero2_Click(object sender, EventArgs e){
+            
+            PhPasajero2.Visible = true;
+        }
+
+        protected void btnGuardar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        protected void btnGuardar2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

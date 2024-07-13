@@ -25,7 +25,8 @@
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            background-color:#ecf0f1;;
+            background-color: #ecf0f1;
+            ;
         }
 
         .NombrePaquete {
@@ -116,6 +117,7 @@
             font-size: 22px;
             font-weight: bold;
             color: #e74c3c;
+            text-align: center;
         }
 
         .fechas-paquetes {
@@ -128,7 +130,7 @@
         .fechas-btn {
             display: block;
             margin: 0 auto;
-            background-color: #e74c3c;
+            background-color: #27ae60;
             color: #fff;
             font-size: 18px;
             font-weight: bold;
@@ -142,7 +144,7 @@
         }
 
             .fechas-btn:hover {
-                background-color: #c0392b;
+                background-color: #1e8449;
             }
 
 
@@ -205,7 +207,53 @@
             }
 
 
-      
+        .titulo-formulario {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: green; 
+        }
+
+        .grupo-formulario {
+            margin-bottom: 15px;
+        }
+
+        .etiqueta-formulario {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .control-formulario {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            color: #555;
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+            .control-formulario:focus {
+                border-color: #80bdff;
+                outline: 0;
+                box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            }
+
+
+
+        #lblMensajeRegistro {
+            color: green;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        #PhPasajero div {
+            margin-bottom: 10px;
+        }
     </style>
 </asp:Content>
 
@@ -277,66 +325,88 @@
 
 
 
-        <asp:UpdatePanel ID="UpFechas" runat="server"  >
-            <ContentTemplate>
+        <asp:PlaceHolder ID="PhFechas" runat="server" Visible="false">
 
-                <div class="fechas-paquetes">
+            <div class="fechas-paquetes">
 
-                    <asp:Repeater ID="repFechas" runat="server">
-                        <ItemTemplate>
-                            <div class="col">
-                                <div class="card h-50">
-                                    <div class="card-body" style="text-align: center;">
-                                        <h5 class="card-title"><%# Eval("FechaInicio") %></h5>
-                                        <asp:Button ID="btnElegirFecha" Text="Elegir fecha" runat="server" OnClick="btnElegirFecha_Click" CommandArgument='<%#Eval("IdFecha")%>' CommandName="IdFecha"  />
-                                    </div>
+                <asp:Repeater ID="repFechas" runat="server">
+                    <ItemTemplate>
+                        <div class="col">
+                            <div class="card h-50">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-title"><%# Eval("FechaInicio") %></h5>
+                                    <asp:Button ID="btnElegirFecha" Text="Elegir fecha" runat="server" OnClick="btnElegirFecha_Click" CommandArgument='<%#Eval("IdFecha")%>' CommandName="IdFecha" />
                                 </div>
-                                </a>
                             </div>
-                        </ItemTemplate>
-                    </asp:Repeater>
-                </div>
+                            </a>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
 
-            </ContentTemplate>
 
-        </asp:UpdatePanel>
-        <asp:UpdatePanel ID="upPasajero" runat="server" >
+        </asp:PlaceHolder>
+
+        <asp:PlaceHolder ID="PhPasajero1" runat="server" Visible="false">
+
+
+
+            <asp:Label ID="lblMensajeRegistro" Text="Pasajero 1" ForeColor="Green" runat="server" CssClass="titulo-formulario"></asp:Label>
+            <div class="grupo-formulario">
+                <asp:Label ID="lblUsuarioRegistro" runat="server" Text="Nombre de usuario:" CssClass="etiqueta-formulario"></asp:Label>
+                <asp:TextBox ID="txtUsuarioRegistro" runat="server" CssClass="control-formulario"></asp:TextBox>
+            </div>
+            <div class="grupo-formulario">
+                <asp:Label ID="lblPasswordRegistro" runat="server" Text="Contraseña:" CssClass="etiqueta-formulario"></asp:Label>
+                <asp:TextBox ID="txtPasswordRegistro" runat="server" TextMode="Password" CssClass="control-formulario"></asp:TextBox>
+            </div>
+            <div class="grupo-formulario">
+                <asp:Label ID="lblEmailRegistro" runat="server" Text="Correo electrónico:" CssClass="etiqueta-formulario"></asp:Label>
+                <asp:TextBox ID="txtEmailRegistro" runat="server" CssClass="control-formulario"></asp:TextBox>
+            </div>
+           
+            <div class="grupo-formulario">
+                <asp:Label ID="lblTelefonoRegistro" runat="server" Text="telefono(Opcional):" CssClass="etiqueta-formulario"></asp:Label>
+                <asp:TextBox ID="txtTelefonoRegistro" runat="server" CssClass="control-formulario"></asp:TextBox>
+            </div>
+              <asp:Button ID="btnGuardar1" runat="server" Text="Guardar" CssClass="fechas-btn" OnClick="btnGuardar1_Click" />
+              <asp:Button ID="btnPasajero2" runat="server" Text="Pasajero 2 (Opcional)" CssClass="fechas-btn" OnClick="btnPasajero2_Click" />
+
+        </asp:PlaceHolder>
+
+           <asp:PlaceHolder ID="PhPasajero2" runat="server" Visible="false">
+
+
+
+       <asp:Label ID="lblMensajeRegistro2" Text="Pasajero 2" ForeColor="Green" runat="server" CssClass="titulo-formulario"></asp:Label>
+       <div class="grupo-formulario">
+           <asp:Label ID="lblUsuarioRegistro2" runat="server" Text="Nombre de usuario:" CssClass="etiqueta-formulario"></asp:Label>
+           <asp:TextBox ID="txtUsuarioRegistro2" runat="server" CssClass="control-formulario"></asp:TextBox>
+       </div>
+       <div class="grupo-formulario">
+           <asp:Label ID="lblPasswordRegistro2" runat="server" Text="Contraseña:" CssClass="etiqueta-formulario"></asp:Label>
+           <asp:TextBox ID="txtPasswordRegistr2" runat="server" TextMode="Password" CssClass="control-formulario"></asp:TextBox>
+       </div>
+       <div class="grupo-formulario">
+           <asp:Label ID="lblEmailRegistro2" runat="server" Text="Correo electrónico:" CssClass="etiqueta-formulario"></asp:Label>
+           <asp:TextBox ID="txtEmailRegistro2" runat="server" CssClass="control-formulario"></asp:TextBox>
+       </div>
+     
+       <div class="grupo-formulario">
+           <asp:Label ID="lblTelefonoRegistro2" runat="server" Text="telefono(Opcional):" CssClass="etiqueta-formulario"></asp:Label>
+           <asp:TextBox ID="txtTelefonoRegistro2" runat="server" CssClass="control-formulario"></asp:TextBox>
+       </div>
+              <asp:Button ID="btnGuardar2" runat="server" Text="Guardar" CssClass="fechas-btn" OnClick="btnGuardar2_Click" />
+
+   </asp:PlaceHolder>
+
+
+
+        <asp:UpdatePanel ID="UpReservaTotal" runat="server">
             <ContentTemplate>
-        
-
-            <asp:Label ID="lblMensajeRegistro" ForeColor="Green" Visible="false" runat="server"></asp:Label>
-            <div>
-                <asp:Label ID="lblUsuarioRegistro" runat="server" Text="Nombre de usuario:"></asp:Label>
-                <asp:TextBox ID="txtUsuarioRegistro" runat="server"></asp:TextBox>
-            </div>
-            <div>
-                <asp:Label ID="lblPasswordRegistro" runat="server" Text="Contraseña:"></asp:Label>
-                <asp:TextBox ID="txtPasswordRegistro" runat="server" TextMode="Password"></asp:TextBox>
-            </div>
-            <div>
-                <asp:Label ID="lblEmailRegistro" runat="server" Text="Correo electrónico:"></asp:Label>
-                <asp:TextBox ID="txtEmailRegistro" runat="server"></asp:TextBox>
-            </div>
-            <div>
-                <asp:Label ID="lblDNI" runat="server" Text="DNI:"></asp:Label>
-                <asp:TextBox ID="txtDNIRegistro" runat="server"></asp:TextBox>
-            </div>
-            <div>
-                <asp:Label ID="lblTelefonoRegistro" runat="server" Text="telefono(Opcional):"></asp:Label>
-                <asp:TextBox ID="txtTelefonoRegistro" runat="server"></asp:TextBox>
-            </div>
-
-            <div class="section reserva-total">
-            </div>
-            </ContentTemplate>
-        </asp:UpdatePanel>
-
-
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-            <ContentTemplate>
-               
+                <div class="section reserva-total">
                     <asp:Label ID="reservaTotal" runat="server" Text="Reserva Total: $0"></asp:Label>
-                
+                </div>
             </ContentTemplate>
 
         </asp:UpdatePanel>
