@@ -277,7 +277,7 @@
 
 
 
-        <asp:UpdatePanel ID="UpFechas" runat="server" Visible="false">
+        <asp:UpdatePanel ID="UpFechas" runat="server"  >
             <ContentTemplate>
 
                 <div class="fechas-paquetes">
@@ -288,7 +288,7 @@
                                 <div class="card h-50">
                                     <div class="card-body" style="text-align: center;">
                                         <h5 class="card-title"><%# Eval("FechaInicio") %></h5>
-                                        <asp:Button Text="Elegir fecha" runat="server" />
+                                        <asp:Button ID="btnElegirFecha" Text="Elegir fecha" runat="server" OnClick="btnElegirFecha_Click" CommandArgument='<%#Eval("IdFecha")%>' CommandName="IdFecha"  />
                                     </div>
                                 </div>
                                 </a>
@@ -300,7 +300,9 @@
             </ContentTemplate>
 
         </asp:UpdatePanel>
-        <asp:PlaceHolder runat="server" ID="PhPasajeros">
+        <asp:UpdatePanel ID="upPasajero" runat="server" >
+            <ContentTemplate>
+        
 
             <asp:Label ID="lblMensajeRegistro" ForeColor="Green" Visible="false" runat="server"></asp:Label>
             <div>
@@ -326,7 +328,9 @@
 
             <div class="section reserva-total">
             </div>
-        </asp:PlaceHolder>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
 
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>

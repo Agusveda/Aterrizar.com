@@ -18,9 +18,10 @@ namespace Gestion_de_viajes
             if (!IsPostBack)
             {
                 int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
-
                 CargarDetallePaquete(idPaquete);
                 PrimerHotel();
+                UpFechas.Visible = false;
+            upPasajero.Visible = false;
             }
         }
 
@@ -194,7 +195,9 @@ namespace Gestion_de_viajes
         {
             UpFechas.Visible = true;
             UpPrincipalesPaquete.Visible = false;
-
+            UpExcursiones.Visible = false;
+            UpHotel.Visible = false;
+            BtnFechas.Visible = false;
             List<Fechas> listafechas = new List<Fechas>();
 
             RepositorioFecha repofechas = new RepositorioFecha();
@@ -209,10 +212,17 @@ namespace Gestion_de_viajes
             repFechas.DataBind();
 
         }
+        
+        protected void btnElegirFecha_Click(object sender, EventArgs e)
+        {
+            string IdFecha = ((Button)sender).CommandArgument; // posible variable fuera para tomarla 
+            UpFechas.Visible = false;
+            upPasajero.Visible = true;
+
+           
 
 
 
-
-
+        }
     }
 }

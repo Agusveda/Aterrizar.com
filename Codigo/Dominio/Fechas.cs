@@ -9,7 +9,7 @@ namespace Dominio
     public   class Fechas
     {
 
-        public int idDestino {  get; set; } 
+        public int idFecha {  get; set; } 
         public int idMes {  get; set; }
         public DateTime FechaInicio { get; set; }
 
