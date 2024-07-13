@@ -351,7 +351,7 @@
 
 
 
-            <asp:Label ID="lblMensajeRegistro" Text="Pasajero 1" ForeColor="Green" runat="server" CssClass="titulo-formulario"></asp:Label>
+            <asp:Label ID="lblMensajeRegistro" Text="Pasajero 1 (obligatorio)" ForeColor="Green" runat="server" CssClass="titulo-formulario"></asp:Label>
             <div class="grupo-formulario">
                 <asp:Label ID="lblUsuarioRegistro" runat="server" Text="Nombre de usuario:" CssClass="etiqueta-formulario"></asp:Label>
                 <asp:TextBox ID="txtUsuarioRegistro" runat="server" CssClass="control-formulario"></asp:TextBox>
@@ -412,9 +412,14 @@
         <asp:UpdatePanel ID="UpReservaTotal" runat="server">
             <ContentTemplate>
                 <div class="section reserva-total">
+                    <asp:Button Text="Confirmar reserva" ID="btnConfirmarReserva" runat="server" Visible="false" OnClick="btnConfirmarReserva_Click"/>
                     <asp:Label ID="reservaTotal" runat="server" Text="Reserva Total: $0"></asp:Label>
+
                 </div>
+            <asp:Label Visible="false" runat="server" CssClass="etiqueta-formulario" Text=" ////              REVISE SU CASILLA DEL CORREO ELECTRONICO PARA CONFIRMAR EL PAGO Y LA RESERVA       ////" ID="lbMensajeConfirmaReserva" ></asp:Label>
             </ContentTemplate>
+
+                
 
         </asp:UpdatePanel>
         <div class="section">

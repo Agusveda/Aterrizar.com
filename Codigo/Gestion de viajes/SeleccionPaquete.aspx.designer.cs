@@ -384,6 +384,15 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.UpdatePanel UpReservaTotal;
 
         /// <summary>
+        /// Control btnConfirmarReserva.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConfirmarReserva;
+
+        /// <summary>
         /// Control reservaTotal.
         /// </summary>
         /// <remarks>
@@ -391,5 +400,14 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label reservaTotal;
+
+        /// <summary>
+        /// Control lbMensajeConfirmaReserva.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbMensajeConfirmaReserva;
     }
 }

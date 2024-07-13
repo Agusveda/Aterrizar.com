@@ -1,5 +1,6 @@
 ﻿using Dominio;
 using Gestion_de_viajes;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -140,7 +141,23 @@ namespace Funcionalidades
 
         }
 
+        public int VerificarUsuarioExistente (int dni)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            accesoDatos.setearSp("verificarUsuarioExistente");
+            accesoDatos.setearParametros("@DNI", dni);
+            accesoDatos.ejecutarLectura();
+            int valor = 0;
+            if (accesoDatos.Lector.Read())
+            {
+            valor = (int)accesoDatos.Lector["Existe"];
+              
+            }
 
+            return valor;
+            
+
+        }
 
     }
 }

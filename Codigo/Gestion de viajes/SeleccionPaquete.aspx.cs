@@ -21,7 +21,7 @@ namespace Gestion_de_viajes
                 CargarDetallePaquete(idPaquete);
                 PrimerHotel();
                 //UpFechas.Visible = false;
-            
+
             }
         }
 
@@ -60,7 +60,7 @@ namespace Gestion_de_viajes
         private void CargarDetallePaquete(int idPaquete)
         {
             RepositorioPaquete repositorio = new RepositorioPaquete();
-            PaqueteDeViaje paquete = repositorio.ObtenerPaquetePorId(idPaquete); 
+            PaqueteDeViaje paquete = repositorio.ObtenerPaquetePorId(idPaquete);
             if (paquete != null)
             {
                 imgPaquete.ImageUrl = paquete.URLimagen;
@@ -88,9 +88,9 @@ namespace Gestion_de_viajes
                     item.Selected = false;
                 }
                 int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
-                
+
                 ActualizarReservaTotal(idPaquete, new List<int>());
-                    
+
             }
         }
         protected void excursionesAdicionales_SelectedIndexChanged(object sender, EventArgs e)
@@ -142,8 +142,8 @@ namespace Gestion_de_viajes
             detalleExcursiones.DataTextField = "Descripcion";
             detalleExcursiones.DataValueField = "IdExcursion";
             detalleExcursiones.DataBind();
-                
-                
+
+
 
             excursionesAdicionales.DataSource = excursionesAdicionalesFiltradas;
             excursionesAdicionales.DataTextField = "Nombre";
@@ -187,9 +187,9 @@ namespace Gestion_de_viajes
                     }
                 }
             }
-           
-                reservaTotal.Text = "Reserva Total: $" + precioTotal.ToString();
-            
+
+            reservaTotal.Text = "Reserva Total: $" + precioTotal.ToString();
+
         }
         protected void BtnFechas_Click(object sender, EventArgs e)
         {
@@ -212,34 +212,82 @@ namespace Gestion_de_viajes
             repFechas.DataBind();
 
         }
-        
+
         protected void btnElegirFecha_Click(object sender, EventArgs e)
         {
             // string IdFecha = ((Button)sender).CommandArgument; // posible variable fuera para tomarla 
             PhFechas.Visible = false;
             PhPasajero1.Visible = true;
-          
+
 
 
         }
 
-       
-              protected void btnPasajero2_Click(object sender, EventArgs e){
-            
+
+        protected void btnPasajero2_Click(object sender, EventArgs e)
+        {
+
             PhPasajero2.Visible = true;
         }
 
-        protected void btnGuardar1_Click(object sender, EventArgs e)
+        protected void btnGuardar1_Click(object sender, EventArgs e) // pasajero 1
         {
+            Usuario nuevo = new Usuario();
+            RepositorioUsuario repoUsuario = new RepositorioUsuario();
+            int dni = int.Parse(txtDni1.Text);
+            
+            int valor = repoUsuario.VerificarUsuarioExistente(dni);
+            if (valor == 0) //existe
+            {
+
+                nuevo.NombreUsuario = txtUsuarioRegistro.Text;
+                nuevo.CorreoElectronico = txtEmailRegistro.Text;
+                nuevo.DNI = int.Parse(txtDni1.Text);
+                nuevo.Telefono = txtTelefonoRegistro.Text;
+                repoUsuario.InsUsuario(nuevo);
+
+
+            }
+            txtUsuarioRegistro.Enabled = false;
+                txtEmailRegistro.Enabled = false;
+            txtDni1.Enabled = false;
+            txtTelefonoRegistro.Enabled = false;
+            btnConfirmarReserva.Visible = true;
 
         }
 
 
         protected void btnGuardar2_Click(object sender, EventArgs e)
         {
+            Usuario nuevo = new Usuario();
+            RepositorioUsuario repoUsuario = new RepositorioUsuario();
+            int dni = int.Parse(txtDni2.Text);
+
+            int valor = repoUsuario.VerificarUsuarioExistente(dni);
+            if (valor == 0) //existe
+            {
+
+                nuevo.NombreUsuario = txtUsuarioRegistro2.Text;
+                nuevo.CorreoElectronico = txtEmailRegistro2.Text;
+                nuevo.DNI = int.Parse(txtDni2.Text);
+                nuevo.Telefono = txtTelefonoRegistro2.Text;
+                repoUsuario.InsUsuario(nuevo);
+
+
+            }
+            txtUsuarioRegistro2.Enabled = false;
+            txtEmailRegistro2.Enabled = false;
+            txtDni2.Enabled = false;
+            txtTelefonoRegistro2.Enabled = false;
+
 
         }
 
-
+        protected void btnConfirmarReserva_Click(object sender, EventArgs e)
+        {
+            PhPasajero2.Visible= false;
+            PhPasajero1.Visible = false;
+            lbMensajeConfirmaReserva.Visible = true;
+        }
     }
 }
