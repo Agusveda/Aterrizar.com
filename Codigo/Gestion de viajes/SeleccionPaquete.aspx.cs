@@ -228,11 +228,12 @@ namespace Gestion_de_viajes
         {
 
             PhPasajero2.Visible = true;
+            btnPasajero2.Visible=false;
         }
 
         protected void btnGuardar1_Click(object sender, EventArgs e) // pasajero 1
         {
-            Usuario nuevo = new Usuario();
+          /*  Usuario nuevo = new Usuario();
             RepositorioUsuario repoUsuario = new RepositorioUsuario();
             int dni = int.Parse(txtDni1.Text);
             
@@ -248,17 +249,20 @@ namespace Gestion_de_viajes
 
 
             }
+          */
             txtUsuarioRegistro.Enabled = false;
                 txtEmailRegistro.Enabled = false;
             txtDni1.Enabled = false;
             txtTelefonoRegistro.Enabled = false;
             btnConfirmarReserva.Visible = true;
+            btnGuardar1.Visible = false;
 
         }
 
 
         protected void btnGuardar2_Click(object sender, EventArgs e)
         {
+            /*
             Usuario nuevo = new Usuario();
             RepositorioUsuario repoUsuario = new RepositorioUsuario();
             int dni = int.Parse(txtDni2.Text);
@@ -273,21 +277,23 @@ namespace Gestion_de_viajes
                 nuevo.Telefono = txtTelefonoRegistro2.Text;
                 repoUsuario.InsUsuario(nuevo);
 
-
             }
+            */
             txtUsuarioRegistro2.Enabled = false;
             txtEmailRegistro2.Enabled = false;
             txtDni2.Enabled = false;
             txtTelefonoRegistro2.Enabled = false;
+                btnGuardar2.Visible = false;
 
 
         }
 
         protected void btnConfirmarReserva_Click(object sender, EventArgs e)
         {
-            PhPasajero2.Visible= false;
-            PhPasajero1.Visible = false;
+            PhPasajero1.Visible= false;
+            PhPasajero2.Visible = false;
             lbMensajeConfirmaReserva.Visible = true;
+            btnConfirmarReserva.Visible= false;
         }
     }
 }

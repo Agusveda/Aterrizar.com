@@ -148,6 +148,29 @@
             }
 
 
+
+        .Reserva-btn {
+            display: block;
+            margin: 0 auto;
+            background-color: #3498db;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .Reserva-btn:hover {
+                background-color:  #2980b9;
+            }
+
+
+
         .col {
             flex: 1;
             min-width: 250px;
@@ -211,7 +234,7 @@
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 20px;
-            color: green; 
+            color: green;
         }
 
         .grupo-formulario {
@@ -364,68 +387,67 @@
                 <asp:Label ID="lblEmailRegistro" runat="server" Text="Correo electrónico:" CssClass="etiqueta-formulario"></asp:Label>
                 <asp:TextBox ID="txtEmailRegistro" runat="server" CssClass="control-formulario"></asp:TextBox>
             </div>
-                          <div class="grupo-formulario">
-    <asp:Label ID="lbDni1" runat="server" Text="DNI:" CssClass="etiqueta-formulario"></asp:Label>
-    <asp:TextBox ID="txtDni1" runat="server" CssClass="control-formulario"></asp:TextBox>
-</div>
+            <div class="grupo-formulario">
+                <asp:Label ID="lbDni1" runat="server" Text="DNI:" CssClass="etiqueta-formulario"></asp:Label>
+                <asp:TextBox ID="txtDni1" runat="server" CssClass="control-formulario"></asp:TextBox>
+            </div>
             <div class="grupo-formulario">
                 <asp:Label ID="lblTelefonoRegistro" runat="server" Text="telefono(Opcional):" CssClass="etiqueta-formulario"></asp:Label>
                 <asp:TextBox ID="txtTelefonoRegistro" runat="server" CssClass="control-formulario"></asp:TextBox>
             </div>
-              <asp:Button ID="btnGuardar1" runat="server" Text="Guardar" CssClass="fechas-btn" OnClick="btnGuardar1_Click" />
-              <asp:Button ID="btnPasajero2" runat="server" Text="Pasajero 2 (Opcional)" CssClass="fechas-btn" OnClick="btnPasajero2_Click" />
+            <asp:Button ID="btnGuardar1" runat="server" Text="Guardar" CssClass="Reserva-btn" OnClick="btnGuardar1_Click" />
+            <asp:Button ID="btnPasajero2" runat="server" Text="Pasajero 2 (Opcional)" CssClass="Reserva-btn" OnClick="btnPasajero2_Click" />
 
         </asp:PlaceHolder>
 
-           <asp:PlaceHolder ID="PhPasajero2" runat="server" Visible="false">
+        <asp:PlaceHolder ID="PhPasajero2" runat="server" Visible="false">
 
 
 
-       <asp:Label ID="lblMensajeRegistro2" Text="Pasajero 2" ForeColor="Green" runat="server" CssClass="titulo-formulario"></asp:Label>
-       <div class="grupo-formulario">
-           <asp:Label ID="lblUsuarioRegistro2" runat="server" Text="Nombre de usuario:" CssClass="etiqueta-formulario"></asp:Label>
-           <asp:TextBox ID="txtUsuarioRegistro2" runat="server" CssClass="control-formulario"></asp:TextBox>
-       </div>
-      <%-- <div class="grupo-formulario">
+            <asp:Label ID="lblMensajeRegistro2" Text="Pasajero 2" ForeColor="Green" runat="server" CssClass="titulo-formulario"></asp:Label>
+            <div class="grupo-formulario">
+                <asp:Label ID="lblUsuarioRegistro2" runat="server" Text="Nombre de usuario:" CssClass="etiqueta-formulario"></asp:Label>
+                <asp:TextBox ID="txtUsuarioRegistro2" runat="server" CssClass="control-formulario"></asp:TextBox>
+            </div>
+            <%-- <div class="grupo-formulario">
            <asp:Label ID="lblPasswordRegistro2" runat="server" Text="Contraseña:" CssClass="etiqueta-formulario"></asp:Label>
            <asp:TextBox ID="txtPasswordRegistr2" runat="server" TextMode="Password" CssClass="control-formulario"></asp:TextBox>
        </div>--%>
-               <div class="grupo-formulario">
-    <asp:Label ID="lbDni2" runat="server" Text="DNI:" CssClass="etiqueta-formulario"></asp:Label>
-    <asp:TextBox ID="txtDni2" runat="server" CssClass="control-formulario"></asp:TextBox>
-</div>
-       <div class="grupo-formulario">
-           <asp:Label ID="lblEmailRegistro2" runat="server" Text="Correo electrónico:" CssClass="etiqueta-formulario"></asp:Label>
-           <asp:TextBox ID="txtEmailRegistro2" runat="server" CssClass="control-formulario"></asp:TextBox>
-       </div>
-     
-       <div class="grupo-formulario">
-           <asp:Label ID="lblTelefonoRegistro2" runat="server" Text="telefono(Opcional):" CssClass="etiqueta-formulario"></asp:Label>
-           <asp:TextBox ID="txtTelefonoRegistro2" runat="server" CssClass="control-formulario"></asp:TextBox>
-       </div>
-              <asp:Button ID="btnGuardar2" runat="server" Text="Guardar" CssClass="fechas-btn" OnClick="btnGuardar2_Click" />
+            <div class="grupo-formulario">
+                <asp:Label ID="lbDni2" runat="server" Text="DNI:" CssClass="etiqueta-formulario"></asp:Label>
+                <asp:TextBox ID="txtDni2" runat="server" CssClass="control-formulario"></asp:TextBox>
+            </div>
+            <div class="grupo-formulario">
+                <asp:Label ID="lblEmailRegistro2" runat="server" Text="Correo electrónico:" CssClass="etiqueta-formulario"></asp:Label>
+                <asp:TextBox ID="txtEmailRegistro2" runat="server" CssClass="control-formulario"></asp:TextBox>
+            </div>
 
-   </asp:PlaceHolder>
+            <div class="grupo-formulario">
+                <asp:Label ID="lblTelefonoRegistro2" runat="server" Text="telefono(Opcional):" CssClass="etiqueta-formulario"></asp:Label>
+                <asp:TextBox ID="txtTelefonoRegistro2" runat="server" CssClass="control-formulario"></asp:TextBox>
+            </div>
+            <asp:Button ID="btnGuardar2" runat="server" Text="Guardar" CssClass="Reserva-btn" OnClick="btnGuardar2_Click" />
+
+        </asp:PlaceHolder>
 
 
 
         <asp:UpdatePanel ID="UpReservaTotal" runat="server">
             <ContentTemplate>
                 <div class="section reserva-total">
-                    <asp:Button Text="Confirmar reserva" ID="btnConfirmarReserva" runat="server" Visible="false" OnClick="btnConfirmarReserva_Click"/>
                     <asp:Label ID="reservaTotal" runat="server" Text="Reserva Total: $0"></asp:Label>
 
                 </div>
-            <asp:Label Visible="false" runat="server" CssClass="etiqueta-formulario" Text=" ////              REVISE SU CASILLA DEL CORREO ELECTRONICO PARA CONFIRMAR EL PAGO Y LA RESERVA       ////" ID="lbMensajeConfirmaReserva" ></asp:Label>
+                <asp:Label Visible="false" runat="server" CssClass="etiqueta-formulario" Text=" ////              REVISE SU CASILLA DEL CORREO ELECTRONICO PARA CONFIRMAR EL PAGO Y LA RESERVA       ////" ID="lbMensajeConfirmaReserva"></asp:Label>
             </ContentTemplate>
 
-                
+
 
         </asp:UpdatePanel>
-        <div class="section">
-            Métodos de Pago, Información Extra, Contacto, etc.
+        <asp:Button Text="Confirmar reserva" ID="btnConfirmarReserva" runat="server" CssClass="fechas-btn" Visible="false" OnClick="btnConfirmarReserva_Click" />
+        
+        
        
-        </div>
     </div>
 
 
