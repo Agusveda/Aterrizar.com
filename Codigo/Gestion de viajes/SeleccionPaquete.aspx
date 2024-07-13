@@ -356,15 +356,18 @@
                 <asp:Label ID="lblUsuarioRegistro" runat="server" Text="Nombre de usuario:" CssClass="etiqueta-formulario"></asp:Label>
                 <asp:TextBox ID="txtUsuarioRegistro" runat="server" CssClass="control-formulario"></asp:TextBox>
             </div>
-            <div class="grupo-formulario">
+            <%--<div class="grupo-formulario">
                 <asp:Label ID="lblPasswordRegistro" runat="server" Text="Contraseña:" CssClass="etiqueta-formulario"></asp:Label>
                 <asp:TextBox ID="txtPasswordRegistro" runat="server" TextMode="Password" CssClass="control-formulario"></asp:TextBox>
-            </div>
+            </div>--%>
             <div class="grupo-formulario">
                 <asp:Label ID="lblEmailRegistro" runat="server" Text="Correo electrónico:" CssClass="etiqueta-formulario"></asp:Label>
                 <asp:TextBox ID="txtEmailRegistro" runat="server" CssClass="control-formulario"></asp:TextBox>
             </div>
-           
+                          <div class="grupo-formulario">
+    <asp:Label ID="lbDni1" runat="server" Text="DNI:" CssClass="etiqueta-formulario"></asp:Label>
+    <asp:TextBox ID="txtDni1" runat="server" CssClass="control-formulario"></asp:TextBox>
+</div>
             <div class="grupo-formulario">
                 <asp:Label ID="lblTelefonoRegistro" runat="server" Text="telefono(Opcional):" CssClass="etiqueta-formulario"></asp:Label>
                 <asp:TextBox ID="txtTelefonoRegistro" runat="server" CssClass="control-formulario"></asp:TextBox>
@@ -383,10 +386,14 @@
            <asp:Label ID="lblUsuarioRegistro2" runat="server" Text="Nombre de usuario:" CssClass="etiqueta-formulario"></asp:Label>
            <asp:TextBox ID="txtUsuarioRegistro2" runat="server" CssClass="control-formulario"></asp:TextBox>
        </div>
-       <div class="grupo-formulario">
+      <%-- <div class="grupo-formulario">
            <asp:Label ID="lblPasswordRegistro2" runat="server" Text="Contraseña:" CssClass="etiqueta-formulario"></asp:Label>
            <asp:TextBox ID="txtPasswordRegistr2" runat="server" TextMode="Password" CssClass="control-formulario"></asp:TextBox>
-       </div>
+       </div>--%>
+               <div class="grupo-formulario">
+    <asp:Label ID="lbDni2" runat="server" Text="DNI:" CssClass="etiqueta-formulario"></asp:Label>
+    <asp:TextBox ID="txtDni2" runat="server" CssClass="control-formulario"></asp:TextBox>
+</div>
        <div class="grupo-formulario">
            <asp:Label ID="lblEmailRegistro2" runat="server" Text="Correo electrónico:" CssClass="etiqueta-formulario"></asp:Label>
            <asp:TextBox ID="txtEmailRegistro2" runat="server" CssClass="control-formulario"></asp:TextBox>

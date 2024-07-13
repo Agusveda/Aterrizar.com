@@ -204,24 +204,6 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtUsuarioRegistro;
 
         /// <summary>
-        /// Control lblPasswordRegistro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPasswordRegistro;
-
-        /// <summary>
-        /// Control txtPasswordRegistro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPasswordRegistro;
-
-        /// <summary>
         /// Control lblEmailRegistro.
         /// </summary>
         /// <remarks>
@@ -238,6 +220,24 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmailRegistro;
+
+        /// <summary>
+        /// Control lbDni1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbDni1;
+
+        /// <summary>
+        /// Control txtDni1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDni1;
 
         /// <summary>
         /// Control lblTelefonoRegistro.
@@ -312,22 +312,22 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtUsuarioRegistro2;
 
         /// <summary>
-        /// Control lblPasswordRegistro2.
+        /// Control lbDni2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPasswordRegistro2;
+        protected global::System.Web.UI.WebControls.Label lbDni2;
 
         /// <summary>
-        /// Control txtPasswordRegistr2.
+        /// Control txtDni2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPasswordRegistr2;
+        protected global::System.Web.UI.WebControls.TextBox txtDni2;
 
         /// <summary>
         /// Control lblEmailRegistro2.
