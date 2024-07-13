@@ -25,7 +25,7 @@ namespace Gestion_de_viajes
 
             try
             {
-                usuario = new Usuario(txtUsuarioLogin.Text, txtPasswordLogin.Text, false);
+                usuario = new Usuario(txtCorreoLogin.Text, int.Parse(txtDNILogin.Text), false);
 
                 if (repousuario.Loguear(usuario))
                 {
@@ -66,7 +66,6 @@ namespace Gestion_de_viajes
                 RepositorioUsuario repoUsuario = new RepositorioUsuario();
                 nuevo.NombreUsuario = txtUsuarioRegistro.Text;
                 nuevo.CorreoElectronico = txtEmailRegistro.Text;
-                nuevo.Password = txtPasswordRegistro.Text;
                 nuevo.DNI = int.Parse(txtDNIRegistro.Text);
                 nuevo.Telefono = txtTelefonoRegistro.Text;
                 int tipo = 1;

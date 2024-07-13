@@ -30,7 +30,6 @@ namespace Funcionalidades
                     aux.NombreUsuario = (string)AccesoDatos.Lector["Nombre"];
                     aux.DNI = (int)AccesoDatos.Lector["DNI"];
                     aux.CorreoElectronico = (string)AccesoDatos.Lector["CorreoElectronico"];
-                    aux.Password = (string)AccesoDatos.Lector["Password"];
                     aux.Telefono = (string)AccesoDatos.Lector["Telefono"];
 
 
@@ -67,7 +66,6 @@ namespace Funcionalidades
                     usuario.DNI = (int)accesoDatos.Lector["DNI"];
                     usuario.NombreUsuario = (string)accesoDatos.Lector["Nombre"];
                     usuario.CorreoElectronico = (string)accesoDatos.Lector["CorreoElectronico"];
-                    usuario.Password = (string)accesoDatos.Lector["Password"];
                     usuario.Telefono = (string)accesoDatos.Lector["Telefono"];
                 }
 
@@ -86,10 +84,10 @@ namespace Funcionalidades
 
             try
             {
-                datos.setearConsulta("SELECT IdUsuario, Nombre, Password, TipoUsuario FROM USUARIOS where  Nombre = @Nombre and Password = @Contra");
+                datos.setearConsulta("SELECT IdUsuario, Nombre, TipoUsuario FROM USUARIOS where  CorreoElectronico = @Nombre and DNI = @Contra");
 
-                datos.setearParametros("@Contra", usuario.Password);
-                datos.setearParametros("@Nombre", usuario.NombreUsuario);
+                datos.setearParametros("@Contra", usuario.DNI);
+                datos.setearParametros("@Nombre", usuario.CorreoElectronico);
 
 
                 datos.ejecutarLectura();
@@ -127,10 +125,10 @@ namespace Funcionalidades
                 accesoDatos.setearSp("InsUsuario");
                 accesoDatos.setearParametros("@Nombre", nuevo.NombreUsuario);
                 accesoDatos.setearParametros("@CorreoElectronico", nuevo.CorreoElectronico);
-                accesoDatos.setearParametros("@Password", nuevo.Password);
                 accesoDatos.setearParametros("@DNI", nuevo.DNI);
                 accesoDatos.setearParametros("@telefono", nuevo.Telefono);
                 accesoDatos.setearParametros("@TipoUsuario", nuevo.TipoUsuario);
+                accesoDatos.setearParametros("@IdReserva", nuevo.IdReserva);
 
                 accesoDatos.ejecutarAccion();
             }

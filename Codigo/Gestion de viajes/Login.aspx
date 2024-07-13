@@ -72,13 +72,13 @@
         <asp:Panel ID="pnlLogin" runat="server">
             <h2>Inicio de Sesión</h2>
             <asp:Label ID="lblmensajeLogin" runat="server" ForeColor="Red"></asp:Label>
-            <div>
-                <asp:Label ID="lblUsuarioLogin" runat="server" Text="Nombre de usuario:"></asp:Label>
-                <asp:TextBox ID="txtUsuarioLogin" runat="server"></asp:TextBox>
+              <div>
+                <asp:Label ID="lblCorreoLogin" runat="server" Text="Correo electrónico:"></asp:Label>
+                <asp:TextBox ID="txtCorreoLogin" runat="server"></asp:TextBox>
             </div>
             <div>
-                <asp:Label ID="lblPasswordLogin" runat="server" Text="Contraseña:"></asp:Label>
-                <asp:TextBox ID="txtPasswordLogin" runat="server" TextMode="Password"></asp:TextBox>
+                <asp:Label ID="lblDNILogin" runat="server" Text="DNI:"></asp:Label>
+                <asp:TextBox ID="txtDNILogin" runat="server"></asp:TextBox>
             </div>
             <div>
                 <asp:Button ID="btnLogin" runat="server" Text="Iniciar Sesión" OnClick="btnLogin_Click" />
@@ -95,10 +95,6 @@
             <div>
                 <asp:Label ID="lblUsuarioRegistro" runat="server" Text="Nombre de usuario:"></asp:Label>
                 <asp:TextBox ID="txtUsuarioRegistro" runat="server"></asp:TextBox>
-            </div>
-            <div>
-                <asp:Label ID="lblPasswordRegistro" runat="server" Text="Contraseña:"></asp:Label>
-                <asp:TextBox ID="txtPasswordRegistro" runat="server" TextMode="Password"></asp:TextBox>
             </div>
             <div>
                 <asp:Label ID="lblEmailRegistro" runat="server" Text="Correo electrónico:"></asp:Label>

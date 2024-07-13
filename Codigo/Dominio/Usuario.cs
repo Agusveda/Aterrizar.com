@@ -15,7 +15,8 @@ namespace Dominio
         public int DNI { get; set; }
         public string NombreUsuario { get; set; }
         public string CorreoElectronico { get; set; }
-        public string Password { get; set; }
+
+        public int IdReserva { get; set; }
         public string Telefono { get; set; }
 
         public TipoUsuario TipoUsuario { get; set; }
@@ -23,10 +24,10 @@ namespace Dominio
         public Usuario() {
             TipoUsuario = TipoUsuario.Normal;
         }
-        public Usuario(string user, string pass, bool admin)
+        public Usuario(string user, int pass, bool admin)
         {
-            NombreUsuario = user;
-            Password = pass;
+            CorreoElectronico = user;
+            DNI = pass;
             TipoUsuario = admin ? TipoUsuario.Admin : TipoUsuario.Normal;
 
         }

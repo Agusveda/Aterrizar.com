@@ -33,40 +33,40 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Label lblmensajeLogin;
 
         /// <summary>
-        /// Control lblUsuarioLogin.
+        /// Control lblCorreoLogin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUsuarioLogin;
+        protected global::System.Web.UI.WebControls.Label lblCorreoLogin;
 
         /// <summary>
-        /// Control txtUsuarioLogin.
+        /// Control txtCorreoLogin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsuarioLogin;
+        protected global::System.Web.UI.WebControls.TextBox txtCorreoLogin;
 
         /// <summary>
-        /// Control lblPasswordLogin.
+        /// Control lblDNILogin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPasswordLogin;
+        protected global::System.Web.UI.WebControls.Label lblDNILogin;
 
         /// <summary>
-        /// Control txtPasswordLogin.
+        /// Control txtDNILogin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPasswordLogin;
+        protected global::System.Web.UI.WebControls.TextBox txtDNILogin;
 
         /// <summary>
         /// Control btnLogin.
@@ -130,24 +130,6 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUsuarioRegistro;
-
-        /// <summary>
-        /// Control lblPasswordRegistro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPasswordRegistro;
-
-        /// <summary>
-        /// Control txtPasswordRegistro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPasswordRegistro;
 
         /// <summary>
         /// Control lblEmailRegistro.
