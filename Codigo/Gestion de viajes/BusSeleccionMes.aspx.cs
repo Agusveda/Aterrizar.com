@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Dominio;
+using Funcionalidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +14,20 @@ namespace Gestion_de_viajes
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (!IsPostBack)
+            {
+                CargarPaquetesActivos();
+            }
         }
+
+
+        private void CargarPaquetesActivos()
+        {
+            RepositorioMes repositorioMes = new RepositorioMes();
+            List<Mes> mesesActivos = repositorioMes.ObtenerMesActivoPorId(1);
+            RepeaterMeses.DataSource = mesesActivos;
+            RepeaterMeses.DataBind();
+        }
+
     }
 }

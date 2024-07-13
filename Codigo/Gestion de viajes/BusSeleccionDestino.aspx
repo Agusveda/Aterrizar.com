@@ -70,7 +70,6 @@
                                  <p class="card-text">Precio: $<%# Eval("PrecioPaquete") %></p>
                                  <p class="card-text">Mes: <%# Eval("Mes") %></p>
                                  <p class="card-text">Duracion: <%# Eval("Duracion") %></p>
-                                 <asp:Button Text="Añadir al carrito" runat="server" CssClass="btn btn-success btn-large my-2 mx-1 " ID="btnAñadir" CommandArgument='<%# Eval("IdPaquete") %>' CommandName="AddCarrito" OnCommand="btnAñadir_Command" />
                              </div>
                          </div>
                      </a>

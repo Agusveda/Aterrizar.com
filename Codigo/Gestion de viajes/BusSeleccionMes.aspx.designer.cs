@@ -13,5 +13,14 @@ namespace Gestion_de_viajes
 
     public partial class PaquetesBus
     {
+
+        /// <summary>
+        /// Control RepeaterMeses.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater RepeaterMeses;
     }
 }

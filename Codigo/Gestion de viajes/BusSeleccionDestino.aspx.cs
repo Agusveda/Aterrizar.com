@@ -16,34 +16,13 @@ namespace Gestion_de_viajes
 
             if (!IsPostBack)
             {
-                PaquetesBus();
+                int mesSeleccionado = Convert.ToInt32(Request.QueryString["mes"]); // Obtener el mes desde la query string
+                RepositorioPaquete repositorioPaquete = new RepositorioPaquete();
+                listapaquete = repositorioPaquete.ListarConSp(2, mesSeleccionado); // Filtrar por tipo de transporte 1 y mes seleccionado
+                repPaquetesBus.DataSource = listapaquete;
+                repPaquetesBus.DataBind();
             }
         }
-        private void PaquetesBus()
-        {
-            RepositorioPaquete repositorioPaquete = new RepositorioPaquete();
-            listapaquete = repositorioPaquete.ListarConSp(2);
-            repPaquetesBus.DataSource = listapaquete;
-            repPaquetesBus.DataBind();
-        }
-        protected void btnAñadir_Command(object sender, CommandEventArgs e)
-        {
-            if (e.CommandName == "AddCarrito")
-            {
-                List<PaqueteDeViaje> ListaCarrito = Session["carrito"] as List<PaqueteDeViaje>;
-                if (ListaCarrito == null)
-                {
-                    ListaCarrito = new List<PaqueteDeViaje>();
-                }
-
-                string valor = e.CommandArgument.ToString(); // Obtener el argumento del comando
-                PaqueteDeViaje aux = new PaqueteDeViaje();
-                RepositorioPaquete repo = new RepositorioPaquete();
-                aux = repo.ObtenerPaquetePorId(int.Parse(valor)); // Obtener el paquete por su ID
-                ListaCarrito.Add(aux);
-                Session["carrito"] = ListaCarrito;
-                Response.Redirect("BusSeleccionDestino.aspx");
-            }
-        }
+     
     }
 }

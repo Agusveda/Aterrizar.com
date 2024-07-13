@@ -54,56 +54,28 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="container">
+      <div class="container">
 
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-                <a href="BusSeleccionDestino.aspx">
+       <div class="row row-cols-1 row-cols-md-2 g-4">
+      
 
-                    <div class="card">
-                        <img src="/imagenes/JULIO.JPG" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN JULIO</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="BusSeleccionDestino.aspx">
+   
+   
+   <asp:Repeater ID="RepeaterMeses" runat="server">
+               <ItemTemplate>
+                   <div class="col">
+                       <a href="BusSeleccionDestino.aspx?mes=<%# Eval("IdMes") %>">
+                           <div class="card">
+                               <img src='/imagenes/<%# Eval("NombreMes") %>.jpg' class="card-img-top" alt='<%# Eval("NombreMes") %>'>
+                               <div class="card-body">
+                                   <h5 class="card-title">SALIDAS EN <%# Eval("NombreMes").ToString() %></h5>
+                               </div>
+                           </div>
+                       </a>
+                   </div>
+               </ItemTemplate>
+           </asp:Repeater>
+       </div>
 
-                    <div class="card">
-                        <img src="/imagenes/Agosto.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN AGOSTO</h5>
-                           
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="BusSeleccionDestino.aspx">
-
-                    <div class="card">
-                        <img src="/imagenes/Septiembre.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN SEPTIEMBRE</h5>
-                           
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="BusSeleccionDestino.aspx">
-                    <div class="card">
-                        <img src="/imagenes/octubre.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SALIDAS EN OCTUBRE</h5>
-                            
-                        </div>
-                    </div>
-        </a>
-            </div>
-        </div>
- 
-    </div>
+   </div>
 </asp:Content>
