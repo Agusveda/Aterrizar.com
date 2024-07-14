@@ -213,8 +213,8 @@
 
                 <asp:Button ID="btnEliminarPaqueteBoton" runat="server" Text="Eliminar Paquete" CssClass="btnPeligro" Visible="false" OnClientClick="return confirm('¿Esta seguro que desea eliminar este paquete?');" OnClick="btnEliminarPaqueteBoton_Click" />
 
-                <asp:Label ID="lblConfirmacion" runat="server" CssClass="success-message" Visible="false"></asp:Label>
                 <asp:Button ID="btnCerrarPaquete" runat="server" Text="Cerrar" OnClick="btnCerrarPaquete_Click" CssClass="btnPeligro" />
+                <asp:Label ID="lblConfirmacion" runat="server" CssClass="success-message" Visible="false"></asp:Label>
             </asp:PlaceHolder>
 
             <asp:PlaceHolder ID="phEliminarPaquete" runat="server" Visible="false">

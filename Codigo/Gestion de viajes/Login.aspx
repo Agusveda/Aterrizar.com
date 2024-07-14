@@ -72,13 +72,17 @@
         <asp:Panel ID="pnlLogin" runat="server">
             <h2>Inicio de Sesión</h2>
             <asp:Label ID="lblmensajeLogin" runat="server" ForeColor="Red"></asp:Label>
-              <div>
+            <div>
                 <asp:Label ID="lblCorreoLogin" runat="server" Text="Correo electrónico:"></asp:Label>
                 <asp:TextBox ID="txtCorreoLogin" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtCorreoLogin" ErrorMessage="Por favor, introduce una dirección de correo electrónico válida." ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$" ForeColor="Red" />
+
             </div>
             <div>
                 <asp:Label ID="lblDNILogin" runat="server" Text="DNI:"></asp:Label>
                 <asp:TextBox ID="txtDNILogin" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revDNI" runat="server" ControlToValidate="txtDNILogin" ErrorMessage="Por favor, introduce solo números." ValidationExpression="^\d+$" ForeColor="Red" />
+
             </div>
             <div>
                 <asp:Button ID="btnLogin" runat="server" Text="Iniciar Sesión" OnClick="btnLogin_Click" />
@@ -91,25 +95,35 @@
 
         <asp:Panel ID="pnlRegistro" runat="server" Visible="False">
             <h2>Registro</h2>
-            <asp:Label ID="lblMensajeRegistro" ForeColor="Green" Visible="false" runat="server" ></asp:Label>
+            <asp:Label ID="lblMensajeRegistro" ForeColor="Green" Visible="false" runat="server"></asp:Label>
             <div>
                 <asp:Label ID="lblUsuarioRegistro" runat="server" Text="Nombre de usuario:"></asp:Label>
                 <asp:TextBox ID="txtUsuarioRegistro" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvUsuarioRegistro" runat="server" ControlToValidate="txtUsuarioRegistro" ErrorMessage="El nombre de usuario es obligatorio." ForeColor="Red" />
+
             </div>
             <div>
                 <asp:Label ID="lblEmailRegistro" runat="server" Text="Correo electrónico:"></asp:Label>
                 <asp:TextBox ID="txtEmailRegistro" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revEmailRegisto" runat="server" ControlToValidate="txtEmailRegistro" ErrorMessage="Por favor, introduce una dirección de correo electrónico válida." ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$" ForeColor="Red" />
+                <asp:RequiredFieldValidator ID="rfvEmailRegistro" runat="server" ControlToValidate="txtEmailRegistro" ErrorMessage="El email es obligatorio." ForeColor="Red" />
+
             </div>
             <div>
                 <asp:Label ID="lblDNI" runat="server" Text="DNI:"></asp:Label>
                 <asp:TextBox ID="txtDNIRegistro" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revDNIRegistro" runat="server" ControlToValidate="txtDNIRegistro" ErrorMessage="Por favor, introduce solo números." ValidationExpression="^\d+$" ForeColor="Red" />
+                    <asp:RequiredFieldValidator ID="rfvDNIRegistro" runat="server" ControlToValidate="txtDNIRegistro" ErrorMessage="El dni es obligatorio." ForeColor="Red" />
+
             </div>
             <div>
                 <asp:Label ID="lblTelefonoRegistro" runat="server" Text="telefono(Opcional):"></asp:Label>
                 <asp:TextBox ID="txtTelefonoRegistro" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revTelefono" runat="server" ControlToValidate="txtTelefonoRegistro" ErrorMessage="Por favor, introduce solo números." ValidationExpression="^\d+$" ForeColor="Red" />
+
             </div>
-            <div >
-                <asp:Button  ID="btnRegistro" runat="server" Text="Registrarse" OnClick="btnRegistro_Click" />
+            <div>
+                <asp:Button ID="btnRegistro" runat="server" Text="Registrarse" OnClick="btnRegistro_Click" />
             </div>
         </asp:Panel>
 

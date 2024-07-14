@@ -51,6 +51,15 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtCorreoLogin;
 
         /// <summary>
+        /// Control revEmail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
+
+        /// <summary>
         /// Control lblDNILogin.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDNILogin;
+
+        /// <summary>
+        /// Control revDNI.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDNI;
 
         /// <summary>
         /// Control btnLogin.
@@ -132,6 +150,15 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtUsuarioRegistro;
 
         /// <summary>
+        /// Control rfvUsuarioRegistro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUsuarioRegistro;
+
+        /// <summary>
         /// Control lblEmailRegistro.
         /// </summary>
         /// <remarks>
@@ -148,6 +175,24 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmailRegistro;
+
+        /// <summary>
+        /// Control revEmailRegisto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmailRegisto;
+
+        /// <summary>
+        /// Control rfvEmailRegistro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmailRegistro;
 
         /// <summary>
         /// Control lblDNI.
@@ -168,6 +213,24 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtDNIRegistro;
 
         /// <summary>
+        /// Control revDNIRegistro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDNIRegistro;
+
+        /// <summary>
+        /// Control rfvDNIRegistro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDNIRegistro;
+
+        /// <summary>
         /// Control lblTelefonoRegistro.
         /// </summary>
         /// <remarks>
@@ -184,6 +247,15 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTelefonoRegistro;
+
+        /// <summary>
+        /// Control revTelefono.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revTelefono;
 
         /// <summary>
         /// Control btnRegistro.

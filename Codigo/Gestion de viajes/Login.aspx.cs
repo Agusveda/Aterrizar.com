@@ -59,37 +59,43 @@ namespace Gestion_de_viajes
 
         protected void btnRegistro_Click(object sender, EventArgs e)
         {
-
-            try
+            if (Page.IsValid)
             {
-                Usuario nuevo = new Usuario();
-                RepositorioUsuario repoUsuario = new RepositorioUsuario();
-                nuevo.NombreUsuario = txtUsuarioRegistro.Text;
-                nuevo.CorreoElectronico = txtEmailRegistro.Text;
-                nuevo.DNI = int.Parse(txtDNIRegistro.Text);
-                nuevo.Telefono = txtTelefonoRegistro.Text;
-                int tipo = 1;
-                nuevo.TipoUsuario = (TipoUsuario)tipo;
-                repoUsuario.InsUsuario(nuevo);
 
-                lblMensajeRegistro.Text = "Registro exitoso. Ahora puede iniciar sesión.";
-                lblMensajeRegistro.ForeColor = System.Drawing.Color.Green;
-                lblMensajeRegistro.Visible = true;
-                // Resetea
+                try
+                {
+                    Usuario nuevo = new Usuario();
+                    RepositorioUsuario repoUsuario = new RepositorioUsuario();
+                    nuevo.NombreUsuario = txtUsuarioRegistro.Text;
+                    nuevo.CorreoElectronico = txtEmailRegistro.Text;
+                    nuevo.DNI = int.Parse(txtDNIRegistro.Text);
+                    nuevo.Telefono = txtTelefonoRegistro.Text;
+                    int tipo = 1;
+                    nuevo.TipoUsuario = (TipoUsuario)tipo;
+                    repoUsuario.InsUsuario(nuevo);
 
-              
+                    lblMensajeRegistro.Text = "Registro exitoso. Ahora puede iniciar sesión.";
+                    lblMensajeRegistro.ForeColor = System.Drawing.Color.Green;
+                    lblMensajeRegistro.Visible = true;
+                    // Resetea
 
-                pnlLogin.Visible = true;
-                pnlRegistro.Visible = false;
-            }
+                    txtUsuarioRegistro.Text = string.Empty;
+                    txtEmailRegistro.Text = string.Empty;
+                    txtDNIRegistro.Text = string.Empty;
+                    txtTelefonoRegistro.Text = string.Empty;
+
+                    pnlLogin.Visible = true;
+                    pnlRegistro.Visible = false;
+                }
             catch (Exception ex)
             {
 
-                lblMensajeRegistro.Text = "Error al registrar usuario: " + ex.Message;
+                lblMensajeRegistro.Text = "Error al registrar usuario ingrese todos los campos" + ex.Message;
                 lblMensajeRegistro.ForeColor = System.Drawing.Color.Red;
                 lblMensajeRegistro.Visible = true;
             }
 
+               }
 
 
          
