@@ -302,6 +302,8 @@ namespace Gestion_de_viajes
             btnConfirmarReserva.Visible= false;
 
             RepositorioFecha repofecha = new RepositorioFecha();
+
+            //inicio para agregar reservas
             RepositorioReserva repoReserva = new RepositorioReserva();
             Reserva NuevaReserva  = new Reserva();
 
@@ -309,15 +311,28 @@ namespace Gestion_de_viajes
             NuevaReserva.estado = 0;
             int idhotel = int.Parse(ddlHoteles.SelectedItem.Value);
             NuevaReserva.idHotel = idhotel;
-            int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
+            int idPaquete = Convert.ToInt32(Request.QueryString["id"]); //traigo el id del paquete que elijo
             NuevaReserva.IdPaquete = idPaquete;
             NuevaReserva.Precio = variablesParaReserva.precioTotalreserva;
-
-
-            Fechas fecha = repofecha.ObtenerFechaPorId(variablesParaReserva.IdFechaFinal);
+            Fechas fecha = repofecha.ObtenerFechaPorId(variablesParaReserva.IdFechaFinal); // traigo la fecha elegida
             NuevaReserva.FechaInicio = fecha.FechaInicio;
-
             repoReserva.AgregarConSp(NuevaReserva);
+
+            // fin para agregar reservas
+
+            // inicio para relacionar los pasajeros con la reserva 
+            RepositorioRelReservaXusuario repoRelReservaxUsuario = new RepositorioRelReservaXusuario();
+            RelReservaXusuario nuevoRelReservaXusuario = new RelReservaXusuario();
+
+            nuevoRelReservaXusuario.IdReserva = repoReserva.ObtenerUltimoRegistro();
+            nuevoRelReservaXusuario.DniUsuario = int.Parse(txtDni1.Text);
+            repoRelReservaxUsuario.InsRelReservaXusuario(nuevoRelReservaXusuario); // pasajero 1
+            if (!string.IsNullOrWhiteSpace(txtDni2.Text))
+            {
+                nuevoRelReservaXusuario.DniUsuario = int.Parse(txtDni2.Text);
+                repoRelReservaxUsuario.InsRelReservaXusuario(nuevoRelReservaXusuario); // pasajero 2
+            }
+
 
 
 

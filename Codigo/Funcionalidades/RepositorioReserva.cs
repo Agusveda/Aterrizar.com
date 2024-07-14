@@ -124,6 +124,36 @@ namespace Funcionalidades
 
         }
 
+        public int ObtenerUltimoRegistro()
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            int IdReserva = 0; // ultimo id 
+            try
+            {
+                accesoDatos.setearSp("ObtenerUltimoRegistroReserva");
+                accesoDatos.ejecutarLectura();
+
+
+                if (accesoDatos.Lector.Read())
+                {
+
+                    IdReserva = (int)accesoDatos.Lector["IdReserva"];
+
+                }
+                return IdReserva;
+
+
+            }
+
+
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+
+        }
 
     }
 }
