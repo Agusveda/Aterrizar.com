@@ -96,6 +96,15 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtNombrePaquete;
 
         /// <summary>
+        /// Control rfvNombrePaquete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombrePaquete;
+
+        /// <summary>
         /// Control txtDescripcionPaquete.
         /// </summary>
         /// <remarks>
@@ -114,6 +123,24 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtPrecioPaquete;
 
         /// <summary>
+        /// Control revPrecio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPrecio;
+
+        /// <summary>
+        /// Control rfvPrecio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPrecio;
+
+        /// <summary>
         /// Control ddlmes.
         /// </summary>
         /// <remarks>
@@ -130,6 +157,24 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDuracionPaquete;
+
+        /// <summary>
+        /// Control revDuracionPaquete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDuracionPaquete;
+
+        /// <summary>
+        /// Control rfvDuracionPaquete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDuracionPaquete;
 
         /// <summary>
         /// Control ddlTipoTransporte.
@@ -159,6 +204,24 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtDisponibilidadPaquete;
 
         /// <summary>
+        /// Control revDisponibilidadPaquete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDisponibilidadPaquete;
+
+        /// <summary>
+        /// Control rfvDisponibilidadPaquete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDisponibilidadPaquete;
+
+        /// <summary>
         /// Control btnGuardarPaquete.
         /// </summary>
         /// <remarks>
@@ -186,15 +249,6 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.Button btnEliminarPaqueteBoton;
 
         /// <summary>
-        /// Control lblConfirmacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblConfirmacion;
-
-        /// <summary>
         /// Control btnCerrarPaquete.
         /// </summary>
         /// <remarks>
@@ -202,6 +256,15 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCerrarPaquete;
+
+        /// <summary>
+        /// Control lblConfirmacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblConfirmacion;
 
         /// <summary>
         /// Control phEliminarPaquete.
@@ -276,6 +339,15 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtNombreHotel;
 
         /// <summary>
+        /// Control rfvNombreHotel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombreHotel;
+
+        /// <summary>
         /// Control txtDescripcionHotel.
         /// </summary>
         /// <remarks>
@@ -292,6 +364,24 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrecioHotel;
+
+        /// <summary>
+        /// Control revPrecioHotel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPrecioHotel;
+
+        /// <summary>
+        /// Control rfvPrecioHotel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPrecioHotel;
 
         /// <summary>
         /// Control lbCdgDestinoEnHotel.
@@ -429,6 +519,15 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtNombreExcursion;
 
         /// <summary>
+        /// Control rfvNombreExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombreExcursion;
+
+        /// <summary>
         /// Control txtDescripcionExcursion.
         /// </summary>
         /// <remarks>
@@ -465,6 +564,24 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtDuracionExcursion;
 
         /// <summary>
+        /// Control revDuracionExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDuracionExcursion;
+
+        /// <summary>
+        /// Control rfvDuracionExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDuracionExcursion;
+
+        /// <summary>
         /// Control txtPrecioExcursion.
         /// </summary>
         /// <remarks>
@@ -472,6 +589,24 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrecioExcursion;
+
+        /// <summary>
+        /// Control revPrecioExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPrecioExcursion;
+
+        /// <summary>
+        /// Control rfvPrecioExcursion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPrecioExcursion;
 
         /// <summary>
         /// Control btnGuardarExcursion.
@@ -627,6 +762,24 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtCodigoDestino;
 
         /// <summary>
+        /// Control revCodigoDestino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCodigoDestino;
+
+        /// <summary>
+        /// Control rfvCodigoDestino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCodigoDestino;
+
+        /// <summary>
         /// Control txtNombreDestino.
         /// </summary>
         /// <remarks>
@@ -634,6 +787,15 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNombreDestino;
+
+        /// <summary>
+        /// Control rfvNombreDestinoo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombreDestinoo;
 
         /// <summary>
         /// Control btnAgregarDestino.

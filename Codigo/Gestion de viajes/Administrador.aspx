@@ -155,6 +155,7 @@
                 <div class="form-group">
                     <label for="txtNombrePaquete">Nombre del Paquete:</label>
                     <asp:TextBox ID="txtNombrePaquete" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator Enabled="false" ID="rfvNombrePaquete" runat="server" ControlToValidate="txtNombrePaquete" ErrorMessage="El nombre del paquete es obligatorio" ForeColor="Red" />
 
                 </div>
 
@@ -166,6 +167,9 @@
                 <div class="form-group">
                     <label for="txtPrecioPaquete">Precio:</label>
                     <asp:TextBox ID="txtPrecioPaquete" runat="server"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revPrecio" runat="server" ControlToValidate="txtPrecioPaquete" ErrorMessage="Por favor, introduce solo números." ValidationExpression="^\d+(\.\d+)?(,\d+)?$" ForeColor="Red" />
+                    <asp:RequiredFieldValidator  Enabled="false" ID="rfvPrecio" runat="server" ControlToValidate="txtPrecioPaquete" ErrorMessage="El precio del paquete es obligatorio" ForeColor="Red" />
+
                 </div>
                 <div class="form-group">
                     <label for="txtMes">Mes:</label>
@@ -187,6 +191,9 @@
                 <div class="form-group">
                     <label for="txtDuracionPaquete">Duración:</label>
                     <asp:TextBox ID="txtDuracionPaquete" runat="server"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revDuracionPaquete" runat="server" ControlToValidate="txtDuracionPaquete" ErrorMessage="Por favor, introduce solo números." ValidationExpression="^\d+$" ForeColor="Red" />
+                    <asp:RequiredFieldValidator Enabled="false" ID="rfvDuracionPaquete" runat="server" ControlToValidate="txtDuracionPaquete" ErrorMessage="La duracion del paquete es obligatorio" ForeColor="Red" />
+
                 </div>
                 <div class="form-group">
                     <label for="ddlTipoTransporte">Tipo de Transporte:</label>
@@ -202,6 +209,9 @@
                 <div class="form-group">
                     <label for="txtDisponibilidadPaquete">Disponibilidad:</label>
                     <asp:TextBox ID="txtDisponibilidadPaquete" runat="server"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revDisponibilidadPaquete" runat="server" ControlToValidate="txtDisponibilidadPaquete" ErrorMessage="Por favor, introduce solo números." ValidationExpression="^\d+$" ForeColor="Red" />
+                    <asp:RequiredFieldValidator Enabled="false" ID="rfvDisponibilidadPaquete" runat="server" ControlToValidate="txtDisponibilidadPaquete" ErrorMessage="La disponibilidad del paquete es obligatorio" ForeColor="Red" />
+
                 </div>
                 <!--Boton al agregar paquete-->
 
@@ -242,20 +252,27 @@
 
                     <asp:Label runat="server" ID="lbIdHotel">Seleccionar id Hotel </asp:Label>
                     <asp:DropDownList runat="server" ID="ddlIdHoteles" AutoPostBack="true" OnSelectedIndexChanged="ddlIdHoteles_SelectedIndexChanged"></asp:DropDownList>
+
                 </div>
 
 
                 <div class="form-group">
                     <label for="txtNombreHotel">Nombre del Hotel:</label>
                     <asp:TextBox ID="txtNombreHotel" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator  Enabled="false" ID="rfvNombreHotel" runat="server" ControlToValidate="txtNombreHotel" ErrorMessage="El nombre del hotel es obligatorio." ForeColor="Red" />
+
                 </div>
                 <div class="form-group">
                     <label for="txtDescripcionHotel">Descripción:</label>
                     <asp:TextBox ID="txtDescripcionHotel" TextMode="MultiLine" runat="server"></asp:TextBox>
+
                 </div>
                 <div class="form-group">
                     <label for="txtPrecioHotel">Precio por Noche:</label>
                     <asp:TextBox ID="txtPrecioHotel" runat="server"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revPrecioHotel" runat="server" ControlToValidate="txtPrecioHotel" ErrorMessage="Por favor, introduce solo números." ValidationExpression="^\d+(\.\d+)?(,\d+)?$" ForeColor="Red" />
+                    <asp:RequiredFieldValidator  Enabled="false" ID="rfvPrecioHotel" runat="server" ControlToValidate="txtPrecioHotel" ErrorMessage="El precio por noche es obligatorio." ForeColor="Red" />
+
                 </div>
                 <div class="form-group">
 
@@ -303,6 +320,8 @@
                 <div class="form-group">
                     <label for="txtNombreExcursion">Nombre de la Excursión:</label>
                     <asp:TextBox ID="txtNombreExcursion" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator  Enabled="false" ID="rfvNombreExcursion" runat="server" ControlToValidate="txtNombreExcursion" ErrorMessage="El nombre de la excursion es obligatorio." ForeColor="Red" />
+
                 </div>
                 <div class="form-group">
                     <label for="txtDescripcionExcursion">Descripción:</label>
@@ -317,10 +336,16 @@
                 <div class="form-group">
                     <label for="lbDuracion">Duracion de la excursion (en horas):</label>
                     <asp:TextBox ID="txtDuracionExcursion" runat="server"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revDuracionExcursion" runat="server" ControlToValidate="txtDuracionExcursion" ErrorMessage="Por favor, introduce solo números." ValidationExpression="^\d+$" ForeColor="Red" />
+                    <asp:RequiredFieldValidator ID="rfvDuracionExcursion" runat="server" ControlToValidate="txtDuracionExcursion" ErrorMessage="La duracion de la excursion es obligatorio." ForeColor="Red" Enabled="false"/>
+
                 </div>
                 <div class="form-group">
                     <label for="txtPrecioExcursion">Precio:</label>
                     <asp:TextBox ID="txtPrecioExcursion" runat="server"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revPrecioExcursion" runat="server" ControlToValidate="txtPrecioExcursion" ErrorMessage="Por favor, introduce solo números." ValidationExpression="^\d+(\.\d+)?(,\d+)?$" ForeColor="Red" />
+                    <asp:RequiredFieldValidator ID="rfvPrecioExcursion" runat="server" ControlToValidate="txtPrecioExcursion" ErrorMessage="El precio de la excursion es obligatorio." ForeColor="Red" Enabled="false"/>
+
                 </div>
                 <!--Boton al agregar Excursion-->
 
@@ -376,7 +401,7 @@
 
             <asp:PlaceHolder ID="phABMDestino" runat="server" Visible="false">
                 <div>
-                    <h2>Destinos Activos</h2>
+                    <h2>Eliminar Destino</h2>
                     <asp:DropDownList ID="ddlDestinosActivos" runat="server" CssClass="select"></asp:DropDownList>
                     <asp:Button Text="Eliminar Destino" ID="btnEliminarDestino" runat="server" CssClass="btnPeligro" OnClick="btnEliminarDestino_Click" />
                 </div>
@@ -386,16 +411,22 @@
                     <div>
                         <label>Código de Destino:</label>
                         <asp:TextBox ID="txtCodigoDestino" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="revCodigoDestino" runat="server" ControlToValidate="txtCodigoDestino" ErrorMessage="Por favor, introduce solo números." ValidationExpression="^\d+$" ForeColor="Red" />
+                        <asp:RequiredFieldValidator ID="rfvCodigoDestino" runat="server" ControlToValidate="txtCodigoDestino" ErrorMessage="El codigo es obligatorio." ForeColor="Red" Enabled="false" />
+
                     </div>
                     <div>
                         <label>Nombre de Destino:</label>
                         <asp:TextBox ID="txtNombreDestino" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                        <asp:Button Text="Agregar Destino" ID="btnAgregarDestino" runat="server" CssClass="btnPrimario" OnClick="btnAgregarDestino_Click" />
-                </div>
-                <asp:Button ID="btnCerrarDestinos" runat="server" Text="Cerrar" OnClick="btnCerrarDestinos_Click" CssClass="btnPeligro" />
-            </asp:PlaceHolder>
+                        <asp:RequiredFieldValidator ID="rfvNombreDestinoo" runat="server" ControlToValidate="txtNombreDestino" ErrorMessage="El nombre del destino es obligatorio." ForeColor="Red" Enabled="false" />
 
+                    </div>
+                    <asp:Button Text="Agregar Destino" ID="btnAgregarDestino" runat="server" CssClass="btnPrimario" OnClick="btnAgregarDestino_Click" />
+                </div>
+
+                <asp:Button ID="btnCerrarDestinos" runat="server" Text="Cerrar" OnClick="btnCerrarDestinos_Click" CssClass="btnPeligro"  />
+
+            </asp:PlaceHolder>
         </div>
     </div>
 
