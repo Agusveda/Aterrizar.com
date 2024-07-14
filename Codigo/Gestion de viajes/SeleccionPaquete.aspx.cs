@@ -155,12 +155,19 @@ namespace Gestion_de_viajes
             //excursionesAdicionales.DataValueField = "IdExcursion";
             //excursionesAdicionales.DataBind();
         }
+
+        public static class variablesParaReserva
+        {
+            public static decimal precioTotalreserva {  get; set; }
+            public static int IdFechaFinal {  get; set; }
+
+        }
         private void ActualizarReservaTotal(int idPaquete, List<int> idsExcursiones)
         {
             RepositorioPaquete repopaquete = new RepositorioPaquete();
             PaqueteDeViaje paquete = repopaquete.ObtenerPaquetePorId(idPaquete);
 
-            decimal precioTotal = paquete.PrecioPaquete;
+          decimal precioTotal = paquete.PrecioPaquete;
             int duracionPaquete = paquete.Duracion;
 
             if (ddlHoteles.SelectedItem != null)
@@ -189,7 +196,7 @@ namespace Gestion_de_viajes
             }
 
             reservaTotal.Text = "Reserva Total: $" + precioTotal.ToString();
-
+            variablesParaReserva.precioTotalreserva = precioTotal;
         }
         protected void BtnFechas_Click(object sender, EventArgs e)
         {
@@ -212,14 +219,14 @@ namespace Gestion_de_viajes
             repFechas.DataBind();
 
         }
-
+       
         protected void btnElegirFecha_Click(object sender, EventArgs e)
         {
-            // string IdFecha = ((Button)sender).CommandArgument; // posible variable fuera para tomarla 
+            string idfecha = ((Button)sender).CommandArgument; // posible variable fuera para tomarla 
             PhFechas.Visible = false;
             PhPasajero1.Visible = true;
 
-
+            variablesParaReserva.IdFechaFinal = int.Parse(idfecha);
 
         }
 
@@ -233,12 +240,12 @@ namespace Gestion_de_viajes
 
         protected void btnGuardar1_Click(object sender, EventArgs e) // pasajero 1
         {
-          /*  Usuario nuevo = new Usuario();
+          Usuario nuevo = new Usuario();
             RepositorioUsuario repoUsuario = new RepositorioUsuario();
             int dni = int.Parse(txtDni1.Text);
             
             int valor = repoUsuario.VerificarUsuarioExistente(dni);
-            if (valor == 0) //existe
+            if (valor == 0) //no existe
             {
 
                 nuevo.NombreUsuario = txtUsuarioRegistro.Text;
@@ -249,7 +256,6 @@ namespace Gestion_de_viajes
 
 
             }
-          */
             txtUsuarioRegistro.Enabled = false;
                 txtEmailRegistro.Enabled = false;
             txtDni1.Enabled = false;
@@ -262,13 +268,13 @@ namespace Gestion_de_viajes
 
         protected void btnGuardar2_Click(object sender, EventArgs e)
         {
-            /*
+            
             Usuario nuevo = new Usuario();
             RepositorioUsuario repoUsuario = new RepositorioUsuario();
             int dni = int.Parse(txtDni2.Text);
 
             int valor = repoUsuario.VerificarUsuarioExistente(dni);
-            if (valor == 0) //existe
+            if (valor == 0) //no existe
             {
 
                 nuevo.NombreUsuario = txtUsuarioRegistro2.Text;
@@ -278,7 +284,7 @@ namespace Gestion_de_viajes
                 repoUsuario.InsUsuario(nuevo);
 
             }
-            */
+            
             txtUsuarioRegistro2.Enabled = false;
             txtEmailRegistro2.Enabled = false;
             txtDni2.Enabled = false;
@@ -294,6 +300,27 @@ namespace Gestion_de_viajes
             PhPasajero2.Visible = false;
             lbMensajeConfirmaReserva.Visible = true;
             btnConfirmarReserva.Visible= false;
+
+            RepositorioFecha repofecha = new RepositorioFecha();
+            RepositorioReserva repoReserva = new RepositorioReserva();
+            Reserva NuevaReserva  = new Reserva();
+
+            NuevaReserva.DNIUsuario = int.Parse(txtDni1.Text);
+            NuevaReserva.estado = 0;
+            int idhotel = int.Parse(ddlHoteles.SelectedItem.Value);
+            NuevaReserva.idHotel = idhotel;
+            int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
+            NuevaReserva.IdPaquete = idPaquete;
+            NuevaReserva.Precio = variablesParaReserva.precioTotalreserva;
+
+
+            Fechas fecha = repofecha.ObtenerFechaPorId(variablesParaReserva.IdFechaFinal);
+            NuevaReserva.FechaInicio = fecha.FechaInicio;
+
+            repoReserva.AgregarConSp(NuevaReserva);
+
+
+
         }
     }
 }

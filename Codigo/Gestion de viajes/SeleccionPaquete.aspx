@@ -166,7 +166,7 @@
         }
 
             .Reserva-btn:hover {
-                background-color:  #2980b9;
+                background-color: #2980b9;
             }
 
 
@@ -438,16 +438,16 @@
                     <asp:Label ID="reservaTotal" runat="server" Text="Reserva Total: $0"></asp:Label>
 
                 </div>
-                <asp:Label Visible="false" runat="server" CssClass="etiqueta-formulario" Text=" ////              REVISE SU CASILLA DEL CORREO ELECTRONICO PARA CONFIRMAR EL PAGO Y LA RESERVA       ////" ID="lbMensajeConfirmaReserva"></asp:Label>
+                <asp:Label Visible="false" runat="server" CssClass="etiqueta-formulario" Text="                                 ////              REVISE SU CASILLA DEL CORREO ELECTRONICO PARA CONFIRMAR EL PAGO Y LA RESERVA       ////" ID="lbMensajeConfirmaReserva"></asp:Label>
             </ContentTemplate>
 
 
 
         </asp:UpdatePanel>
         <asp:Button Text="Confirmar reserva" ID="btnConfirmarReserva" runat="server" CssClass="fechas-btn" Visible="false" OnClick="btnConfirmarReserva_Click" />
-        
-        
-       
+
+
+
     </div>
 
 

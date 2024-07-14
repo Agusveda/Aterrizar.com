@@ -25,7 +25,9 @@ namespace Funcionalidades
                 {
                     Fechas aux = new Fechas();
 
+                    aux.idFecha = (int)accesoDatos.Lector["IdFecha"];
                     aux.FechaInicio = (DateTime)accesoDatos.Lector["fechainicio"];
+
 
                     fechasactivas.Add(aux);
                 }   
@@ -41,7 +43,35 @@ namespace Funcionalidades
                 accesoDatos.cerrarConexion();
             }
         }
+        public Fechas ObtenerFechaPorId (int idfecha)
+        {
+            Fechas fecha = new Fechas();
+            AccesoDatos accesoDatos = new AccesoDatos();
 
+            try
+            {
+                accesoDatos.setearSp("ObtenerFechaPorId");
+                accesoDatos.setearParametros("@IdFecha", idfecha);
+                accesoDatos.ejecutarLectura();
+
+                while (accesoDatos.Lector.Read())
+                {
+                    fecha.FechaInicio = (DateTime)accesoDatos.Lector["FechaInicio"];
+
+                }
+
+                accesoDatos.cerrarConexion();
+                return fecha;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+        }
 
 
 
