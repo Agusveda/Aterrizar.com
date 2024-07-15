@@ -96,8 +96,8 @@ namespace Funcionalidades
                 accesoDatos.setearSp("ObtenerReservaPorId");
                 accesoDatos.setearParametros("@IdReserva", idReserva);
                 accesoDatos.ejecutarLectura();
-
-                if (accesoDatos.Lector.Read())
+                List<Reserva> listReserva = new List<Reserva>();
+                while (accesoDatos.Lector.Read())
                 {
                     Reserva aux = new Reserva();
 
@@ -105,12 +105,13 @@ namespace Funcionalidades
                     aux.DNIUsuario = (int)accesoDatos.Lector["DNI"];
                     aux.estado = (int)accesoDatos.Lector["EstadoReserva"];
                     aux.IdPaquete = (int)accesoDatos.Lector["IdPaquete"];
-                    aux.IdPaquete = (int)accesoDatos.Lector["IdHotel"];
+                    aux.idHotel = (int)accesoDatos.Lector["IdHotel"];
                     aux.Precio = (decimal)accesoDatos.Lector["Precio"];
-                    reserva = aux;
+                    aux.FechaInicio = (DateTime)accesoDatos.Lector["FechaInicio"];
+                    listReserva.Add(aux);
+                    //reserva = aux;
                 }
-
-                accesoDatos.cerrarConexion();
+                    accesoDatos.cerrarConexion();
                 return reserva;
             }
             catch (Exception ex)

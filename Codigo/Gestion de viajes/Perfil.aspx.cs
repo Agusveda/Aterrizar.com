@@ -25,6 +25,7 @@ namespace Gestion_de_viajes
 
 
                     MostrarDetallesUsuario(usuarioSesion);
+
                 }
                 else
                 {
