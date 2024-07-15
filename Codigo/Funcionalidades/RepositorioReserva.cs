@@ -91,5 +91,29 @@ namespace Funcionalidades
         }
 
 
+        public void updEstadoReserva(int idReserva)
+        {
+            
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearSp("updEstadoReserva");
+                accesoDatos.setearParametros("@IdReserva", idReserva);
+                accesoDatos.ejecutarLectura();
+
+               
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+        }
+
     }
 }

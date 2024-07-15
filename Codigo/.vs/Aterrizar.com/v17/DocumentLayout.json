@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "E:\\UTN\\Aterrizar.com\\Codigo\\",
   "Documents": [
     {
@@ -17,6 +18,45 @@
     {
       "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|E:\\UTN\\Aterrizar.com\\Codigo\\funcionalidades\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+  "WorkspaceRootPath": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|c:\\users\\facun\\onedrive\\escritorio\\facultad\\aterrizar.com\\codigo\\gestion de viajes\\verreservas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\verreservas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|c:\\users\\facun\\onedrive\\escritorio\\facultad\\aterrizar.com\\codigo\\gestion de viajes\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|c:\\users\\facun\\onedrive\\escritorio\\facultad\\aterrizar.com\\codigo\\gestion de viajes\\contacto.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\contacto.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|c:\\users\\facun\\onedrive\\escritorio\\facultad\\aterrizar.com\\codigo\\gestion de viajes\\confirmacionreserva.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\confirmacionreserva.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|c:\\users\\facun\\onedrive\\escritorio\\facultad\\aterrizar.com\\codigo\\gestion de viajes\\confirmacionreserva.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\confirmacionreserva.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|c:\\users\\facun\\onedrive\\escritorio\\facultad\\aterrizar.com\\codigo\\gestion de viajes\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|c:\\users\\facun\\onedrive\\escritorio\\facultad\\aterrizar.com\\codigo\\funcionalidades\\repositoriomail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\repositoriomail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|c:\\users\\facun\\onedrive\\escritorio\\facultad\\aterrizar.com\\codigo\\funcionalidades\\repositoriopaquete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\repositoriopaquete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\gestion de viajes\\verreservas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\verreservas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -26,10 +66,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 3,
+=======
+          "SelectedChildIndex": 6,
+>>>>>>> Stashed changes
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\Login.aspx",
+              "RelativeDocumentMoniker": "Gestion de viajes\\Login.aspx",
+              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\Login.aspx",
+              "RelativeToolTip": "Gestion de viajes\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-07-15T18:31:17.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConfirmacionReserva.aspx",
+              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\ConfirmacionReserva.aspx",
+              "RelativeDocumentMoniker": "Gestion de viajes\\ConfirmacionReserva.aspx",
+              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\ConfirmacionReserva.aspx",
+              "RelativeToolTip": "Gestion de viajes\\ConfirmacionReserva.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-07-15T17:07:30.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConfirmacionReserva.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\ConfirmacionReserva.aspx.cs",
+              "RelativeDocumentMoniker": "Gestion de viajes\\ConfirmacionReserva.aspx.cs",
+              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\ConfirmacionReserva.aspx.cs",
+              "RelativeToolTip": "Gestion de viajes\\ConfirmacionReserva.aspx.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAYwBYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T17:08:01.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 3,
               "Title": "AccesoDatos.cs",
               "DocumentMoniker": "E:\\UTN\\Aterrizar.com\\Codigo\\Funcionalidades\\AccesoDatos.cs",
@@ -37,17 +125,87 @@
               "ToolTip": "E:\\UTN\\Aterrizar.com\\Codigo\\Funcionalidades\\AccesoDatos.cs",
               "RelativeToolTip": "Funcionalidades\\AccesoDatos.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAJAAAA",
+=======
+              "DocumentIndex": 2,
+              "Title": "Contacto.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\Contacto.aspx.cs",
+              "RelativeDocumentMoniker": "Gestion de viajes\\Contacto.aspx.cs",
+              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\Contacto.aspx.cs",
+              "RelativeToolTip": "Gestion de viajes\\Contacto.aspx.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T19:06:52.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "Gestion de viajes\\Login.aspx.cs",
+              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\Login.aspx.cs",
+              "RelativeToolTip": "Gestion de viajes\\Login.aspx.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwAwAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T18:31:18.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VerReservas.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\VerReservas.aspx.cs",
+              "RelativeDocumentMoniker": "Gestion de viajes\\VerReservas.aspx.cs",
+              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\VerReservas.aspx.cs",
+              "RelativeToolTip": "Gestion de viajes\\VerReservas.aspx.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAABKAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-10T19:32:17.006Z"
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 1,
               "Title": "Contacto.aspx",
               "DocumentMoniker": "E:\\UTN\\Aterrizar.com\\Codigo\\Gestion de viajes\\Contacto.aspx",
               "RelativeDocumentMoniker": "Gestion de viajes\\Contacto.aspx",
               "ToolTip": "E:\\UTN\\Aterrizar.com\\Codigo\\Gestion de viajes\\Contacto.aspx",
               "RelativeToolTip": "Gestion de viajes\\Contacto.aspx",
+=======
+              "DocumentIndex": 6,
+              "Title": "RepositorioMail.cs",
+              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioMail.cs",
+              "RelativeDocumentMoniker": "Funcionalidades\\RepositorioMail.cs",
+              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioMail.cs",
+              "RelativeToolTip": "Funcionalidades\\RepositorioMail.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAgwFcAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T19:08:30.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RepositorioPaquete.cs",
+              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioPaquete.cs",
+              "RelativeDocumentMoniker": "Funcionalidades\\RepositorioPaquete.cs",
+              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioPaquete.cs",
+              "RelativeToolTip": "Funcionalidades\\RepositorioPaquete.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T18:43:56.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VerReservas.aspx",
+              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\VerReservas.aspx",
+              "RelativeDocumentMoniker": "Gestion de viajes\\VerReservas.aspx",
+              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\Facultad\\Aterrizar.com\\Codigo\\Gestion de viajes\\VerReservas.aspx",
+              "RelativeToolTip": "Gestion de viajes\\VerReservas.aspx",
+>>>>>>> Stashed changes
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2024-07-10T19:08:05.362Z"

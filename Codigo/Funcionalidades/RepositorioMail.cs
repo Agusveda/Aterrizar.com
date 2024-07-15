@@ -47,6 +47,13 @@ namespace Funcionalidades
             }
 
         }
+<<<<<<< Updated upstream
+=======
+        //Mail con imagen incrustada en el cuerpo para enviar el codigo qr de confirmacion de reserva.
+        public MailMessage ArmarCorreoConImagen(string destinatario, string asunto)
+        {
+            email = new MailMessage();
+>>>>>>> Stashed changes
 
 
 

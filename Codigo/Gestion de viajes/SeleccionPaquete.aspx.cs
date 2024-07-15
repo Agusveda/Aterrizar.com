@@ -193,6 +193,110 @@ namespace Gestion_de_viajes
 
             reservaTotal.Text = "Reserva Total: $" + precioTotal.ToString();
             
+<<<<<<< Updated upstream
+=======
+            int valor = repoUsuario.VerificarUsuarioExistente(dni);
+            if (valor == 0) //no existe
+            {
+
+                nuevo.NombreUsuario = txtUsuarioRegistro.Text;
+                nuevo.CorreoElectronico = txtEmailRegistro.Text;
+                nuevo.DNI = int.Parse(txtDni1.Text);
+                nuevo.Telefono = txtTelefonoRegistro.Text;
+                repoUsuario.InsUsuario(nuevo);
+
+
+            }
+            txtUsuarioRegistro.Enabled = false;
+                txtEmailRegistro.Enabled = false;
+            txtDni1.Enabled = false;
+            txtTelefonoRegistro.Enabled = false;
+            btnConfirmarReserva.Visible = true;
+            btnGuardar1.Visible = false;
+
+        }
+
+
+        protected void btnGuardar2_Click(object sender, EventArgs e)
+        {
+            
+            Usuario nuevo = new Usuario();
+            RepositorioUsuario repoUsuario = new RepositorioUsuario();
+            int dni = int.Parse(txtDni2.Text);
+
+            int valor = repoUsuario.VerificarUsuarioExistente(dni);
+            if (valor == 0) //no existe
+            {
+
+                nuevo.NombreUsuario = txtUsuarioRegistro2.Text;
+                nuevo.CorreoElectronico = txtEmailRegistro2.Text;
+                nuevo.DNI = int.Parse(txtDni2.Text);
+                nuevo.Telefono = txtTelefonoRegistro2.Text;
+                repoUsuario.InsUsuario(nuevo);
+
+            }
+            
+            txtUsuarioRegistro2.Enabled = false;
+            txtEmailRegistro2.Enabled = false;
+            txtDni2.Enabled = false;
+            txtTelefonoRegistro2.Enabled = false;
+                btnGuardar2.Visible = false;
+
+
+        }
+
+        protected void btnConfirmarReserva_Click(object sender, EventArgs e)
+        {
+            PhPasajero1.Visible = false;
+            PhPasajero2.Visible = false;
+            lbMensajeConfirmaReserva.Visible = true;
+            btnConfirmarReserva.Visible = false;
+
+            RepositorioFecha repofecha = new RepositorioFecha();
+
+            //inicio para agregar reservas
+            RepositorioReserva repoReserva = new RepositorioReserva();
+            Reserva NuevaReserva = new Reserva();
+
+            NuevaReserva.DNIUsuario = int.Parse(txtDni1.Text);
+            NuevaReserva.estado = 0;
+            int idhotel = int.Parse(ddlHoteles.SelectedItem.Value);
+            NuevaReserva.idHotel = idhotel;
+            int idPaquete = Convert.ToInt32(Request.QueryString["id"]); //traigo el id del paquete que elijo
+            NuevaReserva.IdPaquete = idPaquete;
+            NuevaReserva.Precio = variablesParaReserva.precioTotalreserva;
+            Fechas fecha = repofecha.ObtenerFechaPorId(variablesParaReserva.IdFechaFinal); // traigo la fecha elegida
+            NuevaReserva.FechaInicio = fecha.FechaInicio;
+            repoReserva.AgregarConSp(NuevaReserva);
+
+            // fin para agregar reservas
+
+            // inicio para relacionar los pasajeros con la reserva 
+            RepositorioRelReservaXusuario repoRelReservaxUsuario = new RepositorioRelReservaXusuario();
+            RelReservaXusuario nuevoRelReservaXusuario = new RelReservaXusuario();
+
+            nuevoRelReservaXusuario.IdReserva = repoReserva.ObtenerUltimoRegistro();
+            nuevoRelReservaXusuario.DniUsuario = int.Parse(txtDni1.Text);
+            repoRelReservaxUsuario.InsRelReservaXusuario(nuevoRelReservaXusuario); // pasajero 1
+            if (!string.IsNullOrWhiteSpace(txtDni2.Text))
+            {
+                nuevoRelReservaXusuario.DniUsuario = int.Parse(txtDni2.Text);
+                repoRelReservaxUsuario.InsRelReservaXusuario(nuevoRelReservaXusuario); // pasajero 2
+            }
+
+            if (Session["ReservaXusuario"] == null)
+            {
+                Session["ReservaXusuario"] = new RelReservaXusuario() ;
+            }
+
+            Session["ReservaXusuario"] = nuevoRelReservaXusuario;
+            RepositorioMail mail = new RepositorioMail();
+            
+            mail.EmailService();
+            mail.ArmarCorreoConImagen(txtEmailRegistro.Text, "Confirmacion de Reserva");
+            mail.enviarCorreo();
+
+>>>>>>> Stashed changes
         }
     }
 }
