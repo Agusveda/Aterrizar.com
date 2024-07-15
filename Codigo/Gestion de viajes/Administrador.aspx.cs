@@ -14,6 +14,7 @@ namespace Gestion_de_viajes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+          
             if (!IsPostBack)
             {
                 CargarMesesActivos();
@@ -37,6 +38,7 @@ namespace Gestion_de_viajes
             lblDestPaquete.Visible = true;
             btnGuardarPaquete.Visible = true;
             btnAceptarModificarPaquete.Visible = false;
+            LimpiarCampos();
             DesbloquearEntradaDatos();
             cargarDetalleCdgDestino();
 
@@ -44,6 +46,7 @@ namespace Gestion_de_viajes
         }
         protected void btnModificarPaquete_Click(object sender, EventArgs e)
         {
+            
             btnGuardarPaquete.Visible = false;
             ddlCdgDestino.Visible = true;
             PhABMPaquete.Visible = true;
@@ -51,9 +54,9 @@ namespace Gestion_de_viajes
             lbidPquete.Visible = true;
             lblDestPaquete.Visible = true;
             btnAceptarModificarPaquete.Visible = true;
+            LimpiarCampos();
             DesbloquearEntradaDatos();
             //phModificarPaquete.Visible = true;
-
 
             cargarDetalleIdPaquete();
 
@@ -72,6 +75,7 @@ namespace Gestion_de_viajes
 
             //phModificarPaquete.Visible = false;
             //ESTO ESTA MAS PIOLA Y ANDA GOD, ME FUI.
+            LimpiarCampos();
             BloquearEntradaDatos();
 
             cargarDetalleIdPaquete();
@@ -301,6 +305,19 @@ namespace Gestion_de_viajes
         }
 
 
+        private void LimpiarCampos()
+        {
+            txtNombrePaquete.Text = string.Empty;
+            txtDescripcionPaquete.Text = string.Empty;
+            txtPrecioPaquete.Text = string.Empty;
+            ddlmes.SelectedIndex = 0; 
+            txtDuracionPaquete.Text = string.Empty;
+            ddlTipoTransporte.SelectedIndex = 0; 
+            txtURLimagen.Text = string.Empty;
+            txtDisponibilidadPaquete.Text = string.Empty;
+          
+        }
+
 
         // FIN PAQUETE
 
@@ -320,11 +337,11 @@ namespace Gestion_de_viajes
             lbConfirmacionEliminacionHotel.Visible = false;
             CargarDetalleCdgDestinoEnHotel();
             desbloquearEntradaDatosHotel();
+            LimpiarCamposHoteles();
 
         }
         protected void btnModificarHotel_Click(object sender, EventArgs e)
         {
-
             lbIdHotel.Visible = true;
             ddlIdHoteles.Visible = true;
             PhABMHotel.Visible = true;
@@ -335,6 +352,7 @@ namespace Gestion_de_viajes
             cargarIdHotel();
             CargarDetalleCdgDestinoEnHotel();
             desbloquearEntradaDatosHotel();
+            LimpiarCamposHoteles();
         }
         protected void btnElminarHotel_Click(object sender, EventArgs e)
         {
@@ -348,6 +366,7 @@ namespace Gestion_de_viajes
             cargarIdHotel();
             CargarDetalleCdgDestinoEnHotel();
             bloquearEntradaDatosHotel();
+            LimpiarCamposHoteles();
         }
 
         //botones de con funciones HOTEL
@@ -514,6 +533,18 @@ namespace Gestion_de_viajes
             }
         }
 
+        private void LimpiarCamposHoteles()
+        {
+            txtNombreHotel.Text = string.Empty;
+            txtDescripcionHotel.Text = string.Empty;
+            txtPrecioHotel.Text = string.Empty;
+            ddlCdgDestinoEnHotel.SelectedIndex = 0;
+            txtURLImagenHotel.Text = string.Empty;
+
+           
+           
+        }
+
         // VALIDACIONES HOTEL
 
 
@@ -534,6 +565,7 @@ namespace Gestion_de_viajes
             btnAceptarModificarExcursion.Visible = false;
             btnaceptarEliminarExcursion.Visible = true;
             CargarDetalleCdgDestinoEnExcursion();
+            LimpiarCamposExcursion();
         }
         protected void btnModificarExcursion_Click(object sender, EventArgs e)
         {
@@ -546,6 +578,7 @@ namespace Gestion_de_viajes
             CargarDetalleCdgDestinoEnExcursion();
             desbloquearEntradaDatosExcursiones();
             cargarIdExcursion();
+            LimpiarCamposExcursion();
 
         }
 
@@ -560,6 +593,7 @@ namespace Gestion_de_viajes
             CargarDetalleCdgDestinoEnExcursion();
             bloquearEntradaDatosExcursiones();
             cargarIdExcursion();
+            LimpiarCamposExcursion();
         }
         //botones de con funciones EXCURSIONES
         protected void btnGuardarExcursion_Click(object sender, EventArgs e)
@@ -730,7 +764,17 @@ namespace Gestion_de_viajes
 
         }
 
+        private void LimpiarCamposExcursion()
+        {
+            txtNombreExcursion.Text = string.Empty;
+            txtDescripcionExcursion.Text = string.Empty;
+            txtDuracionExcursion.Text = string.Empty;
+            txtPrecioExcursion.Text = string.Empty;
+            ddlCdgDestinoEnExcursion.SelectedIndex = 0;
 
+            
+          
+        }
 
 
         // MESES

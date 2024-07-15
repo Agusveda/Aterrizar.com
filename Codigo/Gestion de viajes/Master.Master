@@ -114,9 +114,11 @@
         <a class="nav-link" href="Administrador.aspx">Ventana Administrador</a>
     </li>
 <% } %>
+                            <% if (Session["usuario"] != null && ((Dominio.Usuario)Session["usuario"]).TipoUsuario == Dominio.TipoUsuario.Normal) { %>
                         <li class="nav-item">
                             <a class="nav-link" href="VerReservas.aspx">Carrito</a>
                         </li>
+                        <% } %>
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
