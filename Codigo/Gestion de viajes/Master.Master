@@ -115,7 +115,7 @@
     </li>
 <% } %>
                         <li class="nav-item">
-                            <a class="nav-link" href="Carrito.aspx">Carrito</a>
+                            <a class="nav-link" href="VerReservas.aspx">Carrito</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">

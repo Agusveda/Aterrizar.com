@@ -123,7 +123,45 @@ namespace Funcionalidades
             }
 
         }
+        public List<Reserva>  ObtenerReservaPorDNI(int DNI)
+        {
+            Reserva reserva = new Reserva();
+            AccesoDatos accesoDatos = new AccesoDatos();
 
+            try
+            {
+                accesoDatos.setearSp("ObtenerReservaPorDNI");
+                accesoDatos.setearParametros("@DNI", DNI);
+                accesoDatos.ejecutarLectura();
+                List<Reserva> listReserva = new List<Reserva>();
+                if (accesoDatos.Lector.Read())
+                {
+                    Reserva aux = new Reserva();
+
+                    aux.IdReserva = (int)accesoDatos.Lector["IdReserva"];
+                    aux.DNIUsuario = (int)accesoDatos.Lector["DNI"];
+                    aux.estado = (int)accesoDatos.Lector["EstadoReserva"];
+                    aux.IdPaquete = (int)accesoDatos.Lector["IdPaquete"];
+                    aux.IdPaquete = (int)accesoDatos.Lector["IdHotel"];
+                    aux.Precio = (decimal)accesoDatos.Lector["Precio"];
+                    listReserva.Add(aux);
+                    reserva = aux;
+
+                }
+
+                accesoDatos.cerrarConexion();
+                return listReserva;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+        }
         public int ObtenerUltimoRegistro()
         {
             AccesoDatos accesoDatos = new AccesoDatos();

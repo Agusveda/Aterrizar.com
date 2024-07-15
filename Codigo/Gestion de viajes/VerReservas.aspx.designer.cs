@@ -11,25 +11,16 @@ namespace Gestion_de_viajes
 {
 
 
-    public partial class Carrito
+    public partial class VerReservas
     {
 
         /// <summary>
-        /// Control repCarrito.
+        /// Control repReservaDNI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repCarrito;
-
-        /// <summary>
-        /// Control lbTotal.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbTotal;
+        protected global::System.Web.UI.WebControls.Repeater repReservaDNI;
     }
 }
