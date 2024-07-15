@@ -16,11 +16,11 @@
 
                         <div class="card-body" style="text-align: center;">
                             <h5 class="card-title"> Numero de reserva :<%# Eval("IdReserva") %></h5>
-                            <p class="card-text">DNI del usuario: <%# Eval("DNI") %></p>
-                            <p class="card-text">Estado: $<%# Eval("EstadoReserva") %></p>
+                            <p class="card-text">DNI del usuario: <%# Eval("DNIUsuario") %></p>
+                            <p class="card-text">Estado: $<%# Eval("estado") %></p>
                             <p class="card-text">Numero de Paquete: <%# Eval("IdPaquete") %></p>
                             <p class="card-text">Precio: <%# Eval("Precio") %></p>
-                            <p class="card-text">Numero del hotel: <%# Eval("IdHotel") %></p>
+                            <p class="card-text">Numero del hotel: <%# Eval("idHotel") %></p>
                             <p class="card-text">Fecha de inicio: <%# Eval("FechaInicio") %></p>
 
                         </div>

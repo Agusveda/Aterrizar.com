@@ -29,11 +29,8 @@ namespace Gestion_de_viajes
 
                 if (repousuario.Loguear(usuario))
                 {
-
-
                     Session.Add("usuario", usuario);
                     Response.Redirect("Perfil.aspx", false);
-
                 }
                 else
                 {

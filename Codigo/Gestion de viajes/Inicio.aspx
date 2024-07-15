@@ -55,7 +55,6 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col">
             <a href="AvionSeleccionMes.aspx">

@@ -16,7 +16,7 @@ namespace Gestion_de_viajes
 
             if (!IsPostBack)
             {
-
+                
                 RepositorioReserva repoReserva = new RepositorioReserva();
                 List<Reserva> listaReserva = new List<Reserva>();
                 Usuario user = new Usuario();

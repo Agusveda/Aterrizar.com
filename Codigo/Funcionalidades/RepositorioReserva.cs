@@ -134,7 +134,7 @@ namespace Funcionalidades
                 accesoDatos.setearParametros("@DNI", DNI);
                 accesoDatos.ejecutarLectura();
                 List<Reserva> listReserva = new List<Reserva>();
-                if (accesoDatos.Lector.Read())
+                while (accesoDatos.Lector.Read())
                 {
                     Reserva aux = new Reserva();
 
@@ -142,10 +142,11 @@ namespace Funcionalidades
                     aux.DNIUsuario = (int)accesoDatos.Lector["DNI"];
                     aux.estado = (int)accesoDatos.Lector["EstadoReserva"];
                     aux.IdPaquete = (int)accesoDatos.Lector["IdPaquete"];
-                    aux.IdPaquete = (int)accesoDatos.Lector["IdHotel"];
+                    aux.idHotel = (int)accesoDatos.Lector["IdHotel"];
                     aux.Precio = (decimal)accesoDatos.Lector["Precio"];
+                    aux.FechaInicio = (DateTime)accesoDatos.Lector["FechaInicio"];
                     listReserva.Add(aux);
-                    reserva = aux;
+                    //reserva = aux;
 
                 }
 
