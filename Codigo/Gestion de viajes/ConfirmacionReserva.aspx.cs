@@ -19,6 +19,7 @@ namespace Gestion_de_viajes
                 CardConfirmacion.Style["visibility"] = "hidden";
                 CardError.Style["visibility"] = "hidden";
                 CardBoton.Style["visibility"] = "visible";
+                
             }
             
 
