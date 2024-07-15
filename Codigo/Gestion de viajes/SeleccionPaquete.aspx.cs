@@ -18,10 +18,9 @@ namespace Gestion_de_viajes
             if (!IsPostBack)
             {
                 int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
+
                 CargarDetallePaquete(idPaquete);
                 PrimerHotel();
-                //UpFechas.Visible = false;
-
             }
         }
 
@@ -45,6 +44,7 @@ namespace Gestion_de_viajes
                 PrecioHotel.Text = hotelSeleccionado.PrecioPorNoche.ToString();
             }
         }
+
         private void CargarDetalleHotel(int cdgDestino)
         {
             RepositorioHotel repoHotel = new RepositorioHotel();
@@ -57,6 +57,7 @@ namespace Gestion_de_viajes
                 ddlHoteles.DataBind();
             }
         }
+
         private void CargarDetallePaquete(int idPaquete)
         {
             RepositorioPaquete repositorio = new RepositorioPaquete();
@@ -66,12 +67,13 @@ namespace Gestion_de_viajes
                 imgPaquete.ImageUrl = paquete.URLimagen;
                 lbNombrePaquete.Text = paquete.NombrePaquete;
                 int cdgdestino = paquete.cdgDestino;
-                lbduracionpaquete.Text = paquete.Duracion.ToString() + " Días";
+
                 CargarDetalleHotel(cdgdestino);
                 CargarExcursiones(cdgdestino);
                 ActualizarReservaTotal(idPaquete, new List<int>());
             }
         }
+
         protected void ddlHoteles_SelectedIndexChanged(object sender, EventArgs e)
         {
             RepositorioHotel repoHotel = new RepositorioHotel();
@@ -88,11 +90,10 @@ namespace Gestion_de_viajes
                     item.Selected = false;
                 }
                 int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
-
                 ActualizarReservaTotal(idPaquete, new List<int>());
-
             }
         }
+
         protected void excursionesAdicionales_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<int> idsExcursionesSeleccionadas = new List<int>();
@@ -116,6 +117,7 @@ namespace Gestion_de_viajes
             int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
             ActualizarReservaTotal(idPaquete, idsExcursionesSeleccionadas);
         }
+
         private void CargarExcursiones(int cdgDestino)
         {
             RepositorioExcursiones repoExcursion = new RepositorioExcursiones();
@@ -142,8 +144,8 @@ namespace Gestion_de_viajes
             detalleExcursiones.DataTextField = "Descripcion";
             detalleExcursiones.DataValueField = "IdExcursion";
             detalleExcursiones.DataBind();
-
-
+                
+                
 
             excursionesAdicionales.DataSource = excursionesAdicionalesFiltradas;
             excursionesAdicionales.DataTextField = "Nombre";
@@ -156,18 +158,12 @@ namespace Gestion_de_viajes
             //excursionesAdicionales.DataBind();
         }
 
-        public static class variablesParaReserva
-        {
-            public static decimal precioTotalreserva {  get; set; }
-            public static int IdFechaFinal {  get; set; }
-
-        }
         private void ActualizarReservaTotal(int idPaquete, List<int> idsExcursiones)
         {
             RepositorioPaquete repopaquete = new RepositorioPaquete();
             PaqueteDeViaje paquete = repopaquete.ObtenerPaquetePorId(idPaquete);
 
-          decimal precioTotal = paquete.PrecioPaquete;
+            decimal precioTotal = paquete.PrecioPaquete;
             int duracionPaquete = paquete.Duracion;
 
             if (ddlHoteles.SelectedItem != null)
@@ -196,54 +192,9 @@ namespace Gestion_de_viajes
             }
 
             reservaTotal.Text = "Reserva Total: $" + precioTotal.ToString();
-            variablesParaReserva.precioTotalreserva = precioTotal;
-        }
-        protected void BtnFechas_Click(object sender, EventArgs e)
-        {
-            PhFechas.Visible = true;
-            UpPrincipalesPaquete.Visible = false;
-            UpExcursiones.Visible = false;
-            UpHotel.Visible = false;
-            BtnFechas.Visible = false;
-            List<Fechas> listafechas = new List<Fechas>();
-
-            RepositorioFecha repofechas = new RepositorioFecha();
-            RepositorioPaquete repopaquete = new RepositorioPaquete();
-            Fechas auxfecha = new Fechas();
-            int idPaquete = Convert.ToInt32(Request.QueryString["id"]);
-            PaqueteDeViaje aux = repopaquete.ObtenerPaquetePorId(idPaquete);
-            int mesSeleccionado = aux.Mes;
-            listafechas = repofechas.ListarConSpPorMes(mesSeleccionado);
-
-            repFechas.DataSource = listafechas;
-            repFechas.DataBind();
-
-        }
-       
-        protected void btnElegirFecha_Click(object sender, EventArgs e)
-        {
-            string idfecha = ((Button)sender).CommandArgument; // posible variable fuera para tomarla 
-            PhFechas.Visible = false;
-            PhPasajero1.Visible = true;
-
-            variablesParaReserva.IdFechaFinal = int.Parse(idfecha);
-
-        }
-
-
-        protected void btnPasajero2_Click(object sender, EventArgs e)
-        {
-
-            PhPasajero2.Visible = true;
-            btnPasajero2.Visible=false;
-        }
-
-        protected void btnGuardar1_Click(object sender, EventArgs e) // pasajero 1
-        {
-          Usuario nuevo = new Usuario();
-            RepositorioUsuario repoUsuario = new RepositorioUsuario();
-            int dni = int.Parse(txtDni1.Text);
             
+<<<<<<< Updated upstream
+=======
             int valor = repoUsuario.VerificarUsuarioExistente(dni);
             if (valor == 0) //no existe
             {
@@ -296,16 +247,16 @@ namespace Gestion_de_viajes
 
         protected void btnConfirmarReserva_Click(object sender, EventArgs e)
         {
-            PhPasajero1.Visible= false;
+            PhPasajero1.Visible = false;
             PhPasajero2.Visible = false;
             lbMensajeConfirmaReserva.Visible = true;
-            btnConfirmarReserva.Visible= false;
+            btnConfirmarReserva.Visible = false;
 
             RepositorioFecha repofecha = new RepositorioFecha();
 
             //inicio para agregar reservas
             RepositorioReserva repoReserva = new RepositorioReserva();
-            Reserva NuevaReserva  = new Reserva();
+            Reserva NuevaReserva = new Reserva();
 
             NuevaReserva.DNIUsuario = int.Parse(txtDni1.Text);
             NuevaReserva.estado = 0;
@@ -333,9 +284,19 @@ namespace Gestion_de_viajes
                 repoRelReservaxUsuario.InsRelReservaXusuario(nuevoRelReservaXusuario); // pasajero 2
             }
 
+            if (Session["ReservaXusuario"] == null)
+            {
+                Session["ReservaXusuario"] = new RelReservaXusuario() ;
+            }
 
+            Session["ReservaXusuario"] = nuevoRelReservaXusuario;
+            RepositorioMail mail = new RepositorioMail();
+            
+            mail.EmailService();
+            mail.ArmarCorreoConImagen(txtEmailRegistro.Text, "Confirmacion de Reserva");
+            mail.enviarCorreo();
 
-
+>>>>>>> Stashed changes
         }
     }
 }
