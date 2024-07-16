@@ -222,6 +222,15 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtEmailRegistro;
 
         /// <summary>
+        /// Control revEmail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
+
+        /// <summary>
         /// Control lbDni1.
         /// </summary>
         /// <remarks>
@@ -238,6 +247,15 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDni1;
+
+        /// <summary>
+        /// Control revDNI1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDNI1;
 
         /// <summary>
         /// Control lblTelefonoRegistro.
@@ -330,6 +348,15 @@ namespace Gestion_de_viajes
         protected global::System.Web.UI.WebControls.TextBox txtDni2;
 
         /// <summary>
+        /// Control revDNI2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDNI2;
+
+        /// <summary>
         /// Control lblEmailRegistro2.
         /// </summary>
         /// <remarks>
@@ -346,6 +373,15 @@ namespace Gestion_de_viajes
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmailRegistro2;
+
+        /// <summary>
+        /// Control revEmail2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail2;
 
         /// <summary>
         /// Control lblTelefonoRegistro2.

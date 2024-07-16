@@ -277,6 +277,13 @@
         #PhPasajero div {
             margin-bottom: 10px;
         }
+
+        
+        .validation-message {
+            display: block;
+            margin-left: 0;
+            color: red;
+        }
     </style>
 </asp:Content>
 
@@ -386,10 +393,14 @@
             <div class="grupo-formulario">
                 <asp:Label ID="lblEmailRegistro" runat="server" Text="Correo electrónico:" CssClass="etiqueta-formulario"></asp:Label>
                 <asp:TextBox ID="txtEmailRegistro" runat="server" CssClass="control-formulario"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmailRegistro" ErrorMessage="Por favor, introduce una dirección de correo electrónico válida." ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$" ForeColor="Red" Class="validation-message" />
+
             </div>
             <div class="grupo-formulario">
                 <asp:Label ID="lbDni1" runat="server" Text="DNI:" CssClass="etiqueta-formulario"></asp:Label>
                 <asp:TextBox ID="txtDni1" runat="server" CssClass="control-formulario"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revDNI1" runat="server" ControlToValidate="txtDni1" ErrorMessage="Por favor, introduce solo números." ValidationExpression="^\d+$" ForeColor="Red" Class="validation-message" />
+
             </div>
             <div class="grupo-formulario">
                 <asp:Label ID="lblTelefonoRegistro" runat="server" Text="telefono(Opcional):" CssClass="etiqueta-formulario"></asp:Label>
@@ -408,6 +419,7 @@
             <div class="grupo-formulario">
                 <asp:Label ID="lblUsuarioRegistro2" runat="server" Text="Nombre de usuario:" CssClass="etiqueta-formulario"></asp:Label>
                 <asp:TextBox ID="txtUsuarioRegistro2" runat="server" CssClass="control-formulario"></asp:TextBox>
+
             </div>
             <%-- <div class="grupo-formulario">
            <asp:Label ID="lblPasswordRegistro2" runat="server" Text="Contraseña:" CssClass="etiqueta-formulario"></asp:Label>
@@ -416,10 +428,14 @@
             <div class="grupo-formulario">
                 <asp:Label ID="lbDni2" runat="server" Text="DNI:" CssClass="etiqueta-formulario"></asp:Label>
                 <asp:TextBox ID="txtDni2" runat="server" CssClass="control-formulario"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revDNI2" runat="server" ControlToValidate="txtDNILogin" ErrorMessage="Por favor, introduce solo números." ValidationExpression="^\d+$" ForeColor="Red" Class="validation-message" />
+
             </div>
             <div class="grupo-formulario">
                 <asp:Label ID="lblEmailRegistro2" runat="server" Text="Correo electrónico:" CssClass="etiqueta-formulario"></asp:Label>
                 <asp:TextBox ID="txtEmailRegistro2" runat="server" CssClass="control-formulario"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revEmail2" runat="server" ControlToValidate="txtEmailRegistro2" ErrorMessage="Por favor, introduce una dirección de correo electrónico válida." ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$" ForeColor="Red" Class="validation-message" />
+
             </div>
 
             <div class="grupo-formulario">

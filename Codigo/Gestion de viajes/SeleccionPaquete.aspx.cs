@@ -240,61 +240,66 @@ namespace Gestion_de_viajes
 
         protected void btnGuardar1_Click(object sender, EventArgs e) // pasajero 1
         {
-            Usuario nuevo = new Usuario();
-            RepositorioUsuario repoUsuario = new RepositorioUsuario();
-            int dni = int.Parse(txtDni1.Text);
-            string mail = txtEmailRegistro.Text;
-
-            int valor = repoUsuario.VerificarUsuarioExistente(dni, mail );
-            if (valor == 0) //no existe
+            if (Page.IsValid)
             {
+                Usuario nuevo = new Usuario();
+                RepositorioUsuario repoUsuario = new RepositorioUsuario();
+                int dni = int.Parse(txtDni1.Text);
+                string mail = txtEmailRegistro.Text;
 
-                nuevo.NombreUsuario = txtUsuarioRegistro.Text;
-                nuevo.CorreoElectronico = txtEmailRegistro.Text;
-                nuevo.DNI = int.Parse(txtDni1.Text);
-                nuevo.Telefono = txtTelefonoRegistro.Text;
-                repoUsuario.InsUsuario(nuevo);
+                int valor = repoUsuario.VerificarUsuarioExistente(dni, mail);
+                if (valor == 0) //no existe
+                {
+
+                    nuevo.NombreUsuario = txtUsuarioRegistro.Text;
+                    nuevo.CorreoElectronico = txtEmailRegistro.Text;
+                    nuevo.DNI = int.Parse(txtDni1.Text);
+                    nuevo.Telefono = txtTelefonoRegistro.Text;
+                    repoUsuario.InsUsuario(nuevo);
 
 
+                }
+                txtUsuarioRegistro.Enabled = false;
+                txtEmailRegistro.Enabled = false;
+                txtDni1.Enabled = false;
+                txtTelefonoRegistro.Enabled = false;
+                btnConfirmarReserva.Visible = true;
+                btnGuardar1.Visible = false;
             }
-            txtUsuarioRegistro.Enabled = false;
-            txtEmailRegistro.Enabled = false;
-            txtDni1.Enabled = false;
-            txtTelefonoRegistro.Enabled = false;
-            btnConfirmarReserva.Visible = true;
-            btnGuardar1.Visible = false;
 
         }
 
 
         protected void btnGuardar2_Click(object sender, EventArgs e)
         {
-
-            Usuario nuevo = new Usuario();
-            RepositorioUsuario repoUsuario = new RepositorioUsuario();
-            int dni = int.Parse(txtDni2.Text);
-            string mail = txtEmailRegistro2.Text;
-
-            int valor = repoUsuario.VerificarUsuarioExistente(dni, mail);
-
-            if (valor == 0) //no existe
+            if (Page.IsValid)
             {
 
-                nuevo.NombreUsuario = txtUsuarioRegistro2.Text;
-                nuevo.CorreoElectronico = txtEmailRegistro2.Text;
-                nuevo.DNI = int.Parse(txtDni2.Text);
-                nuevo.Telefono = txtTelefonoRegistro2.Text;
-                repoUsuario.InsUsuario(nuevo);
+                Usuario nuevo = new Usuario();
+                RepositorioUsuario repoUsuario = new RepositorioUsuario();
+                int dni = int.Parse(txtDni2.Text);
+                string mail = txtEmailRegistro2.Text;
+
+                int valor = repoUsuario.VerificarUsuarioExistente(dni, mail);
+
+                if (valor == 0) //no existe
+                {
+
+                    nuevo.NombreUsuario = txtUsuarioRegistro2.Text;
+                    nuevo.CorreoElectronico = txtEmailRegistro2.Text;
+                    nuevo.DNI = int.Parse(txtDni2.Text);
+                    nuevo.Telefono = txtTelefonoRegistro2.Text;
+                    repoUsuario.InsUsuario(nuevo);
+
+                }
+
+                txtUsuarioRegistro2.Enabled = false;
+                txtEmailRegistro2.Enabled = false;
+                txtDni2.Enabled = false;
+                txtTelefonoRegistro2.Enabled = false;
+                btnGuardar2.Visible = false;
 
             }
-
-            txtUsuarioRegistro2.Enabled = false;
-            txtEmailRegistro2.Enabled = false;
-            txtDni2.Enabled = false;
-            txtTelefonoRegistro2.Enabled = false;
-            btnGuardar2.Visible = false;
-
-
         }
 
         protected void btnConfirmarReserva_Click(object sender, EventArgs e)
