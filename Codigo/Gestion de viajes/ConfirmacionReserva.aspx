@@ -76,6 +76,7 @@
         <div class="card-body text-success">
             <h5 class="card-title">¡Gracias!</h5>
             <p class="card-text">Tu reserva ha sido confirmada. Te deseamos feliz viaje, Muchas gracias.</p>
+            
         </div>
     </div>
 

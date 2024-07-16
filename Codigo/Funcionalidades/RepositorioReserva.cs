@@ -199,7 +199,7 @@ namespace Funcionalidades
 
         }
 
-        public void updEstadoReserva(int idReserva)
+        public void updEstadoReserva(int idReserva,int idPaquete)
         {
             
             AccesoDatos accesoDatos = new AccesoDatos();
@@ -208,6 +208,7 @@ namespace Funcionalidades
             {
                 accesoDatos.setearSp("updEstadoReserva");
                 accesoDatos.setearParametros("@IdReserva", idReserva);
+                accesoDatos.setearParametros("@IdPaquete", idPaquete);
                 accesoDatos.ejecutarLectura();
 
                

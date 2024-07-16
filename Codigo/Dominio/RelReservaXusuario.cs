@@ -9,8 +9,8 @@ namespace Dominio
     public class RelReservaXusuario
     {
         public int IdReserva { get; set; }
-        public int DniUsuario { get; set; } 
-
+        public int DniUsuario { get; set; }
+        public int IdPaquete { get; set; }
 
 
     }

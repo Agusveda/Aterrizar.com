@@ -330,6 +330,7 @@ namespace Gestion_de_viajes
 
             nuevoRelReservaXusuario.IdReserva = repoReserva.ObtenerUltimoRegistro();
             nuevoRelReservaXusuario.DniUsuario = int.Parse(txtDni1.Text);
+            nuevoRelReservaXusuario.IdPaquete = idPaquete;
             repoRelReservaxUsuario.InsRelReservaXusuario(nuevoRelReservaXusuario); // pasajero 1
 
 

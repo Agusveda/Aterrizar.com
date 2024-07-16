@@ -36,9 +36,15 @@ namespace Gestion_de_viajes
                 relReservaXusuario = (RelReservaXusuario)Session["ReservaXusuario"];
                 if (Session["ReservaXusuario"] != null || relReservaXusuario != null)
                 {
-                    repoReserva.updEstadoReserva(relReservaXusuario.IdReserva);
+                    repoReserva.updEstadoReserva(relReservaXusuario.IdReserva,relReservaXusuario.IdPaquete);
                     CardConfirmacion.Style["visibility"] = "visible";
                     CardError.Style["visibility"] = "hidden";
+                    //DEBUG PARA VER QUE ANDE BIEN
+                    //RepositorioPaquete repositorioPaquete = new RepositorioPaquete();
+                    //PaqueteDeViaje prueba = new PaqueteDeViaje();
+                    //prueba = repositorioPaquete.ObtenerPaquetePorId(relReservaXusuario.IdPaquete);
+                    //lblDisponibilidad.Text = prueba.Disponibilidad.ToString();
+                    //lblIdPaquete.Text = relReservaXusuario.IdPaquete.ToString();
                 }
                 else
                 {
