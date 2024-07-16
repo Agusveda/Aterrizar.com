@@ -48,6 +48,7 @@
     <Compile Include="Mes.cs" />
     <Compile Include="PaqueteDeViaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelExcursionxReserva.cs" />
     <Compile Include="RelReservaXusuario.cs" />
     <Compile Include="Reserva.cs" />
     <Compile Include="Usuario.cs" />

@@ -29,11 +29,6 @@ namespace Funcionalidades
             {
                 accesoDatos.cerrarConexion();
             }
-                
-
-
-
-
         }
 
 

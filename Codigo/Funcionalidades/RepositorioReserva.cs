@@ -124,7 +124,7 @@ namespace Funcionalidades
             }
 
         }
-        public List<Reserva>  ObtenerReservaPorDNI(int DNI)
+        public List<ReservaFinal>  ObtenerReservaPorDNI(int DNI)
         {
             Reserva reserva = new Reserva();
             AccesoDatos accesoDatos = new AccesoDatos();
@@ -134,18 +134,22 @@ namespace Funcionalidades
                 accesoDatos.setearSp("ObtenerReservaPorDNI");
                 accesoDatos.setearParametros("@DNI", DNI);
                 accesoDatos.ejecutarLectura();
-                List<Reserva> listReserva = new List<Reserva>();
+                List<ReservaFinal> listReserva = new List<ReservaFinal>();
                 while (accesoDatos.Lector.Read())
                 {
-                    Reserva aux = new Reserva();
+                    ReservaFinal aux = new ReservaFinal();
 
                     aux.IdReserva = (int)accesoDatos.Lector["IdReserva"];
-                    aux.DNIUsuario = (int)accesoDatos.Lector["DNI"];
+                    aux.DNIUsuario = (int)accesoDatos.Lector["DniUsuario"];
                     aux.estado = (int)accesoDatos.Lector["EstadoReserva"];
                     aux.IdPaquete = (int)accesoDatos.Lector["IdPaquete"];
+                    aux.NombrePaquete= (string)accesoDatos.Lector["NombrePaquete"];
                     aux.idHotel = (int)accesoDatos.Lector["IdHotel"];
+                    aux.nombreHotel = (string)accesoDatos.Lector["NombreHotel"];
                     aux.Precio = (decimal)accesoDatos.Lector["Precio"];
                     aux.FechaInicio = (DateTime)accesoDatos.Lector["FechaInicio"];
+                    aux.cdgdestino= (int)accesoDatos.Lector["cdgDestino"];
+
                     listReserva.Add(aux);
                     //reserva = aux;
 
@@ -218,6 +222,7 @@ namespace Funcionalidades
             }
 
         }
+
 
     }
 }

@@ -116,7 +116,7 @@
 <% } %>
                             <% if (Session["usuario"] != null && ((Dominio.Usuario)Session["usuario"]).TipoUsuario == Dominio.TipoUsuario.Normal) { %>
                         <li class="nav-item">
-                            <a class="nav-link" href="VerReservas.aspx">Carrito</a>
+                            <a class="nav-link" href="VerReservas.aspx">Ver reservas</a>
                         </li>
                         <% } %>
                     </ul>

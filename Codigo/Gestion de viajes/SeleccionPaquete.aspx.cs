@@ -274,6 +274,7 @@ namespace Gestion_de_viajes
             int dni = int.Parse(txtDni2.Text);
 
             int valor = repoUsuario.VerificarUsuarioExistente(dni);
+
             if (valor == 0) //no existe
             {
 
@@ -301,9 +302,9 @@ namespace Gestion_de_viajes
             lbMensajeConfirmaReserva.Visible = true;
             btnConfirmarReserva.Visible = false;
 
-            RepositorioFecha repofecha = new RepositorioFecha();
 
             //inicio para agregar reservas
+            RepositorioFecha repofecha = new RepositorioFecha();
             RepositorioReserva repoReserva = new RepositorioReserva();
             Reserva NuevaReserva = new Reserva();
 
@@ -320,6 +321,9 @@ namespace Gestion_de_viajes
 
             // fin para agregar reservas
 
+           
+
+
             // inicio para relacionar los pasajeros con la reserva 
             RepositorioRelReservaXusuario repoRelReservaxUsuario = new RepositorioRelReservaXusuario();
             RelReservaXusuario nuevoRelReservaXusuario = new RelReservaXusuario();
@@ -327,6 +331,10 @@ namespace Gestion_de_viajes
             nuevoRelReservaXusuario.IdReserva = repoReserva.ObtenerUltimoRegistro();
             nuevoRelReservaXusuario.DniUsuario = int.Parse(txtDni1.Text);
             repoRelReservaxUsuario.InsRelReservaXusuario(nuevoRelReservaXusuario); // pasajero 1
+
+
+
+
             if (!string.IsNullOrWhiteSpace(txtDni2.Text))
             {
                 nuevoRelReservaXusuario.DniUsuario = int.Parse(txtDni2.Text);
@@ -341,6 +349,24 @@ namespace Gestion_de_viajes
             Session["ReservaXusuario"] = nuevoRelReservaXusuario;
             RepositorioMail mail = new RepositorioMail();
 
+            // cargar excursiones adicionales 
+            List<int> idsExcursionesSeleccionadas = new List<int>();
+            RepositorioExcursiones repositorioExcursiones = new RepositorioExcursiones();
+            RepositorioRelIdExcursionxReserva reporelExcursionesxreserva = new RepositorioRelIdExcursionxReserva();
+            RelExcursionxReserva Nuevorelexcursionreserva = new RelExcursionxReserva();
+            foreach (ListItem item in excursionesAdicionales.Items)
+            { 
+                if (item.Selected)
+                {
+                    Nuevorelexcursionreserva.IdReserva = nuevoRelReservaXusuario.IdReserva;
+                    Nuevorelexcursionreserva.IdExcursion = Convert.ToInt32(item.Value);
+                    reporelExcursionesxreserva.InsRelReservaXusuario(Nuevorelexcursionreserva);
+                }
+
+            }
+
+
+            //fin excursiones 
             mail.EmailService();
             mail.ArmarCorreoConImagen(txtEmailRegistro.Text, "Confirmacion de Reserva");
             mail.enviarCorreo();

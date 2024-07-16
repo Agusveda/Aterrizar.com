@@ -24,7 +24,7 @@ namespace Gestion_de_viajes
                     Usuario usuario = repositorio.ObtenerUsuarioPorId(usuarioSesion.IdUsuario);
 
 
-                    MostrarDetallesUsuario(usuarioSesion);
+                    MostrarDetallesUsuario(usuario);
 
                 }
                 else

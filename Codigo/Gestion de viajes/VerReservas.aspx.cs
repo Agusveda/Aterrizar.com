@@ -3,6 +3,7 @@ using Funcionalidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -13,22 +14,34 @@ namespace Gestion_de_viajes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
-                
                 RepositorioReserva repoReserva = new RepositorioReserva();
-                List<Reserva> listaReserva = new List<Reserva>();
-                Usuario user = new Usuario();
+                Usuario user = (Usuario)Session["usuario"];
+                List<ReservaFinal> listaReserva = repoReserva.ObtenerReservaPorDNI(user.DNI);
 
-                user = (Usuario)Session["usuario"];
-                listaReserva = repoReserva.ObtenerReservaPorDNI(user.DNI);
-                 
                 repReservaDNI.DataSource = listaReserva;
                 repReservaDNI.DataBind();
             }
-
-            
         }
+
+        protected void repReservaDNI_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                var reserva = (ReservaFinal)e.Item.DataItem;
+                var repExcursionesAdicionales = (Repeater)e.Item.FindControl("repExcursionesAdicionales");
+
+                if (reserva != null && repExcursionesAdicionales != null)
+                {
+                    RepositorioRelIdExcursionxReserva repoExcursionxReserva = new RepositorioRelIdExcursionxReserva();
+                    List<selRelExcursionxReserva> listaExcursionesAdicionales = repoExcursionxReserva.ListarConSp(reserva.IdReserva);
+
+                    repExcursionesAdicionales.DataSource = listaExcursionesAdicionales;
+                    repExcursionesAdicionales.DataBind();
+                }
+            }
+        }
+
     }
 }
