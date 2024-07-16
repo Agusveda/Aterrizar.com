@@ -1,46 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\",
+  "WorkspaceRootPath": "E:\\UTN\\Aterrizar.com\\Codigo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|d:\\transferencia\\aterrizar.com\\codigo\\gestion de viajes\\inicio.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\inicio.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|d:\\transferencia\\aterrizar.com\\codigo\\gestion de viajes\\verreservas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\verreservas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|d:\\transferencia\\aterrizar.com\\codigo\\funcionalidades\\repositorioexcursiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|E:\\UTN\\Aterrizar.com\\Codigo\\funcionalidades\\repositorioexcursiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\repositorioexcursiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|d:\\transferencia\\aterrizar.com\\codigo\\gestion de viajes\\verreservas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\verreservas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|e:\\utn\\aterrizar.com\\codigo\\gestion de viajes\\administrador.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\administrador.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|d:\\transferencia\\aterrizar.com\\codigo\\funcionalidades\\repositoriorelidexcursionxreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\repositoriorelidexcursionxreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|e:\\utn\\aterrizar.com\\codigo\\gestion de viajes\\master.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\master.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|d:\\transferencia\\aterrizar.com\\codigo\\funcionalidades\\repositorioreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\repositorioreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|d:\\transferencia\\aterrizar.com\\codigo\\gestion de viajes\\administrador.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|E:\\UTN\\Aterrizar.com\\Codigo\\gestion de viajes\\administrador.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\administrador.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A12281A-6722-4ED4-A0BA-AD7832449210}|Dominio\\Dominio.csproj|d:\\transferencia\\aterrizar.com\\codigo\\dominio\\relexcursionxreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A12281A-6722-4ED4-A0BA-AD7832449210}|Dominio\\Dominio.csproj|solutionrelative:dominio\\relexcursionxreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|e:\\utn\\aterrizar.com\\codigo\\gestion de viajes\\avionselecciondestino.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\avionselecciondestino.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A12281A-6722-4ED4-A0BA-AD7832449210}|Dominio\\Dominio.csproj|d:\\transferencia\\aterrizar.com\\codigo\\dominio\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A12281A-6722-4ED4-A0BA-AD7832449210}|Dominio\\Dominio.csproj|solutionrelative:dominio\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A12281A-6722-4ED4-A0BA-AD7832449210}|Dominio\\Dominio.csproj|d:\\transferencia\\aterrizar.com\\codigo\\dominio\\relreservaxusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A12281A-6722-4ED4-A0BA-AD7832449210}|Dominio\\Dominio.csproj|solutionrelative:dominio\\relreservaxusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|e:\\utn\\aterrizar.com\\codigo\\gestion de viajes\\avionseleccionmes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{F4005FB4-3619-4E84-B96C-2921DEA8D083}|Gestion de viajes\\Gestion de viajes.csproj|solutionrelative:gestion de viajes\\avionseleccionmes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,137 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VerReservas.aspx.cs",
-              "DocumentMoniker": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Gestion de viajes\\VerReservas.aspx.cs",
-              "RelativeDocumentMoniker": "Gestion de viajes\\VerReservas.aspx.cs",
-              "ToolTip": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Gestion de viajes\\VerReservas.aspx.cs",
-              "RelativeToolTip": "Gestion de viajes\\VerReservas.aspx.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAtwBQAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T16:57:57.73Z",
-              "IsPinned": true,
+              "DocumentIndex": 2,
+              "Title": "Master.Master",
+              "DocumentMoniker": "E:\\UTN\\Aterrizar.com\\Codigo\\Gestion de viajes\\Master.Master",
+              "RelativeDocumentMoniker": "Gestion de viajes\\Master.Master",
+              "ToolTip": "E:\\UTN\\Aterrizar.com\\Codigo\\Gestion de viajes\\Master.Master",
+              "RelativeToolTip": "Gestion de viajes\\Master.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-07-16T20:48:34.943Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "Administrador.aspx.cs",
+              "DocumentMoniker": "E:\\UTN\\Aterrizar.com\\Codigo\\Gestion de viajes\\Administrador.aspx.cs",
+              "RelativeDocumentMoniker": "Gestion de viajes\\Administrador.aspx.cs",
+              "ToolTip": "E:\\UTN\\Aterrizar.com\\Codigo\\Gestion de viajes\\Administrador.aspx.cs",
+              "RelativeToolTip": "Gestion de viajes\\Administrador.aspx.cs",
+              "ViewState": "AQIAACsCAAAAAAAAAAAYwDgCAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T19:31:28.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AvionSeleccionMes.aspx",
+              "DocumentMoniker": "E:\\UTN\\Aterrizar.com\\Codigo\\Gestion de viajes\\AvionSeleccionMes.aspx",
+              "RelativeDocumentMoniker": "Gestion de viajes\\AvionSeleccionMes.aspx",
+              "ToolTip": "E:\\UTN\\Aterrizar.com\\Codigo\\Gestion de viajes\\AvionSeleccionMes.aspx",
+              "RelativeToolTip": "Gestion de viajes\\AvionSeleccionMes.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-07-16T19:09:34.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AvionSeleccionDestino.aspx",
+              "DocumentMoniker": "E:\\UTN\\Aterrizar.com\\Codigo\\Gestion de viajes\\AvionSeleccionDestino.aspx",
+              "RelativeDocumentMoniker": "Gestion de viajes\\AvionSeleccionDestino.aspx",
+              "ToolTip": "E:\\UTN\\Aterrizar.com\\Codigo\\Gestion de viajes\\AvionSeleccionDestino.aspx",
+              "RelativeToolTip": "Gestion de viajes\\AvionSeleccionDestino.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-07-16T19:09:14.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "RepositorioExcursiones.cs",
-              "DocumentMoniker": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioExcursiones.cs",
+              "DocumentMoniker": "E:\\UTN\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioExcursiones.cs",
               "RelativeDocumentMoniker": "Funcionalidades\\RepositorioExcursiones.cs",
-              "ToolTip": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioExcursiones.cs",
+              "ToolTip": "E:\\UTN\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioExcursiones.cs",
               "RelativeToolTip": "Funcionalidades\\RepositorioExcursiones.cs",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAWwHsAAAAwAAAA",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAuwGoAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-16T17:26:02.995Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Administrador.aspx",
-              "DocumentMoniker": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Gestion de viajes\\Administrador.aspx",
+              "DocumentMoniker": "E:\\UTN\\Aterrizar.com\\Codigo\\Gestion de viajes\\Administrador.aspx",
               "RelativeDocumentMoniker": "Gestion de viajes\\Administrador.aspx",
-              "ToolTip": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Gestion de viajes\\Administrador.aspx",
+              "ToolTip": "E:\\UTN\\Aterrizar.com\\Codigo\\Gestion de viajes\\Administrador.aspx",
               "RelativeToolTip": "Gestion de viajes\\Administrador.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2024-07-16T17:23:57.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RepositorioReserva.cs",
-              "DocumentMoniker": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioReserva.cs",
-              "RelativeDocumentMoniker": "Funcionalidades\\RepositorioReserva.cs",
-              "ToolTip": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioReserva.cs",
-              "RelativeToolTip": "Funcionalidades\\RepositorioReserva.cs",
-              "ViewState": "AQIAAMsAAAAAAAAAAAAYwOUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T17:15:42.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RepositorioRelIdExcursionxReserva.cs",
-              "DocumentMoniker": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioRelIdExcursionxReserva.cs",
-              "RelativeDocumentMoniker": "Funcionalidades\\RepositorioRelIdExcursionxReserva.cs",
-              "ToolTip": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Funcionalidades\\RepositorioRelIdExcursionxReserva.cs",
-              "RelativeToolTip": "Funcionalidades\\RepositorioRelIdExcursionxReserva.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAQwAwAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T17:06:06.183Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RelExcursionxReserva.cs",
-              "DocumentMoniker": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Dominio\\RelExcursionxReserva.cs",
-              "RelativeDocumentMoniker": "Dominio\\RelExcursionxReserva.cs",
-              "ToolTip": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Dominio\\RelExcursionxReserva.cs",
-              "RelativeToolTip": "Dominio\\RelExcursionxReserva.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T16:59:38.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RelReservaXusuario.cs",
-              "DocumentMoniker": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Dominio\\RelReservaXusuario.cs",
-              "RelativeDocumentMoniker": "Dominio\\RelReservaXusuario.cs",
-              "ToolTip": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Dominio\\RelReservaXusuario.cs",
-              "RelativeToolTip": "Dominio\\RelReservaXusuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T16:59:36.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Reserva.cs",
-              "DocumentMoniker": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Dominio\\Reserva.cs",
-              "RelativeDocumentMoniker": "Dominio\\Reserva.cs",
-              "ToolTip": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Dominio\\Reserva.cs",
-              "RelativeToolTip": "Dominio\\Reserva.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAuwBEAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T16:59:27.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VerReservas.aspx",
-              "DocumentMoniker": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Gestion de viajes\\VerReservas.aspx",
-              "RelativeDocumentMoniker": "Gestion de viajes\\VerReservas.aspx",
-              "ToolTip": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Gestion de viajes\\VerReservas.aspx",
-              "RelativeToolTip": "Gestion de viajes\\VerReservas.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-07-16T16:57:34.065Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Inicio.aspx",
-              "DocumentMoniker": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Gestion de viajes\\Inicio.aspx",
-              "RelativeDocumentMoniker": "Gestion de viajes\\Inicio.aspx",
-              "ToolTip": "D:\\TRANSFERENCIA\\Aterrizar.com\\Codigo\\Gestion de viajes\\Inicio.aspx",
-              "RelativeToolTip": "Gestion de viajes\\Inicio.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-07-16T16:57:18.881Z",
               "EditorCaption": ""
             }
           ]

@@ -78,7 +78,6 @@
     <Content Include="Paquetes.aspx" />
     <Content Include="AvionSeleccionMes.aspx" />
     <Content Include="BusSeleccionMes.aspx" />
-    <Content Include="Preguntas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -182,13 +181,6 @@
     </Compile>
     <Compile Include="BusSeleccionMes.aspx.designer.cs">
       <DependentUpon>BusSeleccionMes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Preguntas.aspx.cs">
-      <DependentUpon>Preguntas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Preguntas.aspx.designer.cs">
-      <DependentUpon>Preguntas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

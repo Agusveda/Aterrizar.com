@@ -335,6 +335,7 @@ namespace Gestion_de_viajes
             btnAceptarModificarHotel.Visible = false;
             btnEliminarHotelboton.Visible = false;
             lbConfirmacionEliminacionHotel.Visible = false;
+            btnGuardarHotel.Visible = true;
             CargarDetalleCdgDestinoEnHotel();
             desbloquearEntradaDatosHotel();
             LimpiarCamposHoteles();
@@ -563,7 +564,9 @@ namespace Gestion_de_viajes
             ddlIdExcursion.Visible = false;
             lbidExcursion.Visible = false;
             btnAceptarModificarExcursion.Visible = false;
-            btnaceptarEliminarExcursion.Visible = true;
+            btnGuardarExcursion.Visible = true;
+            btnaceptarEliminarExcursion.Visible = false;
+            desbloquearEntradaDatosExcursiones();
             CargarDetalleCdgDestinoEnExcursion();
             LimpiarCamposExcursion();
         }
@@ -573,7 +576,7 @@ namespace Gestion_de_viajes
             ddlIdExcursion.Visible = true;
             lbidExcursion.Visible = true;
             btnAceptarModificarExcursion.Visible = true;
-            btnaceptarEliminarExcursion.Visible = true;
+            btnaceptarEliminarExcursion.Visible = false;
             btnGuardarExcursion.Visible = false;
             CargarDetalleCdgDestinoEnExcursion();
             desbloquearEntradaDatosExcursiones();
