@@ -20,8 +20,19 @@ namespace Gestion_de_viajes
                 Usuario user = (Usuario)Session["usuario"];
                 List<ReservaFinal> listaReserva = repoReserva.ObtenerReservaPorDNI(user.DNI);
 
-                repReservaDNI.DataSource = listaReserva;
-                repReservaDNI.DataBind();
+                if (listaReserva.Count > 0)
+                {
+                    repReservaDNI.DataSource = listaReserva;
+                    repReservaDNI.DataBind();
+                }
+                else
+                {
+                  
+                    lblMensaje.Text = "No hay reservas disponibles para este usuario.";
+                    lblMensaje.Visible = true;
+                    repReservaDNI.DataSource = null; 
+                    repReservaDNI.DataBind(); 
+                }
             }
         }
 

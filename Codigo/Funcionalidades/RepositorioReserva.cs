@@ -156,6 +156,7 @@ namespace Funcionalidades
                 }
 
                 accesoDatos.cerrarConexion();
+              
                 return listReserva;
             }
             catch (Exception ex)

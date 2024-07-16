@@ -357,7 +357,7 @@
                         <div class="col">
                             <div class="card h-50">
                                 <div class="card-body" style="text-align: center;">
-                                    <h5 class="card-title"><%# Eval("FechaInicio") %></h5>
+                                    <h5 class="card-title"><%# ((DateTime)Eval("FechaInicio")).ToString("dd/MM/yyyy") %></h5>
                                     <asp:Button ID="btnElegirFecha" Text="Elegir fecha" runat="server" OnClick="btnElegirFecha_Click" CommandArgument='<%#Eval("IdFecha")%>' CommandName="IdFecha" />
                                 </div>
                             </div>
