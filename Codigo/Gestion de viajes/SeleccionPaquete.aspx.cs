@@ -243,8 +243,9 @@ namespace Gestion_de_viajes
             Usuario nuevo = new Usuario();
             RepositorioUsuario repoUsuario = new RepositorioUsuario();
             int dni = int.Parse(txtDni1.Text);
+            string mail = txtEmailRegistro.Text;
 
-            int valor = repoUsuario.VerificarUsuarioExistente(dni);
+            int valor = repoUsuario.VerificarUsuarioExistente(dni, mail );
             if (valor == 0) //no existe
             {
 
@@ -272,8 +273,9 @@ namespace Gestion_de_viajes
             Usuario nuevo = new Usuario();
             RepositorioUsuario repoUsuario = new RepositorioUsuario();
             int dni = int.Parse(txtDni2.Text);
+            string mail = txtEmailRegistro2.Text;
 
-            int valor = repoUsuario.VerificarUsuarioExistente(dni);
+            int valor = repoUsuario.VerificarUsuarioExistente(dni, mail);
 
             if (valor == 0) //no existe
             {

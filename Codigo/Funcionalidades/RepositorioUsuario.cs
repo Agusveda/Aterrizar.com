@@ -129,7 +129,7 @@ namespace Funcionalidades
                 accesoDatos.setearParametros("@DNI", nuevo.DNI);
                 accesoDatos.setearParametros("@telefono", nuevo.Telefono);
                 accesoDatos.setearParametros("@TipoUsuario", nuevo.TipoUsuario);
-                accesoDatos.setearParametros("@IdReserva", nuevo.IdReserva);
+              
 
                 accesoDatos.ejecutarAccion();
             }
@@ -141,21 +141,22 @@ namespace Funcionalidades
 
         }
 
-        public int VerificarUsuarioExistente (int dni)
+        public int VerificarUsuarioExistente(int dni, string Email)
         {
             AccesoDatos accesoDatos = new AccesoDatos();
             accesoDatos.setearSp("verificarUsuarioExistente");
             accesoDatos.setearParametros("@DNI", dni);
+            accesoDatos.setearParametros("@CorreoElectronico", Email);
             accesoDatos.ejecutarLectura();
             int valor = 0;
             if (accesoDatos.Lector.Read())
             {
-            valor = (int)accesoDatos.Lector["Existe"];
-              
+                valor = (int)accesoDatos.Lector["Existe"];
+
             }
 
             return valor;
-            
+
 
         }
 

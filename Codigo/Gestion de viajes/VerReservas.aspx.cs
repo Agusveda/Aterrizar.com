@@ -32,6 +32,19 @@ namespace Gestion_de_viajes
                 var reserva = (ReservaFinal)e.Item.DataItem;
                 var repExcursionesAdicionales = (Repeater)e.Item.FindControl("repExcursionesAdicionales");
 
+                var repExcursionesIncluidas = (Repeater)e.Item.FindControl("repExcursionesIncluidas");
+
+
+                if (repExcursionesIncluidas != null &&  repExcursionesIncluidas != null)
+                {
+                    RepositorioExcursiones repoExcursiones = new RepositorioExcursiones(); 
+                    List<Excursiones> listaExcursionesIncluidas = repoExcursiones.ObtenerExcursionesPorDestinoIncluida(reserva.cdgdestino);
+
+                    repExcursionesIncluidas.DataSource = listaExcursionesIncluidas;
+                    repExcursionesIncluidas.DataBind();
+                }
+
+
                 if (reserva != null && repExcursionesAdicionales != null)
                 {
                     RepositorioRelIdExcursionxReserva repoExcursionxReserva = new RepositorioRelIdExcursionxReserva();

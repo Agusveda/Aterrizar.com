@@ -95,6 +95,47 @@ namespace Funcionalidades
                 accesoDatos.cerrarConexion();
             }
         }
+
+        public List<Excursiones> ObtenerExcursionesPorDestinoIncluida(int cdgDestino)
+        {
+            List<Excursiones> excursiones = new List<Excursiones>();
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+
+                accesoDatos.setearSp("ObtenerExcursionesIncluidas");
+
+                accesoDatos.setearParametros("@cdgDestino", cdgDestino);
+                accesoDatos.ejecutarLectura();
+
+
+                while (accesoDatos.Lector.Read())
+                {
+                    Excursiones excursion = new Excursiones();
+
+                    excursion.IdExcursion = (int)accesoDatos.Lector["IdExcursion"];
+                    excursion.cdgDestino = (int)accesoDatos.Lector["cdgDestino"];
+                  
+                 
+                    excursion.duracion = (int)accesoDatos.Lector["Duracion"];
+                    excursion.Nombre = (string)accesoDatos.Lector["Nombre"];
+
+                    excursiones.Add(excursion); 
+                }
+
+                return excursiones;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+        }
+
         public Excursiones ObtenerExcursionesPorId(int idExcursion)
         {
             Excursiones excursiones = new Excursiones();

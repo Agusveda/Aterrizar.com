@@ -16,7 +16,7 @@ namespace Dominio
         public string NombreUsuario { get; set; }
         public string CorreoElectronico { get; set; }
 
-        public int IdReserva { get; set; }
+    
         public string Telefono { get; set; }
 
         public TipoUsuario TipoUsuario { get; set; }
